@@ -1,0 +1,18 @@
+\begin{wrapfigure}{r}{0.55\textwidth}
+    \vspace{-10pt}
+    \small
+    \centering
+    \begin{tabularx}{0.55\columnwidth}{p{2.7cm}X}
+         \toprule
+         \textbf{Labeled Data ($\D_L$)} & \textbf{Unlabeled \mbox{Transfer Data ($\D_T$)}} \\
+         \midrule
+         MNLI (390k) &  \nlistar (1.3m samples)  \\
+         RTE (2.5k) & \nlistar (1.3m samples) \\
+         SST-2 (68k) & Movie Reviews* (1.7m samples) \\
+         Book Reviews (50k) & Book Reviews* (8m samples) \\
+         \bottomrule
+    \end{tabularx}
+    \captionof{table}{\small \textbf{Datasets used for analysis.} A star indicates that hard labels are discarded. NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (400k). The reviews datasets are part of Amazon Product Data. Unless otherwise stated, $\D_{LM}$ consists of \BCW. }
+    \label{tab:tasks-and-datasets}
+    \vspace{-10pt}
+\end{wrapfigure}

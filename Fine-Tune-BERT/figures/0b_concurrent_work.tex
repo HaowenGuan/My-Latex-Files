@@ -1,0 +1,91 @@
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\newcolumntype{g}{>{\columncolor{LightCyan}}c}
+
+\begin{figure}
+    \vspace{-10pt}
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{lllc}
+         \toprule
+         Model & Step 1 (\DLM) & Step 2 (\DT = \DL) & Architecture-agnostic \\
+         \midrule
+         PD (our work)          & LM pre-training       & KD            & \cmark \\
+         \citet{patient_kd}     & \bb truncated         & Patient-KD    & \xmark \\
+         \citet{distil_bert}    & \bb truncated + LM-KD & Fine-tuning   & \xmark \\
+         \bottomrule
+    \end{tabular}
+    } % end \resizebox
+    \captionof{table}{\textbf{Training Strategies} that build compact models by applying language model (LM) pre-training before knowledge distillation (KD). The first two rows apply distillation on task data. The third row applies distillation with an LM objective on general-domain data.}
+    \label{tab:concurrent_desc}
+    %
+    \vspace{20pt}
+    %
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{llcccccc|c|}
+         \toprule
+         & Model & SST-2 & MRPC & QQP & MNLI & QNLI & RTE & Meta \\
+         &  & \footnotesize (acc)
+            & \footnotesize (f1/acc)
+            & \footnotesize (f1/acc)
+            & \footnotesize (acc m/mm)
+            & \footnotesize (acc)
+            & \footnotesize (acc)
+            & Score \\
+         \midrule
+         \parbox[t]{3mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{test}}} 
+         & TF (baseline) &
+            90.7 &         % SST-2
+            85.9/80.2 &    % MRPC
+            69.2/88.2 &             % QQP
+            80.4/79.7 &             % MNLI
+            86.7 &                  % QNLI
+            63.6 &                  % RTE
+            80.5 \\                 % Score
+        & PF (baseline) &
+            \textbf{92.5} &         % SST-2
+            \textbf{86.8/81.8} &    % MRPC
+            70.1/88.5 &             % QQP
+            81.8/81.1 &             % MNLI
+            87.9 &                  % QNLI
+            64.2 &                  % RTE
+            81.6 \\                 % Score    
+        & PD (our work) &
+            91.8 &                  % SST-2
+            \textbf{86.8}/81.7 &    % MRPC
+            70.4/\textbf{88.9} &    % QQP
+            \textbf{82.8/82.2} &    % MNLI
+            88.9 &                  % QNLI
+            65.3 &                  % RTE
+            \textbf{82.1} \\        % Score
+         & \citet{patient_kd} & 92.0 & 85.0/79.9 & \textbf{70.7/88.9} & 81.5/81.0 & \textbf{89.0} & \textbf{65.5} & 81.7 \\  
+         \midrule
+         \parbox[t]{3mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{dev}}}
+         & PF (baseline) &
+            91.1 &           % SST-2
+            87.9/82.5 &      % MRPC
+            86.6/90.0 &      % QQP (bw128)
+            81.1/81.7 &      % MNLI
+            87.8 &           % QNLI
+            63.0 &           % RTE
+            82.8 \\          % Score
+         & PD (our work) &
+            91.1 &                      % SST-2
+            \textbf{89.4/84.9} &        % MRPC
+            87.4/\textbf{90.7} &        % QQP (bw128)
+            \textbf{82.5/83.4} &        % MNLI
+            \textbf{89.4} &             % QNLI
+            \textbf{66.7} &             % RTE
+            \textbf{84.4} \\            % Score
+         & \citet{distil_bert} & \textbf{92.7} & 88.3/82.4 & \textbf{87.7}/90.6 & 81.6/81.1 & 85.5 & 60.0 & 82.3 \\
+         \bottomrule
+    \end{tabular}
+    } % end \resizebox
+    \captionof{table}{\textbf{Model Quality.} All students are 6/768 BERT models, trained by 12/768 BERT teachers. Concurrent results are cited as reported by their authors. Our dev results are averaged over 5 runs. Our test results are evaluated on the GLUE server, using the model that performed best on dev. For anchoring, we also provide our results for MLM pre-training followed by fine-tuning (PF) and cite results from \citet{patient_kd} for \bb truncated and fine-tuned (TF). The meta score is computed on 6 tasks only, and is therefore \underline{not} directly comparable to the GLUE leaderboard.}
+    %For fair comparison, our student was distilled on the target datasets only (\DT = \DL). We performed hyperparameter sweeps over the following values: batch size (32, 64, 128), learning rate (2e-05, 5e-05) and training epochs (3, 4, 10).
+    \label{tab:concurrent_results}
+%\end{table}
+\captionof{figure}{Pre-trained Distillation (PD) and concurrent work on model compression.}
+%\vspace{-10pt}
+\end{figure}

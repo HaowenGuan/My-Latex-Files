@@ -1,0 +1,33 @@
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+\begin{algorithm}[t]
+%\scalebox{.85}{
+    \begin{algorithmic}[1]
+        \Require {
+            %\footnotesize 
+            student $\theta$, teacher $\Omega$,
+            unlabeled LM data $\D_{LM}$, unlabeled transfer data $\D_{T}$, labeled data $\D_{L}$
+        }
+        \vspace{2mm}
+        \State Initialize $\theta$ by pre-training an MLM$^+$ on $\D_{LM}$
+       \ForEach {$x \in \D_T$}
+       \State Get loss $L \gets -\sum_{y} P_\Omega(y | x) \log P_\theta(y | x)$
+       \State Update student $\theta \gets \textsc{backprop}(L, \theta)$
+       \eat{
+        \For{$n \gets 1$ to $\textsc{distillation}\_\textsc{steps}$}
+            \State Sample a batch  $x^1,x^2,\ldots x^k$ from $\D_T$
+            \State Obtain soft labels from the teacher:
+            \vspace{-2mm}
+            \[q^i=P_\Omega(x^i), \forall i=1\ldots k\]
+            \State Update $\theta$ by minimizing cross-entropy: 
+            \vspace{-2mm}
+            \[ -\frac{\partial }{\partial \theta}(\sum_{i=1}^k {\E}_{q^i} [-\log P_\theta(x^i)])\]
+            }
+        \EndFor
+        \State Fine-tune $\theta$ on $\D_L$ \Comment{Optional step.}
+        \State \Return $\theta$
+    \end{algorithmic}
+    %}
+    \caption{\recipename} \label{algo:receipe}
+\end{algorithm}

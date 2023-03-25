@@ -1,0 +1,84 @@
+\begin{table}[]
+    \vspace{-10pt}
+    \centering
+    %\resizebox{\textwidth}{!}{
+    \begin{tabular}{l|l|g|c|c|c|c|c|c}
+         \toprule
+         & Model & Meta & SST-2 & MRPC & QQP & MNLI & QNLI & RTE \\
+         & 
+            & Score 
+            & \footnotesize (acc)
+            & \footnotesize (f1/acc)
+            & \footnotesize (f1/acc)
+            & \footnotesize (acc m/mm)
+            & \footnotesize (acc)
+            & \footnotesize (acc) \\
+         \midrule
+         \parbox[t]{3mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{test}}}
+         & PF &
+            TODO &      % Score
+            TODO &      % SST-2
+            TODO &      % MRPC
+            TODO &      % QQP
+            TODO &      % MNLI
+            TODO &      % QNLI
+            TODO \\     % RTE
+         & PD &
+            74.1 &              % Score
+            83.5 &              % SST-2
+            80.8/71.2 &         % MRPC
+            63.0/84.0 &         % QQP
+            72.9/72.6 &         % MNLI
+            79.8 &              % QNLI
+            59.1 \\             % RTE
+         & PD$^+$F &
+            TODO &      % Score
+            TODO &      % SST-2
+            TODO &      % MRPC
+            TODO &      % QQP
+            TODO &      % MNLI
+            TODO &      % QNLI
+            TODO \\     % RTE
+         \midrule
+         \parbox[t]{3mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{dev}}}
+         & PF &
+            TODO &              % Score
+            81.8 &              % SST-2
+            81.5/71.3 &         % MRPC
+            81.7/85.6 &         % QQP
+            TODO &      % MNLI
+            78.5 &              % QNLI
+            59.1 \\             % RTE
+         & PD &
+            75.9 &              % Score
+            81.7 &              % SST-2
+            82.4/73.0 &         % MRPC
+            82.3/86.2 &         % QQP
+            72.7/73.2 &         % MNLI
+            79.2 &              % QNLI
+            59.1 \\             % RTE
+         & PD$^+$F &
+            TODO &      % Score
+            TODO &      % SST-2
+            TODO &      % MRPC
+            TODO &      % QQP
+            TODO &      % MNLI
+            TODO &      % QNLI
+            TODO \\     % RTE
+         \bottomrule
+    \end{tabular}
+    %} % end \resizebox
+    % A tabular is "fragile command" in a "moving argument". See https://texfaq.org/FAQ-extrabrace.
+    \caption[sanitization argument]{
+        \textbf{Baselines for future work}:\vspace{2mm}
+        \small
+        \begin{tabular}{ll}
+            PF: & \PtFt \\
+            PD: & Pre-trained Distillation on \DT$=$\DL \\
+            PD$^+$F: & Pre-trained Distillation on \DT$>$\DL, fine-tuned on \DL \\
+        \end{tabular}
+        All students are 2L/128H BERT models, trained by 12L/768H BERT teachers. For PD and PD$^+$F, softmax temperature was set to 100. Hyperparameter sweeps include: batch size (32, 64, 128), learning rate (2e-05, 5e-05) and training epochs (3, 4, 10). Dev results are averaged over 5 runs with different seeds for the best hyperparameter setting. Test results are evaluated on the GLUE server, using the model that performed best on dev. The meta score is computed on 6 tasks only, and it is \underline{not} directly comparable to the GLUE leaderboard.
+    }
+    \label{tab:tiny_results}
+    \vspace{-10pt}
+\end{table}

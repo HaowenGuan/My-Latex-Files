@@ -1,0 +1,12 @@
+\section{\recipename}
+
+\emph{Pre-trained Distillation} (PD) (Figure~\ref{fig:pd}) is a general, yet simple algorithm for building compact models that can leverage all the resources enumerated in Section \ref{sec:prelim}. It consists of a sequence of three standard training operations that can be applied to any choice of architecture:
+
+\vspace{-5pt}
+\begin{enumerate}
+    \item \textbf{Pre-training on \DLM}. A compact model is trained with a masked LM objective \citep{bert}, capturing linguistic phenomena from a large corpus of natural language texts.
+    \item \textbf{Distillation on \DT}. This \emph{well-read} student is now prepared to take full advantage of the teacher expertise, and is trained on the \emph{soft} labels (predictive distribution) produced by the teacher. As we will show in Section~\ref{sec:dissection}, randomly initialized distillation is constrained by the size and distribution of its unlabeled transfer set. However, the previous pre-training step mitigates to some extent the negative effects caused by an imperfect transfer set.
+    \item \textbf{(Optional) fine-tuning on \DL}. This step makes the model robust to potential mismatches between the distribution of the transfer and labeled sets. We will refer to the two-step algorithm as PD, and to the three-step algorithm as PDF.
+\end{enumerate}
+
+While we are treating our large teachers as black boxes, it is worth noting that they are produced by pre-training and fine-tuning. Since the teacher could potentially transfer the knowledge it has obtained via pre-training to the student through distillation, it is a priori unclear whether pre-training the student  would bring additional benefits. As  Section~\ref{sec:dissection} shows, pre-training students  is  surprisingly important, even when millions of samples are available for transfer.

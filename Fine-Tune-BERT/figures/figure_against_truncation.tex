@@ -1,0 +1,72 @@
+\begin{figure}[t]
+    \vspace{-10pt}
+    \small
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \scalebox{0.9}{
+    \begin{tikzpicture}[trim left=0]
+    \begin{axis}[
+            % If you change this to true, also s/bert_sizes_v2.dat/bert_sizes.dat
+            enlargelimits=true,
+            xticklabels from table={bert_sizes.dat}{Label},
+            xticklabel style={align=center,font=\small},
+            %every tick label/.append style={font=\footnotesize},
+            %scale only axis,
+            %scaled y ticks=false,
+            title style={font=\small},
+            legend style={font=\footnotesize, align=center},
+            legend columns=1,
+            legend pos=south east,
+            legend cell align={left},
+            title=MNLI,
+            ymin=58,
+        ]
+        \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-bw.csv};
+        \addbertplot{*}{gray}{solid}{data/accuracies_5points/D-nli_P-bw-truncated.csv};
+        \addbertplot{\wpmarker}{\wpcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-wp.csv};
+        \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-rnd.csv};
+    
+        \addlegendentry{PD (MLM pre-training)}
+        \addlegendentry{PD (from 12-layer model)}
+        \addlegendentry{PD (word embeddings)}
+        \addlegendentry{Distillation}
+    \end{axis}
+    \end{tikzpicture}
+    } % end scalebox
+    \caption{\small \textbf{Pre-training outperforms truncation.} Students initialized via LM pre-training (green) outperform those initialized from the bottom layers of 12-layer pre-trained models (gray). When only word embeddings are pre-trained (red), performance is degraded even further.}
+    \label{fig:3b-pretraining-ablation}
+    \end{minipage}
+    %
+    \hspace{10pt}
+    %
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \scalebox{0.9}{
+    \begin{tikzpicture}[trim left=0]
+        \pgfaccuracynoscale
+        \begin{axis}[legend columns=2,
+                     legend pos=north east,
+                     transpose legend=false,
+                     title=\sst,
+                     title style={font=\small},
+                     legend style={font=\small},
+                     ymin=79.9999,
+                     ymax=100]
+            \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies/D-movies_P-bw.csv};
+            \addlegendentry{PD}
+            \addbertplot{none}{red}{dashed}{data/accuracies/sst2_teacher.csv};
+            \addlegendentry{Teacher}
+            \addbertplot{\pretrainmarker}{\pretraincolor}{solid}{data/accuracies/F-sst2_P-bw.csv};
+            \addlegendentry{PF}
+            \addbertplot{\vtmarker}{\vtcolor}{dashed}{data/accuracies/F-sst2_P-rnd.csv};
+            \addlegendentry{Basic training}
+            \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies/D-movies_P-rnd.csv};
+            \addlegendentry{Distillation}
+        \end{axis}
+    \end{tikzpicture}
+    } % end \scalebox
+    \caption{\small \textbf{Depth outweighs width} when models are pre-trained (PD and PF), as emphasized by the sharp drops in the plot. For instance, the 6L/512H (35.4m parameters) model outperforms the 2L/768H model (39.2m parameters). Randomly initialized models take poor advantage of extra parameters.}
+    \vspace{-20pt}
+    \label{fig:all_students}
+    \end{minipage}
+\end{figure}

@@ -1,0 +1,87 @@
+\pdfoutput=1
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2020_conference,times}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+\input{my_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{filecontents,catchfile}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{tikzscale}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{verbatimbox}
+\usepackage{fixltx2e}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{caption}
+%\usepackage[font=small]{caption}
+\usepackage[inline]{enumitem}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{pifont,amssymb}
+%\usepackage{dblfloatfix}
+\usepackage[bottom]{footmisc}
+
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.5}
+
+\title{Well-Read Students Learn Better: On the Importance of Pre-training Compact Models}
+
+\author{Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova \\
+Google Research \\
+\texttt{\{iuliaturc, mingweichang, kentonl, kristout\}@google.com}
+}
+
+\iclrfinalcopy
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Recent developments in natural language representations have been accompanied by large and expensive models that leverage vast amounts of general-domain text through self-supervised pre-training. Due to the cost of applying such models to down-stream tasks, several model compression techniques on pre-trained language representations have been proposed~\cite{patient_kd, distil_bert}. However, surprisingly,  the simple baseline of just pre-training and fine-tuning compact models has been overlooked.
+In this paper, we first show that pre-training remains important in the context of smaller architectures, and
+fine-tuning pre-trained compact models can be competitive to more elaborate methods proposed in concurrent work. Starting with pre-trained compact models, we then explore transferring task knowledge from large fine-tuned models through standard knowledge distillation. The resulting simple, yet effective and general algorithm, \emph{Pre-trained Distillation}, brings further improvements. Through extensive experiments, we more generally explore the interaction between pre-training and distillation under two variables that have been under-studied: model size and properties of unlabeled task data. One surprising observation is that they have a compound effect even when sequentially applied on the \emph{same} data. To accelerate future research, we will make our 24 pre-trained miniature BERT models publicly available.
+
+
+%Second, we discover that pre-trained compact models can be further improved by distilling from large fine-tuned models. This results in a simple and yet effective algorithm, \emph{Pre-trained Distillation}. Finally, we conduct extensive analysis on the non-trivial interactions between pre-training and distillation, and demonstrates the importance of fully pre-training compact models.
+
+
+% Recent developments in NLP have been accompanied by large, expensive models that leverage vast amounts of general-domain data through self-supervised learning. However, applying language model pre-training to more compact models has been overlooked. We show that it remains important in the context of smaller architectures, as approximations explored in prior work suffer quality loss. Pre-trained compact models can be further refined through standard knowledge distillation. The resulting algorithm, \emph{Pre-trained Distillation}, is competitive to more elaborate strategies proposed in concurrent work, with the additional benefit of being architecture-agnostic. Through extensive experiments, we more generally explore the interaction between pre-training and distillation under two variables that have been under-studied: model size and properties of unlabeled task data. One surprising observation is that they have a compound effect even when sequentially applied on the \emph{same} data. To accelerate future research, we will make our 24 pre-trained miniature BERT models publicly available.
+\end{abstract}
+
+\input{sections/a_intro}
+\input{sections/b_problem_statement}
+\input{sections/c_pd}
+\input{sections/d_concurrent}
+\input{sections/e_setup}
+\input{sections/f_exp_truncation}
+\input{sections/g_exp_dissection}
+\input{sections/h_exp_robustness}
+\input{sections/i_exp_compounding}
+\input{sections/j_related}
+\input{sections/k_conclusions}
+
+\bibliography{iclr2020_conference}
+\bibliographystyle{iclr2020_conference}
+
+\appendix
+% \section{Appendix}
+% You may include other additional sections here. 
+
+\end{document}

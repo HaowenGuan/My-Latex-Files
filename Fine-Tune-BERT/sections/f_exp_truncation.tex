@@ -1,0 +1,24 @@
+\section{Analysis}
+\label{sec:exp}
+
+In this section, we conduct experiments that help us understand why Pre-trained Distillation is successful and how to attribute credit to its constituent operations.
+
+\subsection{There Are No Shortcuts: Why Full Pre-training Is Necessary}
+
+As later elaborated in Section \ref{sec:related}, earlier efforts to leverage pre-training in the context of compact models simply feed pre-trained (possibly contextual) input representations into randomly-initialized students \citep{distillation-reading-comprehension, distillation-classification,tang2019distilling}. Concurrent work initializes shallow-and-wide students from the bottom layers of their deeper pre-trained counterparts \citep{truncated-pretraining, patient_kd}. The experiments below indicate these strategies are suboptimal, and that LM pre-training is necessary in order to unlock the full student potential. 
+
+\paragraph{Is it enough to pre-train word embeddings?}
+\emph{No.} In order to prove that pre-training Transformer layers is important, we compare two flavors of \recipename\footnote{Note that, for both flavors of PD, none of the student parameters are frozen; the word embeddings do get updated during distillation.}:
+PD with pre-trained word embeddings and PD with pre-trained word embeddings \emph{and} Transformer layers.  We produce word-piece embeddings by pre-training one-layer Transformers for each embedding size. We then discard the single Transformer layer and keep the  embeddings to initialize our students.
+
+For MNLI (Figure \ref{fig:3b-pretraining-ablation}), less than 24\% of the gains PD brings over distillation can be attributed to the pre-trained word embeddings (for \berttiny, this drops even lower, to 5\%). The rest of the benefits come from additionally pre-training the Transformer layers.
+
+\paragraph{Is it worse to truncate deep pre-trained models?}
+\emph{Yes, especially for shallow students.} Given that pre-training is an expensive process, an exhaustive search over model sizes in the pursuit of the one that meets a certain performance threshold can be impractical. Instead of pre-training all (number of layers, embedding size) combinations of students, one way of short-cutting the process is to pre-train a single deep (e.g.~12-layer) student for each embedding size, then truncate it at various heights. Figure \ref{fig:3b-pretraining-ablation} shows that this can be detrimental especially to shallow architectures; \berttiny loses more than 73\% of the pre-training gains over distillation. As expected, losses fade away as the number of layers increases.
+
+\paragraph{{What is the best student for a fixed parameter size budget?}}
+\emph{As a rule of thumb, prioritize depth over width, especially with pre-trained students.} Figure~\ref{fig:all_students} presents a comparison between 24 student model architectures on SST-2, demonstrating how well different students utilize model capacity. They are sorted first by the hidden size, then by the number of layers. This roughly corresponds to a monotonic increase in the number of parameters, with a few exceptions for the largest students. The quality of randomly initialized students (i.e. basic training and distillation) is closely correlated with the number of parameters. With pre-training (i.e. PD and PF), we observe two intuitive findings: (1) pre-trained models are much more effective at using more parameters, and (2) pre-trained models are particularly efficient at utilizing depth, as indicated by the sharp drops in performance when moving to wider but shallower models.
+
+This is yet another argument against initialization via truncation: for instance, truncating the bottom two layers of BERT\textsubscript{BASE} would lead to a suboptimal distribution of parameters: the 2L/768H model (39.2m parameters) is dramatically worse than e.g. 6L/512H (35.4m parameters). 
+
+\input{figures/figure_against_truncation.tex}

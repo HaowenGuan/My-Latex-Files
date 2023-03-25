@@ -1,0 +1,13 @@
+\subsection{Better Together: The Compound Effect of Pre-training and Distillation}
+
+\input{figures/compound_effect.tex}
+
+We investigate the interaction between pre-training and distillation by applying  them sequentially on the \emph{same} data. We compare the following two algorithms: \PtFt with \DLM = $X$ and \recipename with \DLM = \DT = $X$. Any additional gains that the latter brings over the former must be attributed to distillation, providing evidence that the compound effect still exists.
+
+For MNLI, we set \DLM = \DT = \nlistar and continue the experiment above by taking the students pre-trained on \DLM = \nlistar and distilling them on \DT = \nlistar. As shown in Figure \ref{fig:3a-pretraining-ablation}, PD is better than PF by 2.2\% on average over all student sizes. Note that even when pre-training and then distilling on the \emph{same data}, PD outperforms the two training strategies applied in isolation. The two methods are thus learning different linguistic aspects, both useful for the end task.
+
+% We'll add this for camera ready. I didn't have time to finish all experiments.
+% \subsection{Less Is More: Encouraging the Community to Build Smaller Models}
+% In order to encourage the community to build more compact models, we establish a baseline for \berttiny (2L/128H)
+% in Table \ref{tab:tiny_results}. We provide results for \PtFt (PF), as well as Pre-trained Distillation (PD and PDF$^+$) using BERT\textsubscript{BASE} (12L/768H) as a teacher. Note that this is in contrast to our experimental section, where the teacher is BERT\textsubscript{LARGE}.
+%\input{figures/tiny_results.tex}

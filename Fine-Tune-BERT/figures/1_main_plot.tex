@@ -1,0 +1,58 @@
+\begin{figure*}
+    \centering
+    \vspace{-10pt}
+    \resizebox{\textwidth}{!}{
+    \begin{tikzpicture}[trim left=0]
+        \centering
+        \newfivepoints
+        \begin{groupplot}[
+            group style = {group size = 4 by 1,
+                           %horizontal sep=30pt,
+                           %vertical sep=55pt},
+                           },
+            enlargelimits=true,
+            xticklabels from table={bert_sizes_v3.dat}{Label},
+            xticklabel style={align=center, font=\large},
+            scale only axis,
+            width=0.45\textwidth,
+            scaled y ticks=false,
+            every tick label/.append style={font=\large},
+            legend style={column sep=0.2cm},
+            legend columns=5,
+            legend style={at={(0, -0.35), anchor=south west}, font=\Large}]
+            \nextgroupplot[align=center, title={\Large{MNLI}}, \eat{ylabel=Accuracy \%}]
+                \addbertplot{\teachermarker}{\teachercolor}{dashed}{data/accuracies_5points/mnli_teacher.csv};
+                \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-bw.csv};
+                \addbertplot{\pretrainmarker}{\pretraincolor}{solid}{data/accuracies_5points/F-mnli_P-bw.csv};
+                \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-rnd.csv};
+                \addbertplot{\vtmarker}{\vtcolor}{dotted}{data/accuracies_5points/F-mnli_P-rnd.csv};
+                
+                \addlegendentry{Teacher}
+                \addlegendentry{Pre-trained Distillation}
+                \addlegendentry{\PtFt}
+                \addlegendentry{Distillation}
+                \addlegendentry{Basic Training}
+            \nextgroupplot[align=center, title={\Large{RTE}}, \eat{xlabel={Student Size}}]
+                \addbertplot{\teachermarker}{\teachercolor}{dashed}{data/accuracies_5points/rte/rte_teacher.csv};
+                \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies_5points/rte/D-mnli-snli-qqp_P-bw.csv};
+                \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies_5points/rte/D-mnli-snli-qqp_P-rnd.csv};
+                \addbertplot{\pretrainmarker}{\pretraincolor}{solid}{data/accuracies_5points/rte/F-rte_P-bw.csv};
+                \addbertplot{\vtmarker}{\vtcolor}{dotted}{data/accuracies_5points/rte/F-rte_P-rnd.csv};
+            \nextgroupplot[align=center, title={\Large{\sst}}]
+                \addbertplot{\teachermarker}{\teachercolor}{dashed}{data/accuracies_5points/sst2_teacher.csv};
+                \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies_5points/D-movies_P-bw.csv};
+                \addbertplot{\pretrainmarker}{\pretraincolor}{solid}{data/accuracies_5points/F-sst2_P-bw.csv};
+                \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies_5points/D-movies_P-rnd.csv};
+                \addbertplot{\vtmarker}{\vtcolor}{dotted}{data/accuracies_5points/F-sst2_P-rnd.csv};
+            \nextgroupplot[align=center, title={\Large{Amazon Book Reviews}}]
+                \addbertplot{\teachermarker}{\teachercolor}{dashed}{data/amazon_books_5points/teacher.csv};
+                \addbertplot{\deftmarker}{\deftcolor}{solid}{data/accuracies_5points/D-books8m_P-bw.csv};
+                \addbertplot{\pretrainmarker}{\pretraincolor}{solid}{data/accuracies_5points/F-books_P-bw.csv};
+                \addbertplot{\kdmarker}{\kdcolor}{solid}{data/amazon_books_5points/8m.csv};
+                \addbertplot{\vtmarker}{\vtcolor}{dotted}{data/amazon_books_5points/trained50k.csv};
+        \end{groupplot}
+    \end{tikzpicture}
+    } % end \resizebox
+    \caption{\small {\bf Comparison against analysis baselines.} \recipename out-performs all baselines: \ptft, distillation, and basic training over five different student sizes. Pre-training is performed on a large unlabeled LM set (\BCW). Distillation uses the task-specific unlabeled transfer sets listed in Table \ref{tab:tasks-and-datasets}. Teachers are pre-trained \bertlarge, fine-tuned on labeled data.}
+    \label{fig:1-main-plot}
+\end{figure*}

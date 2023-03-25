@@ -1,0 +1,12 @@
+\subsection{Under the Hood: Dissecting Pre-trained Distillation}
+\label{sec:dissection}
+
+In the previous section, we presented empirical evidence for the importance of the initial LM pre-training step. In this section, we show that distillation brings additional value, especially in the presence of a considerably-sized transfer set, and that fine-tuning ensures robustness when the unlabeled data diverges from the labeled set. 
+
+\paragraph{Comparison to analysis baselines} First, we quantify how much  Pre-trained Distillation improves upon its constituent operations applied in isolation. We compare it against the baselines established in Section \ref{sec:baselines} (basic training, distillation, and \ptft) on the three NLP tasks described in Section \ref{sec:tasks-and-datasets}. We use the BookCorpus~\citep{books-dataset} and English Wikipedia as our unlabeled LM set, following the same pre-training procedure as \citet{bert}.
+
+Results in Figure \ref{fig:1-main-plot} confirm that PD outperforms these baselines, with particularly remarkable results on the Amazon Book Reviews corpus, where \bertmini recovers the accuracy of the teacher at a 31x decrease in model size and 16x speed-up. Distillation achieves the same performance with \bertbase, which is 10x larger than \bertmini. Thus PD can compress the model  more effectively than distillation. On RTE, \recipename improves \berttiny by more than 5\% absolute over the closest baseline (\ptft) and is the only method to recover teacher accuracy with \bertbase.
+
+It is interesting to note that the performance of the baseline systems is closely related to the size of the transfer set. For the sentence-pair tasks such as MNLI and RTE, where the size of the transfer set is moderate (1.3m) and slightly out-of-domain (see Table \ref{tab:tasks-and-datasets}), \ptft out-performs distillation across all student sizes, with an average of 12\%  for MNLI and 8\%  on RTE. Interestingly, the order is inverted on Amazon Book Reviews, where the large transfer set (8m) is strictly in-domain: distillation is better than \ptft by an average of 3\%. On the other hand, \recipename is consistently best in all cases. We will examine the robustness of \recipename in the rest of the section.
+
+\input{figures/1_main_plot.tex}

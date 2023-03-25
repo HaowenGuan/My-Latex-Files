@@ -1,0 +1,190 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{patient_kd,distil_bert}
+\citation{transformer}
+\citation{bert,xlnet,ernie,roberta}
+\citation{patient_kd,distil_bert}
+\citation{distillation}
+\citation{distillation}
+\citation{bert}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{patient_kd}
+\citation{distil_bert}
+\citation{transformer,bert}
+\citation{distillation}
+\citation{bert}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces \relax }}{2}{figure.caption.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Pre-trained Distillation\xspace  \relax }}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:pd}{{1}{2}{\recipename \relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Problem Statement}{2}{section.2}\protected@file@percent }
+\newlabel{sec:prelim}{{2}{2}{Problem Statement}{section.2}{}}
+\citation{kim-etal-2017-adversarial}
+\citation{bert}
+\citation{bert}
+\newlabel{tab:bertsizes}{{2a}{3}{Millions of parameters\relax }{figure.caption.2}{}}
+\newlabel{sub@tab:bertsizes}{{a}{3}{Millions of parameters\relax }{figure.caption.2}{}}
+\newlabel{tab:bertlatenciesspeedup}{{2b}{3}{Relative speedup wrt \bertlarge on TPU v2\relax }{figure.caption.2}{}}
+\newlabel{sub@tab:bertlatenciesspeedup}{{b}{3}{Relative speedup wrt \bertlarge on TPU v2\relax }{figure.caption.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  Student models with various numbers of transformer layers (\textbf  {L}) and hidden embedding sizes (\textbf  {H}). Latency is computed on Cloud TPUs with batch size 1 and sequence length 512. For readability, we focus on five models (underlined) for most figures: Tiny (L=2, H=128), Mini (L=4, H=256), Small (L=4, H=512), Medium (L=8, H=512), and Base (L=12, H=768).\relax }}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{tab:bert-models}{{1}{3}{\small Student models with various numbers of transformer layers (\textbf {L}) and hidden embedding sizes (\textbf {H}). Latency is computed on Cloud TPUs with batch size 1 and sequence length 512. For readability, we focus on five models (underlined) for most figures: Tiny (L=2, H=128), Mini (L=4, H=256), Small (L=4, H=512), Medium (L=8, H=512), and Base (L=12, H=768).\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Pre-trained Distillation\xspace  }{3}{section.3}\protected@file@percent }
+\citation{patient_kd}
+\citation{distil_bert}
+\citation{patient_kd}
+\citation{distil_bert}
+\citation{patient_kd}
+\citation{patient_kd}
+\citation{patient_kd}
+\citation{distil_bert}
+\citation{patient_kd}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces \textbf  {Training Strategies} that build compact models by applying language model (LM) pre-training before knowledge distillation (KD). The first two rows apply distillation on task data. The third row applies distillation with an LM objective on general-domain data.\relax }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{tab:concurrent_desc}{{2}{4}{\textbf {Training Strategies} that build compact models by applying language model (LM) pre-training before knowledge distillation (KD). The first two rows apply distillation on task data. The third row applies distillation with an LM objective on general-domain data.\relax }{figure.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces \textbf  {Model Quality.} All students are 6/768 BERT models, trained by 12/768 BERT teachers. Concurrent results are cited as reported by their authors. Our dev results are averaged over 5 runs. Our test results are evaluated on the GLUE server, using the model that performed best on dev. For anchoring, we also provide our results for MLM pre-training followed by fine-tuning (PF) and cite results from \citet  {patient_kd} for BERT\textsubscript  {BASE}\xspace  truncated and fine-tuned (TF). The meta score is computed on 6 tasks only, and is therefore \underline  {not} directly comparable to the GLUE leaderboard.\relax }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{tab:concurrent_results}{{3}{4}{\textbf {Model Quality.} All students are 6/768 BERT models, trained by 12/768 BERT teachers. Concurrent results are cited as reported by their authors. Our dev results are averaged over 5 runs. Our test results are evaluated on the GLUE server, using the model that performed best on dev. For anchoring, we also provide our results for MLM pre-training followed by fine-tuning (PF) and cite results from \citet {patient_kd} for \bb truncated and fine-tuned (TF). The meta score is computed on 6 tasks only, and is therefore \underline {not} directly comparable to the GLUE leaderboard.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Pre-trained Distillation (PD) and concurrent work on model compression.\relax }}{4}{figure.caption.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Comparison to Concurrent Work}{4}{section.4}\protected@file@percent }
+\newlabel{sec:concurrent}{{4}{4}{Comparison to Concurrent Work}{section.4}{}}
+\citation{transformer}
+\citation{bert}
+\citation{model-compression,distillation}
+\citation{distillation}
+\citation{first-finetuned-pretraining,bert}
+\newlabel{fig:baseline-vanilla-training}{{4a}{5}{Basic Training\relax }{figure.caption.4}{}}
+\newlabel{sub@fig:baseline-vanilla-training}{{a}{5}{Basic Training\relax }{figure.caption.4}{}}
+\newlabel{fig:baseline-distillation}{{4b}{5}{Distillation\relax }{figure.caption.4}{}}
+\newlabel{sub@fig:baseline-distillation}{{b}{5}{Distillation\relax }{figure.caption.4}{}}
+\newlabel{fig:baseline-pretraining}{{4c}{5}{\PtFt (PF)\relax }{figure.caption.4}{}}
+\newlabel{sub@fig:baseline-pretraining}{{c}{5}{\PtFt (PF)\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Baselines for building compact models, used for analysis (Section \ref  {sec:exp}).\relax }}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:training-strategies}{{4}{5}{Baselines for building compact models, used for analysis (Section \ref {sec:exp}).\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Analysis Settings}{5}{section.5}\protected@file@percent }
+\newlabel{sec:experimental-set-up}{{5}{5}{Analysis Settings}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Analysis Baselines}{5}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:baselines}{{5.1}{5}{Analysis Baselines}{subsection.5.1}{}}
+\citation{amazon}
+\citation{sst2}
+\citation{glue}
+\citation{nli_artifacts}
+\citation{mnli}
+\citation{snli}
+\citation{qqp}
+\citation{rte}
+\citation{distillation-reading-comprehension,distillation-classification,tang2019distilling}
+\citation{truncated-pretraining,patient_kd}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Analysis Tasks and Datasets}{6}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:tasks-and-datasets}{{5.2}{6}{Analysis Tasks and Datasets}{subsection.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  \textbf  {Datasets used for analysis.} A star indicates that hard labels are discarded. NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (400k). The reviews datasets are part of Amazon Product Data. Unless otherwise stated, $\mathcal  {D}_{LM}$ consists of BookCorpus \& English Wikipedia. \relax }}{6}{figure.caption.5}\protected@file@percent }
+\newlabel{tab:tasks-and-datasets}{{4}{6}{\small \textbf {Datasets used for analysis.} A star indicates that hard labels are discarded. NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (400k). The reviews datasets are part of Amazon Product Data. Unless otherwise stated, $\D _{LM}$ consists of \BCW . \relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Analysis}{6}{section.6}\protected@file@percent }
+\newlabel{sec:exp}{{6}{6}{Analysis}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}There Are No Shortcuts: Why Full Pre-training Is Necessary}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Is it enough to pre-train word embeddings?}{6}{section*.6}\protected@file@percent }
+\citation{books-dataset}
+\citation{bert}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  \textbf  {Pre-training outperforms truncation.} Students initialized via LM pre-training (green) outperform those initialized from the bottom layers of 12-layer pre-trained models (gray). When only word embeddings are pre-trained (red), performance is degraded even further.\relax }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:3b-pretraining-ablation}{{5}{7}{\small \textbf {Pre-training outperforms truncation.} Students initialized via LM pre-training (green) outperform those initialized from the bottom layers of 12-layer pre-trained models (gray). When only word embeddings are pre-trained (red), performance is degraded even further.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  \textbf  {Depth outweighs width} when models are pre-trained (PD and PF), as emphasized by the sharp drops in the plot. For instance, the 6L/512H (35.4m parameters) model outperforms the 2L/768H model (39.2m parameters). Randomly initialized models take poor advantage of extra parameters.\relax }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:all_students}{{6}{7}{\small \textbf {Depth outweighs width} when models are pre-trained (PD and PF), as emphasized by the sharp drops in the plot. For instance, the 6L/512H (35.4m parameters) model outperforms the 2L/768H model (39.2m parameters). Randomly initialized models take poor advantage of extra parameters.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Is it worse to truncate deep pre-trained models?}{7}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{{What is the best student for a fixed parameter size budget?}}{7}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Under the Hood: Dissecting Pre-trained Distillation}{7}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:dissection}{{6.2}{7}{Under the Hood: Dissecting Pre-trained Distillation}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Comparison to analysis baselines}{7}{section*.10}\protected@file@percent }
+\citation{distillation-dnn,distillation}
+\citation{fitnets,distillation}
+\citation{model-compression}
+\citation{spearman-original}
+\citation{spearman-similarity}
+\citation{spearman-formula}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  {\bf  Comparison against analysis baselines.} Pre-trained Distillation\xspace  out-performs all baselines: pre-training$+$fine-tuning\xspace  , distillation, and basic training over five different student sizes. Pre-training is performed on a large unlabeled LM set (BookCorpus \& English Wikipedia). Distillation uses the task-specific unlabeled transfer sets listed in Table \ref  {tab:tasks-and-datasets}. Teachers are pre-trained BERT\textsubscript  {LARGE}\xspace  , fine-tuned on labeled data.\relax }}{8}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:1-main-plot}{{7}{8}{\small {\bf Comparison against analysis baselines.} \recipename out-performs all baselines: \ptft , distillation, and basic training over five different student sizes. Pre-training is performed on a large unlabeled LM set (\BCW ). Distillation uses the task-specific unlabeled transfer sets listed in Table \ref {tab:tasks-and-datasets}. Teachers are pre-trained \bertlarge , fine-tuned on labeled data.\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {paragraph}{Robustness to transfer set size}{8}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Robustness to domain shift}{8}{section*.13}\protected@file@percent }
+\citation{word2vec,glove}
+\citation{elmo}
+\citation{openai-gpt,bert,openai-gpt2}
+\citation{johnson2015semi,gururangan-etal-2019-variational}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  {\bf  Robustness to transfer set size.} We verify that distillation requires a \emph  {large transfer set}: 8m instances are needed to match the performance of the teacher using Transformer\textsubscript  {BASE}\xspace  . PD achieves the same performance with Transformer\textsubscript  {MINI}\xspace  , on a 5m transfer set (10x smaller, 13x faster, 1.5x less data).\relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:2a-dataset-size}{{8}{9}{\small {\bf Robustness to transfer set size.} We verify that distillation requires a \emph {large transfer set}: 8m instances are needed to match the performance of the teacher using \bertbase . PD achieves the same performance with \bertmini , on a 5m transfer set (10x smaller, 13x faster, 1.5x less data).\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  {\bf  Robustness to domain shift in transfer set.} By keeping $|\mathcal  {D}_T|$ fixed (1.7m) and varying the correlation between $\mathcal  {D}_L$\xspace  and $\mathcal  {D}_T$\xspace  (denoted by $S$), we show that distillation requires an \emph  {in-domain transfer set}. PD and PD-F are more robust to transfer set domain.\relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:2b-domain-shift}{{9}{9}{\small {\bf Robustness to domain shift in transfer set.} By keeping $|\D _T|$ fixed (1.7m) and varying the correlation between \DL and \DT (denoted by $S$), we show that distillation requires an \emph {in-domain transfer set}. PD and PD-F are more robust to transfer set domain.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Better Together: The Compound Effect of Pre-training and Distillation}{9}{subsection.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  {\bf  Pre-training complements distillation.} PD outperforms the baselines even when we pre-train and distill on the same dataset ($\mathcal  {D}_{LM}$\xspace  = $\mathcal  {D}_T$\xspace  = NLI*\xspace  ).\relax }}{9}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:3a-pretraining-ablation}{{10}{9}{\small {\bf Pre-training complements distillation.} PD outperforms the baselines even when we pre-train and distill on the same dataset (\DLM = \DT = \nlistar ).\relax }{figure.caption.15}{}}
+\citation{model-compression}
+\citation{distillation}
+\citation{fitnets,yim2017gift,patient_kd}
+\citation{model-compression,kimura2018few}
+\citation{han2015deep,Gupta:2015}
+\citation{distillation-reading-comprehension}
+\citation{distillation-classification,tang2019distilling}
+\citation{truncated-pretraining,patient_kd,distil_bert}
+\citation{clark-etal-2019-bam}
+\bibdata{iclr2020_conference}
+\bibcite{rte}{{1}{2009}{{Bentivogli et~al.}}{{Bentivogli, Dagan, Dang, Giampiccolo, and Magnini}}}
+\bibcite{snli}{{2}{2015}{{Bowman et~al.}}{{Bowman, Angeli, Potts, and Manning}}}
+\bibcite{model-compression}{{3}{2006}{{Bucil{\u {a}} et~al.}}{{Bucil{\u {a}}, Caruana, and Niculescu-Mizil}}}
+\bibcite{qqp}{{4}{2018}{{Chen et~al.}}{{Chen, Zhang, Zhang, and Zhao}}}
+\bibcite{distillation-classification}{{5}{2018}{{Chia et~al.}}{{Chia, Witteveen, and Andrews}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Related Work}{10}{section.7}\protected@file@percent }
+\newlabel{sec:related}{{7}{10}{Related Work}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pre-training}{10}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Learning compact models}{10}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Distillation with unsupervised pre-training}{10}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{10}{section.8}\protected@file@percent }
+\bibcite{clark-etal-2019-bam}{{6}{2019}{{Clark et~al.}}{{Clark, Luong, Khandelwal, Manning, and Le}}}
+\bibcite{first-finetuned-pretraining}{{7}{2015}{{Dai \& Le}}{{Dai and Le}}}
+\bibcite{bert}{{8}{2018}{{Devlin et~al.}}{{Devlin, Chang, Lee, and Toutanova}}}
+\bibcite{Gupta:2015}{{9}{2015}{{Gupta et~al.}}{{Gupta, Agrawal, Gopalakrishnan, and Narayanan}}}
+\bibcite{nli_artifacts}{{10}{2018}{{Gururangan et~al.}}{{Gururangan, Swayamdipta, Levy, Schwartz, Bowman, and Smith}}}
+\bibcite{gururangan-etal-2019-variational}{{11}{2019}{{Gururangan et~al.}}{{Gururangan, Dang, Card, and Smith}}}
+\bibcite{han2015deep}{{12}{2016}{{Han et~al.}}{{Han, Mao, and Dally}}}
+\bibcite{amazon}{{13}{2016}{{He \& McAuley}}{{He and McAuley}}}
+\bibcite{distillation}{{14}{2015}{{Hinton et~al.}}{{Hinton, Vinyals, and Dean}}}
+\bibcite{distillation-reading-comprehension}{{15}{2018}{{Hu et~al.}}{{Hu, Peng, Wei, Huang, Li, Yang, and Zhou}}}
+\bibcite{spearman-similarity}{{16}{1989}{{Johansson et~al.}}{{Johansson, Stig, and Hofland}}}
+\bibcite{johnson2015semi}{{17}{2015}{{Johnson \& Zhang}}{{Johnson and Zhang}}}
+\bibcite{spearman-formula}{{18}{1998}{{Kilgarriff \& Rose}}{{Kilgarriff and Rose}}}
+\bibcite{kim-etal-2017-adversarial}{{19}{2017}{{Kim et~al.}}{{Kim, Stratos, and Kim}}}
+\bibcite{kimura2018few}{{20}{2018}{{Kimura et~al.}}{{Kimura, Ghahramani, Takeuchi, Iwata, and Ueda}}}
+\bibcite{distillation-dnn}{{21}{2014}{{Li et~al.}}{{Li, Zhao, Huang, and Gong}}}
+\bibcite{roberta}{{22}{2019}{{Liu et~al.}}{{Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis, Zettlemoyer, and Stoyanov}}}
+\bibcite{word2vec}{{23}{2013}{{Mikolov et~al.}}{{Mikolov, Sutskever, Chen, Corrado, and Dean}}}
+\bibcite{glove}{{24}{2014}{{Pennington et~al.}}{{Pennington, Socher, and Manning}}}
+\bibcite{elmo}{{25}{2018}{{Peters et~al.}}{{Peters, Neumann, Iyyer, Gardner, Clark, Lee, and Zettlemoyer}}}
+\bibcite{openai-gpt}{{26}{2018}{{Radford et~al.}}{{Radford, Narasimhan, Salimans, and Sutskever}}}
+\bibcite{openai-gpt2}{{27}{2019}{{Radford et~al.}}{{Radford, Wu, Child, Luan, Amodei, and Sutskever}}}
+\bibcite{fitnets}{{28}{2014}{{Romero et~al.}}{{Romero, Ballas, Kahou, Chassang, Gatta, and Bengio}}}
+\bibcite{distil_bert}{{29}{2019}{{Sanh}}{{}}}
+\bibcite{sst2}{{30}{2013}{{Socher et~al.}}{{Socher, Perelygin, Wu, Chuang, Manning, Ng, and Potts}}}
+\bibcite{spearman-original}{{31}{1904}{{Spearman}}{{}}}
+\bibcite{patient_kd}{{32}{2019{a}}{{Sun et~al.}}{{Sun, Cheng, Gan, and Liu}}}
+\bibcite{ernie}{{33}{2019{b}}{{Sun et~al.}}{{Sun, Wang, Li, Feng, Tian, Wu, and Wang}}}
+\bibcite{tang2019distilling}{{34}{2019}{{Tang et~al.}}{{Tang, Lu, Liu, Mou, Vechtomova, and Lin}}}
+\bibcite{transformer}{{35}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{glue}{{36}{2018}{{Wang et~al.}}{{Wang, Singh, Michael, Hill, Levy, and Bowman}}}
+\bibcite{mnli}{{37}{2018}{{Williams et~al.}}{{Williams, Nangia, and Bowman}}}
+\bibcite{truncated-pretraining}{{38}{2019{a}}{{Yang et~al.}}{{Yang, Shou, Gong, Lin, and Jiang}}}
+\bibcite{xlnet}{{39}{2019{b}}{{Yang et~al.}}{{Yang, Dai, Yang, Carbonell, Salakhutdinov, and Le}}}
+\bibcite{yim2017gift}{{40}{2017}{{Yim et~al.}}{{Yim, Joo, Bae, and Kim}}}
+\bibcite{books-dataset}{{41}{2015}{{Zhu et~al.}}{{Zhu, Kiros, Zemel, Salakhutdinov, Urtasun, Torralba, and Fidler}}}
+\bibstyle{iclr2020_conference}
+\gdef \@abspage@last{13}

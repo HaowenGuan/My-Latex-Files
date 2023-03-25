@@ -1,0 +1,18 @@
+\paragraph{Robustness to transfer set size}
+ It is generally accepted that distillation is reliant upon a large transfer set. For instance, distillation for speech recognition is performed on hundreds of millions of data points \citep{distillation-dnn,distillation}.
+ 
+We reaffirm this statement through experiments on Amazon Book Reviews in Figure \ref{fig:2a-dataset-size}, given that Amazon Book Reviews have the biggest transfer set. 
+Distillation barely recovers teacher accuracy with the largest student (\bertbase), using the entire 8m transfer set. When there is only 1m transfer set, the performance is 4\% behind the teacher model.
+%
+In contrast, PD achieves the same performance with \bertmini on 5m instances. In other words, 
+PD can match the teacher model with 10x smaller model and 1.5x less transfer data,
+compared to distillation.
+
+\paragraph{Robustness to domain shift} 
+To the best of our knowledge, there is no prior work that explicitly studies how distillation is impacted by the mismatch between training and transfer sets (which we will refer to as \emph{domain shift}). Many previous distillation efforts focus on tasks where the two sets come from the same distribution \citep{fitnets, distillation}, while others simply acknowledge the importance of and strive for a close match between them \cite{model-compression}.
+
+We provide empirical evidence that out-of-domain data degrades distillation and that our algorithm is more robust to mismatches between $\D_{L}$ and $\D_{T}$. We measure domain shift using the {\em Spearman rank correlation coefficient} (which we refer to as \emph{Spearman} or simply \emph{S}), introduced as a general metric in \cite{spearman-original} and first used as a corpus similarity metric in \cite{spearman-similarity}. To compute corpus similarity, we follow the procedure described in \cite{spearman-formula}: for two datasets $X$ and $Y$, we compute the corresponding frequency ranks $F_X$ and $F_Y$ of their most common $n=100$ words. For each of these words, the difference $d$ between ranks in $F_X$ and $F_Y$ is computed. The final statistic is given by the following formula: $1 - \sum_{i=1}^{100} d_i^2 / (n(n^2 - 1))$.
+
+To measure the effect of domain shift, we again experiment on the Amazon Book Reviews task. Instead of varying the size of the transfer sets, this time we keep size fixed (to 1.7m documents) and vary the source of the unlabeled text used for distillation. Transfer set domains vary from not task-related (paragraphs from Wikipedia with $S$=0.43), to reviews for products of unrelated category (electronics reviews with $S$=0.52), followed by reviews from a related category (movie reviews with $S$=0.76), and finally in-domain book reviews ($S$=1.0). Results in Figure \ref{fig:2b-domain-shift} show a direct correlation between accuracy and the Spearman coefficient for both distillation and PD. When $S$ drops to 0.43, distillation on $\D_{T}$ is 1.8\% \emph{worse} than basic training on $\D_{L}$, whereas PD suffers a smaller loss over \ptft, and a gain of about 1.5\% when a final fine-tuning step is added.  When reviews from an unrelated product are used as a transfer set ($S$=0.52), PD obtains a much larger gain from learning from the teacher, compared to distillation.
+
+\input{figures/2_robustness.tex}

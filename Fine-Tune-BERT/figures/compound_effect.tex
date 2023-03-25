@@ -1,0 +1,35 @@
+\begin{wrapfigure}{t}{0.5\textwidth}
+    \centering
+    \vspace{-15pt}
+    \scalebox{0.75}{
+    \begin{tikzpicture}
+    \begin{axis}[
+            % If you change this to true, also s/bert_sizes_v2.dat/bert_sizes.dat
+            enlargelimits=true,
+            xticklabels from table={bert_sizes.dat}{Label},
+            xticklabel style={align=center, font=\small},
+            % every tick label/.append style={font=\small},
+            %scale only axis,
+            %scaled y ticks=false,
+            title style={font=\small},
+            legend style={font=\footnotesize, align=center},
+            legend columns=1,
+            legend pos=south east,
+            legend cell align={left},
+            title=MNLI,
+        ]
+        
+        \addbertplot{square}{\deftcolor}{dashed}{data/accuracies_5points/D-nli_P-nli.csv};
+        \addlegendentry{PD (\DLM = \DT = \nlistar)}
+        \addbertplot{diamond}{\pretraincolor}{dashed}{data/accuracies_5points/F-mnli_P-mnli-snli-qqp-pairs.csv};
+        \addlegendentry{PF (\DLM = \nlistar)}
+        
+        \addbertplot{\kdmarker}{\kdcolor}{solid}{data/accuracies_5points/D-mnli-snli-qqp_P-rnd.csv};
+        \addlegendentry{Distillation (\DT = \nlistar)}
+    \end{axis}
+    \end{tikzpicture}
+    } % end scalebox
+    \caption{\small {\bf Pre-training complements distillation.} PD outperforms the baselines even when we pre-train and distill on the same dataset (\DLM = \DT = \nlistar).}
+    \label{fig:3a-pretraining-ablation}
+    \vspace{-10pt}
+\end{wrapfigure}
