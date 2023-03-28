@@ -1,0 +1,947 @@
+%auto-ignore
+%!TEX root = main.tex
+
+@STRING{PT = {Prentice-Hall}}
+@STRING{CVPR = {CVPR}}
+@STRING{ismir = {Proceedings of International Conference on Music Information Retrieval}}
+@STRING{ieeetcsad = {IEEE Transactions Circuits Systems~II: Analog and Digital Signal Processing}}
+@STRING{IJCV = {IJCV}}
+@STRING{TIP = {TIP}}
+@STRING{TVCG = {TVCG}}
+@STRING{ICIP = {ICIP}}
+@STRING{PAMI = {PAMI}}
+@STRING{ICCV = {ICCV}}
+@STRING{ICPR = {ICPR}}
+@STRING{AAAI = {AAAI}}
+@STRING{ECCV = {ECCV}}
+@STRING{ICLR = {ICLR}}
+@STRING{ICLRW = {ICLR Workshop}}
+@STRING{ICCP = {ICCP}}
+@STRING{SIG = {SIGGRAPH}}
+@STRING{SIGGRAPH = {SIGGRAPH}}
+@STRING{SIGA = {SIGGRAPH Asia}}
+@STRING{TOG = {ACM TOG}}
+@STRING{prl = {Pattern Recognition Letters}}
+@STRING{vldb = {Proceedings of International Conference on Very Large Databases}}
+@STRING{ICML = {ICML}}
+@STRING{JMLR = {JMLR}}
+@STRING{AISTATS = {AISTATS}}
+@STRING{IJCNN = {IJCNN}}
+@STRING{WACV = {WACV}}
+@STRING{NIPS = {NeurIPS}}
+@STRING{UAI = {UAI}}
+@STRING{NeurIPS = {NeurIPS}}
+@STRING{AIJ = "Artificial Intelligence"}
+@STRING{IJCAI = {IJCAI}}%"Proc. Int. Joint Conf. on Art. Intell."}
+@STRING{BMVC = {BMVC}}
+@STRING{CGF = {Computer Graphics Forum}}
+@STRING{PMLR = {PMLR}}
+@STRING{ACL = {ACL}}
+
+% network visualization
+@article{erhan2009visualizing,
+  title={Visualizing higher-layer features of a deep network},
+  author={Erhan, Dumitru and Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
+  journal={University of Montreal},
+  volume={1341},
+  number={3},
+  pages={1},
+  year={2009}
+}
+
+@inproceedings{stl10,
+  title={An analysis of single-layer networks in unsupervised feature learning},
+  author={Coates, Adam and Ng, Andrew and Lee, Honglak},
+  booktitle={Proceedings of the fourteenth international conference on artificial intelligence and statistics},
+  pages={215--223},
+  year={2011}
+}
+
+@inproceedings{agrawal2014analyzing,
+  title={Analyzing the performance of multilayer neural networks for object recognition},
+  author={Agrawal, Pulkit and Girshick, Ross and Malik, Jitendra},
+  booktitle=ECCV,
+  pages={329--344},
+  year={2014},
+  organization={Springer}
+}
+
+@inproceedings{yosinski2014transferable,
+  title={How transferable are features in deep neural networks?},
+  author={Yosinski, Jason and Clune, Jeff and Bengio, Yoshua and Lipson, Hod},
+  booktitle=NeurIPS,
+  year={2014}
+}
+
+@inproceedings{zhou2014object,
+  title={Object detectors emerge in deep scene cnns},
+  author={Zhou, Bolei and Khosla, Aditya and Lapedriza, Agata and Oliva, Aude and Torralba, Antonio},
+  booktitle=ICLR,
+  year={2015}
+}
+
+@inproceedings{mahendran15understanding,
+ author = {Aravindh Mahendran and Andrea Vedaldi},
+ booktitle =CVPR,
+ title = {Understanding Deep Image Representations by Inverting Them},
+ year = {2015}
+}
+
+@inproceedings{nguyen2016synthesizing,
+  title={Synthesizing the preferred inputs for neurons in neural networks via deep generator networks},
+  author={Nguyen, Anh and Dosovitskiy, Alexey and Yosinski, Jason and Brox, Thomas and Clune, Jeff},
+  booktitle=NeurIPS,
+  year={2016}
+}
+
+@inproceedings{krizhevsky2012imagenet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  booktitle=NIPS,
+  year={2012}
+}
+
+
+@InProceedings{Koh2017understanding,
+  title = 	 {Understanding Black-box Predictions via Influence Functions},
+  author = 	 {Pang Wei Koh and Percy Liang},
+  booktitle = 	ICML,
+  year = 	 {2017},
+}
+
+@article{cook1980characterizations,
+  title={Characterizations of an empirical influence function for detecting influential cases in regression},
+  author={Cook, R Dennis and Weisberg, Sanford},
+  journal={Technometrics},
+  volume={22},
+  number={4},
+  pages={495--508},
+  year={1980},
+  publisher={Taylor \& Francis Group}
+}
+
+@inproceedings{torralba2011unbiased,
+  title={Unbiased look at dataset bias},
+  author={Torralba, Antonio and Efros, Alexei A},
+  booktitle=CVPR,
+  pages={1521--1528},
+  year={2011},
+  organization={IEEE}
+}
+
+
+@incollection{ponce2006dataset,
+  title={Dataset issues in object recognition},
+  author={Ponce, Jean and Berg, Tamara L and Everingham, Mark and Forsyth, David A and Hebert, Martial and Lazebnik, Svetlana and Marszalek, Marcin and Schmid, Cordelia and Russell, Bryan C and Torralba, Antonio and others},
+  booktitle={Toward category-level object recognition},
+  pages={29--48},
+  year={2006},
+}
+@inproceedings{bau2017network,
+  title={Network dissection: Quantifying interpretability of deep visual representations},
+  author={Bau, David and Zhou, Bolei and Khosla, Aditya and Oliva, Aude and Torralba, Antonio},
+  booktitle=CVPR,
+  year={2017},
+}
+
+@inproceedings{zeiler2014visualizing,
+  title={Visualizing and understanding convolutional networks},
+  author={Zeiler, Matthew D and Fergus, Rob},
+  booktitle=ECCV,
+  year={2014},
+}
+
+@inproceedings{simonyan2013deep,
+  title={Deep inside convolutional networks: Visualising image classification models and saliency maps},
+  author={Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  booktitle={ICLR Workshop},
+  year={2013}
+}
+% data importance
+@article{lapedriza2013all,
+  title={Are all training examples equally valuable?},
+  author={Lapedriza, Agata and Pirsiavash, Hamed and Bylinskii, Zoya and Torralba, Antonio},
+  journal={arXiv preprint arXiv:1311.6510},
+  year={2013}
+}
+
+@article{chen2017targeted,
+  title={Targeted backdoor attacks on deep learning systems using data poisoning},
+  author={Chen, Xinyun and Liu, Chang and Li, Bo and Lu, Kimberly and Song, Dawn},
+  journal={arXiv preprint arXiv:1712.05526},
+  year={2017}
+}
+
+@inproceedings{li2016data,
+  title={Data poisoning attacks on factorization-based collaborative filtering},
+  author={Li, Bo and Wang, Yining and Singh, Aarti and Vorobeychik, Yevgeniy},
+  booktitle=NIPS,
+  year={2016}
+}
+
+% pages={1885--1893},
+@inproceedings{angelova2005pruning,
+  title={Pruning training sets for learning of object categories},
+  author={Angelova, Anelia and Abu-Mostafam, Yaser and Perona, Pietro},
+  booktitle=CVPR,
+  year={2005},
+}
+
+@article{felzenszwalb2010object,
+  title={Object detection with discriminatively trained part-based models},
+  author={Felzenszwalb, Pedro F and Girshick, Ross B and McAllester, David and Ramanan, Deva},
+  journal=PAMI,
+  volume={32},
+  number={9},
+  pages={1627--1645},
+  year={2010},
+  publisher={IEEE}
+}
+
+@inproceedings{shrivastava2016training,
+  title={Training region-based object detectors with online hard example mining},
+  author={Shrivastava, Abhinav and Gupta, Abhinav and Girshick, Ross},
+  booktitle=CVPR,
+  year={2016}
+}
+
+@article{tong2001support,
+  title={Support vector machine active learning with applications to text classification},
+  author={Tong, Simon and Koller, Daphne},
+  journal=JMLR,
+  volume={2},
+  number={Nov},
+  pages={45--66},
+  year={2001}
+}
+
+@article{cohn1996active,
+  title={Active learning with statistical models},
+  author={Cohn, David A and Ghahramani, Zoubin and Jordan, Michael I},
+  journal={Journal of artificial intelligence research},
+  volume={4},
+  pages={129--145},
+  year={1996}
+}
+
+% MNIST
+@article{lecun1998gradient,
+  title={Gradient-based learning applied to document recognition},
+  author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278--2324},
+  year={1998},
+  publisher={IEEE}
+}
+
+@inproceedings{glorot2010understanding,
+  title={Understanding the difficulty of training deep feedforward neural networks},
+  author={Glorot, Xavier and Bengio, Yoshua},
+  booktitle={International conference on artificial intelligence and statistics},
+  year={2010}
+}
+
+@inproceedings{radosavovic2017data,
+  title={Data Distillation: Towards Omni-Supervised Learning},
+  author={Radosavovic, Ilija and Doll{\'a}r, Piotr and Girshick, Ross and Gkioxari, Georgia and He, Kaiming},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{hinton2015distilling,
+title	= {Distilling the Knowledge in a Neural Network},
+author	= {Geoffrey Hinton and Oriol Vinyals and Jeffrey Dean},
+year	= {2015},
+booktitle	= {NIPS Deep Learning and Representation Learning Workshop}
+}
+
+
+@inproceedings{mei2015using,
+  title={Using Machine Teaching to Identify Optimal Training-Set Attacks on Machine Learners.},
+  author={Mei, Shike and Zhu, Xiaojin},
+  booktitle=AAAI,
+  year={2015}
+}
+
+@inproceedings{biggio2012poisoning,
+  title={Poisoning attacks against support vector machines},
+  author={Biggio, Battista and Nelson, Blaine and Laskov, Pavel},
+  booktitle=ICML,
+  year={2012}
+}
+
+@article{goodfellow2014explaining,
+  title={Explaining and harnessing adversarial examples},
+  author={Goodfellow, Ian J and Shlens, Jonathon and Szegedy, Christian},
+  journal={arXiv preprint arXiv:1412.6572},
+  year={2014}
+}
+
+@article{szegedy2013intriguing,
+  title={Intriguing properties of neural networks},
+  author={Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob},
+  journal={arXiv preprint arXiv:1312.6199},
+  year={2013}
+}
+
+@inproceedings{munoz2017towards,
+  title={Towards poisoning of deep learning algorithms with back-gradient optimization},
+  author={Mu{\~n}oz-Gonz{\'a}lez, Luis and Biggio, Battista and Demontis, Ambra and Paudice, Andrea and Wongrassamee, Vasin and Lupu, Emil C and Roli, Fabio},
+  booktitle={Proceedings of the 10th ACM Workshop on Artificial Intelligence and Security},
+  pages={27--38},
+  year={2017},
+}
+
+
+@article{chen2017targeted,
+  title={Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning},
+  author={Chen, Xinyun and Liu, Chang and Li, Bo and Lu, Kimberly and Song, Dawn},
+  journal={arXiv preprint arXiv:1712.05526},
+  year={2017}
+}
+
+@article{springenberg2014striving,
+  title={Striving for simplicity: The all convolutional net},
+  author={Springenberg, Jost Tobias and Dosovitskiy, Alexey and Brox, Thomas and Riedmiller, Martin},
+  journal={arXiv preprint arXiv:1412.6806},
+  year={2014}
+}
+
+@inproceedings{ba2014deep,
+  title={Do deep nets really need to be deep?},
+  author={Ba, Jimmy and Caruana, Rich},
+  booktitle=NIPS,
+  year={2014}
+}
+
+@inproceedings{romero2014fitnets,
+  title={Fitnets: Hints for thin deep nets},
+  author={Romero, Adriana and Ballas, Nicolas and Kahou, Samira Ebrahimi and Chassang, Antoine and Gatta, Carlo and Bengio, Yoshua},
+  booktitle=ICLR,
+  year={2015}
+}
+
+@inproceedings{saenko2010adapting,
+  title={Adapting visual category models to new domains},
+  author={Saenko, Kate and Kulis, Brian and Fritz, Mario and Darrell, Trevor},
+  booktitle=ECCV,
+  year={2010},
+}
+
+@inproceedings{daume2007frustratingly,
+  author = {Daume III, Hal},
+  booktitle = ACL,
+  title = {Frustratingly Easy Domain Adaptation},
+  year = 2007
+}
+
+
+
+%   pages={213--226},
+%   organization={Springer}
+
+@inproceedings{howard2017mobilenets,
+  title={Mobilenets: Efficient convolutional neural networks for mobile vision applications},
+  author={Howard, Andrew G and Zhu, Menglong and Chen, Bo and Kalenichenko, Dmitry and Wang, Weijun and Weyand, Tobias and Andreetto, Marco and Adam, Hartwig},
+  booktitle=CVPR,
+  year={2017}
+}
+
+@inproceedings{maclaurin2015gradient,
+  title={Gradient-based hyperparameter optimization through reversible learning},
+  author={Maclaurin, Dougal and Duvenaud, David and Adams, Ryan},
+  booktitle=ICML,
+  year={2015}
+}
+
+%   pages={2113--2122},
+@article{bengio2000gradient,
+  title={Gradient-based optimization of hyperparameters},
+  author={Bengio, Yoshua},
+  journal={Neural computation},
+  volume={12},
+  number={8},
+  pages={1889--1900},
+  year={2000},
+  publisher={MIT Press}
+}
+
+@inproceedings{domke2012generic,
+  title={Generic methods for optimization-based modeling},
+  author={Domke, Justin},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={318--326},
+  year={2012}
+}
+
+@inproceedings{pedregosa2016hyperparameter,
+  title={Hyperparameter optimization with approximate gradient},
+  author={Pedregosa, Fabian},
+  booktitle=ICML,
+  year={2016}
+}
+
+%   pages={737--746},
+
+@Article{Simonyan14c,
+    author       = "Simonyan, K. and Zisserman, A.",
+    title        = "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+    journal      = "CoRR",
+    volume       = "abs/1409.1556",
+    year         = "2014"
+}
+
+@inproceedings{paszke2017automatic,
+  title={Automatic differentiation in PyTorch},
+  author={Paszke, Adam and Gross, Sam and Chintala, Soumith and Chanan, Gregory and Yang, Edward and DeVito, Zachary and Lin, Zeming and Desmaison, Alban and Antiga, Luca and Lerer, Adam},
+  booktitle=ICLRW,
+  year={2017}
+}
+
+@article{pearlmutter1994fast,
+  title={Fast exact multiplication by the Hessian},
+  author={Pearlmutter, Barak A},
+  journal={Neural computation},
+  volume={6},
+  number={1},
+  pages={147--160},
+  year={1994},
+  publisher={MIT Press}
+}
+
+@inproceedings{he2015delving,
+  title={Delving deep into rectifiers: Surpassing human-level performance on imagenet classification},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle=ICCV,
+  year={2015}
+}
+
+@misc{gretton2009covariate,
+  title={Covariate shift and local learning by distribution matching},
+  author={Gretton, Arthur and Smola, Alexander J and Huang, Jiayuan and Schmittfull, Marcel and Borgwardt, Karsten M and Sch{\"o}lkopf, Bernhard},
+  year={2009},
+  pages={131--160},
+  publisher={MIT Press}
+}
+
+@article{krahenbuhl2015data,
+  title={Data-dependent initializations of convolutional neural networks},
+  author={Kr{\"a}henb{\"u}hl, Philipp and Doersch, Carl and Donahue, Jeff and Darrell, Trevor},
+  journal={arXiv preprint arXiv:1511.06856},
+  year={2015}
+}
+
+@inproceedings{he2016deep,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle=CVPR,
+  pages={770--778},
+  year={2016}
+}
+
+@article{lecun1998mnist,
+  title={The MNIST database of handwritten digits},
+  author={LeCun, Yann},
+  journal={http://yann. lecun. com/exdb/mnist/},
+  year={1998}
+}
+
+@techreport{cifar10,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey},
+  year={2009},
+  institution={Citeseer}
+}
+
+@article{krizhevsky2012cuda,
+  title={cuda-convnet: High-performance c++/cuda implementation of convolutional neural networks},
+  author={Krizhevsky, Alex},
+  journal={https://github.com/akrizhevsky/cuda-convnet2},
+  year={2012}
+}
+
+@inproceedings{deng2009imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle=CVPR,
+  year={2009},
+}
+
+@inproceedings{motiian2017few,
+  title={Few-shot adversarial domain adaptation},
+  author={Motiian, Saeid and Jones, Quinn and Iranmanesh, Seyed and Doretto, Gianfranco},
+  booktitle=NIPS,
+  year={2017}
+}
+%   pages={6670--6680},
+@article{everingham2010pascal,
+  title={The pascal visual object classes (voc) challenge},
+  author={Everingham, Mark and Van Gool, Luc and Williams, Christopher KI and Winn, John and Zisserman, Andrew},
+  journal=IJCV,
+  volume={88},
+  number={2},
+  pages={303--338},
+  year={2010},
+  publisher={Springer}
+}
+
+@techreport{WahCUB_200_2011,
+	Title = {{The Caltech-UCSD Birds-200-2011 Dataset}},
+	Author = {Wah, C. and Branson, S. and Welinder, P. and Perona, P. and Belongie, S.},
+	Year = {2011},
+	Institution = {California Institute of Technology},
+	Number = {CNS-TR-2011-001}
+}
+
+@article{krizhevsky2014one,
+  title={One weird trick for parallelizing convolutional neural networks},
+  author={Krizhevsky, Alex},
+  journal={arXiv preprint arXiv:1404.5997},
+  year={2014}
+}
+
+@article{tsang2005core,
+  title={Core vector machines: Fast SVM training on very large data sets},
+  author={Tsang, Ivor W and Kwok, James T and Cheung, Pak-Ming},
+  journal=JMLR,
+  volume={6},
+  pages={363--392},
+  year={2005}
+}
+
+@article{baykal2018small,
+  title={Small Coresets to Represent Large Training Data for Support Vector Machines},
+  author={Baykal, Cenk and Tukan, Murad and Feldman, Dan and Rus, Daniela},
+  year={2018}
+}
+
+@article{har2007smaller,
+  title={Smaller coresets for k-median and k-means clustering},
+  author={Har-Peled, Sariel and Kushal, Akash},
+  journal={Discrete \& Computational Geometry},
+  volume={37},
+  number={1},
+  pages={3--19},
+  year={2007},
+  publisher={Springer}
+}
+
+@article{bachem2017practical,
+  title={Practical coreset constructions for machine learning},
+  author={Bachem, Olivier and Lucic, Mario and Krause, Andreas},
+  journal={arXiv preprint arXiv:1703.06476},
+  year={2017}
+}
+
+@article{olvera2010review,
+  title={A review of instance selection methods},
+  author={Olvera-L{\'o}pez, J Arturo and Carrasco-Ochoa, J Ariel and Mart{\'\i}nez-Trinidad, J Francisco and Kittler, Josef},
+  journal={Artificial Intelligence Review},
+  volume={34},
+  number={2},
+  pages={133--143},
+  year={2010},
+  publisher={Springer}
+}
+@inproceedings{sener2018active,
+    title={Active Learning for Convolutional Neural Networks: A Core-Set Approach},
+    author={Ozan Sener and Silvio Savarese},
+    booktitle=ICLR,
+    year={2018},
+}
+
+@inproceedings{netzer2011reading,
+  title={Reading digits in natural images with unsupervised feature learning},
+  author={Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Bo and Ng, Andrew Y},
+  booktitle={NIPS workshop},
+  year={2011}
+}
+
+@article{hull1994database,
+  title={A database for handwritten text recognition research},
+  author={Hull, Jonathan J.},
+  journal=PAMI,
+  volume={16},
+  number={5},
+  pages={550--554},
+  year={1994},
+}
+
+@book{rosenblatt1957perceptron,
+  title={The perceptron, a perceiving and recognizing automaton Project Para},
+  author={Rosenblatt, Frank},
+  year={1957},
+  publisher={Cornell Aeronautical Laboratory}
+}
+
+@article{hearst1998support,
+  title={Support vector machines},
+  author={Hearst, Marti A. and Dumais, Susan T and Osuna, Edgar and Platt, John and Scholkopf, Bernhard},
+  journal={IEEE Intelligent Systems and their applications},
+  volume={13},
+  number={4},
+  pages={18--28},
+  year={1998},
+  publisher={IEEE}
+}
+
+@article{goldman1995complexity,
+  title={On the complexity of teaching},
+  author={Goldman, Sally A and Kearns, Michael J},
+  journal={Journal of Computer and System Sciences},
+  volume={50},
+  number={1},
+  pages={20--31},
+  year={1995},
+  publisher={Elsevier}
+}
+
+@article{shinohara1991teachability,
+  title={Teachability in computational learning},
+  author={Shinohara, Ayumi and Miyano, Satoru},
+  journal={New Generation Computing},
+  volume={8},
+  number={4},
+  pages={337--347},
+  year={1991},
+  publisher={Springer}
+}
+
+@inproceedings{zhu2013machine,
+  title={Machine teaching for bayesian learners in the exponential family},
+  author={Zhu, Xiaojin},
+  booktitle=NIPS,
+  year={2013}
+}
+
+@inproceedings{zhu2015machine,
+  title={Machine Teaching: An Inverse Problem to Machine Learning and an Approach Toward Optimal Education.},
+  author={Zhu, Xiaojin},
+  booktitle=AAAI,
+  year={2015}
+}
+
+@inproceedings{kingma2014adam,
+  title={Adam: A method for stochastic optimization},
+  author={Kingma, Diederik and Ba, Jimmy},
+  booktitle=ICLR,
+  year={2015}
+}
+
+@article{lopes2017data,
+  title={Data-free knowledge distillation for deep neural networks},
+  author={Lopes, Raphael Gontijo and Fenu, Stefano and Starner, Thad},
+  journal={arXiv preprint arXiv:1710.07535},
+  year={2017}
+}
+
+@inproceedings{dc,
+  title={Dataset Condensation with Gradient Matching},
+  author={Zhao, Bo and Mopuri, Konda Reddy and Bilen, Hakan},
+  booktitle=ICLR,
+  year={2020}
+}
+
+@article{dm,
+  title={Dataset Condensation with Distribution Matching},
+  author={Zhao, Bo and Bilen, Hakan},
+  journal={arXiv preprint arXiv:2110.04181},
+  year={2021}
+}
+
+@inproceedings{dsa,
+  title={Dataset Condensation with Differentiable Siamese Augmentation},
+  author={Zhao, Bo and Bilen, Hakan},
+  booktitle=ICML,
+  year={2021}
+}
+
+@inproceedings{gidaris2018dynamic,
+  title={Dynamic few-shot visual learning without forgetting},
+  author={Gidaris, Spyros and Komodakis, Nikos},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{nguyen2021dataset,
+  title={Dataset distillation with infinitely wide convolutional networks},
+  author={Nguyen, Timothy and Novak, Roman and Xiao, Lechao and Lee, Jaehoon},
+  booktitle=NeurIPS,
+  year={2021}
+}
+
+@article{ulyanov2016instance,
+  title={Instance normalization: The missing ingredient for fast stylization},
+  author={Ulyanov, Dmitry and Vedaldi, Andrea and Lempitsky, Victor},
+  journal={arXiv preprint arXiv:1607.08022},
+  year={2016}
+}
+
+@inproceedings{nguyen2020dataset,
+  title={Dataset Meta-Learning from Kernel Ridge-Regression},
+  author={Nguyen, Timothy and Chen, Zhourong and Lee, Jaehoon},
+  booktitle=ICLR,
+  year={2020}
+}
+ 
+ @misc{imagenette, title={FASTAI/imagenette: A smaller subset of 10 easily classified classes from Imagenet, and a little more French}, url={https://github.com/fastai/imagenette}, journal={GitHub}, author={Fastai}} 
+ 
+ @misc{tiny, title={CS231N: Convolutional Neural Networks for visual recognition}, url={http://cs231n.stanford.edu/}, journal={Stanford University CS231n: Convolutional Neural Networks for Visual Recognition}, author={cs231n.stanford.edu}}
+  
+@article{dd,
+  title={Dataset distillation},
+  author={Wang, Tongzhou and Zhu, Jun-Yan and Torralba, Antonio and Efros, Alexei A},
+  journal={arXiv preprint arXiv:1811.10959},
+  year={2018}
+}
+
+@article{bohdal2020flexible,
+  title={Flexible Dataset Distillation: Learn Labels Instead of Images},
+  author={Bohdal, Ondrej and Yang, Yongxin and Hospedales, Timothy},
+  journal={arXiv preprint arXiv:2006.08572},
+  year={2020}
+}
+
+@inproceedings{sucholutsky2021soft,
+  title={Soft-label dataset distillation and text dataset distillation},
+  author={Sucholutsky, Ilia and Schonlau, Matthias},
+  booktitle=IJCNN,
+  year={2021},
+}
+
+@inproceedings{prabhu2020gdumb,
+  title={Gdumb: A simple approach that questions our progress in continual learning},
+  author={Prabhu, Ameya and Torr, Philip HS and Dokania, Puneet K},
+  booktitle=ECCV,
+  year={2020},
+}
+@inproceedings{rebuffi2017icarl,
+  title={icarl: Incremental classifier and representation learning},
+  author={Rebuffi, Sylvestre-Alvise and Kolesnikov, Alexander and Sperl, Georg and Lampert, Christoph H},
+  booktitle=CVPR,
+  year={2017}
+}
+
+@article{osa2018algorithmic,
+  title={An algorithmic perspective on imitation learning},
+  author={Osa, Takayuki and Pajarinen, Joni and Neumann, Gerhard and Bagnell, J Andrew and Abbeel, Pieter and Peters, Jan},
+  journal={arXiv preprint arXiv:1811.06711},
+  year={2018}
+}
+
+@article{peng2018deepmimic,
+  title={Deepmimic: Example-guided deep reinforcement learning of physics-based character skills},
+  author={Peng, Xue Bin and Abbeel, Pieter and Levine, Sergey and van de Panne, Michiel},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={37},
+  number={4},
+  pages={1--14},
+  year={2018},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{peng2021amp,
+  title={Amp: Adversarial motion priors for stylized physics-based character control},
+  author={Peng, Xue Bin and Ma, Ze and Abbeel, Pieter and Levine, Sergey and Kanazawa, Angjoo},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={40},
+  number={4},
+  pages={1--20},
+  year={2021},
+  publisher={ACM New York, NY, USA}
+}
+
+@inproceedings{ross2011reduction,
+  title={A reduction of imitation learning and structured prediction to no-regret online learning},
+  author={Ross, St{\'e}phane and Gordon, Geoffrey and Bagnell, Drew},
+  booktitle=AISTATS,
+  year={2011},
+}
+
+@inproceedings{ho2016generative,
+  title={Generative adversarial imitation learning},
+  author={Ho, Jonathan and Ermon, Stefano},
+  booktitle=NeurIPS,
+  year={2016}
+}
+
+@article{fu2020d4rl,
+  title={D4rl: Datasets for deep data-driven reinforcement learning},
+  author={Fu, Justin and Kumar, Aviral and Nachum, Ofir and Tucker, George and Levine, Sergey},
+  journal={arXiv preprint arXiv:2004.07219},
+  year={2020}
+}
+
+@misc{gulcehre2020rl,
+    title={RL Unplugged: Benchmarks for Offline Reinforcement Learning},
+    author={Caglar Gulcehre and Ziyu Wang and Alexander Novikov and Tom Le Paine
+        and  Sergio Gómez Colmenarejo and Konrad Zolna and Rishabh Agarwal and
+        Josh Merel and Daniel Mankowitz and Cosmin Paduraru and Gabriel
+        Dulac-Arnold and Jerry Li and Mohammad Norouzi and Matt Hoffman and
+        Ofir Nachum and George Tucker and Nicolas Heess and Nando deFreitas},
+    year={2020},
+    eprint={2006.13888},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+
+@article{borsos2020coresets,
+  title={Coresets via bilevel optimization for continual learning and streaming},
+  author={Borsos, Zal{\'a}n and Mutny, Mojmir and Krause, Andreas},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={14879--14890},
+  year={2020}
+}
+
+@inproceedings{masarczyk2020reducing,
+  title={Reducing catastrophic forgetting with learning on synthetic data},
+  author={Masarczyk, Wojciech and Tautkute, Ivona},
+  booktitle={CVPR Workshops},
+  year={2020}
+}
+
+@inproceedings{such2020generative,
+  title={Generative teaching networks: Accelerating neural architecture search by learning to generate synthetic training data},
+  author={Such, Felipe Petroski and Rawal, Aditya and Lehman, Joel and Stanley, Kenneth and Clune, Jeffrey},
+  booktitle=ICML,
+  year={2020},
+}
+
+
+@inproceedings{li2020soft,
+  title={Soft-label anonymous gastric x-ray image distillation},
+  author={Li, Guang and Togo, Ren and Ogawa, Takahiro and Haseyama, Miki},
+  booktitle=ICIP,
+  year={2020},
+}
+
+@article{goetz2020federated,
+  title={Federated learning via synthetic data},
+  author={Goetz, Jack and Tewari, Ambuj},
+  journal={arXiv preprint arXiv:2008.04489},
+  year={2020}
+}
+
+@article{zhou2020distilled,
+  title={Distilled one-shot federated learning},
+  author={Zhou, Yanlin and Pu, George and Ma, Xiyao and Li, Xiaolin and Wu, Dapeng},
+  journal={arXiv preprint arXiv:2009.07999},
+  year={2020}
+}
+@article{sucholutsky2020secdd,
+  title={SecDD: Efficient and Secure Method for Remotely Training Neural Networks},
+  author={Sucholutsky, Ilia and Schonlau, Matthias},
+  journal={arXiv preprint arXiv:2009.09155},
+  year={2020}
+}
+
+
+
+@inproceedings{diffaug,
+  title={Differentiable Augmentation for Data-Efficient GAN Training},
+  author={Zhao, Shengyu and Liu, Zhijian and Lin, Ji and Zhu, Jun-Yan and Han, Song},
+  booktitle=NeurIPS,
+  year={2020}
+}
+
+
+@article{tran2020towards,
+  title={Towards good practices for data augmentation in gan training},
+  author={Tran, Ngoc-Trung and Tran, Viet-Hung and Nguyen, Ngoc-Bao and Nguyen, Trung-Kien and Cheung, Ngai-Man},
+  journal={IEEE Transactions on Image Processing},
+  year={2020}
+}
+
+
+@article{zhao2020image,
+  title={Image augmentations for GAN training},
+  author={Zhao, Zhengli and Zhang, Zizhao and Chen, Ting and Singh, Sameer and Zhang, Han},
+  journal={arXiv preprint arXiv:2006.02595},
+  year={2020}
+}
+
+
+
+}
+@inproceedings{stylegan2ada,
+  title={Training generative adversarial networks with limited data},
+  author={Karras, Tero and Aittala, Miika and Hellsten, Janne and Laine, Samuli and Lehtinen, Jaakko and Aila, Timo},
+  booktitle=NeurIPS,
+  year={2020}
+}
+
+
+@inproceedings{toneva2018empirical,
+  title={An empirical study of example forgetting during deep neural network learning},
+  author={Toneva, Mariya and Sordoni, Alessandro and Combes, Remi Tachet des and Trischler, Adam and Bengio, Yoshua and Gordon, Geoffrey J},
+  booktitle=ICLR,
+  year={2018}
+}
+
+@inproceedings{chen2010super,
+  title={Super-samples from kernel herding},
+  author={Chen, Yutian and Welling, Max and Smola, Alex},
+  booktitle=UAI,
+  year={2010}
+}
+
+@inproceedings{castro2018end,
+  title={End-to-end incremental learning},
+  author={Castro, Francisco M and Mar{\'\i}n-Jim{\'e}nez, Manuel J and Guil, Nicol{\'a}s and Schmid, Cordelia and Alahari, Karteek},
+  booktitle=ECCV,
+  year={2018}
+}
+
+@inproceedings{kornia,
+  author    = {E. Riba and D. Mishkin and D. Ponsa and E. Rublee and G. Bradski},
+  title     = {Kornia: an Open Source Differentiable Computer Vision Library for PyTorch},
+  booktitle = WACV,
+  year      = {2020},
+  url       = {https://arxiv.org/pdf/1910.02190.pdf}
+}
+
+@inproceedings{alexnet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  booktitle=NeurIPS,
+  year={2012}
+}
+
+@article{vgg,
+  title={Very deep convolutional networks for large-scale image recognition},
+  author={Simonyan, Karen and Zisserman, Andrew},
+  journal={arXiv preprint arXiv:1409.1556},
+  year={2014}
+}
+
+@inproceedings{resnet,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle=CVPR,
+  year={2016}
+}
+
+
+@inproceedings{finn2017model,
+  title={Model-agnostic meta-learning for fast adaptation of deep networks},
+  author={Finn, Chelsea and Abbeel, Pieter and Levine, Sergey},
+  booktitle=ICML,
+  year={2017},
+}
+
+@article{nichol2018first,
+  title={On first-order meta-learning algorithms},
+  author={Nichol, Alex and Achiam, Joshua and Schulman, John},
+  journal={arXiv preprint arXiv:1803.02999},
+  year={2018}
+}
+
+@article{wang2022cafe,
+  title={CAFE: Learning to Condense Dataset by Aligning Features},
+  author={Wang, Kai and Zhao, Bo and Peng, Xiangyu and Zhu, Zheng and Yang, Shuo and Wang, Shuo and Huang, Guan and Bilen, Hakan and Wang, Xinchao and You, Yang},
+  journal={arXiv preprint arXiv:2203.01531},
+  year={2022}
+}

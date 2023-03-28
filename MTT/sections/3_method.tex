@@ -1,0 +1,59 @@
+\section{Method}
+\lblsec{method}
+\emph{Dataset Distillation} refers to the curation of a small, synthetic training set $\mathcal{D}_\mathsf{syn}$ such that a model trained on this synthetic data will have similar performance on the real test set as a model trained on the large, real training set $\mathcal{D}_\mathsf{real}$. In this section, we describe our method that directly mimics the long-range behavior of real-data training, matching multiple training steps on distilled data to \textit{many} more steps on the real data.
+
+
+
+In \refsec{expert}, we discuss how we obtain expert trajectories of networks trained on real datasets. In \refsec{matching}, we describe a new dataset distillation method that explicitly encourages the distilled dataset to induce similar long-range network parameter trajectories as the real dataset, resulting in a synthetically-trained network that performs similarly to a network trained on real data. Finally, \refsec{memory} describes our techniques to reduce memory consumption.
+
+
+\subsection{Expert Trajectories}
+\lblsec{expert}
+The core of our method involves using \emph{expert trajectories} $\tau^*$ to guide the distillation of our synthetic dataset. By expert trajectories, we mean the time sequence of parameters $\{\theta^*_t\}_0^T$ obtained during the training of a neural network on the \emph{full, real dataset}. To generate these expert trajectories, we simply train a large number of networks on the real dataset and save their snapshot parameters at every epoch. We call these sequences of parameters ``expert trajectories'' because they represent the theoretical upper bound for the dataset distillation task: the performance of a network trained on the full, real dataset. Similarly, we define student parameters $\hat{\theta}_t$ as the network parameters trained on synthetic images at the training step $t$. Our goal is to distill a dataset that will induce a similar trajectory (given the same starting point) as that induced by the real training set such that we end up with a similar model.
+
+Since these expert trajectories are computed using only real data, we can pre-compute them before distillation. All of our experiments for a given dataset were performed using the same pre-computed set of expert trajectories, allowing for rapid distillation and experimentation.
+
+\input{sections/algorithm}
+\subsection{Long-Range Parameter Matching}
+\lblsec{matching}
+Our distillation process learns from the generated sequences of parameters making up our expert trajectories $\{\theta^*_t\}_0^T$. Unlike previous work, our method directly encourages the long-range training dynamics induced by our synthetic dataset to match those of networks trained on the real data.
+
+At each distillation step, we first sample parameters from one of our expert trajectories at a random timestep $\theta^*_t$ and use these to initialize our student parameters $\hat{\theta}_t \coloneqq \theta^*_t$. Placing an upper bound $T^+$ on $t$ lets us ignore the less informative later parts of the expert trajectories where the parameters do not change much.
+
+With our student network initialized, we then perform $N$ gradient descent updates on the student parameters with respect to the classification loss of the \emph{synthetic} data:
+\begin{equation}
+    \hat{\theta}_{t+n+1} = \hat{\theta}_{t+n} - \alpha \nabla \ell(\mathcal{A}(\mathcal{D}_\mathsf{syn}); \hat{\theta}_{t+n}),
+\end{equation}
+where $\mathcal{A}$ is the differentiable augmentation technique~\cite{stylegan2ada,zhao2020image,tran2020towards,diffaug} used in previous work~\cite{dsa}, and $\alpha$ is the (trainable) learning rate used to update the student network. Any data augmentation used during distillation must be differentiable so that we can back-propagate through the augmentation layer to our synthetic data. Our method does not use differentiable \textit{Siamese} augmentation since there is no real data used during the distillation process; we are only applying the augmentations to synthetic data at this time. However, we do use the same types of differentiable augmentations on real data during the generation of the expert trajectories.
+
+From this point, we return to our expert trajectory and retrieve the expert parameters from $M$ training updates after those used to initialize the student network $\theta^*_{t+M}$. Finally, we update our distilled images according to the weight matching loss: i.e., the normalized squared $L_2$ error between the updated student parameters $\hat{\theta}_{t+N}$ and the known future expert parameters $\theta^*_{t+M}$:
+\begin{equation}
+    \mathcal{L} = \frac{\|\hat{\theta}_{t+N} - \theta^*_{t+M}\|^2_2}{\|\theta^*_{t} - \theta^*_{t+M}\|_2^2}, %
+    \lbleq{weight_matching}
+\end{equation}%
+where we normalize the $L_2$ error by the expert distance traveled so that we still get a strong signal from later training epochs where the expert does not move as much. This normalization also helps self-calibrate the magnitude difference across neurons and layers. We have also experimented with other choices of loss functions such as a cosine distance, but find our simple $L_2$ loss works better empirically. We also tried to match the network's output logits between expert trajectory and student network but did not see a clear improvement. We speculate that backpropagating from the network output to the weights introduces additional optimization difficulty.  %
+
+
+We then minimize this objective to update the pixels of our distilled dataset, along with our trainable learning rate $\alpha$, by back-propagating through all $N$ updates to the student network. The optimization of trainable learning rate $\alpha$ serves as automatic adjusting for the number of student and expert updates (hyperparameters $M$ and $N$).  We use SGD with momentum to optimize $\mathcal{D}_\mathsf{syn}$ and $\alpha$ with respect to the above objective. \refalg{main} illustrates our main algorithm. 
+\input{figText/table_sota_new}
+
+\subsection{Memory Constraints}
+\lblsec{memory}
+Given that we are back-propagating through many gradient descent updates, memory consumption quickly becomes an issue when our distilled dataset is sufficiently large, as we have to jointly optimize all the images of all the classes at each optimization step. To reduce memory consumption and ease the learning problem, previous methods distill one class at a time~\cite{dc, dsa, dm}, but this may not be an ideal strategy for our method since the expert trajectories are trained on all classes simultaneously.
+
+We could potentially circumvent this memory constraint by sampling a new mini-batch at every distillation step (the outer loop in Line \ref{step:outer} of \refalg{main}). 
+Unfortunately,  this comes with its own issues, as redundant information could be distilled into multiple images across the synthetic dataset, degrading to catastrophic mode collapse in the worst case.
+
+Instead, we can sample a new mini-batch $b$ for every update of the \emph{student network} (i.e., the inner loop in  Line \ref{step:inner} of \refalg{main}) such that all distilled images will have been seen by the time the final weight matching loss (\refeq{weight_matching}) is calculated. The mini-batch $b$ still contains images from different classes but has much fewer images per class. In this case, our student network update then becomes%
+\vspace{-5pt}\begin{equation}
+\begin{split}
+      & b_{t+n} \sim \mathcal{D}_\mathsf{syn}\\
+    & \hat{\theta}_{t+n+1} =\hat{\theta}_{t+n} - \alpha \nabla \ell(\mathcal{A}(b_{t+n}); \hat{\theta}_{t+n}).
+\end{split}\vspace{-10pt}
+\end{equation}%
+This method of batching allows us to distill a much larger synthetic dataset while ensuring some amount of heterogeneity among the distilled images of the same class. 
+
+
+
+
+

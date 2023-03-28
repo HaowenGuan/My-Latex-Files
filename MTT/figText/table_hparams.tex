@@ -1,0 +1,34 @@
+\begin{table}
+\renewcommand\arraystretch{0.9}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.98\linewidth}{!}{
+\begin{tabular}{ccc|ccccc}
+\toprule
+Dataset         & Model & Img/Cls & \makecell{Synthetic \\ Steps \\ ($N$)} & \makecell{Expert \\ Epochs \\($M^\dagger$)}  & \makecell{Max Start \\ Epoch \\ ($T^+$)}  & \makecell{Synthetic \\ Batch Size \\ ($|b|$)} & ZCA \\ \midrule
+
+
+\multirow{3}{*}{CIFAR-10}  & \multirow{3}{*}{ConvNetD3}      & 1   & 50   & 2  & 2 & - & Y\\
+                               & & 10  & 30    & 2  & 20 & - & Y\\
+                               & & 50  & 30      & 2 & 40  &  -  & N\\ \midrule
+                                
+\multirow{3}{*}{CIFAR-100} & \multirow{3}{*}{ConvNetD3}     & 1   & 20   & 3  &  20  & - & Y \\ 
+                              && 10  & 20      & 2  & 20  & - & N\\  
+                              && 50  & 80     & 2  & 40  & -   & Y     \\  \midrule
+
+\multirow{3}{*}{Tiny ImageNet} & \multirow{3}{*}{ConvNetD4} & 1   & 10    &  2  &  10  &  - & -\\ 
+                             & & 10  & 20      &  2  & 40  &  200 & -  \\  
+                             & & 50  & 20     & 2  & 40  & 300  & -\\  \midrule
+                              
+\multirow{2}{*}{ImageNet (All)} & \multirow{2}{*}{ConvNetD5} & 1   & 20    &  2  &  10  &  - & -\\ 
+                             & & 10  & 20      &  2  & 10  &  20  & - \\  \bottomrule
+
+\end{tabular}
+}
+\caption{Hyper-parameters used for our best-performing distillation experiments. A synthetic batch size of ``-'' indicates that we used the full support set at each synthetic step. Note: instead of number of expert \textit{updates} ($M$), here we list number of expert \textit{epochs} ($M^\dagger$) for simplicity across datasets.}
+\lbltbl{hparams}
+     \vspace{-6pt}
+\end{table}
+
+

@@ -1,0 +1,17 @@
+\begin{table}
+    \centering
+    \smaller
+    \resizebox{0.9\linewidth}{!}{
+    \begin{tabular}{cc|cccc}
+        \toprule& &\multicolumn{4}{c}{Evaluation Model}\\
+        & & ConvNet & ResNet & VGG & AlexNet  \\
+        \midrule \multirow{3}{*}{\rotatebox[origin=c]{90}{Method}} &Ours & \textbf{64.3 $\pm$ 0.7} & \textbf{46.4 $\pm$ 0.6} & \textbf{50.3 $\pm$ 0.8} & \textbf{34.2 $\pm$ 2.6}\\
+        &DSA & 52.1 $\pm$ 0.4 & 42.8 $\pm$ 1.0 & 43.2 $\pm$ 0.5 &  \textbf{35.9 $\pm$ 1.3}\\
+        &KIP & 47.6 $\pm$ 0.9 & 36.8 $\pm$ 1.0&  42.1 $\pm$ 0.4& 24.4 $\pm$ 3.9 \\\bottomrule
+    \end{tabular}
+    }
+\vspace{-6pt}
+    \caption{Despite being trained for a specific architecture, our synthetic images do not seem to suffer from much over-fitting to that model. This is evaluated on CIFAR-10 with 10 images per class.}
+    \lbltbl{cross}
+\vspace{-7pt}
+\end{table}

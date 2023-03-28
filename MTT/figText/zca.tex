@@ -1,0 +1,35 @@
+\begin{figure}[!h]
+\renewcommand\arraystretch{0.9}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.48\linewidth}{!}{
+\begin{tabular}{cc|c|ccc|cccccc|c}
+\toprule
+        Dataset & Img/Cls  & Yes-ZCA & No-ZCA \\ \midrule  %
+
+
+\multirow{3}{*}{CIFAR-10}        & 1      & 46.3 & 45.2 \\
+                                & 10     & 65.3 & 62.8\\  
+                                & 50       & 71.5 & 71.6\\ \midrule
+                                
+\multirow{3}{*}{CIFAR-100}     & 1      &  24.3 & 22.7\\ 
+                              & 10       & 39.4 & 40.1\\  
+                              & 50       & 47.7 & 47.2\\   \bottomrule
+
+
+\end{tabular}
+}
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.48\linewidth}{!}{
+\begin{tabular}{cc}
+&CIFAR-10, 10 img/cls\\
+\rotatebox[origin=c]{90}{Validation Acc. \%}& \hspace{0cm}\includegraphics[trim={0.8cm 0.4cm 0.8cm 0.4cm},clip,align=c,width=0.4\linewidth]{figures/time.pdf}\\
+&Distilling Time (mins)
+\end{tabular}
+}
+\vspace{-8pt}
+\caption{\textbf{Left}: ZCA Ablation. \textbf{Right}: Distillation Time.}
+\vspace{-8pt}
+\lblfig{zca}
+\end{figure}

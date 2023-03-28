@@ -1,0 +1,32 @@
+\begin{table}[!h]
+\renewcommand\arraystretch{0.9}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.75\linewidth}{!}{
+\begin{tabular}{cc|c|ccc}
+\toprule
+        Dataset & Img/Cls  & \makecell{1 Iter.\\(sec)} & \makecell{1k Iter.\\(min)} & \makecell{5k Iter.\\(min)} & \makecell{10k Iter.\\(min)}\\ \midrule  %
+
+
+\multirow{3}{*}{CIFAR-10}        & 1      & 0.5 & 8 & 42 & 83\\
+                                & 10     & 0.6 & 10 & 50 & 100\\  
+                                & 50       & 0.8 & 13 & 67 & 133\\ \midrule
+                                
+\multirow{3}{*}{CIFAR-100}     & 1      &  0.6 & 10 &50 & 100\\ 
+                              & 10       & 0.8 & 13 & 67 & 133\\  
+                              & 50       & 1.9 & 32 & 158 & 317\\  \midrule
+
+\multirow{3}{*}{Tiny ImageNet} & 1       &  1.1 & 18 & 92 & 183\\ 
+                              & 10      &  2.3 & 38 & 192 & 383\\  
+                              & 50      & 2.6 & 43 & 217 & 433\\  \bottomrule
+
+
+\end{tabular}
+}
+\vspace{-8pt}
+\caption{Distillation time for each dataset and support size.}
+\lbltbl{time}
+\end{table}
+
+

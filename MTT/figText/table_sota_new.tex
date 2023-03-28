@@ -1,0 +1,34 @@
+\begin{table*}[!h]
+\renewcommand\arraystretch{0.9}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.98\linewidth}{!}{
+\begin{tabular}{ccc|rrr|rrrrrrcr|c}
+\toprule
+\multirow{3}{*}{}           & \multirow{2}{*}{Img/Cls} & \multirow{2}{*}{Ratio \%} & \multicolumn{3}{c|}{Coreset Selection}   & \multicolumn{8}{c|}{Training Set Synthesis} & \multirow{2}{*}{Full Dataset} \\ %
+                            & &                & \multicolumn{1}{c}{Random}        & \multicolumn{1}{c}{Herding}       & \multicolumn{1}{c|}{Forgetting}     & \multicolumn{1}{c}{\texttt{DD}$^\dagger$\cite{dd}}  & \multicolumn{1}{c}{\texttt{LD}$^\dagger$\cite{bohdal2020flexible}} & \multicolumn{1}{c}{\texttt{DC} \cite{dc}}             & \multicolumn{1}{c}{\texttt{DSA} \cite{dsa}} 					& \multicolumn{1}{c}{\texttt{DM} \cite{dm}}         & \multicolumn{1}{c}{\texttt{CAFE} \cite{wang2022cafe}}         &\multicolumn{1}{c}{\texttt{CAFE+DSA} \cite{wang2022cafe}}         & \multicolumn{1}{c|}{Ours} &    \\ \midrule
+
+
+\multirow{3}{*}{CIFAR-10}        & 1   & 0.02   & 14.4 $\pm$ 2.0  & 21.5 $\pm$ 1.2  & 13.5 $\pm$ 1.2   & \multicolumn{1}{c}{-}             & 25.7 $\pm$ 0.7  & 28.3 $\pm$ 0.5 & 28.8 $\pm$ 0.7 & 26.0 $\pm$ 0.8 & 30.3 $\pm$ 1.1 & 31.6 $\pm$ 0.8 & \bf{46.3 $\pm$ 0.8\anote\;} & \multirow{3}{*}{84.8 $\pm$ 0.1} \\
+                                & 10  & 0.2    & 26.0 $\pm$ 1.2  & 31.6 $\pm$ 0.7  & 23.3 $\pm$ 1.0   & 36.8 $\pm$ 1.2  & 38.3 $\pm$ 0.4  & 44.9 $\pm$ 0.5  & 52.1 $\pm$ 0.5  	& 48.9 $\pm$ 0.6 & 46.3 $\pm$ 0.6 & 50.9 $\pm$ 0.5 & \bf{65.3 $\pm$ 0.7\anote\;}          \\  
+                                & 50  & 1      & 43.4 $\pm$ 1.0  & 40.4 $\pm$ 0.6  & 23.3 $\pm$ 1.1   & \multicolumn{1}{c}{-}             & 42.5 $\pm$ 0.4  & 53.9 $\pm$ 0.5  & 60.6 $\pm$ 0.5          & 63.0 $\pm$ 0.4 & 55.5 $\pm$ 0.6 & 62.3 $\pm$ 0.4 & \bf{71.6 $\pm$ 0.2\;}&  \\ \midrule
+                                
+\multirow{3}{*}{CIFAR-100}     & 1   & 0.2    &  4.2 $\pm$ 0.3  &  8.4 $\pm$ 0.3  &  4.5 $\pm$ 0.2   & \multicolumn{1}{c}{-}             & 11.5 $\pm$ 0.4  & 12.8 $\pm$ 0.3  & 13.9 $\pm$ 0.3    		& 11.4 $\pm$ 0.3 &12.9 $\pm$ 0.3 & 14.0 $\pm$ 0.3 &  \bf{24.3 $\pm$ 0.3\anote\;} & \multirow{3}{*}{56.2 $\pm$ 0.3}\\ 
+                              & 10  & 2      & 14.6 $\pm$ 0.5  & 17.3 $\pm$ 0.3  & 15.1 $\pm$ 0.3   & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}             & 25.2 $\pm$ 0.3  & 32.3 $\pm$ 0.3    		& 29.7 $\pm$ 0.3  & 27.8 $\pm$ 0.3 & 31.5 $\pm$ 0.2 &   \bf{40.1 $\pm$ 0.4\;}           \\  
+                              & 50  & 10     & 30.0 $\pm$ 0.4  & 33.7 $\pm$ 0.5  & 30.5 $\pm$ 0.3   & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}             &   42.8 $\pm$ 0.4                    & 43.6 $\pm$ 0.4  & 37.9 $\pm$ 0.3 & 42.9 $\pm$ 0.2 &      \bf{47.7 $\pm$  0.2\anote\;}        \\  \midrule
+
+\multirow{3}{*}{Tiny ImageNet} & 1   & 0.2    &  1.4 $\pm$ 0.1  &  2.8 $\pm$ 0.2  &  1.6 $\pm$ 0.1   & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}               & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}    		            &  3.9 $\pm$ 0.2  & \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} &\bf{8.8 $\pm$ 0.3\;}  & \multirow{3}{*}{37.6 $\pm$ 0.4}\\ 
+                              & 10  & 2      &  5.0 $\pm$ 0.2  &  6.3 $\pm$ 0.2  &  5.1 $\pm$ 0.2   & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}               & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}  		            & 12.9 $\pm$ 0.4  &          \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} &\bf{23.2 $\pm$ 0.2\;}      \\  
+                              & 50  & 10     & 15.0 $\pm$ 0.4  & 16.7 $\pm$ 0.3  & 15.0 $\pm$ 0.3   & \multicolumn{1}{c}{-}             & \multicolumn{1}{c}{-}               & \multicolumn{1}{c}{-}             &   \multicolumn{1}{c}{-}                   &24.1 $\pm$ 0.3  &         \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} &\bf{28.0 $\pm$ 0.3\;}       \\  \bottomrule
+
+
+\end{tabular}
+}
+\vspace{-7pt}
+\caption{Comparing distillation and coreset selection methods. As in previous work, we distill the given number of images per class using the training set, train a neural network on the synthetic set, and evaluate on the test set. To get $\Bar{x}\pm s$, we train 5 networks from scratch on the distilled dataset. Note that the earlier works \texttt{DD}$^\dagger$ and \texttt{LD}$^\dagger$ use different architectures, \ie LeNet \citep{lecun1998gradient} for MNIST and AlexNet \citep{alexnet} for CIFAR-10. All others use a 128-width ConvNet. CIFAR values marked by ($*$) signify best results were obtained with ZCA whitening.}
+\lbltbl{sota}
+     \vspace{-6pt}
+\end{table*}
+
+

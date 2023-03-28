@@ -1,0 +1,21 @@
+
+\begin{table}
+\centering\vspace{-8pt}
+\resizebox{0.95\linewidth}{!}{
+\begin{tabular}{@{}ccc|c|cc}
+\toprule
+ & Img/Cls & Ratio \% & \makecell{KIP to NN \\ (1024-width)}&\makecell{KIP to NN\\ (128-width)}& \makecell{Ours \\ (128-width)} \\ \midrule 
+\multirow{3}{*}{CIFAR-10}  & 1 & 0.02 & 49.9 & 38.3 & \textbf{46.3} \\
+                          & 10 & 0.1 & 62.7 &  57.6&\bf{65.3 }\\
+                          & 50 & 1 & 68.6 & 65.8 &\bf{71.5 }\\ \midrule
+\multirow{2}{*}{CIFAR-100} & 1  & 0.2 & 15.7 & 18.2&\bf{24.3 }\\
+                          & 10 & 2 & 28.3 & 32.8&\bf{39.4}\\
+\bottomrule
+\end{tabular}
+}
+\vspace{-7pt}
+\caption{Kernel Inducing Point (\texttt{KIP})~\cite{nguyen2021dataset} performs distillation using the infinite-width network limit. We consistently outperform \texttt{KIP} when evaluating on the same finite-width network, and almost always outperform \texttt{KIP} applied on wider networks. }
+\lbltbl{transfer_nn}
+\vspace{-8pt}
+\end{table}
+

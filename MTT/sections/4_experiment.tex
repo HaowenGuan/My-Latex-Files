@@ -1,0 +1,135 @@
+
+\section{Experiments}
+\lblsec{expr}
+We evaluate our method on various datasets, including \begin{itemize}[topsep=1pt, partopsep=9pt, itemsep=-1pt, parsep=0.5ex]
+    \item $32\times32$ CIFAR-10 and CIFAR-100 (\refsec{low-res}), two commonly used datasets in dataset distillation literature,
+    \item $64\times 64$ Tiny ImageNet (\refsec{tiny}), a recent benchmark by the concurrent work~\cite{dm}, and 
+    \item our new $128 \times 128$ ImageNet subsets (\refsec{imagenet}).
+\end{itemize}
+We provide additional visualizations and ablation studies in the supplementary material. 
+
+
+\myparagraph{Evaluation and Baselines.} %
+We evaluate various methods according to the standard protocol: training a randomly initialized neural network from scratch on \emph{distilled} data and evaluating on the validation set. %
+
+To generate the distilled images for our method, we employ the distillation process detailed in the previous section and Algorithm \ref{alg:alg}, using the same suite of differentiable augmentations as done in previous work~\cite{dsa,dm}. The hyperparameters used for each setting (real epochs per iteration, synthetic updates per iteration, image learning rate, etc.) can be found in the supplemental material. 
+
+
+
+
+
+We compare to several recent methods including Dataset Distillation~\cite{dd} (\texttt{DD}), Flexible Dataset Distillation ~\cite{bohdal2020flexible} (\texttt{LD}), Dataset Condensation~\cite{dc} (\texttt{DC}), and Differentiable Siamese Augmentation~\cite{dsa} (\texttt{DSA}), along with a method based on the infnite-width kernel limit~\citep{nguyen2020dataset,nguyen2021dataset} (\texttt{KIP}) and concurrent works Distribution Matching~\cite{dm} (\texttt{DM}) and Aligning Features~\cite{wang2022cafe} (\texttt{CAFE}). We also compare our methods with instance selection algorithms including random selection (\texttt{random}), herding methods~\cite{chen2010super} (\texttt{herding}), and example forgetting~\cite{toneva2018empirical} (\texttt{forgetting}). 
+
+\myparagraph{Network Architectures.}
+Staying with precedent~\cite{dc, dsa, dm, nguyen2021dataset}, we mainly employ a simple ConvNet architecture designed by Gidaris and Komodakis~\cite{gidaris2018dynamic} for our distillation tasks. The architecture consists of several convolutional blocks, each containing a
+$3\times 3$ convolution layer with 128 filters, Instance normalization~\cite{ulyanov2016instance}, RELU, and $2\times2$ average pooling with stride 2. After the convoluation blocks, a single linear layer produces the logits. The exact number of such blocks is decided by the dataset resolution and is specified below for each dataset.
+Staying with this simple architecture allows us to directly analyze the effectiveness of our core method and remain comparable with previous works.
+
+\subsection{Low-Resolution Data (32$\times$32)}
+\lblsec{low-res}
+
+For low-resolution tasks, we begin with the 32$\times$32 CIFAR-10 and CIFAR-100 datasets~\cite{CIFAR10}. For these datasets, we employ ZCA whitening as done in previous work~\cite{nguyen2020dataset, nguyen2021dataset}, using the Kornia \cite{kornia} implementation with default parameters.
+Staying with precedent, we use a depth-3 ConvNet taken directly from the open-source code~\cite{dc, dsa}.
+
+As seen in \reftbl{sota}, our method significantly outperforms all baselines in every setting. In fact, on the one image per class setting, we  improve the next best method (\texttt{DSA} \cite{dsa}) to almost twice test accuracy, on both datasets. For CIFAR-10, these distilled images can be seen in \reffig{CIFAR-10}.  CIFAR-100 images are visualized in the supplementary material
+
+In  \reftbl{transfer_nn}, we also compare with a recent method \texttt{KIP}~\cite{nguyen2020dataset,nguyen2021dataset}, where the distilled data is learned with respect to the Neural Tangent Kernel. Because \texttt{KIP} training is agnostic to actual network width, we test their result on both a ConvNet of the same width as us and other methods (128) and a ConvNet of larger width (1024) (which is shown in \texttt{KIP} paper \citep{nguyen2021dataset}).  Based on the the infinite-width network limit, \texttt{KIP} may exhibit a gap with practical finite-width networks. Our method does not suffer from this limitation and generally achieves better performance.  In all settings, our method, trained on the 128-width network, outperforms \texttt{KIP} results evaluated on both widths, except for just one setting where \texttt{KIP} is applied on the much wider 1024-width network. 
+
+As noted in the previous methods \citep{dd}, we also see significant diminishing returns when allowing more images in our synthetic datasets. For instance, on CIFAR-10, we see an increase from 46.3\% to 65.3\% classification accuracy when increasing from 1 to 10 images per class, but only an increase from 65.3\% to 71.5\% when increasing the number of distilled images per class from 10 to 50.
+
+If we look at the one image per class visualizations in \reffig{CIFAR-10} (top), we see very abstract, yet still recognizable, representations of each class. When we limit the task to just one synthetic image per class, the optimization is forced to squeeze as much of the class's distinguishing information as possible into just one sample. When we allow more images in which to disperse the class's information, the optimization has the freedom to spread the class's discriminative features among the multiple samples, resulting in a diverse set of structured images we see in \reffig{CIFAR-10} (bottom) (e.g., different types of cars and horses with different poses).
+\input{figText/kip_to_nn}
+\input{figText/crossarch}
+
+\myparagraph{Cross-Architecture Generalization.}
+We also evaluate how well our synthetic data performs on architectures different from the one used to distill it on the CIFAR-10, 1 image per class task. In \reftbl{cross}, we show our baseline \linebreak ConvNet performance and evaluate on ResNet~\cite{resnet}, VGG~\cite{vgg}, and AlexNet~\cite{alexnet}. 
+ 
+For \texttt{KIP}, instead of the Kornia \cite{kornia} ZCA implementation, we use the authors' custom ZCA implementation for evaluation of their method. Our method is solidly the top performer on all the transfer models except for AlexNet where we lie within one standard deviation of \texttt{DSA}. This could be attributed to our higher baseline performance, but it still shows that our method is robust to changes in architecture.
+
+\begin{figure}
+    \centering
+    \vspace{-6pt}
+    \includegraphics[width=0.88\linewidth]{figures/CIFAR10_1_ipc.pdf}\\[-0.6ex]
+    {\smaller 1 image per class} \vspace{0.5cm}\\
+        \vspace{-0.34cm}
+
+    \includegraphics[width=0.88\linewidth, trim=0 0 0 20, clip]{figures/CIFAR10.pdf}\\[-0.6ex]
+    {\smaller 10 images per class}
+         \vspace{-7pt}
+    \caption{CIFAR-10: The 1 image per class images are more abstract but also more information-dense while the 10 images per class images are more expressive and contain more structure.}
+    \lblfig{CIFAR-10}
+         \vspace{-7pt}
+\end{figure}
+
+
+\subsection{Short-Range vs.~Long-Range Matching}
+\lblsec{shortlongrange}
+
+Unlike some prior works (\texttt{DC} and \texttt{DSA}), our method performs long-range parameter matching, where $N$ training steps on distilled data match a much larger $M$ steps on real data. Methods that optimize over entire training processes (\eg \texttt{DD} and \texttt{KIP}) can be viewed as even longer range matching. However, their performances fall short of our method (\eg in \reftbl{sota}), likely due to related instabilities or inexact approximations. Here, we experimentally confirm our hypothesis that long-range matching achieved by larger $M$ and $N$ in our method is superior to the short-range counterparts (such as small $M$ and $N$ and \texttt{DSA}).
+
+
+In \reffig{mn-alpha} (left), we evaluate our method on different settings of $M$ and $N$. Really short-range matching (with $N=1$ and small $M$) generally exhibits worse performance than long-range matching, with the best performance attained when both $N$ and $M$ are relatively large. Furthermore, as we increase $N$, the power of  $N$ combined steps (on distilled data) becomes stronger and can approximate longer-range behavior, leading to the optimal $M$ values shifting to greater values correspondingly.
+
+\input{figText/ablation_plots2}
+
+In  \reffig{mn-alpha} (right), we evaluate our method and a short-range matching work (\texttt{DSA}) on their abilities to approximate real training behavior over short and long ranges. Starting from a set of initial parameters, we set the target parameters to be the result of $\Delta_t$ training steps on real data (\ie the long-range behavior that distilled data should mimic). A small (or large) $\Delta_t$ means evaluating matching over a short (or long) range. For both methods, we test how close they can train the network (using distilled data) from the same initial parameters to the target parameters. \texttt{DSA} is only optimized to match short-range behavior, and thus errors may accumulate during longer training. Indeed, as $\Delta_t$ grows larger, \texttt{DSA} fails to mimic the real data behavior over longer ranges. In comparison, our method is optimized for long-range matching and thus performs much better.
+
+
+
+
+
+\input{figText/imagenet_table}
+
+
+\subsection{Tiny ImageNet (64$\times$64)}
+\lblsec{tiny}
+
+Introduced to the dataset distillation task by the concurrent work, Distribution Matching (\texttt{DM})~\cite{dm}, we also show the effectiveness of our algorithm on the 200 class, 64$\times$64 Tiny ImageNet~\cite{tiny} dataset (a downscaled subset of ImageNet \cite{deng2009imagenet}). %
+To account for the higher image resolution, we move up to a depth-4 ConvNet, similar to \texttt{DM}~\cite{dm}.
+
+Most dataset distillation methods (other than \texttt{DM}) are unable to handle this larger resolution due to extensive memory or time requirement, as the \texttt{DM} authors also observed \citep{dm}. In \reftbl{sota}, our method consistently outperforms the only viable such baseline, \texttt{DM}. Notably, on the 10 images per class task, our method improves the concurrent work \texttt{DM} from  12.9\% and 23.2\%. A subset of our results is shown in \reffig{tinyimagenet}. The supplementary material contains the rest of the images. %
+
+
+At 200 classes and 64$\times$64 resolution, Tiny ImageNet certainly poses a much harder task than previous datasets. Despite this, many of our distilled images are still recognizable, with a clear color, texture, or shape pattern.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/Tiny.pdf}
+         \vspace{-7pt}
+    \caption{Selected samples distilled from Tiny ImageNet, one image per class. Despite the higher resolution, our method still produces high-fidelity images. (Can you guess which classes these images represent? Check your answers in the footnote!\protect\footnotemark)}
+    \lblfig{tinyimagenet}%
+    \vspace{-7pt}
+\end{figure}
+
+\footnotetext{\smaller{Answers for \reffig{tinyimagenet}: \textbf{First Row:} African Elephant, Jellyfish, Kimono, Lampshade, Monarch} \textbf{Second Row:} Organ, Pizza, Pretzel, Teapot, Teddy}
+\subsection{ImageNet Subsets (128$\times$128)}
+\lblsec{imagenet}
+\input{figText/imagenet_fig}
+Next, we push the boundaries of dataset distillation even further by running our method on yet higher resolution images in the form of 128$\times$128 subsets of ImageNet~\cite{deng2009imagenet}. Again, due to the higher resolution, we increase the depth of our architecture and use a depth-5 ConvNet for the 128$\times$128 ImageNet subsets.
+
+
+ImageNette (assorted objects) and ImageWoof (dog breeds) are existing subsets~\cite{imagenette} designed to be easy and hard to learn respectively. We also introduce ImageFruit (fruits), ImageMeow (cats), ImageSquawk (birds), and ImageYellow (yellow-ish things) to further illustrate our algorithm. %
+
+Similar to Tiny ImageNet, most dataset distillation baselines do not scale up to our ImageNet subset settings.
+As the code of \texttt{DM}~\cite{dm} is not publicly available now, we choose to only compare to the networks trained on the full dataset. We wish to show that our method transfers well to large images and still produces meaningful results at a higher resolution. Validation set accuracies are presented in \reftbl{imagenet}.
+
+While all of the generated images are devoid of high-frequency noise, the tasks still differ in the type of distilled image they induce. For tasks where all the classes have a similar structure but unique textures like ImageSquawk (\reffig{imagenet}), the distilled images may not have much structure but instead store discriminating information in the textures.
+
+Conversely, for tasks where all classes have similar color or textures like ImageYellow (\reffig{imagenet}), the distilled images seem to diverge from their common trait and accentuate the structure or secondary color that makes them unique. Specifically, note the differences between the distilled ``Banana'' images for the ImageFruit and ImageYellow (bottom row, \reffig{imagenet}). Although the expert trajectory-generating networks saw the same ``Banana'' training images, the distilled images differ between the two tasks. The distilled ``Banana'' for the ImageYellow task is clearly much ``greener'' than the equivalent image for the ImageFruit task. This implies that the expert networks identify different features by which to identify classes based on the other classes in the task.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

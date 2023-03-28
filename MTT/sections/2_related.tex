@@ -1,0 +1,28 @@
+\section{Related Work}
+
+
+
+\myparagraph{Dataset Distillation.}
+Dataset distillation was first introduced by Wang et al.~\cite{dd}, who proposed expressing the model weights as a function of distilled images and optimized them using gradient-based hyperparameter optimization~\cite{maclaurin2015gradient}, which is also widely used in meta-learning research \citep{finn2017model,nichol2018first}. %
+Subsequently, several works significantly improved the results by learning soft labels \cite{bohdal2020flexible,sucholutsky2021soft}, amplifying learning signal via gradient matching \cite{dc}, adopting augmentations~\cite{dsa}, and optimizing with respect to the infinite-width kernel limit \cite{nguyen2020dataset,nguyen2021dataset}. Dataset distillation has enabled various applications including continual learning~\cite{dd,dc,dsa}, efficient neural architecture search~\cite{dc,dsa}, federated learning~\cite{goetz2020federated,zhou2020distilled,sucholutsky2020secdd}, and privacy-preserving ML~\cite{sucholutsky2020secdd,li2020soft} for images, text, and medical imaging data. As mentioned in the introduction, our method does not rely on single-step behavior matching~\cite{dc,dsa},  costly unrolling of full optimization trajectories~\cite{dd,sucholutsky2021soft}, or large-scale Neural Tangent Kernel computation~\cite{nguyen2020dataset,nguyen2021dataset}. Instead, our method achieves long-range trajectory matching by transferring the knowledge from pre-trained experts. %
+
+
+Concurrent with our work, the method of Zhao and Bilen~\cite{dm} completely disregards optimization steps, instead focusing on distribution matching between synthetic and real data. While this method is applicable to higher-resolution datasets (\eg Tiny ImageNet) due to reduced memory requirements, it attains inferior performance in most cases (\eg when compared to previous works~\cite{dc,dsa}). In contrast, our method simultaneously reduces memory costs while outperforming existing works~\cite{dc,dsa} and the concurrent method~\cite{dm} on both standard benchmarks and higher-resolution datasets. 
+
+A related line of research learns a generative model to synthesize training data \cite{such2020generative,masarczyk2020reducing}. However, such methods do not generate a small-size dataset, and are thus not directly comparable with dataset distillation methods.
+
+
+
+\myparagraph{Imitation Learning.} 
+Imitation learning attempts to learn a good policy by observing a collection of expert demonstrations \cite{osa2018algorithmic,peng2018deepmimic,peng2021amp}. Behavior cloning trains the learning policy to act the same as expert demonstrations. Some more sophisticated formulations involve on-policy learning with labeling from the expert \cite{ross2011reduction}, while other approaches avoid any label at all, \eg via distribution matching
+\cite{ho2016generative}. Such methods (behavior cloning in particular) have been shown to work well in offline settings \cite{fu2020d4rl,gulcehre2020rl}. 
+Our method can be viewed as imitating a collection of expert network training trajectories, which are obtained via training on real datasets. Therefore, it can be considered as doing imitation learning over optimization trajectories.
+
+\myparagraph{Coreset and Instance Selection.}
+Similar to dataset distillation, coreset~\cite{tsang2005core,har2007smaller,bachem2017practical,sener2018active,chen2010super} and instance selection~\cite{olvera2010review} aim to select a subset of the entire training dataset, where training on this small subset achieves good performance. Most of such methods do not apply to modern deep learning, but new formulations based on bi-level optimization have shown promising results on applications like continual learning \cite{borsos2020coresets}. Related to coreset, other lines of research aim to understand which training samples are    ``valuable'' for modern machine learning, including measuring single-example accuracy \citep{lapedriza2013all} and counting misclassification rates \citep{toneva2018empirical}. In fact, dataset distillation is a generalization of such ideas, as the distilled data do not need to be realistic or come from the training set.
+
+
+
+
+
+

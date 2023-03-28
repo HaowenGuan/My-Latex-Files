@@ -1,0 +1,173 @@
+\section{Appendix}\subsection{Additional Visualizations}
+We first include some additional visualizations here. CIFAR-100 (1 image per class) can be seen in \reffig{cifar-100}. 
+All of Tiny ImageNet (1 image per class) is broken up into Figures \ref{fig:tiny1} and \ref{fig:tiny2}. We specifically show the 10 best and worst-performing distilled classes in Figures \ref{fig:tinygood} and \ref{fig:tinybad} respectively.
+We include 10 image per class visualizations of all our 128$\times$128 ImageNet subsets in Figures \ref{fig:nette_10}-\ref{fig:yellow_10}.
+
+
+
+\subsection{Additional Quantitative Results}
+
+
+\myparagraph{Analysis of learned learning rates \boldmath{$\alpha$}.}
+In \reffig{lr}, we explore the effect of our learnable synthetic step size $\alpha$. The left plot confirms that we learn different values of $\alpha$ for different combinations of $M$ and $N$. The logic here is that different numbers of synthetic steps $N$ require a different step size $\alpha$ to cover the same distance as $M$ real steps. The right plot illustrates the practical benefits of our adaptive learning rate; instead of yet another hyper-parameter to tune, our adaptive learning rate works from a wide range of initializations.
+
+
+
+\myparagraph{Effects of ZCA Whitening}
+Note that \texttt{DC}, \texttt{DSA}, and \texttt{DM} do not use ZCA normalization, while \texttt{KIP} started using ZCA as it was a ``crucial ingredient for [their] strong results.'' We report our results w/o ZCA in \reffig{zca} (Left).
+We find that ZCA normalization is \textit{not} critical to our performance. 
+However, the expert models trained without ZCA normalization take significantly longer to converge. Thus, when distilling using these models as experts, we must use a larger value of $T^+$ (and therefore save more model snapshots). When we use a larger value of $T^+$ for non-ZCA distillations, we get results comparable to or even better than those of the ZCA distillations.  
+In short, ZCA helps expert convergence but does not notably improve distillation performance. 
+
+\input{figText/zca}
+
+\subsubsection{Additional Ablation Studies}
+
+
+\myparagraph{Initialization, normalization, and augmentation.}
+In the main paper, we show ablations over several hyper-parameters. Here, we study the role of initialization, data normalization, and data augmentation for CIFAR-100 (1 image per class) in \reftbl{ablation}. For initialization in particular, recall that we typically initialize our synthetic images with real samples. Here, we evaluate initializing with Gaussian noise instead. Visualizations of these distilled sets can be seen in Figures \ref{fig:noise}-\ref{fig:noaug}. We also include a visualization of a set distilled with only one expert trajectory in \reffig{1exp}.
+\input{figText/ablation_tab}
+
+\input{figText/ablation_plots}
+\input{figText/ablation_plots3}
+
+\myparagraph{Performance w.r.t. the number of expert trajectories.}
+Since they effectively make up our method's ``training set,'' it is reasonable to assume that having more expert trajectories would lead to better performance. We see that this is indeed the case for the CIFAR-100, 1 image per class setting in \reffig{experts} (left). However, what's most interesting is the sharp, logarithmic increase in validation accuracy w.r.t. the number of experts. We note the most amount of improvement when increasing from  1 to 20 experts but see almost complete saturation by the time we reach 200. Given how high-dimensional the parameter space of a neural network is, it is remarkable that we can achieve such high performance with so few expert trajectories. \vspace{10pt}
+
+\myparagraph{Performance w.r.t. expert time-step range.}
+When we initialize our student networks, we do so at a randomly selected time-step from an expert trajectory. We find that it is important to put an upper bound on this starting time-step (\reffig{experts}, right). If the upper bound is too high, the synthetic data receives gradients from points where the experts movements are small and uninformative. If it is too low, the synthetic data is never exposed to mid and later points in the trajectories, missing out on a significant portion of the training dynamics.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/CIFAR100.pdf}
+    \caption{CIFAR-100, 1 Image Per Class}
+    \lblfig{cifar-100}
+    \vspace{-9pt}
+\end{figure}
+
+\subsection{Experiment Details}
+\myparagraph{Hyper-Parameters.}
+In \reftbl{hparams}, we enumerate the hyper-parameters used for our results reported in the main text. Limited compute forced us to batch our synthetic data for some of the larger sets. The ``ConvNet'' architectures are as explained in the main text.
+\input{figText/table_hparams}
+
+\myparagraph{Compute resources.} We had a relatively limited compute budget for our experiments, using any GPU we could access. As such, our experiments were run on a mixture of RTX2080ti, RTX3090, and RTX6000 GPUs. The largest amount of VRAM we used for a single experiment was 144GB over 6xRTX6000 GPUs.
+
+\myparagraph{Training Time.} Distillation time varied based on dataset and type and number of GPUs used. Regardless of dataset or compute resources, time per distillation iteration scaled linearly with the number of synthetic steps $N$. For CIFAR-100, 1 image per class with $N=20$, we had an average time of 0.6 seconds per distillation step when using a single RTX3090. We ran our experiments for 10000 distillation steps but saw the most improvement within the first 1000.
+
+Our distillation time, in general, is comparable to \texttt{DC/DSA}, as they also utilize a bi-level optimization. In the 10 img/class setting (for example), \texttt{DC/DSA} trains on the synthetic data for 50 epochs on the between each update. We include a sample distillation curve in \reffig{zca} (Right). Both experiments were run on RTX3090. Note that  \texttt{KIP} requires over 1,000 GPU hours.
+
+Regarding the distillation time for learning different sets on CIFAR10/100 and TinyImageNet, we report them in \reftbl{time}. Note that most improvement occurs within the first 1k iterations, but we continue training for 10k.
+\input{figText/time}
+
+\myparagraph{KIP to NN}
+In the \texttt{KIP} paper, results are presented for images distilled using the neural tangent kernel method and then evaluated by training a modified width-1024 ConvNetD3. Aside from the increased width of the finite model, the ConvNet architecture used in the \texttt{KIP} paper also has an additional 1-layer convolutional stem.
+
+Using the training notebook provided with the \texttt{KIP} paper, we perform an exhaustive search over a reasonable set of hyper-parameters for the KIP to width-128 NN problem: \texttt{checkpoint} $\in$ \{112, 335, 1000\}, \texttt{weight\_decay} $\in $ \{0, 0.0001, 0.001, 0.01\}, \texttt{aug} $\in$ \{\texttt{True}, \texttt{False}\}, \texttt{zca} $\in$ \{\texttt{True}, \texttt{False}\}, \texttt{label\_learn} $\in$ \{\texttt{True}, \texttt{False}\}, and \texttt{norm} $\in$ \{\texttt{none}, \texttt{instance}\}. The architecture originally used for KIP to NN in the \texttt{KIP} paper contained no normalization layers. However, we found that with the smaller width, this model could not even converge on the synthetic training data for CIFAR-100, so we added instance normalization layers as found in the ConvNets we and \texttt{DC}, \texttt{DSA}, and \texttt{DM} use.
+
+In \reftbl{kip_hyperparams}, we include the optimal hyper-parameters from this search that were used to obtain the KIP to NN (128\nobreakdash-width) values reported in the main text.
+
+\input{figText/kip_to_nn_params}
+
+
+
+
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/Tiny_Good.pdf}
+    \vspace{-20pt}
+    \caption{Most-correct distilled images for Tiny ImageNet \smaller{($\geq 30\%$)}}
+    \label{fig:tinygood}
+    \vspace{-8pt}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/Tiny_Bad.pdf}
+    \vspace{-8pt}
+    \caption{Least-correct distilled images for Tiny ImageNet \smaller{($\leq 4\%$)}}
+    \label{fig:tinybad}
+    \vspace{-8pt}
+\end{figure}
+
+
+\clearpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/cifar100-noise.pdf}
+    \caption{CIFAR-100, Initialized as Random Noise}
+    \label{fig:noise}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/cifar100-nozca.pdf}
+    \caption{CIFAR-100, No ZCA Whitening}
+    \label{fig:nozca}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/cifar100-noaug.pdf}
+    \caption{CIFAR-100, No Differentiable Augmentation}
+    \label{fig:noaug}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/cifar100-single.pdf}
+    \caption{CIFAR-100, Only 1 Expert Trajectory}
+    \label{fig:1exp}
+\end{figure}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/tiny_all_1.pdf}
+    \caption{Tiny ImageNet, 1 Image Per Class (Classes 1-100)}
+    \label{fig:tiny1}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/tiny_all_2.pdf}
+    \caption{Tiny ImageNet, 1 Image Per Class (Classes 101-200)}
+    \label{fig:tiny2}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imagenette_all.pdf}
+    \caption{ImageNette, 10 Images Per Class}
+    \label{fig:nette_10}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imagewoof_all.pdf}
+    \caption{ImageWoof, 10 Images Per Class}
+    \label{fig:woof_10}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imagesquawk_all.pdf}
+    \caption{ImageSquawk, 10 Images Per Class}
+    \label{fig:squawk_10}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imagemeow_all.pdf}
+    \caption{ImageMeow, 10 Images Per Class}
+    \label{fig:meow_10}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imagefruit_all.pdf}
+    \caption{ImageFruit, 10 Images Per Class}
+    \label{fig:fruit_10}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/imagenet_10/imageyellow_all.pdf}
+    \caption{ImageYellow, 10 Images Per Class}
+    \label{fig:yellow_10}
+\end{figure*}
+\vfill\break

@@ -1,0 +1,20 @@
+
+\begin{table}
+\centering\vspace{-8pt}
+\resizebox{0.95\linewidth}{!}{
+\begin{tabular}{cc|cccccc}
+\toprule
+ & Img/Cls  & \makecell{Learn\\Labels} & Aug. & ZCA & Norm & \makecell{Weight\\Decay} & Ckpt.\\ \midrule 
+\multirow{3}{*}{CIFAR-10}  & 1  & N & Y & Y & N & 0.001 & 1000\\
+                          & 10  & N &  N & Y & N & 0.001 & 112\\
+                          & 50  & N & N & Y & I & 0.01 & 112\\ \midrule
+\multirow{2}{*}{CIFAR-100} & 1   & N & N & Y & I & 0.001 & 1000\\
+                          & 10  & N & N & N & I & 0.001 & 1000\\
+\bottomrule
+\end{tabular}
+}
+\caption{Optimal hyper-parameters for our reported width-128 KIP to NN results. These were obtained via grid search using the notebook provided by the KIP authors.}
+\lbltbl{kip_hyperparams}
+\vspace{-8pt}
+\end{table}
+

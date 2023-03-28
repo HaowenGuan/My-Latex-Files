@@ -1,0 +1,14 @@
+
+\begin{table}[!h]
+    \centering
+        \smaller
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{c|cccc}
+       \toprule Setting  &  Ours & Gauss. Init. &  w/o ZCA & w/o Diff. Aug.\\
+       \midrule Acc. & 24.3 $\pm$ 0.3 &  22.9 $\pm$ 0.4 & 19.1 $\pm$ 0.6 & 20.7 $\pm$ 0.7\\
+       \bottomrule
+    \end{tabular}
+    }
+    \caption{As we ablate our categorical hyper-parameters, we still achieve state-of-the-art performance (compared to \texttt{DSA}: 13.9\%). This is evaluated on CIFAR-100 with 1 image per class. Each design choice in our final method improves the performance of distilled images.  Here we use the default set of hyper-parameters for these ablations.}%
+    \lbltbl{ablation}
+\end{table}

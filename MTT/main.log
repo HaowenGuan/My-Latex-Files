@@ -1,0 +1,2149 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.15)  27 MAR 2023 09:37
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/data/VisualStudioProjects/HaowenGuan.github.io/My-Latex-Files/MTT/main.tex
+(/Users/data/VisualStudioProjects/HaowenGuan.github.io/My-Latex-Files/MTT/main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (./cvpr.sty
+Package: cvpr 2021/08/23 Example LaTex class for IEEE CVPR
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/silence/silence.sty
+Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
+\sl@Save=\count193
+\sl@StateNumber=\count194
+\sl@MessageCount=\count195
+\sl@Casualties=\count196
+\sl@Filter=\toks16
+\sl@Message=\toks17
+\sl@UnexpandedMessage=\toks18
+\sl@Mess@ge=\toks19
+\sl@WarningCount=\count197
+\sl@WarningNumber=\count198
+\sl@WarningCasualties=\count199
+\sl@TempBOW=\toks20
+\sl@BankOfWarnings=\toks21
+LaTeX Info: Redefining \GenericWarning on input line 433.
+\sl@ErrorCount=\count266
+\sl@ErrorNumber=\count267
+\sl@ErrorCasualties=\count268
+\sl@TempBOE=\toks22
+\sl@BankOfErrors=\toks23
+LaTeX Info: Redefining \GenericError on input line 601.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count269
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+\caption@tempdima=\dimen139
+\captionmargin=\dimen140
+\caption@leftmargin=\dimen141
+\caption@rightmargin=\dimen142
+\caption@width=\dimen143
+\caption@indent=\dimen144
+\caption@parindent=\dimen145
+\caption@hangindent=\dimen146
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count270
+\c@continuedfloat=\count271
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count272
+\c@subtable=\count273
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+\cvprrulerbox=\box50
+\cvprrulercount=\count274
+\cvprruleroffset=\dimen147
+\cv@lineheight=\dimen148
+\cv@boxheight=\dimen149
+\cv@tmpbox=\box51
+\cv@refno=\count275
+\cv@tot=\count276
+\cv@tmpc@=\count277
+\cv@tmpc=\count278
+) (./packages.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen152
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen153
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count279
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count280
+\leftroot@=\count281
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count282
+\DOTSCASE@=\count283
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen154
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count284
+\c@MaxMatrixCols=\count285
+\dotsspace@=\muskip17
+\c@parentequation=\count286
+\dspbrk@lvl=\count287
+\tag@help=\toks26
+\row@=\count288
+\column@=\count289
+\maxfields@=\count290
+\andhelp@=\toks27
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
+\@envbody=\toks28
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count291
+\@cmidlb=\count292
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count293
+\@lastruleclass=\count294
+\@thisrulewidth=\dimen173
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/duckuments/duckuments.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count295
+\l__pdf_internal_box=\box54
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: duckuments 2019-10-03 v0.5 minimal working duckuments
+\g_duckuments_blindduck_start_int=\count296
+\g_duckuments_blindduck_end_int=\count297
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count298
+\float@exts=\toks30
+\float@box=\box55
+\@float@everytoks=\toks31
+\@floatcapt=\box56
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks32
+\c@algorithm=\count299
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count300
+\c@ALG@rem=\count301
+\c@ALG@nested=\count302
+\ALG@tlm=\skip52
+\ALG@thistlm=\skip53
+\c@ALG@Lnr=\count303
+\c@ALG@blocknr=\count304
+\c@ALG@storecount=\count305
+\c@ALG@tmpcounter=\count306
+\ALG@tmplength=\skip54
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen174
+\calc@Bdimen=\dimen175
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count309
+\calc@Cskip=\skip57
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count310
+\l_MT_multwidth_dim=\dimen176
+\origjot=\skip58
+\l_MT_shortvdotswithinadjustabove_dim=\dimen177
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen178
+\l_MT_above_intertext_sep=\dimen179
+\l_MT_below_intertext_sep=\dimen180
+\l_MT_above_shortintertext_sep=\dimen181
+\l_MT_below_shortintertext_sep=\dimen182
+\xmathstrut@box=\box57
+\xmathstrut@dim=\dimen183
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/moresize/moresize.sty
+Package: moresize 1999/07/26 v1.9 (more font sizes)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen184
+\epsfysize=\dimen185
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+\MT@toks=\toks33
+\MT@tempbox=\box58
+\MT@count=\count311
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1195.
+\MT@outer@kern=\dimen186
+LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
+\MT@listname@count=\count312
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2022/03/14 v3.0d Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 900.
+LaTeX Info: Redefining \lslig on input line 900.
+\MT@outer@space=\skip59
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen187
+\dashlinegap=\dimen188
+\adl@box=\box59
+\adl@height=\dimen189
+\adl@heightsave=\dimen190
+\adl@depth=\dimen191
+\adl@depthsave=\dimen192
+\adl@finaldepth=\dimen193
+\adl@columns=\count313
+\adl@ncol=\count314
+\adl@currentcolumn=\count315
+\adl@currentcolumnsave=\count316
+\adl@totalheight=\count317
+\adl@totalheightsave=\count318
+\adl@dash=\count319
+\adl@gap=\count320
+\adl@cla=\count321
+\adl@clb=\count322
+\adl@everyvbox=\toks34
+\adl@LTpagetotal=\dimen194
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen195
+\ar@mcellbox=\box60
+\extrarowheight=\dimen196
+\NC@list=\toks35
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box61
+)
+\TX@col@width=\dimen197
+\TX@old@table=\dimen198
+\TX@old@col=\dimen199
+\TX@target=\dimen256
+\TX@delta=\dimen257
+\TX@cols=\count323
+\TX@ftn=\toks36
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks37
+\XKV@tempa@toks=\toks38
+)
+\XKV@depth=\count324
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box62
+)
+\tc@llx=\dimen258
+\tc@lly=\dimen259
+\tc@urx=\dimen260
+\tc@ury=\dimen261
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen262
+\adjbox@Height=\dimen263
+\adjbox@Depth=\dimen264
+\adjbox@Totalheight=\dimen265
+\adjbox@pwidth=\dimen266
+\adjbox@pheight=\dimen267
+\adjbox@pdepth=\dimen268
+\adjbox@ptotalheight=\dimen269
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count325
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box63
+\sift@deathcycles=\count326
+\@vwid@loff=\dimen270
+\@vwid@roff=\dimen271
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks39
+\minrowclearance=\skip62
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen272
+\WF@size=\dimen273
+\c@WF@wrappedlines=\count327
+\WF@box=\box64
+\WF@everypar=\toks40
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen274
+\c@nlinenum=\count328
+\TeXr@lab=\toks41
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count329
+\multirow@dima=\skip64
+\bigstrutjot=\dimen275
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/overpic/overpic.sty
+Package: overpic 2020/02/22 1.3 picture overlays (RN)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count330
+\d@lta=\count331
+\@delta=\dimen276
+\@@delta=\dimen277
+\@gridcnt=\count332
+\@joinkind=\count333
+\@dotgap=\dimen278
+\@ddotgap=\dimen279
+\@x@diff=\count334
+\@y@diff=\count335
+\x@diff=\dimen280
+\y@diff=\dimen281
+\@dotbox=\box65
+\num@segments=\count336
+\num@segmentsi=\count337
+\@datafile=\read2
+)
+\OVP@box=\box66
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphbox/graphbox.sty
+Package: graphbox 2018/01/17 v1.1 extension for graphicx to adjust containing box
+\Gin@box@box=\box67
+\Gin@box@width=\skip65
+\Gin@box@height=\skip66
+\Gin@box@raise=\skip67
+\Gin@box@hspace=\skip68
+\Gin@box@bwidth=\skip69
+\Gin@box@bheight=\skip70
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks42
+\@arclen=\dimen282
+\@arcrad=\dimen283
+\pIIe@tempdima=\dimen284
+\pIIe@tempdimb=\dimen285
+\pIIe@tempdimc=\dimen286
+\pIIe@tempdimd=\dimen287
+\pIIe@tempdime=\dimen288
+\pIIe@tempdimf=\dimen289
+)
+\diagbox@boxa=\box68
+\diagbox@boxb=\box69
+\diagbox@boxm=\box70
+\diagbox@wd=\dimen290
+\diagbox@ht=\dimen291
+\diagbox@insepl=\dimen292
+\diagbox@insepr=\dimen293
+\diagbox@outsepl=\dimen294
+\diagbox@outsepr=\dimen295
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+\symboldstmry=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip71
+\L@UnitsRaiseTextstyle=\skip72
+\L@UnitsRaiseScriptstyle=\skip73
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count338
+\cp@tempcnt=\count339
+LaTeX Info: Redefining \checkoddpage on input line 59.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/extramarks.sty
+Package: extramarks 2021/01/28 v4.0.1 Extra marks for LaTeX
+\@temptokenb=\toks43
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip74
+\f@nch@O@elh=\skip75
+\f@nch@O@erh=\skip76
+\f@nch@O@olh=\skip77
+\f@nch@O@orh=\skip78
+\f@nch@O@elf=\skip79
+\f@nch@O@erf=\skip80
+\f@nch@O@olf=\skip81
+\f@nch@O@orf=\skip82
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks44
+\SOUL@lasttoken=\toks45
+\SOUL@cmds=\toks46
+\SOUL@buffer=\toks47
+\SOUL@token=\toks48
+\SOUL@spaceskip=\skip83
+\SOUL@ttwidth=\dimen296
+\SOUL@uldp=\dimen297
+\SOUL@ulht=\dimen298
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen299
+\Hy@linkcounter=\count340
+\Hy@pagecounter=\count341
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count342
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4018.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing ON on input line 4155.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+))
+\c@Hy@tempcnt=\count343
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen300
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count344
+\Field@Width=\dimen301
+\Fld@charsize=\dimen302
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing ON on input line 6040.
+Package hyperref Info: Link coloring ON on input line 6045.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count345
+\c@Item=\count346
+\c@Hfootnote=\count347
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+\Fld@listcount=\count348
+\c@bookmark@seq@number=\count349
+\Hy@SectionHShift=\skip84
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip85
+\enit@outerparindent=\dimen303
+\enit@toks=\toks49
+\enit@inbox=\box71
+\enit@count@id=\count350
+\enitdp@description=\count351
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count352
+\c@@ppsavesec=\count353
+\c@@ppsaveapp=\count354
+)) (./macros.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
+\bibhang=\skip86
+\bibsep=\skip87
+LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \citenum on input line 708.
+\c@NAT@ctr=\count355
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
+)
+LaTeX Info: Redefining \onedot on input line 256.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `algorithmicx' support loaded on input line 3120.
+Package cleveref Info: always capitalise cross-reference names on input line 7830.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 25.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen304
+\caption@adjustwidth@linewidth=\dimen305
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ ABD: EveryShipout initializing macros (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count356
+\scratchdimen=\dimen306
+\scratchbox=\box72
+\nofMPsegments=\count357
+\nofMParguments=\count358
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count359
+\MPscratchDim=\dimen307
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
+\everyMPtoPDFconversion=\toks51
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \microtypecontext on input line 25.
+Package microtype Info: Applying patch `item' on input line 25.
+Package microtype Info: Applying patch `toc' on input line 25.
+Package microtype Info: Applying patch `eqnum' on input line 25.
+Package microtype Info: Applying patch `footnote' on input line 25.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 25.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+Package backref Info: ** backref set up for natbib ** on input line 25.
+Package hyperref Info: Link coloring ON on input line 25.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count362
+)
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+ (./figText/teaser.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 54.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 54.
+
+<figures/cover/cifar/apple_0.pdf, id=6, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/apple_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/apple_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/apple_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/camel_0.pdf, id=7, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/camel_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/camel_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/camel_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/clock_0.pdf, id=8, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/clock_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/clock_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/clock_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/fox_0.pdf, id=9, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/fox_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/fox_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/fox_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/kangaroo_0.pdf, id=10, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/kangaroo_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/kangaroo_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/kangaroo_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/orange_0.pdf, id=11, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/orange_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/orange_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/orange_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/orchid_0.pdf, id=12, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/orchid_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/orchid_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/orchid_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/pear_0.pdf, id=13, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/pear_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/pear_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/pear_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/pine_tree_0.pdf, id=14, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/pine_tree_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/pine_tree_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/pine_tree_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/cifar/tulip_0.pdf, id=15, 185.0112pt x 185.0112pt>
+File: figures/cover/cifar/tulip_0.pdf Graphic file (type pdf)
+<use figures/cover/cifar/tulip_0.pdf>
+Package pdftex.def Info: figures/cover/cifar/tulip_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...tempdima \xdef \adl@rowsL {\adl@rowsL 
+                                                  (\adl@colsL /\number \adl@...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...ef \adl@rowsL {\adl@rowsL (\adl@colsL 
+                                                  /\number \adl@height );\if...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...a );\fi }\xdef \adl@rowsR {\adl@rowsR 
+                                                  (\adl@colsR /\number \adl@...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...ef \adl@rowsR {\adl@rowsR (\adl@colsR 
+                                                  /\number \adl@height );\if...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figures/cover/tiny/0_guinea_pig_0.pdf, id=16, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/0_guinea_pig_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/0_guinea_pig_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/0_guinea_pig_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/goose_0.pdf, id=17, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/goose_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/goose_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/goose_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/guacamole_0.pdf, id=18, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/guacamole_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/guacamole_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/guacamole_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/hourglass_0.pdf, id=19, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/hourglass_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/hourglass_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/hourglass_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/z_german_shepherd_0.pdf, id=20, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/z_german_shepherd_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/z_german_shepherd_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/z_german_shepherd_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/lesser_panda_0.pdf, id=21, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/lesser_panda_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/lesser_panda_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/lesser_panda_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/potpie_0.pdf, id=22, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/potpie_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/potpie_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/potpie_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/sewing_machine_0.pdf, id=23, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/sewing_machine_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/sewing_machine_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/sewing_machine_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/ladybug_0.pdf, id=24, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/ladybug_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/ladybug_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/ladybug_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/tiny/zz_triumphal_arch_0.pdf, id=25, 185.0112pt x 185.0112pt>
+File: figures/cover/tiny/zz_triumphal_arch_0.pdf Graphic file (type pdf)
+<use figures/cover/tiny/zz_triumphal_arch_0.pdf>
+Package pdftex.def Info: figures/cover/tiny/zz_triumphal_arch_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/teaser.tex:54: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.54 }]
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figures/cover/imagenet/banana_0.pdf, id=26, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/banana_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/banana_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/banana_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/church_0.pdf, id=27, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/church_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/church_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/church_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/english_sheepdog_0.pdf, id=28, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/english_sheepdog_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/english_sheepdog_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/english_sheepdog_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/flamingo_0.pdf, id=29, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/flamingo_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/flamingo_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/flamingo_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/french_horn_0.pdf, id=30, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/french_horn_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/french_horn_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/french_horn_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/golden_retriever_0.pdf, id=31, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/golden_retriever_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/golden_retriever_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/golden_retriever_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/king_penguin_0.pdf, id=32, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/king_penguin_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/king_penguin_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/king_penguin_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/siamese_cat_0.pdf, id=33, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/siamese_cat_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/siamese_cat_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/siamese_cat_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/strawberry_0.pdf, id=34, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/strawberry_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/strawberry_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/strawberry_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+<figures/cover/imagenet/tiger_0.pdf, id=35, 185.0112pt x 185.0112pt>
+File: figures/cover/imagenet/tiger_0.pdf Graphic file (type pdf)
+<use figures/cover/imagenet/tiger_0.pdf>
+Package pdftex.def Info: figures/cover/imagenet/tiger_0.pdf  used on input line 54.
+(pdftex.def)             Requested size: 46.20877pt x 46.2075pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 54.
+See the caption package documentation for explanation.
+
+) (./sections/0_abstract.tex) (./sections/1_introduction.tex
+
+pdfTeX warning: pdflatex (file ./figures/figure_2_dataset_distillation.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/figure_2_dataset_distillation.pdf, id=38, 794.97pt x 614.295pt>
+File: figures/figure_2_dataset_distillation.pdf Graphic file (type pdf)
+<use figures/figure_2_dataset_distillation.pdf>
+Package pdftex.def Info: figures/figure_2_dataset_distillation.pdf  used on input line 12.
+(pdftex.def)             Requested size: 239.85573pt x 282.93706pt.
+
+Overfull \hbox (2.71979pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `hinton2015distilling' on page 1 undefined on input line 17.
+
+
+Package natbib Warning: Citation `dd' on page 1 undefined on input line 18.
+
+
+LaTeX Warning: Reference `fig:dataset_distillation' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `bohdal2020flexible' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `sucholutsky2021soft' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `dc' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `dsa' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 1 undefined on input line 20.
+
+
+Package natbib Warning: Citation `dm' on page 1 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:teaser' on page 1 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:dataset_distillation' on page 1 undefined on input line 23.
+
+
+Package natbib Warning: Citation `dd' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `dd' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `maclaurin2015gradient' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `dc' on page 1 undefined on input line 24.
+
+
+Package natbib Warning: Citation `dsa' on page 1 undefined on input line 24.
+
+
+LaTeX Warning: Reference `sec:shortlongrange' on page 1 undefined on input line 24.
+
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figures/cover/cifar/apple_0.pdf> <./figures/cover/cifar/camel_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/camel_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/clock_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/clock_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/fox_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/fox_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/kangaroo_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/kangaroo_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/orange_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/orange_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/orchid_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/orchid_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/pear_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/pear_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/pine_tree_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/pine_tree_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/cifar/tulip_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/cifar/tulip_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/0_guinea_pig_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/0_guinea_pig_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/goose_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/goose_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/guacamole_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/guacamole_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/hourglass_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/hourglass_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/z_german_shepherd_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/z_german_shepherd_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/lesser_panda_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/lesser_panda_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/potpie_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/potpie_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/sewing_machine_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/sewing_machine_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/ladybug_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/ladybug_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/tiny/zz_triumphal_arch_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/tiny/zz_triumphal_arch_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/banana_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/banana_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/church_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/church_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/english_sheepdog_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/english_sheepdog_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/flamingo_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/flamingo_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/french_horn_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/french_horn_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/golden_retriever_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/golden_retriever_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/king_penguin_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/king_penguin_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/siamese_cat_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/siamese_cat_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/strawberry_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/strawberry_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cover/imagenet/tiger_0.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cover/imagenet/tiger_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./figText/overview.tex
+<figures/figure_3_our_method.pdf, id=141, 782.925pt x 542.025pt>
+File: figures/figure_3_our_method.pdf Graphic file (type pdf)
+<use figures/figure_3_our_method.pdf>
+Package pdftex.def Info: figures/figure_3_our_method.pdf  used on input line 4.
+(pdftex.def)             Requested size: 469.75862pt x 185.49408pt.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+
+LaTeX Warning: Reference `fig:method_traj_match' on page 1 undefined on input line 33.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 35.
+
+
+Package natbib Warning: Citation `dm' on page 2 undefined on input line 35.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 2 undefined on input line 35.
+
+
+Package natbib Warning: Citation `deng2009imagenet' on page 2 undefined on input line 36.
+
+) (./sections/2_related.tex
+
+Package natbib Warning: Citation `dd' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `maclaurin2015gradient' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `finn2017model' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `nichol2018first' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `bohdal2020flexible' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `sucholutsky2021soft' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dd' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `goetz2020federated' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `zhou2020distilled' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `sucholutsky2020secdd' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `sucholutsky2020secdd' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `li2020soft' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dd' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `sucholutsky2021soft' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `dm' on page 2 undefined on input line 10.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 10.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 10.
+
+
+Package natbib Warning: Citation `dc' on page 2 undefined on input line 10.
+
+
+Package natbib Warning: Citation `dsa' on page 2 undefined on input line 10.
+
+
+Package natbib Warning: Citation `dm' on page 2 undefined on input line 10.
+
+[2 <./figures/figure_2_dataset_distillation.pdf>]
+
+Package natbib Warning: Citation `such2020generative' on page 3 undefined on input line 12.
+
+
+Package natbib Warning: Citation `masarczyk2020reducing' on page 3 undefined on input line 12.
+
+
+Package natbib Warning: Citation `osa2018algorithmic' on page 3 undefined on input line 17.
+
+
+Package natbib Warning: Citation `peng2018deepmimic' on page 3 undefined on input line 17.
+
+
+Package natbib Warning: Citation `peng2021amp' on page 3 undefined on input line 17.
+
+
+Package natbib Warning: Citation `ross2011reduction' on page 3 undefined on input line 17.
+
+
+Package natbib Warning: Citation `ho2016generative' on page 3 undefined on input line 18.
+
+
+Package natbib Warning: Citation `fu2020d4rl' on page 3 undefined on input line 18.
+
+
+Package natbib Warning: Citation `gulcehre2020rl' on page 3 undefined on input line 18.
+
+
+Package natbib Warning: Citation `tsang2005core' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `har2007smaller' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `bachem2017practical' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `sener2018active' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `chen2010super' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `olvera2010review' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `borsos2020coresets' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `lapedriza2013all' on page 3 undefined on input line 22.
+
+
+Package natbib Warning: Citation `toneva2018empirical' on page 3 undefined on input line 22.
+
+) (./sections/3_method.tex
+
+LaTeX Warning: Reference `sec:expert' on page 3 undefined on input line 7.
+
+
+LaTeX Warning: Reference `sec:matching' on page 3 undefined on input line 7.
+
+
+LaTeX Warning: Reference `sec:memory' on page 3 undefined on input line 7.
+
+[3 <./figures/figure_3_our_method.pdf>] (./sections/algorithm.tex
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 3.
+)
+
+Package natbib Warning: Citation `stylegan2ada' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `zhao2020image' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `tran2020towards' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `diffaug' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `dsa' on page 4 undefined on input line 27.
+
+
+LaTeX Warning: Reference `alg:main' on page 4 undefined on input line 37.
+
+(./figText/table_sota_new.tex
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 27.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+Package natbib Warning: Citation `dd' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `bohdal2020flexible' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `dc' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `dsa' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `dm' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `wang2022cafe' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `wang2022cafe' on page 4 undefined on input line 27.
+
+
+Package natbib Warning: Citation `lecun1998gradient' on page 4 undefined on input line 29.
+
+
+Package natbib Warning: Citation `alexnet' on page 4 undefined on input line 29.
+
+
+Package natbib Warning: Citation `lecun1998gradient' on page 4 undefined on input line 29.
+
+
+Package natbib Warning: Citation `alexnet' on page 4 undefined on input line 29.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+Package natbib Warning: Citation `dc' on page 4 undefined on input line 42.
+
+
+Package natbib Warning: Citation `dsa' on page 4 undefined on input line 42.
+
+
+Package natbib Warning: Citation `dm' on page 4 undefined on input line 42.
+
+
+LaTeX Warning: Reference `step:outer' on page 4 undefined on input line 44.
+
+
+LaTeX Warning: Reference `alg:main' on page 4 undefined on input line 44.
+
+[4]
+
+LaTeX Warning: Reference `step:inner' on page 5 undefined on input line 47.
+
+
+LaTeX Warning: Reference `alg:main' on page 5 undefined on input line 47.
+
+
+LaTeX Warning: Reference `eq:weight_matching' on page 5 undefined on input line 47.
+
+) (./sections/4_experiment.tex
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+LaTeX Warning: Reference `sec:low-res' on page 5 undefined on input line 5.
+
+
+LaTeX Warning: Reference `sec:tiny' on page 5 undefined on input line 6.
+
+
+Package natbib Warning: Citation `dm' on page 5 undefined on input line 6.
+
+
+LaTeX Warning: Reference `sec:imagenet' on page 5 undefined on input line 7.
+
+
+LaTeX Warning: Reference `alg:alg' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `dsa' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `dm' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `dd' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `bohdal2020flexible' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `dc' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `dsa' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `dm' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `wang2022cafe' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `chen2010super' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `toneva2018empirical' on page 5 undefined on input line 21.
+
+
+Package natbib Warning: Citation `dc' on page 5 undefined on input line 24.
+
+
+Package natbib Warning: Citation `dsa' on page 5 undefined on input line 24.
+
+
+Package natbib Warning: Citation `dm' on page 5 undefined on input line 24.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 5 undefined on input line 24.
+
+
+Package natbib Warning: Citation `gidaris2018dynamic' on page 5 undefined on input line 24.
+
+
+Package natbib Warning: Citation `ulyanov2016instance' on page 5 undefined on input line 25.
+
+
+Package natbib Warning: Citation `CIFAR10' on page 5 undefined on input line 31.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 5 undefined on input line 31.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 5 undefined on input line 31.
+
+
+Package natbib Warning: Citation `kornia' on page 5 undefined on input line 31.
+
+
+Package natbib Warning: Citation `dc' on page 5 undefined on input line 32.
+
+
+Package natbib Warning: Citation `dsa' on page 5 undefined on input line 32.
+
+
+LaTeX Warning: Reference `tbl:sota' on page 5 undefined on input line 34.
+
+
+Package natbib Warning: Citation `dsa' on page 5 undefined on input line 34.
+
+
+LaTeX Warning: Reference `fig:CIFAR-10' on page 5 undefined on input line 34.
+
+
+LaTeX Warning: Reference `tbl:transfer_nn' on page 5 undefined on input line 36.
+
+
+Package natbib Warning: Citation `nguyen2020dataset' on page 5 undefined on input line 36.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 5 undefined on input line 36.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 5 undefined on input line 36.
+
+[5]
+
+Package natbib Warning: Citation `dd' on page 6 undefined on input line 38.
+
+
+LaTeX Warning: Reference `fig:CIFAR-10' on page 6 undefined on input line 40.
+
+
+LaTeX Warning: Reference `fig:CIFAR-10' on page 6 undefined on input line 40.
+
+(./figText/kip_to_nn.tex
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `nguyen2021dataset' on page 6 undefined on input line 17.
+
+) (./figText/crossarch.tex)
+
+LaTeX Warning: Reference `tbl:cross' on page 6 undefined on input line 45.
+
+
+Package natbib Warning: Citation `resnet' on page 6 undefined on input line 45.
+
+
+Package natbib Warning: Citation `vgg' on page 6 undefined on input line 45.
+
+
+Package natbib Warning: Citation `alexnet' on page 6 undefined on input line 45.
+
+
+Package natbib Warning: Citation `kornia' on page 6 undefined on input line 47.
+
+<figures/CIFAR10_1_ipc.pdf, id=422, 517.935pt x 79.29625pt>
+File: figures/CIFAR10_1_ipc.pdf Graphic file (type pdf)
+<use figures/CIFAR10_1_ipc.pdf>
+Package pdftex.def Info: figures/CIFAR10_1_ipc.pdf  used on input line 52.
+(pdftex.def)             Requested size: 208.68077pt x 31.94902pt.
+<figures/CIFAR10.pdf, id=423, 517.935pt x 543.02875pt>
+File: figures/CIFAR10.pdf Graphic file (type pdf)
+<use figures/CIFAR10.pdf>
+Package pdftex.def Info: figures/CIFAR10.pdf  used on input line 56.
+(pdftex.def)             Requested size: 208.68077pt x 210.70187pt.
+
+LaTeX Warning: Reference `tbl:sota' on page 6 undefined on input line 68.
+
+
+LaTeX Warning: Reference `fig:mn-alpha' on page 6 undefined on input line 71.
+
+(./figText/ablation_plots2.tex
+<figures/MandN.pdf, id=425, 392.46625pt x 241.90375pt>
+File: figures/MandN.pdf Graphic file (type pdf)
+<use figures/MandN.pdf>
+Package pdftex.def Info: figures/MandN.pdf  used on input line 7.
+(pdftex.def)             Requested size: 107.89728pt x 70.08754pt.
+<figures/min_dt.pdf, id=427, 387.4475pt x 241.90375pt>
+File: figures/min_dt.pdf Graphic file (type pdf)
+<use figures/min_dt.pdf>
+Package pdftex.def Info: figures/min_dt.pdf  used on input line 7.
+(pdftex.def)             Requested size: 108.60649pt x 71.90727pt.
+
+./figText/ablation_plots2.tex:7: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.7 ...3 0 9 0,clip]{figures/min_dt.pdf}\\[-1.3ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/ablation_plots2.tex:7: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.7 ...3 0 9 0,clip]{figures/min_dt.pdf}\\[-1.3ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `eq:weight_matching' on page 6 undefined on input line 14.
+
+
+LaTeX Warning: Reference `eq:weight_matching' on page 6 undefined on input line 14.
+
+)
+
+LaTeX Warning: Reference `fig:mn-alpha' on page 6 undefined on input line 75.
+
+[6 <./figures/CIFAR10.pdf> <./figures/CIFAR10_1_ipc.pdf
+
+pdfTeX warning: pdflatex (file ./figures/CIFAR10_1_ipc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./figText/imagenet_table.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 3.
+
+)
+
+Package natbib Warning: Citation `dm' on page 7 undefined on input line 87.
+
+
+Package natbib Warning: Citation `tiny' on page 7 undefined on input line 87.
+
+
+Package natbib Warning: Citation `deng2009imagenet' on page 7 undefined on input line 87.
+
+
+Package natbib Warning: Citation `dm' on page 7 undefined on input line 88.
+
+
+Package natbib Warning: Citation `dm' on page 7 undefined on input line 90.
+
+
+LaTeX Warning: Reference `tbl:sota' on page 7 undefined on input line 90.
+
+
+LaTeX Warning: Reference `fig:tinyimagenet' on page 7 undefined on input line 90.
+
+<figures/Tiny.pdf, id=463, 1308.89pt x 525.965pt>
+File: figures/Tiny.pdf Graphic file (type pdf)
+<use figures/Tiny.pdf>
+Package pdftex.def Info: figures/Tiny.pdf  used on input line 96.
+(pdftex.def)             Requested size: 237.13594pt x 95.28758pt.
+
+LaTeX Warning: Reference `fig:tinyimagenet' on page 7 undefined on input line 103.
+
+(./figText/imagenet_fig.tex
+<figures/ImageNette.pdf, id=465, 517.935pt x 307.1475pt>
+File: figures/ImageNette.pdf Graphic file (type pdf)
+<use figures/ImageNette.pdf>
+Package pdftex.def Info: figures/ImageNette.pdf  used on input line 8.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+<figures/ImageWoof.pdf, id=466, 517.935pt x 307.1475pt>
+File: figures/ImageWoof.pdf Graphic file (type pdf)
+<use figures/ImageWoof.pdf>
+Package pdftex.def Info: figures/ImageWoof.pdf  used on input line 9.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+
+./figText/imagenet_fig.tex:9: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.9 ...rigin=c]{270}{\small{ImageWoof}} \\[-0.8ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/imagenet_fig.tex:9: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.9 ...rigin=c]{270}{\small{ImageWoof}} \\[-0.8ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figures/ImageSquawk.pdf, id=467, 517.935pt x 307.1475pt>
+File: figures/ImageSquawk.pdf Graphic file (type pdf)
+<use figures/ImageSquawk.pdf>
+Package pdftex.def Info: figures/ImageSquawk.pdf  used on input line 10.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+<figures/ImageMeow.pdf, id=468, 517.935pt x 307.1475pt>
+File: figures/ImageMeow.pdf Graphic file (type pdf)
+<use figures/ImageMeow.pdf>
+Package pdftex.def Info: figures/ImageMeow.pdf  used on input line 11.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+./figText/imagenet_fig.tex:11: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.11 ...igin=c]{270}{\small{ImageMeow}} \\[-0.8ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/imagenet_fig.tex:11: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.11 ...igin=c]{270}{\small{ImageMeow}} \\[-0.8ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figures/ImageFruit.pdf, id=469, 517.935pt x 307.1475pt>
+File: figures/ImageFruit.pdf Graphic file (type pdf)
+<use figures/ImageFruit.pdf>
+Package pdftex.def Info: figures/ImageFruit.pdf  used on input line 12.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+<figures/ImageYellow.pdf, id=470, 517.935pt x 307.1475pt>
+File: figures/ImageYellow.pdf Graphic file (type pdf)
+<use figures/ImageYellow.pdf>
+Package pdftex.def Info: figures/ImageYellow.pdf  used on input line 13.
+(pdftex.def)             Requested size: 223.58379pt x 132.59106pt.
+
+Package natbib Warning: Citation `deng2009imagenet' on page 7 undefined on input line 17.
+
+
+Package natbib Warning: Citation `deng2009imagenet' on page 7 undefined on input line 17.
+
+)
+
+Package natbib Warning: Citation `deng2009imagenet' on page 7 undefined on input line 107.
+
+
+Package natbib Warning: Citation `imagenette' on page 7 undefined on input line 110.
+
+
+Package natbib Warning: Citation `dm' on page 7 undefined on input line 113.
+
+
+LaTeX Warning: Reference `tbl:imagenet' on page 7 undefined on input line 113.
+
+
+LaTeX Warning: Reference `fig:imagenet' on page 7 undefined on input line 115.
+
+
+LaTeX Warning: Reference `fig:imagenet' on page 7 undefined on input line 117.
+
+
+LaTeX Warning: Reference `fig:imagenet' on page 7 undefined on input line 117.
+
+[7 <./figures/MandN.pdf> <./figures/min_dt.pdf> <./figures/Tiny.pdf>]) (./sections/5_discussion.tex
+
+LaTeX Warning: Reference `sec:imagenet' on page 8 undefined on input line 5.
+
+) (./sections/6_acknowledgements.tex)
+No file main.bbl.
+[8 <./figures/ImageNette.pdf> <./figures/ImageWoof.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ImageWoof.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/ImageSquawk.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ImageSquawk.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/ImageMeow.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ImageMeow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/ImageFruit.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ImageFruit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/ImageYellow.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ImageYellow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./sections/Appendix.tex
+
+LaTeX Warning: Reference `fig:cifar-100' on page 9 undefined on input line 2.
+
+
+LaTeX Warning: Reference `fig:tiny1' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:tiny2' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:tinygood' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:tinybad' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:nette_10' on page 9 undefined on input line 4.
+
+
+LaTeX Warning: Reference `fig:yellow_10' on page 9 undefined on input line 4.
+
+
+LaTeX Warning: Reference `fig:lr' on page 9 undefined on input line 12.
+
+
+LaTeX Warning: Reference `fig:zca' on page 9 undefined on input line 17.
+
+(./figText/zca.tex
+<figures/time.pdf, id=578, 392.46625pt x 241.90375pt>
+File: figures/time.pdf Graphic file (type pdf)
+<use figures/time.pdf>
+Package pdftex.def Info: figures/time.pdf  used on input line 30.
+(pdftex.def)             Requested size: 94.85292pt x 59.91144pt.
+)
+
+LaTeX Warning: Reference `tbl:ablation' on page 9 undefined on input line 28.
+
+
+LaTeX Warning: Reference `fig:noise' on page 9 undefined on input line 28.
+
+
+LaTeX Warning: Reference `fig:noaug' on page 9 undefined on input line 28.
+
+
+LaTeX Warning: Reference `fig:1exp' on page 9 undefined on input line 28.
+
+(./figText/ablation_tab.tex) (./figText/ablation_plots.tex
+<figures/experts.pdf, id=580, 392.46625pt x 241.90375pt>
+File: figures/experts.pdf Graphic file (type pdf)
+<use figures/experts.pdf>
+Package pdftex.def Info: figures/experts.pdf  used on input line 8.
+(pdftex.def)             Requested size: 101.9667pt x 62.84918pt.
+<figures/start-epoch.pdf, id=581, 392.46625pt x 241.90375pt>
+File: figures/start-epoch.pdf Graphic file (type pdf)
+<use figures/start-epoch.pdf>
+Package pdftex.def Info: figures/start-epoch.pdf  used on input line 8.
+(pdftex.def)             Requested size: 101.9667pt x 62.84918pt.
+) (./figText/ablation_plots3.tex
+<figures/learningrate.pdf, id=582, 392.46625pt x 241.90375pt>
+File: figures/learningrate.pdf Graphic file (type pdf)
+<use figures/learningrate.pdf>
+Package pdftex.def Info: figures/learningrate.pdf  used on input line 7.
+(pdftex.def)             Requested size: 107.89728pt x 66.50343pt.
+<figures/lr_lr.pdf, id=583, 392.46625pt x 241.90375pt>
+File: figures/lr_lr.pdf Graphic file (type pdf)
+<use figures/lr_lr.pdf>
+Package pdftex.def Info: figures/lr_lr.pdf  used on input line 7.
+(pdftex.def)             Requested size: 108.60649pt x 66.93898pt.
+
+./figText/ablation_plots3.tex:7: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.7 ...458\linewidth]{figures/lr_lr.pdf}\\[-1.3ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./figText/ablation_plots3.tex:7: Undefined control sequence.
+\adl@@cr ...t );\ifdim #1=\z@ \else (\adl@discard 
+                                                  /\number \@tempdima );\fi ...
+l.7 ...458\linewidth]{figures/lr_lr.pdf}\\[-1.3ex]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+
+LaTeX Warning: Reference `fig:experts' on page 9 undefined on input line 35.
+
+
+LaTeX Warning: Reference `fig:experts' on page 9 undefined on input line 38.
+
+[9
+
+ <./figures/time.pdf> <./figures/experts.pdf
+
+pdfTeX warning: pdflatex (file ./figures/experts.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/start-epoch.pdf
+
+pdfTeX warning: pdflatex (file ./figures/start-epoch.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/learningrate.pdf
+
+pdfTeX warning: pdflatex (file ./figures/learningrate.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/lr_lr.pdf
+
+pdfTeX warning: pdflatex (file ./figures/lr_lr.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/CIFAR100.pdf, id=631, 517.935pt x 517.935pt>
+File: figures/CIFAR100.pdf Graphic file (type pdf)
+<use figures/CIFAR100.pdf>
+Package pdftex.def Info: figures/CIFAR100.pdf  used on input line 43.
+(pdftex.def)             Requested size: 237.13594pt x 237.13866pt.
+
+
+LaTeX Warning: Reference `tbl:hparams' on page 10 undefined on input line 51.
+
+(./figText/table_hparams.tex)
+
+LaTeX Warning: Reference `fig:zca' on page 10 undefined on input line 58.
+
+
+LaTeX Warning: Reference `tbl:time' on page 10 undefined on input line 60.
+
+(./figText/time.tex)
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 66.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+ [10 <./figures/CIFAR100.pdf>]
+
+LaTeX Warning: Reference `tbl:kip_hyperparams' on page 11 undefined on input line 68.
+
+(./figText/kip_to_nn_params.tex)
+<figures/Tiny_Good.pdf, id=645, 517.935pt x 307.1475pt>
+File: figures/Tiny_Good.pdf Graphic file (type pdf)
+<use figures/Tiny_Good.pdf>
+Package pdftex.def Info: figures/Tiny_Good.pdf  used on input line 80.
+(pdftex.def)             Requested size: 237.13594pt x 140.62874pt.
+LaTeX Font Info:    Calculating math sizes for size <7.50002> on input line 82.
+<figures/Tiny_Bad.pdf, id=646, 517.935pt x 307.1475pt>
+File: figures/Tiny_Bad.pdf Graphic file (type pdf)
+<use figures/Tiny_Bad.pdf>
+Package pdftex.def Info: figures/Tiny_Bad.pdf  used on input line 88.
+(pdftex.def)             Requested size: 237.13594pt x 140.62874pt.
+ [11
+
+ <./figures/Tiny_Good.pdf> <./figures/Tiny_Bad.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Tiny_Bad.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/cifar100-noise.pdf, id=678, 517.935pt x 517.935pt>
+File: figures/cifar100-noise.pdf Graphic file (type pdf)
+<use figures/cifar100-noise.pdf>
+Package pdftex.def Info: figures/cifar100-noise.pdf  used on input line 100.
+(pdftex.def)             Requested size: 237.13594pt x 237.13866pt.
+<figures/cifar100-nozca.pdf, id=679, 517.935pt x 517.935pt>
+File: figures/cifar100-nozca.pdf Graphic file (type pdf)
+<use figures/cifar100-nozca.pdf>
+Package pdftex.def Info: figures/cifar100-nozca.pdf  used on input line 106.
+(pdftex.def)             Requested size: 237.13594pt x 237.13866pt.
+<figures/cifar100-noaug.pdf, id=680, 517.935pt x 517.935pt>
+File: figures/cifar100-noaug.pdf Graphic file (type pdf)
+<use figures/cifar100-noaug.pdf>
+Package pdftex.def Info: figures/cifar100-noaug.pdf  used on input line 112.
+(pdftex.def)             Requested size: 237.13594pt x 237.13866pt.
+<figures/cifar100-single.pdf, id=681, 517.935pt x 517.935pt>
+File: figures/cifar100-single.pdf Graphic file (type pdf)
+<use figures/cifar100-single.pdf>
+Package pdftex.def Info: figures/cifar100-single.pdf  used on input line 118.
+(pdftex.def)             Requested size: 237.13594pt x 237.13866pt.
+<figures/tiny_all_1.pdf, id=682, 2657.93pt x 2657.93pt>
+File: figures/tiny_all_1.pdf Graphic file (type pdf)
+<use figures/tiny_all_1.pdf>
+Package pdftex.def Info: figures/tiny_all_1.pdf  used on input line 125.
+(pdftex.def)             Requested size: 496.85625pt x 496.8195pt.
+<figures/tiny_all_2.pdf, id=683, 2657.93pt x 2657.93pt>
+File: figures/tiny_all_2.pdf Graphic file (type pdf)
+<use figures/tiny_all_2.pdf>
+Package pdftex.def Info: figures/tiny_all_2.pdf  used on input line 132.
+(pdftex.def)             Requested size: 496.85625pt x 496.8195pt.
+<figures/imagenet_10/imagenette_all.pdf, id=684, 1328.965pt x 1328.965pt>
+File: figures/imagenet_10/imagenette_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imagenette_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imagenette_all.pdf  used on input line 139.
+(pdftex.def)             Requested size: 496.85625pt x 496.86006pt.
+<figures/imagenet_10/imagewoof_all.pdf, id=685, 2657.93pt x 2657.93pt>
+File: figures/imagenet_10/imagewoof_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imagewoof_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imagewoof_all.pdf  used on input line 145.
+(pdftex.def)             Requested size: 496.85625pt x 496.8195pt.
+<figures/imagenet_10/imagesquawk_all.pdf, id=686, 2657.93pt x 2657.93pt>
+File: figures/imagenet_10/imagesquawk_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imagesquawk_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imagesquawk_all.pdf  used on input line 151.
+(pdftex.def)             Requested size: 496.85625pt x 496.8195pt.
+<figures/imagenet_10/imagemeow_all.pdf, id=687, 1328.965pt x 1328.965pt>
+File: figures/imagenet_10/imagemeow_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imagemeow_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imagemeow_all.pdf  used on input line 157.
+(pdftex.def)             Requested size: 496.85625pt x 496.86006pt.
+<figures/imagenet_10/imagefruit_all.pdf, id=688, 2657.93pt x 2657.93pt>
+File: figures/imagenet_10/imagefruit_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imagefruit_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imagefruit_all.pdf  used on input line 163.
+(pdftex.def)             Requested size: 496.85625pt x 496.8195pt.
+<figures/imagenet_10/imageyellow_all.pdf, id=689, 1328.965pt x 1328.965pt>
+File: figures/imagenet_10/imageyellow_all.pdf Graphic file (type pdf)
+<use figures/imagenet_10/imageyellow_all.pdf>
+Package pdftex.def Info: figures/imagenet_10/imageyellow_all.pdf  used on input line 169.
+(pdftex.def)             Requested size: 496.85625pt x 496.86006pt.
+)
+
+Package caption Warning: Unused \captionsetup[sub] on input line 43.
+See the caption package documentation for explanation.
+
+
+Package natbib Warning: There were undefined citations.
+
+[12 <./figures/cifar100-noise.pdf> <./figures/cifar100-nozca.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cifar100-nozca.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cifar100-noaug.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cifar100-noaug.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/cifar100-single.pdf
+
+pdfTeX warning: pdflatex (file ./figures/cifar100-single.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [13 <./figures/tiny_all_1.pdf>] [14 <./figures/tiny_all_2.pdf>] [15 <./figures/imagenet_10/imagenette_all.pdf>] [16 <./figures/imagenet_10/imagewoof_all.pdf>] [17 <./figures/imagenet_10/imagesquawk_all.pdf>] [18 <./figures/imagenet_10/imagemeow_all.pdf>] [19 <./figures/imagenet_10/imagefruit_all.pdf>] [20 <./figures/imagenet_10/imageyellow_all.pdf>] (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  4F796AE4E56E9D8E2C4027394B27E8EC;2939.
+ ) 
+Here is how much of TeX's memory you used:
+ 23300 strings out of 478268
+ 401724 string characters out of 5846346
+ 754816 words of memory out of 5000000
+ 40401 multiletter control sequences out of 15000+600000
+ 541953 words of font info for 428 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 92i,20n,94p,1229b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (20 pages, 15888615 bytes).
+PDF statistics:
+ 886 PDF objects out of 1000 (max. 8388607)
+ 602 compressed objects within 7 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 82282 words of extra memory for PDF output out of 89155 (max. 10000000)
+

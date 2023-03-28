@@ -1,0 +1,67 @@
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[pagenumbers]{cvpr} %
+
+
+\input{packages}
+\input{macros}
+
+
+
+
+
+
+\usepackage[capitalize]{cleveref}
+\crefname{section}{Sec.}{Secs.}
+\Crefname{section}{Section}{Sections}
+\Crefname{table}{Table}{Tables}
+\crefname{table}{Tab.}{Tabs.}
+
+
+
+
+
+\begin{document}
+
+\title{Dataset Distillation by Matching Training Trajectories}
+
+\author{George Cazenavette\textsuperscript{1}\;\;\;\;\;Tongzhou Wang\textsuperscript{2}\;\;\;\;\;Antonio Torralba\textsuperscript{2}\;\;\;\;\;Alexei A. Efros\textsuperscript{3}\;\;\;\;\;Jun-Yan Zhu\textsuperscript{1}\\
+\\
+\textsuperscript{1}Carnegie Mellon University\;\;\;\;\;\textsuperscript{2}Massachusetts Institute of Technology\;\;\;\;\;\textsuperscript{3}UC Berkeley
+% \\\\
+% \smaller{\href{https://georgecazenavette.github.io/mtt-distillation/}{\color{blue}https://georgecazenavette.github.io/mtt-distillation/}
+% }
+% \vspace{-0.6cm}
+}
+
+
+\input{figText/teaser}
+
+\input{sections/0_abstract}
+
+
+
+\input{sections/1_introduction}
+
+\input{sections/2_related}
+
+\input{sections/3_method}
+
+\input{sections/4_experiment}
+
+\input{sections/5_discussion}
+
+\input{sections/6_acknowledgements}
+
+
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{main}
+}
+\clearpage
+
+\appendix
+\input{sections/Appendix}
+
+\end{document}

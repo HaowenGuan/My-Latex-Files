@@ -1,0 +1,34 @@
+\begin{algorithm}[t]
+    \small
+    \caption{Dataset Distillation via Trajectory Matching}
+    \label{alg:alg}
+    \begin{algorithmic}[1]
+        \Require {$\{\tau_i^*\}$: set of expert parameter trajectories trained on $\mathcal{D}_\mathsf{real}$.}
+        \Require {$M$: \# of updates between starting and target expert params.}
+        \Require {$N$: \# of updates to student network per distillation step.}
+        \Require {$\mathcal{A}$: Differentiable augmentation function.}
+        \Require {$T^+ < T$: Maximum start epoch.}
+        \State {Initialize distilled data $\mathcal{D}_\mathsf{syn} \sim \mathcal{D}_\mathsf{real}$}
+        \State {Initialize trainable learning rate $\alpha \coloneqq \alpha_0$ for apply $\mathcal{D}_\mathsf{syn}$}
+        \For {\textbf{each} distillation step...}
+         \label{step:outer}
+            \State {$\triangleright$ Sample expert trajectory: $\tau^* \sim \{\tau^*_i\}$ with $ \tau^* = \{\theta^*_{t}\}_0^T$}
+            \State {$\triangleright$ Choose random start epoch, $t \leq T^+$}
+            \label{step:time}
+            \State {$\triangleright$ Initialize student network with expert params:}
+            \State {$\quad\quad \hat{\theta}_t \coloneqq \theta^*_{t}$}
+            \For {$n = 0 \to N-1$}
+                \State $\triangleright$ Sample a mini-batch of distilled images:
+                \State $\quad\quad b_{t+n} \sim \mathcal{D}_\mathsf{syn}$
+                \label{step:inner}
+                \State $\triangleright$ Update student network w.r.t. classification loss:
+                \State $\quad\quad \hat{\theta}_{t+n+1} = \hat{\theta}_{t+n} - \alpha\nabla \ell(\mathcal{A}(b_{t+n}); \hat{\theta}_{t+n})$
+            \EndFor
+            \State {$\triangleright$ Compute loss between ending student and expert params:}
+            \State $\quad\quad\mathcal{L} = \|\hat{\theta}_{t+N} - \theta^*_{t+M}\|_2^2 \;/\; \|\theta^*_{t} - \theta^*_{t+M}\|_2^2$
+            \State {$\triangleright$ Update $\mathcal{D}_\mathsf{syn}$ and $\alpha$ with respect to $\mathcal{L}$}
+        \EndFor
+        \Ensure {distilled data $\mathcal{D}_\mathsf{syn}$ and learning rate $\alpha$}
+    \end{algorithmic}
+        \lblalg{main}
+\end{algorithm}

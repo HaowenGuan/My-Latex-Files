@@ -1,0 +1,266 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{hinton2015distilling}
+\citation{dd}
+\citation{bohdal2020flexible,sucholutsky2021soft,dc,dsa,nguyen2020dataset,nguyen2021dataset,dm}
+\citation{dd,nguyen2020dataset,nguyen2021dataset}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{dd,maclaurin2015gradient}
+\citation{dc,dsa}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example distilled images from 32x32 CIFAR-100 (top), 64x64 Tiny ImageNet (middle), and 128x128 ImageNet subsets (bottom). Training a standard CNN using only such distilled images (as few as one per category) yields a trained model capable of test accuracy significantly better than previous methods of dataset distillation. Please see more results at \href  {https://georgecazenavette.github.io/mtt-distillation/}{\color  {blue}https://georgecazenavette.github.io/mtt-distillation/}. \relax }}{1}{figure.1}\protected@file@percent }
+\newlabel{fig:teaser}{{1}{1}{Example distilled images from 32x32 CIFAR-100 (top), 64x64 Tiny ImageNet (middle), and 128x128 ImageNet subsets (bottom). Training a standard CNN using only such distilled images (as few as one per category) yields a trained model capable of test accuracy significantly better than previous methods of dataset distillation. Please see more results at \href {https://georgecazenavette.github.io/mtt-distillation/}{\color {blue}https://georgecazenavette.github.io/mtt-distillation/}. \relax }{figure.1}{}}
+\newlabel{fig:teaser@cref}{{[figure][1][]1}{[1][1][]1}}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}\hskip -1em.\nobreakspace  {}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{\hskip -1em.~Introduction}{section.1}{}}
+\newlabel{sec:intro@cref}{{[section][1][]1}{[1][1][]1}}
+\citation{dsa,dm}
+\citation{nguyen2021dataset}
+\citation{deng2009imagenet}
+\citation{dd}
+\citation{maclaurin2015gradient}
+\citation{finn2017model,nichol2018first}
+\citation{bohdal2020flexible,sucholutsky2021soft}
+\citation{dc}
+\citation{dsa}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{dd,dc,dsa}
+\citation{dc,dsa}
+\citation{goetz2020federated,zhou2020distilled,sucholutsky2020secdd}
+\citation{sucholutsky2020secdd,li2020soft}
+\citation{dc,dsa}
+\citation{dd,sucholutsky2021soft}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{dm}
+\citation{dc,dsa}
+\citation{dc,dsa}
+\citation{dm}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Dataset distillation aims to generate a small synthetic dataset for which a model trained on it can achieve a similar test performance as a model trained on the whole real train set.\relax }}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:dataset_distillation}{{2}{2}{Dataset distillation aims to generate a small synthetic dataset for which a model trained on it can achieve a similar test performance as a model trained on the whole real train set.\relax }{figure.caption.1}{}}
+\newlabel{fig:dataset_distillation@cref}{{[figure][2][]2}{[1][1][]2}}
+\newlabel{fig:intro}{{1}{2}{\hskip -1em.~Introduction}{figure.caption.2}{}}
+\newlabel{fig:intro@cref}{{[section][1][]1}{[1][2][]2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}\hskip -1em.\nobreakspace  {}Related Work}{2}{section.2}\protected@file@percent }
+\citation{such2020generative,masarczyk2020reducing}
+\citation{osa2018algorithmic,peng2018deepmimic,peng2021amp}
+\citation{ross2011reduction}
+\citation{ho2016generative}
+\citation{fu2020d4rl,gulcehre2020rl}
+\citation{tsang2005core,har2007smaller,bachem2017practical,sener2018active,chen2010super}
+\citation{olvera2010review}
+\citation{borsos2020coresets}
+\citation{lapedriza2013all}
+\citation{toneva2018empirical}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces We perform long-range parameter matching between training on distilled synthetic data and training on real data. Starting from the same initial parameters, we train distilled data $\mathcal  {D}_\mathsf  {syn}$ such that $N$ training steps on them match the same result (in parameter space) from much more $M$ steps on real data.\relax }}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:method_traj_match}{{3}{3}{We perform long-range parameter matching between training on distilled synthetic data and training on real data. Starting from the same initial parameters, we train distilled data $\mathcal {D}_\mathsf {syn}$ such that $N$ training steps on them match the same result (in parameter space) from much more $M$ steps on real data.\relax }{figure.caption.2}{}}
+\newlabel{fig:method_traj_match@cref}{{[figure][3][]3}{[1][2][]3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}\hskip -1em.\nobreakspace  {}Method}{3}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{3}{\hskip -1em.~Method}{section.3}{}}
+\newlabel{sec:method@cref}{{[section][3][]3}{[1][3][]3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}\hskip -1em.\nobreakspace  {}Expert Trajectories}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:expert}{{3.1}{3}{\hskip -1em.~Expert Trajectories}{subsection.3.1}{}}
+\newlabel{sec:expert@cref}{{[subsection][1][3]3.1}{[1][3][]3}}
+\citation{stylegan2ada,zhao2020image,tran2020towards,diffaug}
+\citation{dsa}
+\citation{dd}
+\citation{bohdal2020flexible}
+\citation{dc}
+\citation{dsa}
+\citation{dm}
+\citation{wang2022cafe}
+\citation{wang2022cafe}
+\citation{lecun1998gradient}
+\citation{alexnet}
+\citation{lecun1998gradient}
+\citation{alexnet}
+\citation{dc,dsa,dm}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Dataset Distillation via Trajectory Matching\relax }}{4}{algorithm.1}\protected@file@percent }
+\newlabel{alg:alg}{{1}{4}{Dataset Distillation via Trajectory Matching\relax }{algorithm.1}{}}
+\newlabel{alg:alg@cref}{{[algorithm][1][]1}{[1][4][]4}}
+\newlabel{step:outer}{{3}{4}{Dataset Distillation via Trajectory Matching\relax }{ALG@line.3}{}}
+\newlabel{step:outer@cref}{{[line][3][]3}{[1][4][]4}}
+\newlabel{step:time}{{5}{4}{Dataset Distillation via Trajectory Matching\relax }{ALG@line.5}{}}
+\newlabel{step:time@cref}{{[line][5][]5}{[1][4][]4}}
+\newlabel{step:inner}{{10}{4}{Dataset Distillation via Trajectory Matching\relax }{ALG@line.10}{}}
+\newlabel{step:inner@cref}{{[line][10][]10}{[1][4][]4}}
+\newlabel{alg:main}{{1}{4}{Dataset Distillation via Trajectory Matching\relax }{ALG@line.17}{}}
+\newlabel{alg:main@cref}{{[algorithm][1][]1}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}\hskip -1em.\nobreakspace  {}Long-Range Parameter Matching}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:matching}{{3.2}{4}{\hskip -1em.~Long-Range Parameter Matching}{subsection.3.2}{}}
+\newlabel{sec:matching@cref}{{[subsection][2][3]3.2}{[1][4][]4}}
+\newlabel{eq:weight_matching}{{2}{4}{\hskip -1em.~Long-Range Parameter Matching}{equation.3.2}{}}
+\newlabel{eq:weight_matching@cref}{{[equation][2][]2}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}\hskip -1em.\nobreakspace  {}Memory Constraints}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:memory}{{3.3}{4}{\hskip -1em.~Memory Constraints}{subsection.3.3}{}}
+\newlabel{sec:memory@cref}{{[subsection][3][3]3.3}{[1][4][]4}}
+\citation{dm}
+\citation{dsa,dm}
+\citation{dd}
+\citation{bohdal2020flexible}
+\citation{dc}
+\citation{dsa}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{dm}
+\citation{wang2022cafe}
+\citation{chen2010super}
+\citation{toneva2018empirical}
+\citation{dc,dsa,dm,nguyen2021dataset}
+\citation{gidaris2018dynamic}
+\citation{ulyanov2016instance}
+\citation{CIFAR10}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{kornia}
+\citation{dc,dsa}
+\citation{dsa}
+\citation{nguyen2020dataset,nguyen2021dataset}
+\citation{nguyen2021dataset}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparing distillation and coreset selection methods. As in previous work, we distill the given number of images per class using the training set, train a neural network on the synthetic set, and evaluate on the test set. To get $\bar  {x}\pm s$, we train 5 networks from scratch on the distilled dataset. Note that the earlier works \texttt  {DD}$^\dagger $ and \texttt  {LD}$^\dagger $ use different architectures, i.e\onedot  ,\xspace  LeNet \citep  {lecun1998gradient} for MNIST and AlexNet \citep  {alexnet} for CIFAR-10. All others use a 128-width ConvNet. CIFAR values marked by ($*$) signify best results were obtained with ZCA whitening.\relax }}{5}{table.caption.3}\protected@file@percent }
+\newlabel{tbl:sota}{{1}{5}{Comparing distillation and coreset selection methods. As in previous work, we distill the given number of images per class using the training set, train a neural network on the synthetic set, and evaluate on the test set. To get $\Bar {x}\pm s$, we train 5 networks from scratch on the distilled dataset. Note that the earlier works \texttt {DD}$^\dagger $ and \texttt {LD}$^\dagger $ use different architectures, \ie LeNet \citep {lecun1998gradient} for MNIST and AlexNet \citep {alexnet} for CIFAR-10. All others use a 128-width ConvNet. CIFAR values marked by ($*$) signify best results were obtained with ZCA whitening.\relax }{table.caption.3}{}}
+\newlabel{tbl:sota@cref}{{[table][1][]1}{[1][4][]5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}\hskip -1em.\nobreakspace  {}Experiments}{5}{section.4}\protected@file@percent }
+\newlabel{sec:expr}{{4}{5}{\hskip -1em.~Experiments}{section.4}{}}
+\newlabel{sec:expr@cref}{{[section][4][]4}{[1][5][]5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}\hskip -1em.\nobreakspace  {}Low-Resolution Data (32$\times $32)}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:low-res}{{4.1}{5}{\hskip -1em.~Low-Resolution Data (32$\times $32)}{subsection.4.1}{}}
+\newlabel{sec:low-res@cref}{{[subsection][1][4]4.1}{[1][5][]5}}
+\citation{dd}
+\citation{nguyen2021dataset}
+\citation{nguyen2021dataset}
+\citation{resnet}
+\citation{vgg}
+\citation{alexnet}
+\citation{kornia}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Kernel Inducing Point (\texttt  {KIP})\nobreakspace  {}\cite  {nguyen2021dataset} performs distillation using the infinite-width network limit. We consistently outperform \texttt  {KIP} when evaluating on the same finite-width network, and almost always outperform \texttt  {KIP} applied on wider networks. \relax }}{6}{table.caption.4}\protected@file@percent }
+\newlabel{tbl:transfer_nn}{{2}{6}{Kernel Inducing Point (\texttt {KIP})~\cite {nguyen2021dataset} performs distillation using the infinite-width network limit. We consistently outperform \texttt {KIP} when evaluating on the same finite-width network, and almost always outperform \texttt {KIP} applied on wider networks. \relax }{table.caption.4}{}}
+\newlabel{tbl:transfer_nn@cref}{{[table][2][]2}{[1][6][]6}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Despite being trained for a specific architecture, our synthetic images do not seem to suffer from much over-fitting to that model. This is evaluated on CIFAR-10 with 10 images per class.\relax }}{6}{table.caption.5}\protected@file@percent }
+\newlabel{tbl:cross}{{3}{6}{Despite being trained for a specific architecture, our synthetic images do not seem to suffer from much over-fitting to that model. This is evaluated on CIFAR-10 with 10 images per class.\relax }{table.caption.5}{}}
+\newlabel{tbl:cross@cref}{{[table][3][]3}{[1][6][]6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces CIFAR-10: The 1 image per class images are more abstract but also more information-dense while the 10 images per class images are more expressive and contain more structure.\relax }}{6}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:CIFAR-10}{{4}{6}{CIFAR-10: The 1 image per class images are more abstract but also more information-dense while the 10 images per class images are more expressive and contain more structure.\relax }{figure.caption.6}{}}
+\newlabel{fig:CIFAR-10@cref}{{[figure][4][]4}{[1][6][]6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\hskip -1em.\nobreakspace  {}Short-Range vs.\nobreakspace  {}Long-Range Matching}{6}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:shortlongrange}{{4.2}{6}{\hskip -1em.~Short-Range vs.~Long-Range Matching}{subsection.4.2}{}}
+\newlabel{sec:shortlongrange@cref}{{[subsection][2][4]4.2}{[1][6][]6}}
+\citation{dm}
+\citation{tiny}
+\citation{deng2009imagenet}
+\citation{dm}
+\citation{dm}
+\citation{deng2009imagenet}
+\citation{deng2009imagenet}
+\citation{deng2009imagenet}
+\citation{imagenette}
+\citation{dm}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CIFAR-100 (1 image / class). \textbf  {Left:} Smaller $M$ and $N$ match shorter-range behavior, which performs worse than longer-range matching. \textbf  {Right:} Over $1000$ training steps on distilled data, we track the closest distance in parameter space (normalized MSE in Eqn.\nobreakspace  {}\ref  {eq:weight_matching}) to a target set of parameters, obtained with $\Delta _t$ training steps on real data. Matching long-range behavior, our method better approximate real data training for longer ranges (large $\Delta _t$). \relax }}{7}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:mn-alpha}{{5}{7}{CIFAR-100 (1 image / class). \textbf {Left:} Smaller $M$ and $N$ match shorter-range behavior, which performs worse than longer-range matching. \textbf {Right:} Over $1000$ training steps on distilled data, we track the closest distance in parameter space (normalized MSE in \refeq {weight_matching}) to a target set of parameters, obtained with $\Delta _t$ training steps on real data. Matching long-range behavior, our method better approximate real data training for longer ranges (large $\Delta _t$). \relax }{figure.caption.7}{}}
+\newlabel{fig:mn-alpha@cref}{{[figure][5][]5}{[1][6][]7}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Applying our method to 128$\times $128 resolution ImageNet subsets. On this higher resolution, across various subsets, our method continues to produce high-quality distilled images.\relax }}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tbl:imagenet}{{4}{7}{Applying our method to 128$\times $128 resolution ImageNet subsets. On this higher resolution, across various subsets, our method continues to produce high-quality distilled images.\relax }{table.caption.8}{}}
+\newlabel{tbl:imagenet@cref}{{[table][4][]4}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}\hskip -1em.\nobreakspace  {}Tiny ImageNet (64$\times $64)}{7}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:tiny}{{4.3}{7}{\hskip -1em.~Tiny ImageNet (64$\times $64)}{subsection.4.3}{}}
+\newlabel{sec:tiny@cref}{{[subsection][3][4]4.3}{[1][7][]7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Selected samples distilled from Tiny ImageNet, one image per class. Despite the higher resolution, our method still produces high-fidelity images. (Can you guess which classes these images represent? Check your answers in the footnote!\footnotemark )\relax }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:tinyimagenet}{{6}{7}{Selected samples distilled from Tiny ImageNet, one image per class. Despite the higher resolution, our method still produces high-fidelity images. (Can you guess which classes these images represent? Check your answers in the footnote!\protect \footnotemark )\relax }{figure.caption.9}{}}
+\newlabel{fig:tinyimagenet@cref}{{[figure][6][]6}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}\hskip -1em.\nobreakspace  {}ImageNet Subsets (128$\times $128)}{7}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:imagenet}{{4.4}{7}{\hskip -1em.~ImageNet Subsets (128$\times $128)}{subsection.4.4}{}}
+\newlabel{sec:imagenet@cref}{{[subsection][4][4]4.4}{[1][7][]7}}
+\bibstyle{ieee_fullname}
+\bibdata{main}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Our method is the first capable of distilling higher-resolution (128$\times $128) images, allowing us to explore the ImageNet \cite  {deng2009imagenet} dataset.\relax }}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:imagenet}{{7}{8}{Our method is the first capable of distilling higher-resolution (128$\times $128) images, allowing us to explore the ImageNet \cite {deng2009imagenet} dataset.\relax }{figure.caption.10}{}}
+\newlabel{fig:imagenet@cref}{{[figure][7][]7}{[1][7][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}\hskip -1em.\nobreakspace  {}Discussion and Limitations}{8}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{8}{\hskip -1em.~Discussion and Limitations}{section.5}{}}
+\newlabel{sec:discussion@cref}{{[section][5][]5}{[1][8][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}\hskip -1em.\nobreakspace  {}Appendix}{9}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}\hskip -1em.\nobreakspace  {}Additional Visualizations}{9}{subsection.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}\hskip -1em.\nobreakspace  {}Additional Quantitative Results}{9}{subsection.A.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {Left}: ZCA Ablation. \textbf  {Right}: Distillation Time.\relax }}{9}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:zca}{{8}{9}{\textbf {Left}: ZCA Ablation. \textbf {Right}: Distillation Time.\relax }{figure.caption.11}{}}
+\newlabel{fig:zca@cref}{{[figure][8][2147483647]8}{[1][9][]9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.2.1}Additional Ablation Studies}{9}{subsubsection.A.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Left:} We see logarithmic performance improvement with respect to the number of expert trajectories used, quickly saturating near 200. \textbf  {Right:} The upper bound on the expert epoch at which the synthetic data starts working cannot be too high or low to ensure quality learning signal.\relax }}{9}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:experts}{{9}{9}{\textbf {Left:} We see logarithmic performance improvement with respect to the number of expert trajectories used, quickly saturating near 200. \textbf {Right:} The upper bound on the expert epoch at which the synthetic data starts working cannot be too high or low to ensure quality learning signal.\relax }{figure.caption.13}{}}
+\newlabel{fig:experts@cref}{{[figure][9][2147483647]9}{[1][9][]9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Left:} Our learned synthetic step size $\alpha $ seems to scale inversely with the number of synthetic steps $N$ to cover the same distance in parameter space as the expert steps $M$. \textbf  {Right:} Having a learnable step size $\alpha $ saves us from having to search for an appropriate fixed $\alpha _0$. \relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:lr}{{10}{9}{\textbf {Left:} Our learned synthetic step size $\alpha $ seems to scale inversely with the number of synthetic steps $N$ to cover the same distance in parameter space as the expert steps $M$. \textbf {Right:} Having a learnable step size $\alpha $ saves us from having to search for an appropriate fixed $\alpha _0$. \relax }{figure.caption.14}{}}
+\newlabel{fig:lr@cref}{{[figure][10][2147483647]10}{[1][9][]9}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces As we ablate our categorical hyper-parameters, we still achieve state-of-the-art performance (compared to \texttt  {DSA}: 13.9\%). This is evaluated on CIFAR-100 with 1 image per class. Each design choice in our final method improves the performance of distilled images. Here we use the default set of hyper-parameters for these ablations.\relax }}{9}{table.caption.12}\protected@file@percent }
+\newlabel{tbl:ablation}{{5}{9}{As we ablate our categorical hyper-parameters, we still achieve state-of-the-art performance (compared to \texttt {DSA}: 13.9\%). This is evaluated on CIFAR-100 with 1 image per class. Each design choice in our final method improves the performance of distilled images. Here we use the default set of hyper-parameters for these ablations.\relax }{table.caption.12}{}}
+\newlabel{tbl:ablation@cref}{{[table][5][2147483647]5}{[1][9][]9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces CIFAR-100, 1 Image Per Class\relax }}{10}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:cifar-100}{{11}{10}{CIFAR-100, 1 Image Per Class\relax }{figure.caption.15}{}}
+\newlabel{fig:cifar-100@cref}{{[figure][11][2147483647]11}{[1][10][]10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}\hskip -1em.\nobreakspace  {}Experiment Details}{10}{subsection.A.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Hyper-parameters used for our best-performing distillation experiments. A synthetic batch size of ``-'' indicates that we used the full support set at each synthetic step. Note: instead of number of expert \textit  {updates} ($M$), here we list number of expert \textit  {epochs} ($M^\dagger $) for simplicity across datasets.\relax }}{10}{table.caption.16}\protected@file@percent }
+\newlabel{tbl:hparams}{{6}{10}{Hyper-parameters used for our best-performing distillation experiments. A synthetic batch size of ``-'' indicates that we used the full support set at each synthetic step. Note: instead of number of expert \textit {updates} ($M$), here we list number of expert \textit {epochs} ($M^\dagger $) for simplicity across datasets.\relax }{table.caption.16}{}}
+\newlabel{tbl:hparams@cref}{{[table][6][2147483647]6}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Distillation time for each dataset and support size.\relax }}{10}{table.caption.17}\protected@file@percent }
+\newlabel{tbl:time}{{7}{10}{Distillation time for each dataset and support size.\relax }{table.caption.17}{}}
+\newlabel{tbl:time@cref}{{[table][7][2147483647]7}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Optimal hyper-parameters for our reported width-128 KIP to NN results. These were obtained via grid search using the notebook provided by the KIP authors.\relax }}{11}{table.caption.18}\protected@file@percent }
+\newlabel{tbl:kip_hyperparams}{{8}{11}{Optimal hyper-parameters for our reported width-128 KIP to NN results. These were obtained via grid search using the notebook provided by the KIP authors.\relax }{table.caption.18}{}}
+\newlabel{tbl:kip_hyperparams@cref}{{[table][8][2147483647]8}{[1][11][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Most-correct distilled images for Tiny ImageNet \smaller  {($\geq 30\%$)}\relax }}{11}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:tinygood}{{12}{11}{Most-correct distilled images for Tiny ImageNet \smaller {($\geq 30\%$)}\relax }{figure.caption.19}{}}
+\newlabel{fig:tinygood@cref}{{[figure][12][2147483647]12}{[1][11][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Least-correct distilled images for Tiny ImageNet \smaller  {($\leq 4\%$)}\relax }}{11}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:tinybad}{{13}{11}{Least-correct distilled images for Tiny ImageNet \smaller {($\leq 4\%$)}\relax }{figure.caption.20}{}}
+\newlabel{fig:tinybad@cref}{{[figure][13][2147483647]13}{[1][11][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces CIFAR-100, Initialized as Random Noise\relax }}{12}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:noise}{{14}{12}{CIFAR-100, Initialized as Random Noise\relax }{figure.caption.21}{}}
+\newlabel{fig:noise@cref}{{[figure][14][2147483647]14}{[1][12][]12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces CIFAR-100, No ZCA Whitening\relax }}{12}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:nozca}{{15}{12}{CIFAR-100, No ZCA Whitening\relax }{figure.caption.22}{}}
+\newlabel{fig:nozca@cref}{{[figure][15][2147483647]15}{[1][12][]12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces CIFAR-100, No Differentiable Augmentation\relax }}{12}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:noaug}{{16}{12}{CIFAR-100, No Differentiable Augmentation\relax }{figure.caption.23}{}}
+\newlabel{fig:noaug@cref}{{[figure][16][2147483647]16}{[1][12][]12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces CIFAR-100, Only 1 Expert Trajectory\relax }}{12}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:1exp}{{17}{12}{CIFAR-100, Only 1 Expert Trajectory\relax }{figure.caption.24}{}}
+\newlabel{fig:1exp@cref}{{[figure][17][2147483647]17}{[1][12][]12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Tiny ImageNet, 1 Image Per Class (Classes 1-100)\relax }}{13}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:tiny1}{{18}{13}{Tiny ImageNet, 1 Image Per Class (Classes 1-100)\relax }{figure.caption.25}{}}
+\newlabel{fig:tiny1@cref}{{[figure][18][2147483647]18}{[1][12][]13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Tiny ImageNet, 1 Image Per Class (Classes 101-200)\relax }}{14}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:tiny2}{{19}{14}{Tiny ImageNet, 1 Image Per Class (Classes 101-200)\relax }{figure.caption.26}{}}
+\newlabel{fig:tiny2@cref}{{[figure][19][2147483647]19}{[1][12][]14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces ImageNette, 10 Images Per Class\relax }}{15}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:nette_10}{{20}{15}{ImageNette, 10 Images Per Class\relax }{figure.caption.27}{}}
+\newlabel{fig:nette_10@cref}{{[figure][20][2147483647]20}{[1][12][]15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces ImageWoof, 10 Images Per Class\relax }}{16}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:woof_10}{{21}{16}{ImageWoof, 10 Images Per Class\relax }{figure.caption.28}{}}
+\newlabel{fig:woof_10@cref}{{[figure][21][2147483647]21}{[1][12][]16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces ImageSquawk, 10 Images Per Class\relax }}{17}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:squawk_10}{{22}{17}{ImageSquawk, 10 Images Per Class\relax }{figure.caption.29}{}}
+\newlabel{fig:squawk_10@cref}{{[figure][22][2147483647]22}{[1][12][]17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces ImageMeow, 10 Images Per Class\relax }}{18}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:meow_10}{{23}{18}{ImageMeow, 10 Images Per Class\relax }{figure.caption.30}{}}
+\newlabel{fig:meow_10@cref}{{[figure][23][2147483647]23}{[1][12][]18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces ImageFruit, 10 Images Per Class\relax }}{19}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:fruit_10}{{24}{19}{ImageFruit, 10 Images Per Class\relax }{figure.caption.31}{}}
+\newlabel{fig:fruit_10@cref}{{[figure][24][2147483647]24}{[1][12][]19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces ImageYellow, 10 Images Per Class\relax }}{20}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:yellow_10}{{25}{20}{ImageYellow, 10 Images Per Class\relax }{figure.caption.32}{}}
+\newlabel{fig:yellow_10@cref}{{[figure][25][2147483647]25}{[1][12][]20}}
+\gdef \@abspage@last{20}

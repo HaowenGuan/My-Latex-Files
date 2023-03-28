@@ -1,0 +1,8 @@
+\section{Discussion and Limitations}
+\lblsec{discussion}
+In this work, we introduced a dataset distillation algorithm by means of directly optimizing the synthetic data to induce similar network training dynamics as the real data.  The main difference between ours and prior approaches is that we are neither limited to the short-range single-step matching nor subject to instability and compute intensity of optimizing over the full training process. Our method balances these two regimes and shows improvement over both. 
+
+Unlike prior methods, ours is the first to scale to $128\times 128$ ImageNet images, which not only allows us to gain interesting insights of the dataset (\eg in \refsec{imagenet}) but also may serve as an important step towards practical applications of dataset distillation on real-world datasets. 
+
+\myparagraph{Limitations.} Our use of pre-computed trajectories allows for significant memory saving, at the cost of additional disk storage and computational cost for expert model training. The computational overhead of training and storing expert trajectories is
+quite high. For example, CIFAR experts took $\sim$3 seconds per epoch (8 GPU hours total for all 200 CIFAR experts) while each ImageNet (subset) expert took $\sim$11 seconds per epoch (15 GPU hours total for all 100 ImageNet experts). Storage-wise, each CIFAR expert took up $\sim$60MB of storage while each ImageNet expert took up $\sim$120MB.
