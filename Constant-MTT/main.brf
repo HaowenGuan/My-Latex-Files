@@ -1,0 +1,52 @@
+\backcite {wang2018dataset}{{1}{1}{section.1}}
+\backcite {wolf2011facility, rebuffi2017icarl, castro2018end}{{1}{1}{section.1}}
+\backcite {zhaodsa}{{1}{1}{section.1}}
+\backcite {zhaodm}{{1}{1}{section.1}}
+\backcite {nguyen2021dataset}{{1}{1}{section.1}}
+\backcite {cazenavette2022dataset}{{1}{1}{section.1}}
+\backcite {dcbench}{{1}{1}{section.1}}
+\backcite {wang2018dataset,zhaodc,bohdal2020flexible,zhaodsa,zhaodm,wang2022cafe}{{1}{1}{section.1}}
+\backcite {zhou2022dataset,cazenavette2022dataset,dcbench}{{1}{1}{section.1}}
+\backcite {cazenavette2022dataset}{{1}{1}{section.1}}
+\backcite {zhou2022dataset}{{1}{1}{section.1}}
+\backcite {zhou2022dataset}{{2}{1}{section.1}}
+\backcite {wang2018dataset}{{2}{2}{section.2}}
+\backcite {wang2018dataset,zhaodc}{{2}{2}{section.2}}
+\backcite {zhou2020distilled,xiong2022FedDM}{{2}{2}{section.2}}
+\backcite {zhaodsa, wang2021rethinking}{{2}{2}{section.2}}
+\backcite {zhaodc}{{2}{2}{section*.2}}
+\backcite {zhaodsa}{{2}{2}{section*.2}}
+\backcite {zhaodm}{{2}{2}{section*.2}}
+\backcite {pmlr-v162-kim22c,deng2022remember,lee2022dataset}{{2}{2}{section*.2}}
+\backcite {cazenavette2022dataset}{{2}{2}{section*.2}}
+\backcite {dcbench}{{2}{2}{section*.2}}
+\backcite {dcbench, zhou2022dataset}{{3}{2}{section*.2}}
+\backcite {nguyen2020dataset, nguyen2021dataset}{{3}{2}{section*.2}}
+\backcite {zhou2022dataset}{{3}{2}{section*.2}}
+\backcite {cazenavette2022dataset}{{3}{3}{section*.3}}
+\backcite {zhaodsa, zhaodm, nguyen2020dataset, nguyen2021dataset, wang2022cafe}{{3}{3.1}{subsection.3.1}}
+\backcite {cazenavette2022dataset}{{3}{3.1}{equation.3.4}}
+\backcite {zhou2022dataset}{{4}{3.3}{equation.3.8}}
+\backcite {hinton2015distilling}{{5}{3.4}{subsection.3.4}}
+\backcite {krizhevsky2009learning}{{6}{4.1}{subsection.4.1}}
+\backcite {russakovsky2015imagenet}{{6}{4.1}{subsection.4.1}}
+\backcite {zhou2022dataset}{{6}{4.1}{subsection.4.1}}
+\backcite {ulyanov2016instance}{{6}{4.1}{subsection.4.1}}
+\backcite {goodfellow2016deep, radford2015unsupervised, tran2020towards, zhao2020differentiable}{{6}{4.1}{subsection.4.1}}
+\backcite {zhou2022dataset}{{6}{4.1}{subsection.4.1}}
+\backcite {zhaodsa, zhaodm, cazenavette2022dataset, zhou2022dataset, dcbench}{{6}{4.1}{subsection.4.1}}
+\backcite {zhaodsa, zhaodm, cazenavette2022dataset}{{6}{4.1}{subsection.4.1}}
+\backcite {cazenavette2022dataset}{{7}{4.3}{figure.caption.7}}
+\backcite {zhaodm,cazenavette2022dataset,zhou2022dataset, dcbench}{{8}{4.5}{subsection.4.5}}
+\backcite {dosovitskiy2020image, dcbench}{{8}{4.5}{subsection.4.5}}
+\backcite {krizhevsky2009learning}{{11}{A.2}{subsection.A.2}}
+\backcite {russakovsky2015imagenet}{{11}{A.2}{subsection.A.2}}
+\backcite {zhou2022dataset}{{11}{A.2}{subsection.A.2}}
+\backcite {lecun1998gradient}{{11}{A.2}{subsection.A.2}}
+\backcite {xiao2017fashion}{{11}{A.2}{subsection.A.2}}
+\backcite {EdgarRiba2019KorniaAO}{{11}{A.3}{subsection.A.3}}
+\backcite {ulyanov2016instance}{{11}{A.4}{subsection.A.4}}
+\backcite {zhou2022dataset}{{11}{A.6}{subsection.A.6}}
+\backcite {zhaodsa, cazenavette2022dataset, zhou2022dataset}{{12}{A.8}{subsection.A.8}}
+\backcite {cubuk2018autoaugment}{{12}{A.8}{subsection.A.8}}
+\backcite {cubuk2020randaugment}{{12}{A.8}{subsection.A.8}}

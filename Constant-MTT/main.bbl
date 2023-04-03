@@ -6,15 +6,12 @@ Ondrej Bohdal, Yongxin Yang, and Timothy Hospedales.
 \newblock {\em arXiv preprint arXiv:2006.08572}, 2020.
 
 \bibitem{castro2018end}
-Francisco~M Castro, Manuel~J Mar{\'\i}n-Jim{\'e}nez, Nicol{\'a}s Guil, Cordelia
-  Schmid, and Karteek Alahari.
+Francisco~M Castro, Manuel~J Mar{\'\i}n-Jim{\'e}nez, Nicol{\'a}s Guil, Cordelia Schmid, and Karteek Alahari.
 \newblock End-to-end incremental learning.
-\newblock In {\em Proceedings of the European conference on computer vision
-  (ECCV)}, pages 233--248, 2018.
+\newblock In {\em Proceedings of the European conference on computer vision (ECCV)}, pages 233--248, 2018.
 
 \bibitem{cazenavette2022dataset}
-George Cazenavette, Tongzhou Wang, Antonio Torralba, Alexei~A Efros, and
-  Jun-Yan Zhu.
+George Cazenavette, Tongzhou Wang, Antonio Torralba, Alexei~A Efros, and Jun-Yan Zhu.
 \newblock Dataset distillation by matching training trajectories.
 \newblock {\em arXiv preprint arXiv:2203.11932}, 2022.
 
@@ -25,10 +22,8 @@ Ekin~D Cubuk, Barret Zoph, Dandelion Mane, Vijay Vasudevan, and Quoc~V Le.
 
 \bibitem{cubuk2020randaugment}
 Ekin~D Cubuk, Barret Zoph, Jonathon Shlens, and Quoc~V Le.
-\newblock Randaugment: Practical automated data augmentation with a reduced
-  search space.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition Workshops}, pages 702--703, 2020.
+\newblock Randaugment: Practical automated data augmentation with a reduced search space.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops}, pages 702--703, 2020.
 
 \bibitem{dcbench}
 Justin Cui, Ruochen Wang, Si Si, and Cho-Jui Hsieh.
@@ -37,16 +32,12 @@ Justin Cui, Ruochen Wang, Si Si, and Cho-Jui Hsieh.
 
 \bibitem{deng2022remember}
 Zhiwei Deng and Olga Russakovsky.
-\newblock Remember the past: Distilling datasets into addressable memories for
-  neural networks.
+\newblock Remember the past: Distilling datasets into addressable memories for neural networks.
 \newblock {\em arXiv preprint arXiv:2206.02916}, 2022.
 
 \bibitem{dosovitskiy2020image}
-Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn,
-  Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg
-  Heigold, Sylvain Gelly, et~al.
-\newblock An image is worth 16x16 words: Transformers for image recognition at
-  scale.
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et~al.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale.
 \newblock {\em arXiv preprint arXiv:2010.11929}, 2020.
 
 \bibitem{goodfellow2016deep}
@@ -60,13 +51,9 @@ Geoffrey Hinton, Oriol Vinyals, Jeff Dean, et~al.
 \newblock {\em arXiv preprint arXiv:1503.02531}, 2(7), 2015.
 
 \bibitem{pmlr-v162-kim22c}
-Jang-Hyun Kim, Jinuk Kim, Seong~Joon Oh, Sangdoo Yun, Hwanjun Song, Joonhyun
-  Jeong, Jung-Woo Ha, and Hyun~Oh Song.
+Jang-Hyun Kim, Jinuk Kim, Seong~Joon Oh, Sangdoo Yun, Hwanjun Song, Joonhyun Jeong, Jung-Woo Ha, and Hyun~Oh Song.
 \newblock Dataset condensation via efficient synthetic-data parameterization.
-\newblock In Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvari,
-  Gang Niu, and Sivan Sabato, editors, {\em Proceedings of the 39th
-  International Conference on Machine Learning}, volume 162 of {\em Proceedings
-  of Machine Learning Research}, pages 11102--11118. PMLR, 17--23 Jul 2022.
+\newblock In Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvari, Gang Niu, and Sivan Sabato, editors, {\em Proceedings of the 39th International Conference on Machine Learning}, volume 162 of {\em Proceedings of Machine Learning Research}, pages 11102--11118. PMLR, 17--23 Jul 2022.
 
 \bibitem{krizhevsky2009learning}
 Alex Krizhevsky, Geoffrey Hinton, et~al.
@@ -95,33 +82,26 @@ Timothy Nguyen, Roman Novak, Lechao Xiao, and Jaehoon Lee.
 
 \bibitem{radford2015unsupervised}
 Alec Radford, Luke Metz, and Soumith Chintala.
-\newblock Unsupervised representation learning with deep convolutional
-  generative adversarial networks.
+\newblock Unsupervised representation learning with deep convolutional generative adversarial networks.
 \newblock {\em arXiv preprint arXiv:1511.06434}, 2015.
 
 \bibitem{rebuffi2017icarl}
-Sylvestre-Alvise Rebuffi, Alexander Kolesnikov, Georg Sperl, and Christoph~H
-  Lampert.
+Sylvestre-Alvise Rebuffi, Alexander Kolesnikov, Georg Sperl, and Christoph~H Lampert.
 \newblock icarl: Incremental classifier and representation learning.
-\newblock In {\em Proceedings of the IEEE conference on Computer Vision and
-  Pattern Recognition}, pages 2001--2010, 2017.
+\newblock In {\em Proceedings of the IEEE conference on Computer Vision and Pattern Recognition}, pages 2001--2010, 2017.
 
 \bibitem{EdgarRiba2019KorniaAO}
 Edgar Riba, Dmytro Mishkin, Daniel Ponsa, Ethan Rublee, and Gary Bradski.
-\newblock Kornia: an open source differentiable computer vision library for
-  pytorch.
+\newblock Kornia: an open source differentiable computer vision library for pytorch.
 \newblock {\em workshop on applications of computer vision}, 2019.
 
 \bibitem{russakovsky2015imagenet}
-Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
-  Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, et~al.
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, et~al.
 \newblock Imagenet large scale visual recognition challenge.
-\newblock {\em International Journal of Computer Vision}, 115(3):211--252,
-  2015.
+\newblock {\em International Journal of Computer Vision}, 115(3):211--252, 2015.
 
 \bibitem{tran2020towards}
-Ngoc-Trung Tran, Viet-Hung Tran, Ngoc-Bao Nguyen, Trung-Kien Nguyen, and
-  Ngai-Man Cheung.
+Ngoc-Trung Tran, Viet-Hung Tran, Ngoc-Bao Nguyen, Trung-Kien Nguyen, and Ngai-Man Cheung.
 \newblock Towards good practices for data augmentation in gan training.
 \newblock {\em arXiv preprint arXiv:2006.05338}, 2:3, 2020.
 
@@ -131,11 +111,9 @@ Dmitry Ulyanov, Andrea Vedaldi, and Victor Lempitsky.
 \newblock {\em arXiv preprint arXiv:1607.08022}, 2016.
 
 \bibitem{wang2022cafe}
-Kai Wang, Bo Zhao, Xiangyu Peng, Zheng Zhu, Shuo Yang, Shuo Wang, Guan Huang,
-  Hakan Bilen, Xinchao Wang, and Yang You.
+Kai Wang, Bo Zhao, Xiangyu Peng, Zheng Zhu, Shuo Yang, Shuo Wang, Guan Huang, Hakan Bilen, Xinchao Wang, and Yang You.
 \newblock Cafe learning to condense dataset by aligning features.
-\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition 2022}, 2022.
+\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern Recognition 2022}, 2022.
 
 \bibitem{wang2021rethinking}
 Ruochen Wang, Minhao Cheng, Xiangning Chen, Xiaocheng Tang, and Cho-Jui Hsieh.
@@ -149,27 +127,22 @@ Tongzhou Wang, Jun-Yan Zhu, Antonio Torralba, and Alexei~A Efros.
 
 \bibitem{wolf2011facility}
 Gert~W Wolf.
-\newblock Facility location: concepts, models, algorithms and case studies.
-  series: Contributions to management science.
-\newblock {\em International Journal of Geographical Information Science},
-  25(2):331--333, 2011.
+\newblock Facility location: concepts, models, algorithms and case studies. series: Contributions to management science.
+\newblock {\em International Journal of Geographical Information Science}, 25(2):331--333, 2011.
 
 \bibitem{xiao2017fashion}
 Han Xiao, Kashif Rasul, and Roland Vollgraf.
-\newblock Fashion-mnist: a novel image dataset for benchmarking machine
-  learning algorithms.
+\newblock Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms.
 \newblock {\em arXiv preprint arXiv:1708.07747}, 2017.
 
 \bibitem{xiong2022FedDM}
 Yuanhao Xiong, Ruochen Wang, Minhao Cheng, Felix Yu, and Cho-Jui Hsieh.
-\newblock Feddm: Iterative distribution matching for communication-efficient
-  federated learning, 2022.
+\newblock Feddm: Iterative distribution matching for communication-efficient federated learning, 2022.
 
 \bibitem{zhaodsa}
 Bo Zhao and Hakan Bilen.
 \newblock Dataset condensation with differentiable siamese augmentation.
-\newblock In {\em International Conference on Machine Learning}, pages
-  12674--12685. PMLR, 2021.
+\newblock In {\em International Conference on Machine Learning}, pages 12674--12685. PMLR, 2021.
 
 \bibitem{zhaodm}
 Bo Zhao and Hakan Bilen.
@@ -184,8 +157,7 @@ Bo Zhao, Konda~Reddy Mopuri, and Hakan Bilen.
 \bibitem{zhao2020differentiable}
 Shengyu Zhao, Zhijian Liu, Ji Lin, Jun-Yan Zhu, and Song Han.
 \newblock Differentiable augmentation for data-efficient gan training.
-\newblock {\em Advances in Neural Information Processing Systems},
-  33:7559--7570, 2020.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:7559--7570, 2020.
 
 \bibitem{zhou2022dataset}
 Yongchao Zhou, Ehsan Nezhadarya, and Jimmy Ba.

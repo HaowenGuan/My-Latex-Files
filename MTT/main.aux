@@ -2,13 +2,10 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -16,6 +13,7 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{erhan2009visualizing}
 \citation{hinton2015distilling}
 \citation{dd}
 \citation{bohdal2020flexible,sucholutsky2021soft,dc,dsa,nguyen2020dataset,nguyen2021dataset,dm}
@@ -169,7 +167,7 @@
 \citation{deng2009imagenet}
 \citation{imagenette}
 \citation{dm}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CIFAR-100 (1 image / class). \textbf  {Left:} Smaller $M$ and $N$ match shorter-range behavior, which performs worse than longer-range matching. \textbf  {Right:} Over $1000$ training steps on distilled data, we track the closest distance in parameter space (normalized MSE in Eqn.\nobreakspace  {}\ref  {eq:weight_matching}) to a target set of parameters, obtained with $\Delta _t$ training steps on real data. Matching long-range behavior, our method better approximate real data training for longer ranges (large $\Delta _t$). \relax }}{7}{figure.caption.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CIFAR-100 (1 image / class). \textbf  {Left:} Smaller $M$ and $N$ match shorter-range behavior, which performs worse than longer-range matching. \textbf  {Right:} Over $1000$ training steps on distilled data, we track the closest distance in parameter space (normalized MSE in Eqn.\nobreakspace  {}\ref {eq:weight_matching}) to a target set of parameters, obtained with $\Delta _t$ training steps on real data. Matching long-range behavior, our method better approximate real data training for longer ranges (large $\Delta _t$). \relax }}{7}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:mn-alpha}{{5}{7}{CIFAR-100 (1 image / class). \textbf {Left:} Smaller $M$ and $N$ match shorter-range behavior, which performs worse than longer-range matching. \textbf {Right:} Over $1000$ training steps on distilled data, we track the closest distance in parameter space (normalized MSE in \refeq {weight_matching}) to a target set of parameters, obtained with $\Delta _t$ training steps on real data. Matching long-range behavior, our method better approximate real data training for longer ranges (large $\Delta _t$). \relax }{figure.caption.7}{}}
 \newlabel{fig:mn-alpha@cref}{{[figure][5][]5}{[1][6][]7}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Applying our method to 128$\times $128 resolution ImageNet subsets. On this higher resolution, across various subsets, our method continues to produce high-quality distilled images.\relax }}{7}{table.caption.8}\protected@file@percent }

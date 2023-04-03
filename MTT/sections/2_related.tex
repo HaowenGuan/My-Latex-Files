@@ -1,3 +1,5 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
 \section{Related Work}
 
 
@@ -20,6 +22,7 @@ Our method can be viewed as imitating a collection of expert network training tr
 
 \myparagraph{Coreset and Instance Selection.}
 Similar to dataset distillation, coreset~\cite{tsang2005core,har2007smaller,bachem2017practical,sener2018active,chen2010super} and instance selection~\cite{olvera2010review} aim to select a subset of the entire training dataset, where training on this small subset achieves good performance. Most of such methods do not apply to modern deep learning, but new formulations based on bi-level optimization have shown promising results on applications like continual learning \cite{borsos2020coresets}. Related to coreset, other lines of research aim to understand which training samples are    ``valuable'' for modern machine learning, including measuring single-example accuracy \citep{lapedriza2013all} and counting misclassification rates \citep{toneva2018empirical}. In fact, dataset distillation is a generalization of such ideas, as the distilled data do not need to be realistic or come from the training set.
+\end{document}
 
 
 

@@ -1,4 +1,3 @@
-
 \documentclass[10pt,twocolumn,letterpaper]{article}
 
 \usepackage[pagenumbers]{cvpr} %
@@ -17,7 +16,7 @@
 \Crefname{section}{Section}{Sections}
 \Crefname{table}{Table}{Tables}
 \crefname{table}{Tab.}{Tabs.}
-
+\usepackage{subfiles}
 
 
 
@@ -36,23 +35,17 @@
 }
 
 
-\input{figText/teaser}
+\subfile{figText/teaser.tex}
+\cite{erhan2009visualizing}
 
-\input{sections/0_abstract}
+\subfile{sections/0_abstract}
+\subfile{sections/1_introduction}
+\subfile{sections/2_related}
+\subfile{sections/3_method}
+\subfile{sections/4_experiment}
+\subfile{sections/5_discussion}
+\subfile{sections/6_acknowledgements}
 
-
-
-\input{sections/1_introduction}
-
-\input{sections/2_related}
-
-\input{sections/3_method}
-
-\input{sections/4_experiment}
-
-\input{sections/5_discussion}
-
-\input{sections/6_acknowledgements}
 
 
 {\small
@@ -62,6 +55,6 @@
 \clearpage
 
 \appendix
-\input{sections/Appendix}
+\subfile{sections/Appendix}
 
 \end{document}

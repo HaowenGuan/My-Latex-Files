@@ -1,3 +1,5 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
 
 \section{Experiments}
 \lblsec{expr}
@@ -115,6 +117,8 @@ As the code of \texttt{DM}~\cite{dm} is not publicly available now, we choose to
 While all of the generated images are devoid of high-frequency noise, the tasks still differ in the type of distilled image they induce. For tasks where all the classes have a similar structure but unique textures like ImageSquawk (\reffig{imagenet}), the distilled images may not have much structure but instead store discriminating information in the textures.
 
 Conversely, for tasks where all classes have similar color or textures like ImageYellow (\reffig{imagenet}), the distilled images seem to diverge from their common trait and accentuate the structure or secondary color that makes them unique. Specifically, note the differences between the distilled ``Banana'' images for the ImageFruit and ImageYellow (bottom row, \reffig{imagenet}). Although the expert trajectory-generating networks saw the same ``Banana'' training images, the distilled images differ between the two tasks. The distilled ``Banana'' for the ImageYellow task is clearly much ``greener'' than the equivalent image for the ImageFruit task. This implies that the expert networks identify different features by which to identify classes based on the other classes in the task.
+
+\end{document}
 
 
 

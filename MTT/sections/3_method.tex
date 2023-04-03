@@ -1,3 +1,6 @@
+
+\documentclass[main.tex]{subfiles}
+\begin{document}
 \section{Method}
 \lblsec{method}
 \emph{Dataset Distillation} refers to the curation of a small, synthetic training set $\mathcal{D}_\mathsf{syn}$ such that a model trained on this synthetic data will have similar performance on the real test set as a model trained on the large, real training set $\mathcal{D}_\mathsf{real}$. In this section, we describe our method that directly mimics the long-range behavior of real-data training, matching multiple training steps on distilled data to \textit{many} more steps on the real data.
@@ -53,7 +56,7 @@ Instead, we can sample a new mini-batch $b$ for every update of the \emph{studen
 \end{equation}%
 This method of batching allows us to distill a much larger synthetic dataset while ensuring some amount of heterogeneity among the distilled images of the same class. 
 
-
+\end{document}
 
 
 
