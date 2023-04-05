@@ -1,0 +1,35 @@
+% \makeatletter \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@} {2mm \@plus1ex \@minus.2ex} {-0.7em} {\normalfont\normalsize\bfseries}} \makeatother
+\makeatletter \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@} {2mm \@plus1ex \@minus.2ex} {-0.7em} {\normalfont\normalsize\bfseries}} \makeatother
+
+\newcommand{\listheader}[1]{\item \emph{#1} }
+
+\newcommand\overstar[1]{\ThisStyle{\ensurestackMath{%
+  \setbox0=\hbox{$\SavedStyle#1$}%
+  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedStyle*}}{O}{c}{F}{T}{S}}}}
+
+\newtheorem{theorem}{Theorem}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{mydefinition}[theorem]{Definition}
+\newtheorem{loosedefinition}[theorem]{(Loose) Definition}
+
+\newcommand{\STAB}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
+
+% \newcommand\mathmacro[1][A]{\ensuremath{{#1}_1}}
+\newcommand\mathmacro[1][A]{{#1}_1}
+\newcommand{\dataset}[0]{\ensuremath{\mathcal{D}}\xspace}
+\newcommand{\distill}[0]{\ensuremath{\mathcal{D}_{\mathsf{syn}}}\xspace}
+
+\newcommand{\bs}[1]{\ensuremath{\bm{\mathit{#1}}}}
+
+\newcommand{\ns}[1]{\textcolor{blue}{[Noveen: #1]}}
+\newcommand{\ie}[0]{\emph{i.e.}\xspace}
+\newcommand{\etc}[0]{\emph{etc.}\xspace}
+\newcommand{\eg}[0]{\emph{e.g.}\xspace}
+\newcommand{\vs}[0]{\emph{vs.}\xspace}
+\newcommand{\wrt}[0]{\emph{w.r.t.}\xspace}
+\newcommand{\aka}[0]{\emph{a.k.a.}\xspace}
+
+% \newcommand{\dim}[1]{\operatorname{dim}\left(#1\right)}
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+\newcommand{\expectation}[2]{\underset{#1}{\mathbb{E}} \left[#2\right]}

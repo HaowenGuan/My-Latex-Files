@@ -1,0 +1,84 @@
+% \newcommand{\format}[2]{$#1 \scriptscriptstyle \pm #2$}
+\newcommand{\format}[2]{\begin{tabular}{@{}c@{}}$#1$\\[-7pt]$\scriptscriptstyle \pm #2$\end{tabular}}
+\newcommand{\boformat}[2]{\color{black} \begin{tabular}{@{}c@{}}$\mathbf{#1}$\\[-7pt]$\scriptscriptstyle \mathbf{\pm #2}$\end{tabular}}
+\newcommand{\orformat}[2]{\color{orange} \begin{tabular}{@{}c@{}}$\mathbf{#1}$\\[-7pt]$\scriptscriptstyle \mathbf{\pm #2}$\end{tabular}}
+\newcommand{\blformat}[2]{\color{blue} \begin{tabular}{@{}c@{}}$\mathbf{#1}$\\[-7pt]$\scriptscriptstyle \mathbf{\pm #2}$\end{tabular}}
+
+\def\arraystretch{1.32}
+\setlength{\tabcolsep}{0.5em}
+\begin{table*}[!htbp]
+    \begin{footnotesize}
+    \begin{center}
+        \caption{Comparison of data distillation methods. Each method (1) synthesizes the data summary on the train-set; (2) unless mentioned, trains a 128-width ConvNet \citep{conv_net} on the data summary; and (3) evaluates it on the test-set. Confidence intervals are obtained by training at least 5 networks on the data summary. LinBa (No Fact.) represents LinBa with the no factorization. Methods evaluated using KRR are marked as ($\infty$-Conv) or ($\infty$-FC). The equivalent storage-in-bytes is used for factorization-based techniques instead of IPC. The best method in their category is \textbf{emboldened}, the best-overall non-factorized method evaluated on ConvNet is \textbf{\textcolor{orange}{colored orange}}, and the best-overall factorized method is \textbf{\textcolor{blue}{colored blue}}.}
+        \label{tab:main_results}
+        \begin{tabular}{c c | c c c | c c c | c c c | c c c }
+            \toprule
+            \multicolumn{2}{c|}{\textbf{Dataset}} & \multicolumn{3}{c|}{\textbf{MNIST}} & \multicolumn{3}{c|}{\textbf{CIFAR-10}} & \multicolumn{3}{c|}{\textbf{CIFAR-100}} & \multicolumn{3}{c}{\textbf{Tiny ImageNet}} \\
+            \multicolumn{2}{c|}{\textbf{Imgs/Class (IPC)}} & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 & 1 & 10 & 50 \\
+            
+            \midrule
+            
+            \multirow{4}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Baselines\\\end{tabular}}}} & Random & \format{64.9}{3.5} & \boformat{95.1}{0.9} & \boformat{97.9}{0.2} & \format{14.4}{2.0} & \format{26.0}{1.2} & \boformat{43.4}{1.0} & \format{4.2}{0.3} & \format{14.6}{0.5} & \format{30.0}{0.4} & \boformat{1.5}{0.1} & \boformat{6.0}{0.8} & \boformat{16.8}{1.8} \\ 
+            & Herding\color{red}{$^1$} & \boformat{89.2}{1.6} & \format{93.7}{0.3} & \format{94.9}{0.2} & \boformat{21.5}{1.2} & \boformat{31.6}{0.7} & \format{40.4}{0.6} & \format{8.4}{0.3} & \format{17.3}{0.5} & \format{33.7}{0.5} & - & - & - \\ 
+            & Forgetting\color{red}{$^2$} & \format{35.5}{5.6} & \format{68.1}{3.3} & \format{88.2}{1.2} & \format{13.5}{1.2} & \format{23.3}{1.0} & \format{23.3}{1.1} & \format{4.5}{0.2} & \format{15.1}{0.3} & \format{30.5}{0.3} & - & - & - \\ 
+            
+            \midrule
+
+            \multirow{12}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Meta-model Matching\\\end{tabular}}}} & DD\color{red}{$^3$} & - & \format{79.5}{8.1} & - & - & \format{36.8}{1.2} & - & - & - & - & - & - & - \\
+            & LinBa (No Fact.)\color{red}{$^{15}$} & \orformat{95.2}{0.3} & \orformat{98.8}{0.1} & \orformat{99.2}{0.1} & \format{49.1}{0.6} & \format{62.4}{0.4} & \format{70.5}{0.4} & \format{21.3}{0.6} & \format{34.7}{0.5} & - & - & - & - \\
+            & KIP (ConvNet)\color{red}{$^4$} & \format{90.1}{0.1} & \format{97.5}{0.0} & \format{98.3}{0.1} & \format{49.9}{0.2} & \format{62.7}{0.3} & \format{68.6}{0.2} & \format{15.7}{0.2} & \format{28.3}{0.1} & - & - & - & - \\
+            & RFAD (ConvNet)\color{red}{$^5$} & \format{94.4}{1.5} & \format{98.5}{0.1} & \format{98.8}{0.1} & \orformat{53.6}{1.2} & \boformat{66.3}{0.5} & \format{71.1}{0.4} & \format{26.3}{1.1} & \format{33.0}{0.3} & - & - & - & - \\
+            & FRePO (ConvNet)\color{red}{$^6$} & \format{93.0}{0.4} & \format{98.6}{0.1} & \orformat{99.2}{0.1} & \format{46.8}{0.7} & \format{65.5}{0.6} & \boformat{71.7}{0.2} & \orformat{28.7}{0.1} & \orformat{42.5}{0.2} & \boformat{44.3}{0.2} & \orformat{15.4}{0.3} & \orformat{25.4}{0.2} & - \\
+
+            \cmidrule{2-14}
+            
+            & KIP ($\infty$-FC)\color{red}{$^7$} & \format{85.5}{0.1} & \format{97.2}{0.2} & \format{98.4}{0.1} & \format{40.5}{0.4} & \format{53.1}{0.5} & \format{58.6}{0.4} & - & - & - & - & - & - \\
+            & KIP ($\infty$-Conv)\color{red}{$^4$} & \boformat{97.3}{0.1} & \boformat{99.1}{0.1} & \boformat{99.5}{0.1} & \boformat{64.7}{0.2} & \boformat{75.6}{0.2} & \boformat{80.6}{0.1} & \format{34.9}{0.1} & \boformat{49.5}{0.3} & - & - & - & - \\
+            & RFAD ($\infty$-Conv)\color{red}{$^5$} & \format{97.2}{0.2} & \format{99.1}{0.0} & \format{99.1}{0.0} & \format{61.4}{0.8} & \format{73.7}{0.2} & \format{76.6}{0.3} & \boformat{44.1}{0.1} & \format{46.8}{0.2} & - & - & - & - \\
+            & FRePO ($\infty$-Conv)\color{red}{$^6$} & \format{92.6}{0.4} & \format{98.6}{0.1} & \format{99.2}{0.1} & \format{47.9}{0.6} & \format{68.0}{0.2} & \format{74.4}{0.1} & \format{32.3}{0.1} & \format{44.9}{0.2} & \format{43.0}{0.3} & \boformat{19.1}{0.3} & \boformat{26.5}{0.1} & - \\
+
+            \midrule
+
+            \multirow{4}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Gradient\\Matching\\\end{tabular}}}} & DC\color{red}{$^8$} & \boformat{91.7}{0.5} & \format{97.4}{0.2} & \format{98.2}{0.2} & \format{28.3}{0.5} & \format{44.9}{0.5} & \format{53.9}{0.5} & \format{12.8}{0.3} & \format{25.2}{0.3} & \format{30.5}{0.3} & \format{4.6}{0.6} & \format{11.2}{1.6} & \format{10.9}{0.7} \\
+            & DSA\color{red}{$^9$} & \format{88.7}{0.6} & \boformat{97.8}{0.1} & \orformat{99.2}{0.1} & \format{28.8}{0.7} & \format{52.1}{0.5} & \format{60.6}{0.5} & \format{13.9}{0.3} & \format{32.3}{0.3} & \boformat{42.8}{0.4} & \boformat{6.6}{0.2}  & \boformat{14.4}{2.0} & \boformat{22.6}{2.6} \\
+            & DCC\color{red}{$^{10}$} & - & - & - & \boformat{34.0}{0.7} & \boformat{54.5}{0.5} & \boformat{64.2}{0.4} & \boformat{14.6}{0.3} & \boformat{33.5}{0.3} & \format{39.3}{0.4} & - & - & - \\
+
+            \midrule
+
+            % \multirow{2}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Distr.\\Matching\\\end{tabular}}}} & DM\color{red}{$^{11}$} & \format{64.9}{3.5} & \format{95.1}{0.9} & \format{97.9}{0.2} & \format{14.4}{2.0} & \format{26.0}{1.2} & \format{43.4}{1.0} & \format{4.2}{0.3} & \format{14.6}{0.5} & \format{30.0}{0.4} & \format{3.9}{0.2} & \format{12.9}{0.4} & \format{21.5}{1.2} \\
+            \multirow{2}{*}{\begin{tabular}{@{}c@{}}\\[-10pt]Distr.\\Matching\end{tabular}} & DM\color{red}{$^{11}$} & \format{89.7}{0.6} & \boformat{97.5}{0.1} & \format{98.6}{0.1} & \format{26.0}{0.8} & \format{48.9}{0.6} & \boformat{63.0}{0.4} & \format{11.4}{0.3} & \format{29.7}{0.3} & \boformat{43.6}{0.4} & \boformat{3.9}{0.2} & \boformat{12.9}{0.4} & \boformat{24.1}{0.3} \\
+            & CAFE\color{red}{$^{12}$} & \boformat{90.8}{0.5} & \boformat{97.5}{0.1} & \boformat{98.9}{0.2} & \boformat{31.6}{0.8} & \boformat{50.9}{0.5} & \format{62.3}{0.4} & \boformat{14.0}{0.3} & \boformat{31.5}{0.2} & \format{42.9}{0.2} & - & - & - \\
+
+            \midrule
+
+            \multirow{2}{*}{\begin{tabular}{@{}c@{}}\\[-10pt]Traj.\\Matching\end{tabular}}
+            % \begin{tabular}{@{}c@{}}Traj.\\Matching\end{tabular} 
+            & MTT\color{red}{$^{13}$} & - & - & - & \format{46.3}{0.8} & \format{65.3}{0.7} & \format{71.6}{0.2} & \format{24.3}{0.3} & \format{40.1}{0.4} & \format{47.7}{0.2} & \boformat{8.8}{0.3} & \boformat{23.2}{0.2} & \orformat{28.0}{0.3} \\
+            & TESLA\color{red}{$^{14}$} & - & - & - & \boformat{48.5}{0.8} & \orformat{66.4}{0.8} & \orformat{72.6}{0.7} & \boformat{24.8}{0.4} & \boformat{41.7}{0.3} & \orformat{47.9}{0.3} & - & - & - \\
+            % \multirow{1}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Traj.\\Matching\\\end{tabular}}}} & MTT\color{red}{$^{13}$} & \format{64.9}{3.5} & \format{95.1}{0.9} & \format{97.9}{0.2} & \format{46.3}{0.8} & \format{65.3}{0.7} & \format{71.6}{0.2} & \format{24.3}{0.3} & \format{40.1}{0.4} & \format{47.7}{0.2} & \format{8.8}{0.3} & \format{23.2}{0.2} & \format{28.0}{0.3} \\
+
+            \midrule
+
+            \multirow{5}{*}{\STAB{\rotatebox[origin=c]{90}{\begin{tabular}{@{}c@{}}Factorization \ \\\end{tabular}}}} & IDC\color{red}{$^{15}$} & - & - & - & \format{50.0}{0.4} & \format{67.5}{0.5} & \format{74.5}{0.1} & - & \format{44.8}{0.2} & - & - & - & - \\
+            & LinBa\color{red}{$^{16}$} & \blformat{98.7}{0.7} & \blformat{99.3}{0.5} & \blformat{99.4}{0.4} & \blformat{66.4}{0.4} & \format{71.2}{0.4} & \format{73.6}{0.5} & \format{34.0}{0.4} & \format{42.9}{0.7} & - & \format{16.0}{0.7}  & - & - \\
+            & HaBa\color{red}{$^{17}$} & - & - & - & \format{48.3}{0.8} & \format{69.9}{0.4} & \format{74.0}{0.2} & \format{33.4}{0.4} & \format{40.2}{0.2} & \blformat{47.0}{0.2} & - & - & - \\
+            & KFS\color{red}{$^{18}$} & - & - & - & \format{59.8}{0.5} & \blformat{72.0}{0.3} & \blformat{75.0}{0.2} & \blformat{40.0}{0.5} & \blformat{50.6}{0.2} & - & \blformat{22.7}{0.2} & \blformat{27.8}{0.2} & - \\
+
+            \midrule
+
+            \multicolumn{2}{c|}{Full Dataset} & \multicolumn{3}{c|}{\format{99.6}{0.1}} & \multicolumn{3}{c|}{\format{84.8}{0.1}} & \multicolumn{3}{c|}{\format{56.2}{0.3}} & \multicolumn{3}{c}{\format{37.6}{0.4}} \\
+            
+            \bottomrule
+
+            \\[-5pt]
+
+            \multicolumn{14}{l}{\textcolor{red}{$^1$} \citep{herding}, \textcolor{red}{$^2$} \citep{forgetting}, \textcolor{red}{$^3$} \citep{dd_orig}, \textcolor{red}{$^4$} \citep{kip_conv}, \textcolor{red}{$^5$} \citep{rfad}} \\
+            \multicolumn{14}{l}{\textcolor{red}{$^6$} \citep{frepo}, \textcolor{red}{$^7$} \citep{kip}, \textcolor{red}{$^8$} \citep{zhao_dc}, \textcolor{red}{$^9$} \citep{zhao_dsa}, \textcolor{red}{$^{10}$} \citep{dcc}} \\
+            \multicolumn{14}{l}{\textcolor{red}{$^{11}$} \citep{dm}, \textcolor{red}{$^{12}$} \citep{cafe}, \textcolor{red}{$^{13}$} \citep{mtt}, \textcolor{red}{$^{14}$} \citep{tesla}} \\
+            \multicolumn{14}{l}{\textcolor{red}{$^{15}$} \citep{idc}, \textcolor{red}{$^{16}$} \citep{remember_past}, \textcolor{red}{$^{17}$} \citep{haba}, \textcolor{red}{$^{18}$} \citep{kfs}} \\
+        \end{tabular}
+    \end{center}
+    \end{footnotesize}
+    % \bigskip
+    \vspace{-6mm} %Put here to reduce too much white space after your table
+\end{table*}

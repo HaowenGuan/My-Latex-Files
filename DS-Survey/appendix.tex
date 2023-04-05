@@ -1,0 +1,45 @@
+\section{Notation} \label{appendix:details}
+
+\def\arraystretch{1.5}
+\begin{table*}[!htbp]
+\begin{center}
+\begin{tabular}{r@{\hskip 0.4in} l}
+    \multicolumn{2}{c}{\textbf{Dataset related}} \\[0.1in]
+    
+    $\dataset \triangleq \{ (x_i \in \mathcal{X}, y_i \in \mathcal{Y}) \}_{i=1}^{|\dataset|}$ & The target dataset to be distilled \\
+    $\mathcal{X}$ & Data domain \\
+    $\mathcal{Y}$ & Predictand domain \\
+    $\mathcal{C}$ & Set of unique classes in $\mathcal{Y}$ \\
+    $\dataset^c \triangleq \{ (x_i, y_i) ~|~ y_i = c\}_{i=1}^{|\dataset|}$ & Portion of \dataset with class $c$ \\
+    $\mathbf{X} \triangleq [x_i]_{i=1}^{|\dataset|}$ & Matrix of all features in \dataset \\
+    $\mathbf{Y} \triangleq [y_i]_{i=1}^{|\dataset|}$ & Matrix of all predictands in \dataset \\
+    $n$ & Size of data summary \\
+    $\distill \triangleq \{ (\Tilde{x}_i, \Tilde{y}_i) \}_{i=1}^{n}$ & Data summary \\
+    $\distill^c \triangleq \{ (\Tilde{x}_i, \Tilde{y}_i) ~|~ \Tilde{y}_i = c\}_{i=1}^{n}$ & Portion of \distill with class $c$ \\
+    $\mathbf{X}_{\mathsf{syn}} \triangleq [\Tilde{x}_i]_{i=1}^{n}$ & Matrix of all features in \distill \\
+    $\mathbf{Y}_{\mathsf{syn}} \triangleq [\Tilde{y}_i]_{i=1}^{n}$ & Matrix of all predictands in \distill
+
+    \\[0.1in] \multicolumn{2}{c}{\textbf{Learning related}} \\[0.1in]
+    
+    $\Phi_{\theta} : \mathcal{X} \mapsto \mathcal{Y}$ & Learning algorithm parameterized by $\theta$ \\
+    $l : \mathcal{Y} \times \mathcal{Y} \mapsto \mathbb{R}$ & Twice-differentiable cost function \\
+    $\mathcal{L}_{\dataset}(\theta) \triangleq \mathbb{E}_{(x, y) \sim \dataset}[l(\Phi_{\theta}(x), y)]$ & Expected loss of $\Phi$ on \dataset \\
+    $\mathcal{L}_{\distill}(\theta) \triangleq \mathbb{E}_{(x, y) \sim \distill}[l(\Phi_{\theta}(x), y)]$ & Expected loss of $\Phi$ on \distill 
+    
+    \\[0.1in] \multicolumn{2}{c}{\textbf{General}} \\[0.1in]
+
+    $\dim(\mathcal{A})$ & Size of basis of $\mathcal{A}$ \\
+    $|\mathcal{A}|$ & Number of elements in $\mathcal{A}$ \\
+    $\operatorname{sup}$ & Supremum \\
+    $\underset{\theta}{\operatorname{arg} \operatorname{min}} ~~ f(\theta)$ & Optimum value of $\theta$ which minimizes $f(\theta)$ \\
+    $\expectation{x}{f(x)} \triangleq \sum_x p(x) \cdot f(x)$ & Expected value of $f(x)$ when domain of $x$ is discrete
+\end{tabular}
+\end{center}
+\end{table*}
+
+% \vspace{0.25cm}
+% \newpage
+
+% \section{Collated Results} \label{appendix:results}
+
+% \input{results.tex}
