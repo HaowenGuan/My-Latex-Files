@@ -1,0 +1,302 @@
+\begin{thebibliography}{42}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Allamanis and Sutton(2013)]{allamanis2013mining}
+Miltiadis Allamanis and Charles Sutton.
+\newblock Mining source code repositories at massive scale using language
+  modeling.
+\newblock In \emph{2013 10th Working Conference on Mining Software Repositories
+  (MSR)}, pages 207--216. IEEE, 2013.
+
+\bibitem[Alur et~al.(2018)Alur, Fisman, Padhi, Singh, and Udupa]{alur2018sygus}
+Rajeev Alur, Dana Fisman, Saswat Padhi, Rishabh Singh, and Abhishek Udupa.
+\newblock Sygus-comp 2018: Results and analysis.
+\newblock \emph{SYNT}, 2018.
+
+\bibitem[Bisk et~al.(2019)Bisk, Zellers, Bras, Gao, and
+  Choi]{bisk2019physicaliqa}
+Yonatan Bisk, Rowan Zellers, Ronan~Le Bras, Jianfeng Gao, and Yejin Choi.
+\newblock Piqa: Reasoning about physical commonsense in natural language, 2019.
+
+\bibitem[Black et~al.(2021)Black, Gao, Wang, Leahy, and Biderman]{gpt-neo}
+Sid Black, Leo Gao, Phil Wang, Connor Leahy, and Stella Biderman.
+\newblock {GPT-Neo: Large Scale Autoregressive Language Modeling with
+  Mesh-Tensorflow}, March 2021.
+\newblock URL \url{https://doi.org/10.5281/zenodo.5297715}.
+\newblock {If you use this software, please cite it using these metadata.}
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Kr{\"u}ger,
+  Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin,
+  Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and
+  Amodei]{Brown2020LanguageMA}
+T.~Brown, B.~Mann, Nick Ryder, Melanie Subbiah, J.~Kaplan, Prafulla Dhariwal,
+  Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini
+  Agarwal, Ariel Herbert-Voss, G.~Kr{\"u}ger, T.~Henighan, R.~Child, Aditya
+  Ramesh, D.~Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen,
+  E.~Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, J.~Clark, Christopher
+  Berner, Sam McCandlish, A.~Radford, Ilya Sutskever, and Dario Amodei.
+\newblock Language models are few-shot learners.
+\newblock \emph{ArXiv}, abs/2005.14165, 2020.
+
+\bibitem[Cai et~al.(2017)Cai, Shin, and Song]{Cai2017MakingNP}
+Jonathon Cai, Richard Shin, and D.~Song.
+\newblock Making neural programming architectures generalize via recursion.
+\newblock 2017.
+
+\bibitem[Chen et~al.(2021)Chen, Tworek, Jun, Yuan, Ponde, Kaplan, Edwards,
+  Burda, Joseph, Brockman, et~al.]{chen2021evaluating}
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde, Jared Kaplan,
+  Harri Edwards, Yura Burda, Nicholas Joseph, Greg Brockman, et~al.
+\newblock Evaluating large language models trained on code.
+\newblock \emph{arXiv preprint arXiv:2107.03374}, 2021.
+
+\bibitem[Desai et~al.(2016)Desai, Gulwani, Hingorani, Jain, Karkare, Marron,
+  and Roy]{desai2016program}
+Aditya Desai, Sumit Gulwani, Vineet Hingorani, Nidhi Jain, Amey Karkare, Mark
+  Marron, and Subhajit Roy.
+\newblock Program synthesis using natural language.
+\newblock In \emph{Proceedings of the 38th International Conference on Software
+  Engineering}, pages 345--356, 2016.
+
+\bibitem[Gao et~al.(2020)Gao, Biderman, Black, Golding, Hoppe, Foster, Phang,
+  He, Thite, Nabeshima, et~al.]{gao2020pile}
+Leo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles
+  Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, et~al.
+\newblock The pile: An 800gb dataset of diverse text for language modeling.
+\newblock \emph{arXiv preprint arXiv:2101.00027}, 2020.
+
+\bibitem[Gebru et~al.(2018)Gebru, Morgenstern, Vecchione, Vaughan, Wallach,
+  Daume{\'e}~III, and Crawford]{gebru2018datasheets}
+Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer~Wortman Vaughan,
+  Hanna Wallach, Hal Daume{\'e}~III, and Kate Crawford.
+\newblock Datasheets for datasets.
+\newblock \emph{arXiv preprint arXiv:1803.09010}, 2018.
+
+\bibitem[Gulwani et~al.(2017)Gulwani, Polozov, and Singh]{Gulwani2017ProgramS}
+Sumit Gulwani, Oleksandr Polozov, and R.~Singh.
+\newblock Program synthesis.
+\newblock \emph{Found. Trends Program. Lang.}, 4:\penalty0 1--119, 2017.
+
+\bibitem[Hendrycks et~al.(2021{\natexlab{a}})Hendrycks, Burns, Basart, Critch,
+  Li, Song, and Steinhardt]{hendrycks2021ethics}
+Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song,
+  and Jacob Steinhardt.
+\newblock Aligning {AI} with shared human values.
+\newblock \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}, 2021{\natexlab{a}}.
+
+\bibitem[Hendrycks et~al.(2021{\natexlab{b}})Hendrycks, Burns, Basart, Zou,
+  Mazeika, Song, and Steinhardt]{hendryckstest2021}
+Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn
+  Song, and Jacob Steinhardt.
+\newblock Measuring massive multitask language understanding.
+\newblock \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}, 2021{\natexlab{b}}.
+
+\bibitem[Hendrycks et~al.(2021{\natexlab{c}})Hendrycks, Burns, Kadavath, Arora,
+  Basart, Tang, Song, and Steinhardt]{hendrycksmath2021}
+Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul Arora, Steven Basart, Eric
+  Tang, Dawn Song, and Jacob Steinhardt.
+\newblock Measuring mathematical problem solving with the math dataset.
+\newblock \emph{arXiv preprint arXiv:2103.03874}, 2021{\natexlab{c}}.
+
+\bibitem[Huang et~al.(2019)Huang, Bras, Bhagavatula, and
+  Choi]{huang2019cosmosqa}
+Lifu Huang, Ronan~Le Bras, Chandra Bhagavatula, and Yejin Choi.
+\newblock Cosmos qa: Machine reading comprehension with contextual commonsense
+  reasoning, 2019.
+
+\bibitem[Iyer et~al.(2018)Iyer, Konstas, Cheung, and
+  Zettlemoyer]{iyer-etal-2018-mapping}
+Srinivasan Iyer, Ioannis Konstas, Alvin Cheung, and Luke Zettlemoyer.
+\newblock Mapping language to code in programmatic context.
+\newblock In \emph{Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing}, Brussels, Belgium, October-November 2018.
+  Association for Computational Linguistics.
+
+\bibitem[Kulal et~al.(2019)Kulal, Pasupat, Chandra, Lee, Padon, Aiken, and
+  Liang]{NEURIPS2019_7298332f}
+Sumith Kulal, Panupong Pasupat, Kartik Chandra, Mina Lee, Oded Padon, Alex
+  Aiken, and Percy~S Liang.
+\newblock Spoc: Search-based pseudocode to code.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~32, 2019.
+
+\bibitem[Lachaux et~al.(2020)Lachaux, Roziere, Chanussot, and
+  Lample]{lachaux2020unsupervised}
+Marie-Anne Lachaux, Baptiste Roziere, Lowik Chanussot, and Guillaume Lample.
+\newblock Unsupervised translation of programming languages.
+\newblock \emph{arXiv preprint arXiv:2006.03511}, 2020.
+
+\bibitem[Ling et~al.(2016)Ling, Blunsom, Grefenstette, Hermann, Kocisk{\'y},
+  Wang, and Senior]{Ling2016LatentPN}
+W.~Ling, P.~Blunsom, Edward Grefenstette, K.~Hermann, Tom{\'a}s Kocisk{\'y},
+  Fumin Wang, and A.~Senior.
+\newblock Latent predictor networks for code generation.
+\newblock \emph{ArXiv}, abs/1603.06744, 2016.
+
+\bibitem[Liu et~al.(2020{\natexlab{a}})Liu, Shen, Zhu, Niu, Li, and
+  Zhang]{raca}
+Hui Liu, Mingzhu Shen, Jiaqi Zhu, Nan Niu, Ge~Li, and Lu~Zhang.
+\newblock Deep learning based program generation from requirements text: Are we
+  there yet?
+\newblock \emph{IEEE Transactions on Software Engineering}, 2020{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2020{\natexlab{b}})Liu, Cui, Liu, Huang, Wang, and
+  Zhang]{Liu2020LogiQAAC}
+J.~Liu, Leyang Cui, Hanmeng Liu, Dandan Huang, Yile Wang, and Yue Zhang.
+\newblock {LogiQA}: A challenge dataset for machine reading comprehension with
+  logical reasoning.
+\newblock In \emph{IJCAI}, 2020{\natexlab{b}}.
+
+\bibitem[Loshchilov and Hutter(2019)]{Loshchilov2019DecoupledWD}
+I.~Loshchilov and F.~Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock In \emph{ICLR}, 2019.
+
+\bibitem[Lu et~al.(2021)Lu, Guo, Ren, Huang, Svyatkovskiy, Blanco, Cl{\'e}ment,
+  Drain, Jiang, Tang, Li, Zhou, Shou, Zhou, Tufano, Gong, Zhou, Duan,
+  Sundaresan, Deng, Fu, and Liu]{Lu2021CodeXGLUEAM}
+Shuai Lu, Daya Guo, Shuo Ren, Junjie Huang, Alexey Svyatkovskiy, A.~Blanco,
+  C.~Cl{\'e}ment, Dawn Drain, Daxin Jiang, Duyu Tang, Ge~Li, L.~Zhou, Linjun
+  Shou, Long Zhou, Michele Tufano, Ming Gong, Ming Zhou, N.~Duan,
+  N.~Sundaresan, Shao~Kun Deng, Shengyu Fu, and Shujie Liu.
+\newblock Codexglue: A machine learning benchmark dataset for code
+  understanding and generation.
+\newblock 2021.
+
+\bibitem[Oda et~al.(2015)Oda, Fudaba, Neubig, Hata, Sakti, Toda, and
+  Nakamura]{oda2015ase:pseudogen1}
+Yusuke Oda, Hiroyuki Fudaba, Graham Neubig, Hideaki Hata, Sakriani Sakti,
+  Tomoki Toda, and Satoshi Nakamura.
+\newblock Learning to generate pseudo-code from source code using statistical
+  machine translation.
+\newblock In \emph{International Conference on Automated Software Engineering
+  (ASE)}, 2015.
+
+\bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and
+  Zhu]{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
+\newblock Bleu: a method for automatic evaluation of machine translation.
+\newblock In \emph{Proceedings of the 40th annual meeting of the Association
+  for Computational Linguistics}, pages 311--318, 2002.
+
+\bibitem[Polu and Sutskever(2020)]{Polu2020GenerativeLM}
+Stanislas Polu and Ilya Sutskever.
+\newblock Generative language modeling for automated theorem proving.
+\newblock \emph{ArXiv}, abs/2009.03393, 2020.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, and
+  Sutskever]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, and Ilya
+  Sutskever.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Rajbhandari et~al.(2020)Rajbhandari, Rasley, Ruwase, and
+  He]{rajbhandari2020zero}
+Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He.
+\newblock Zero: Memory optimizations toward training trillion parameter models,
+  2020.
+
+\bibitem[Rasley et~al.(2020)Rasley, Rajbhandari, Ruwase, and
+  He]{Rasley2020DeepSpeedSO}
+Jeff Rasley, Samyam Rajbhandari, Olatunji Ruwase, and Yuxiong He.
+\newblock Deepspeed: System optimizations enable training deep learning models
+  with over 100 billion parameters.
+\newblock \emph{Proceedings of the 26th ACM SIGKDD International Conference on
+  Knowledge Discovery and Data Mining}, 2020.
+
+\bibitem[Raychev et~al.(2016)Raychev, Bielik, and
+  Vechev]{Raychev2016ProbabilisticMF}
+Veselin Raychev, Pavol Bielik, and Martin~T. Vechev.
+\newblock Probabilistic model for code with decision trees.
+\newblock \emph{Proceedings of the 2016 ACM SIGPLAN International Conference on
+  Object-Oriented Programming, Systems, Languages, and Applications}, 2016.
+
+\bibitem[Raza et~al.(2015)Raza, Gulwani, and
+  Milic-Frayling]{Raza2015CompositionalPS}
+Mohammad Raza, Sumit Gulwani, and Natasa Milic-Frayling.
+\newblock Compositional program synthesis from natural language and examples.
+\newblock In \emph{IJCAI}, 2015.
+
+\bibitem[Ren et~al.(2020)Ren, Guo, Lu, Zhou, Liu, Tang, Zhou, Blanco, and
+  Ma]{Ren2020CodeBLEUAM}
+Shuo Ren, Daya Guo, Shuai Lu, L.~Zhou, Shujie Liu, Duyu Tang, M.~Zhou,
+  A.~Blanco, and S.~Ma.
+\newblock Codebleu: a method for automatic evaluation of code synthesis.
+\newblock \emph{ArXiv}, abs/2009.10297, 2020.
+
+\bibitem[Tang and Mooney(2001)]{Tang2001UsingMC}
+L.~Tang and R.~Mooney.
+\newblock Using multiple clause constructors in inductive logic programming for
+  semantic parsing.
+\newblock In \emph{ECML}, 2001.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{Vaswani2017AttentionIA}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, L.~Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock \emph{ArXiv}, abs/1706.03762, 2017.
+
+\bibitem[Wang et~al.(2019{\natexlab{a}})Wang, Pruksachatkun, Nangia, Singh,
+  Michael, Hill, Levy, and Bowman]{NEURIPS2019_4496bf24}
+Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael,
+  Felix Hill, Omer Levy, and Samuel Bowman.
+\newblock Superglue: A stickier benchmark for general-purpose language
+  understanding systems.
+\newblock In \emph{NeurIPS}, 2019{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2019{\natexlab{b}})Wang, Pruksachatkun, Nangia, Singh,
+  Michael, Hill, Levy, and Bowman]{Wang2019SuperGLUEAS}
+Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael,
+  Felix Hill, Omer Levy, and Samuel~R. Bowman.
+\newblock Superglue: A stickier benchmark for general-purpose language
+  understanding systems.
+\newblock In \emph{NeurIPS}, 2019{\natexlab{b}}.
+
+\bibitem[Wang et~al.(2019{\natexlab{c}})Wang, Shin, Liu, Polozov, and
+  Richardson]{wang2019rat}
+Bailin Wang, Richard Shin, Xiaodong Liu, Oleksandr Polozov, and Matthew
+  Richardson.
+\newblock Rat-sql: Relation-aware schema encoding and linking for text-to-sql
+  parsers.
+\newblock \emph{arXiv preprint arXiv:1911.04942}, 2019{\natexlab{c}}.
+
+\bibitem[Yasunaga and Liang(2020)]{Yasunaga2020GraphbasedSP}
+Michihiro Yasunaga and Percy Liang.
+\newblock Graph-based, self-supervised program repair from diagnostic feedback.
+\newblock \emph{ArXiv}, abs/2005.10636, 2020.
+
+\bibitem[Yu et~al.(2018)Yu, Zhang, Yang, Yasunaga, Wang, Li, Ma, Li, Yao,
+  Roman, et~al.]{yu2018spider}
+Tao Yu, Rui Zhang, Kai Yang, Michihiro Yasunaga, Dongxu Wang, Zifan Li, James
+  Ma, Irene Li, Qingning Yao, Shanelle Roman, et~al.
+\newblock Spider: A large-scale human-labeled dataset for complex and
+  cross-domain semantic parsing and text-to-sql task.
+\newblock \emph{arXiv preprint arXiv:1809.08887}, 2018.
+
+\bibitem[Zavershynskyi et~al.(2018)Zavershynskyi, Skidanov, and
+  Polosukhin]{Zavershynskyi2018NAPSNP}
+Maksym Zavershynskyi, A.~Skidanov, and Illia Polosukhin.
+\newblock Naps: Natural program synthesis dataset.
+\newblock \emph{2nd Workshop on Neural Abstract Machines and Program
+  Induction}, 2018.
+
+\bibitem[Zelle and Mooney(1996)]{Zelle1996LearningTP}
+J.~Zelle and R.~Mooney.
+\newblock Learning to parse database queries using inductive logic programming.
+\newblock In \emph{AAAI/IAAI, Vol. 2}, 1996.
+
+\bibitem[Zellers et~al.(2019)Zellers, Holtzman, Bisk, Farhadi, and
+  Choi]{zellers2019hellaswag}
+Rowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi.
+\newblock Hellaswag: Can a machine really finish your sentence?, 2019.
+
+\end{thebibliography}

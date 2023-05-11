@@ -1,0 +1,140 @@
+\section{The APPS Dataset}\label{sec:dataset}
+
+The APPS dataset consists of problems collected from different open-access coding websites such as Codeforces, Kattis, and more. The APPS benchmark attempts to mirror how humans programmers are evaluated by posing coding problems in unrestricted natural language and using test cases to evaluate solution correctness. The problems range in difficulty from introductory to collegiate competition level and measure coding and problem-solving ability. 
+
+The Automated Programming Progress Standard, abbreviated APPS, consists of $10,\!000$ coding problems in total, with $131,\!777$ test cases for checking solutions and $232,\!421$ ground-truth solutions written by humans. Problems can be complicated, as the average length of a problem is $293.2$ words.
+The data are split evenly into training and test sets, with $5,\!000$ problems each. In the test set, every problem has multiple test cases, and the average number of test cases is $21.2$. Each test case is specifically designed for the corresponding problem, enabling us to rigorously evaluate program functionality.
+
+  
+
+
+
+
+
+
+\noindent\textbf{Dataset Construction.}\quad
+To create the APPS dataset, we manually curate problems from open-access sites where programmers share problems with each other, including Codewars, AtCoder, Kattis, and Codeforces. Problems are posed as natural language specifications of what should be coded, and they come in various formats. To improve quality and consistency, we wrote custom HTML parsers for each source of problems, which allows us to properly format LaTeX expressions, lists, and sections in the question text. Where necessary, we convert equation images to LaTeX using the MathPix API, and we remove problems that rely on image figures. We also perform deduplication using tf-idf features with SVD dimensionality reduction and cosine similarity. Several graduate and undergraduate student authors polished and refined this dataset over the course of six months, ensuring a high-quality set of problems.
+
+Executing and evaluating arbitrary Python code is challenging. On the websites we source data from, human solutions are allowed to run arbitrary code, including import statements for common modules and libraries. To handle this, each website implements a custom judging system for solutions. We design a testing framework with this in mind, which merges the judging functionality of several websites. We also standardize the format of test cases. The end result is that solutions are allowed to execute arbitrary Python code, and the results are compared against test cases for a given problem.
+
+
+
+\noindent\textbf{Dataset Difficulty.}\quad
+Each of our problem sources uses a separate scale for measuring difficulty. We place problems from these different sources into three categories. For example, problems from Kattis with difficulty less than $3$ are categorized as ``introductory,'' problems with difficulty between $3$ and $5$ as ``interview,'' and problems with difficulty greater than $5$ as ``competition.''
+
+\begin{enumerate}
+    \item \textbf{Introductory Level}. These are problems that most programmers with 1-2 years of experience can answer without requiring complicated algorithms. Examples of such problems include counting the number of vowels in a string, or returning the running sum of a list of integers. There are $3,\!639$ problems classified as introductory level and $1,\!000$ in the test set.
+    \item \textbf{Interview Level}. These are problems that are more algorithmic and difficult in nature and would be at the level of questions asked in programming technical interviews. Examples of such problems might include those involving data structures such as trees or graphs, or problems that requiring nontrivial algorithms. There are $5,\!000$ problems classified as interview level and $3,\!000$ in the test set.
+    \item \textbf{Competition Level}. These are problems are the most challenging and are at the level of the most advanced high school and collegiate programming competitions, including USACO, IOI, and ACM. There are $1,\!361$ competition level problems and $1,\!000$ in the test set.
+\end{enumerate}
+
+
+
+
+
+
+
+
+\noindent\textbf{Problem Formats.}\quad 
+To accommodate a broad range of problem sources, problems in APPS come in two formats.
+\begin{itemize}
+    \item \textbf{Call-Based Format} problems generally provide initial starter code, usually in the form of a function header, and ask for the solution to be provided as the function's return value.
+    \item \textbf{Standard Input Format} problems generally lack starter code. Instead, the model is only provided with the problem and must output its answers to the STDOUT stream, such as by using print statements.
+\end{itemize}
+
+For the call-based format problems, we prompt models using the following inputs:
+
+\begin{spverbatim}
+"\nQUESTION:\n" + q_str + "\n" + starter_code_str + "\n" + "\nUse Call-Based Format\n\nANSWER:\n"
+\end{spverbatim}
+
+
+For the above prompt, the variable \verb|q_str| represents the raw text of the problem statement. The variable \verb|starter_code_str| represents the starter code given in the problem definition, or the empty string if no starter code was provided. For the standard input format problems, we prompt the model with the input string as before, but we replace ``Call-Based Format'' with ``Standard Input Format.'' Note that if starter code is given, it is only part of the input. This means that to use the starter code, a model must learn to copy the starter code at the beginning of its outputted answer in order to get the question correct. We find that fine-tuned models are able to do this without difficulty.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure*}
+    \textbf{Problem} \\
+     You are given a string $s=s_1s_2\dots s_n$ of length $n$, which only contains digits $1$, $2$,..., $9$. A substring $s[l \dots r]$ of $s$ is a string $s_l s_{l + 1} s_{l + 2} \ldots s_r$. A substring $s[l \dots r]$ of $s$ is called even if the number represented by it is even. Find the number of even substrings of $s$. Note, that even if some substrings are equal as strings, but have different $l$ and $r$, they are counted as different substrings. The first line contains an integer $n$ ($1 \le n \le 65000$) — the length of the string $s$. The second line contains a string $s$ of length $n$. The string $s$ consists only of digits $1$, $2$,..., $9$. Print the number of even substrings of $s$.\looseness=-1
+
+ 
+
+ \textbf{Model Output}
+ \begin{minted}{python}
+n = int(input())
+s = input()
+ans = 0
+for i in range(n):
+    for j in range(i, n):
+        if int(s[i:j+1]) %
+            ans += 1
+print(ans)
+ \end{minted}
+
+\caption{Model-generated code from GPT-2 1.5B. 18/18 test cases pass for the problem. Note that models were given in problems exactly as they they are formatted here, which even meant parsing \LaTeX. For brevity, we exclude formatting instructions from this depicted problem.}
+    \label{fig:samples_from_1500}
+\end{figure*}
+
+
+
+\begin{figure*}
+    \textbf{Problem} \\
+     You are given two integers $n$ and $m$. Calculate the number of pairs of arrays $(a, b)$ such that:  the length of both arrays is equal to $m$;  each element of each array is an integer between $1$ and $n$ (inclusive);  $a_i \le b_i$ for any index $i$ from $1$ to $m$;  array $a$ is sorted in non-descending order;  array $b$ is sorted in non-ascending order. As the result can be very large, you should print it modulo $10^9+7$. Input: The only line contains two integers $n$ and $m$ ($1 \le n \le 1000$, $1 \le m \le 10$). Output: Print one integer – the number of arrays $a$ and $b$ satisfying the conditions described above modulo $10^9+7$.
+ \\
+ \\
+ \textbf{Model Output}
+ \begin{small}
+ \begin{minted}{python}
+n, m = map(int, input().split())
+mod = 10**9+7
+
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
+
+for i in range(2, n+1):
+    fact.append((fact[-1] * i) %
+    inv.append((-inv[mod %
+    factinv.append((factinv[-1] * inv[-1]) %
+
+def cmb(n, r, mod):
+    if (r < 0) or (n < r):
+        return 0
+    r = min(r, n - r)
+    return fact[n] * factinv[r] * factinv[n-r] %
+
+print((cmb(n, m, mod) * cmb(m-1, n-1, mod)) %
+\end{minted}
+ \end{small}
+    \caption{An example from GPT-2 1.5B. Although the code generated passes 0 test cases, it looks plausible at first glance.}
+    \label{fig:interesting_sample_from_1500}
+\end{figure*}
+
+
+
+
+
+
+
+
+\paragraph{Test Case Quality.}
+In the APPS test split, the average number of test cases is $21.2$, but some problems only have two test cases. These problems mainly come from Kattis and were chosen for the test split due to limited numbers of competition problems. A potential concern is that these problems could result in false positives if models happen to guess both test cases correctly. This is very unlikely in problems with large output spaces, but some problems have small output spaces, such as $\{\text{``YES''}, \text{``NO''}\}$. Although the model must narrow down these two options from the space of all possible strings, we find that this is not difficult for current models to accomplish, and this may cause false positives in our evaluation.
+
+To quantify the impact of these problems, we took all 2- and 3-test-case problems that GPT-Neo 2.7B passed and manually checked for false positives. Out of 12 problems that the model got correct with 2 test cases, 8 were false positives. Out of 6 problems with 3 test cases, only 1 was a false positive. Since the test cases are from coding challenge websites with many users, we can assume that false negatives are absent. Thus, the false positive rate with 2 test cases is $8/(890-4) = 0.009 < 1\%$ and $1/(765-5) = 0.001 < 1\%$ with 3 test cases. The upshot is that the potential for noise is significantly less than that of most naturally annotated datasets.

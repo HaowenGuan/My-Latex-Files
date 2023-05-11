@@ -1,0 +1,213 @@
+\documentclass{article}
+
+
+\usepackage[nonatbib]{neurips_data_2021}
+\usepackage[round,semicolon]{natbib}
+
+
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{dsfont}
+
+\usepackage[breaklinks=true,colorlinks,citecolor=black,bookmarks=false]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+	citecolor=black,
+}
+
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+
+
+
+
+\usepackage[finalizecache,cachedir=.]{minted}
+\usemintedstyle{autumn}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+\definecolor{codegreen}{rgb}{0,0.5,0}
+\definecolor{codeblue}{rgb}{0.25,0.5,0.5}
+\definecolor{codeblue2}{rgb}{0.1,0.1,0.8}
+\definecolor{codegray}{rgb}{0.6,0.6,0.6}
+
+\definecolor{backcolour}{rgb}{0.97, 0.97, 0.97}
+\definecolor{white}{rgb}{1, 1, 1}
+\definecolor{backcolour2}{rgb}{0.90, 0.90, 0.90}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{codeblue2},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codeblue},
+    basicstyle=\fontsize{9pt}{9.5pt}\fontfamily{lmtt}\selectfont,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=12pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    framexleftmargin=20pt,
+    framextopmargin=10pt,
+    framesep=30pt,
+}
+
+\lstset{style=mystyle}
+
+
+
+
+
+
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+
+\usepackage[utf8]{inputenc} %
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}    %
+\usepackage{url}            %
+\usepackage{amsfonts}       %
+\usepackage{microtype}      %
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{stfloats}
+\usepackage{spverbatim}
+\usepackage{makecell}
+
+\usepackage{cleveref}
+\usepackage{appendix}
+
+\usepackage{tikz}
+\definecolor{rightgreen}{RGB}{0,154,24}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pifont}%
+\newcommand{\xmark}{\ding{53}}%
+
+\DeclareMathOperator{\dif}{d\!}         %
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\newcommand{\pluseq}{\mathrel{+}=}
+\newcommand{\diveq}{\mathrel{/}=}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\makeatletter
+\newcommand{\printfnsymbol}[1]{%
+  \textsuperscript{\@fnsymbol{#1}}%
+}
+\makeatother
+
+
+\newcommand\NameCite[1]{%
+  \citeauthor{#1}~[\citeyear{#1}]}
+
+\newcommand{\reviewer}[3]{
+	\expandafter\newcommand\csname #1\endcsname[1]{
+		\textcolor{#3}{[#2: ##1]}
+	}
+}
+\reviewer{norman}{Norman}{green}
+\definecolor{neonpurple}{rgb}{0.3,0,1}
+\reviewer{dan}{Dan}{neonpurple}
+\reviewer{mantas}{Mantas}{red}
+\reviewer{justin}{Justin}{blue}
+\newcommand{\js}[1]{{\color{blue} [JS: #1]}}
+\newcommand{\jg}[1]{{\color{green} [JG: #1]}}
+
+
+\title{Measuring Coding Challenge Competence With APPS}
+\date{}
+
+\author{Dan Hendrycks\thanks{Equal Contribution.}\\
+UC Berkeley\\
+\And
+Steven Basart\printfnsymbol{1}\\
+UChicago\\
+\And
+Saurav Kadavath\\
+UC Berkeley\\
+\And
+Mantas Mazeika\\
+UIUC\\
+\And
+Akul Arora\\
+UC Berkeley\\
+\And
+Ethan Guo\\
+UC Berkeley\\
+\And
+Collin Burns\\
+UC Berkeley\\
+\And
+Samir Puranik\\
+UC Berkeley\\
+\And
+Horace He\\
+Cornell\\
+\AND
+Dawn Song\\
+UC Berkeley\\
+\And
+Jacob Steinhardt\\
+UC Berkeley\\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+While programming is one of the most broadly applicable skills in modern society, it is unclear how well state-of-the-art machine learning models can write code. Despite its importance, there has been surprisingly little work on evaluating code generation, and it can be difficult to assess code generation performance in an accurate and rigorous manner. To meet this challenge, we introduce APPS, a benchmark for code generation. Unlike prior work in more restricted settings, our benchmark measures the ability of models to take an arbitrary natural language specification and generate satisfactory Python code. Similar to how companies assess candidate software developers, we evaluate models by checking their generated code on test cases. Our benchmark includes $10,\!000$ problems, which range from having simple one-line solutions to being substantial algorithmic challenges. We fine-tune large language models on both GitHub and our training set, and we find that the prevalence of syntax errors is decreasing exponentially as models improve. Recent models such as GPT-Neo can pass approximately $20\%$ of the test cases of introductory problems, so we find that machine learning models are now beginning to learn how to code. As the social significance of automatic code generation increases over the coming years, our benchmark can provide an objective measure for tracking advancements.\looseness=-1
+\end{abstract}
+
+
+``Everybody should learn to program a computer, because it teaches you how to think.'' -- \emph{Steve Jobs}
+
+\input{sections/1-intro}
+\input{sections/2-related-work}
+\input{sections/3-dataset}
+\input{sections/4-experiments}
+\input{sections/5-conclusion}
+
+
+
+\bibliography{main}
+\bibliographystyle{plainnat}
+
+\input{sections/checklist}
+
+\end{document}

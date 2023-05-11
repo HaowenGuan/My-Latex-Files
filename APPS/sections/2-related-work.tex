@@ -1,0 +1,54 @@
+
+
+\begin{table*}[t]
+\setlength{\tabcolsep}{9pt}
+\fontsize{10}{11}\selectfont
+\centering
+\begin{tabular}{lcccc}
+& PY150 & CONCODE & SPoC & APPS \\
+\hline
+Programming Language             & Python & Java & C++ & Python \\
+Test Cases             & {\color{red}\xmark} & {\color{red}\xmark} & {\color{rightgreen}\checkmark} & {\color{rightgreen}\checkmark} \\
+Number of Programs             & N/A & 104,000 & 18,356 & 232,421 \\
+Lines per Program (Avg.)     & 1 & 26.3 & 14.7 & 18.0 \\
+Number of Exercises             & 3,000 & 104,000 & 677 & 10,000 \\
+Text Input      & Python & Docstrings & Pseudocode & Problem Descriptions \\
+\hline
+\end{tabular}
+\caption{A comparison of the APPS dataset to existing datasets for converting between text and code. APPS has over an order of magnitude more ground-truth solutions than these datasets, test cases, and natural language problem descriptions.}
+\label{tab:dataset_comparison}
+\end{table*}
+
+
+\section{Related Work}
+
+\textbf{Program Synthesis.}\quad
+Program synthesis is the task of generating a computer program that satisfies given specifications.
+Deductive program synthesis uses formal logic specifications to define a search problem. Complex optimization techniques are used to generate programs satisfying these specifications \citep{alur2018sygus}. Because specifications must be converted into a formal language, these approaches can be rigid. Inductive synthesis from example input-output behavior can provide an alternative to formal specification \citep{Cai2017MakingNP,Gulwani2017ProgramS}, but it is often hard to full specify behavior with examples, as any machine learning practitioner is well-aware.
+
+An alternative to formal or inductive specification is to specify program behavior in natural language, which prior work has considered in constrained settings.
+\citet{Raza2015CompositionalPS} and \citet{desai2016program} generate short programs using ad-hoc programming languages to solve specifications such as ``Any 2 letters followed by any combination of 6 whole numbers.'' \citet{yu2018spider} introduce the Spider dataset for converting natural language queries into short SQL database commands. In contrast, we consider long natural language specifications and general-purpose programming languages.
+
+
+
+
+
+
+
+
+\textbf{Code Understanding Datasets.}\quad
+Language modeling is a compelling tool for code generation, and several works have achieved success generating code with language models in limited settings. \citet{lachaux2020unsupervised} use unsupervised machine translation techniques to translate functions across programming languages, attaining identical behavior after translation in many cases. \citet{NEURIPS2019_7298332f} introduce SPoC, a method for converting pseudocode to code utilizing seq2seq machine translation with an additional search step. To train SPoC, they collect line-by-line descriptions of C++ programs using Amazon Mechanical Turk. Recently, \citet{Lu2021CodeXGLUEAM} introduce the CodeXGLUE benchmark which aggregates various previous benchmarks and use CodeBLEU \citep{Ren2020CodeBLEUAM} and CONCODE. \citet{iyer-etal-2018-mapping} investigate generating Java code from docstrings and evaluate performance with BLEU. The docstrings are often incomplete specifications of what should be coded and only $14.7$ words long on average, e.g. ``Convert mixed case to underscores.'' By comparison, problem specifications in our new APPS benchmark are self-contained and have a much larger average length of $293.2$ words. Unlike \citet{iyer-etal-2018-mapping}, APPS contains test cases for every exercise, enabling a high-quality evaluation of code correctness. Further comparisons are in the Appendix.
+
+\textbf{Evaluating Large-Scale Language Models.}\quad
+Modern large-scale language models have demonstrated impressive capabilities across a variety of text-based tasks. On the SuperGLUE benchmark \citep{Wang2019SuperGLUEAS}, some models now exceed human performance. On many commonsense reasoning benchmarks, performance is rising quickly \citep{zellers2019hellaswag,huang2019cosmosqa,bisk2019physicaliqa}. Even when language models are evaluated across diverse technical areas such as law and medicine, performance is surprisingly high and poised to improve as models are scaled up further \citep{hendryckstest2021}. With rapid improvements across numerous datasets, finding resilient benchmarks on which models significantly underperform humans is challenging. APPS represents an attempt to fill this gap and cleanly separate model performance from that of expert humans.
+
+
+
+
+
+
+
+
+
+
+
