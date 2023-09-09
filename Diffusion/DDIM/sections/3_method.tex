@@ -29,7 +29,7 @@ The forward process\footnote{We overload the term ``forward process'' for cases 
 which is %
 also Gaussian (although we do not use this fact for the remainder of this paper).
 Unlike the diffusion process in \eqref{eq:diff-ho}, %
-the forward process here is no longer Markovian, since each $\bm{x}_t$ could depend on both $\bm{x}_{t-1}$ and $\bm{x}_0$. The magnitude of $\sigma$ controls the how stochastic the forward process is; when $\sigma \to \vzero$, %
+the forward process here is no longer Markovian, since each $\bm{x}_t$ could depend on both $\bm{x}_{t-1}$ and $\bm{x}_0$. The magnitude of $\sigma$ controls the how stochastic the forward process is; when $\sigma \to \bm{0}$, %
 we reach an extreme case where as long as we observe $\bm{x}_0$ and $\bm{x}_t$ for some $t$, then $\bm{x}_{t-1}$ become known and fixed. %
 
 
@@ -42,13 +42,13 @@ Next, we define a trainable generative process $p_\theta(\bm{x}_{0:T})$ where ea
 Intuitively, given a noisy observation $\bm{x}_t$, we first make a prediction\footnote{Learning a distribution over the predictions is also possible, but empirically we found little benefits of it.} of the corresponding $\bm{x}_0$, 
 and then use it to obtain a sample $\bm{x}_{t-1}$ through the reverse conditional distribution $q_\sigma(\bm{x}_{t-1} | \bm{x}_{t}, \bm{x}_0)$, which we have defined. %
 
-For some $\bm{x}_0 \sim q(\bm{x}_0)$ and $\epsilon_t \sim \mathcal{N}(\vzero, \bm{I})$, 
+For some $\bm{x}_0 \sim q(\bm{x}_0)$ and $\epsilon_t \sim \mathcal{N}(\bm{0}, \bm{I})$, 
 $\bm{x}_t$ can be obtained using \eqref{eq:reparam_xt}. The model $\epsilon_\theta^{(t)}(\bm{x}_t)$ then attempts to predict $\epsilon_t$ from $\bm{x}_t$, without knowledge of $\bm{x}_0$.
 By rewriting \eqref{eq:reparam_xt}, one can then predict the \textit{denoised observation}, which is a prediction of $\bm{x}_0$ given $\bm{x}_t$:
 \begin{align}
     f_\theta^{(t)}(\bm{x}_t) := (\bm{x}_t - \sqrt{1 - \alpha_t} \cdot \epsilon_{\theta}^{(t)}(\bm{x}_t)) / \sqrt{\alpha_t}. \label{eq:x0-pred-def}
 \end{align}
-We can then define the generative process with a fixed prior $p_\theta(\bm{x}_T) = \mathcal{N}(\vzero, \bm{I})$ and
+We can then define the generative process with a fixed prior $p_\theta(\bm{x}_T) = \mathcal{N}(\bm{0}, \bm{I})$ and
 \begin{align}
     p_\theta^{(t)}(\bm{x}_{t-1} | \bm{x}_t) = \begin{cases}
     \mathcal{N}(f_\theta^{(1)}(\bm{x}_1), \sigma_1^2 \bm{I})  & \text{if} \ t = 1 \\
@@ -71,7 +71,7 @@ From the definition of $J_\sigma$, it would appear that a different model has to
 However, $J_\sigma$ is equivalent to $L_\gamma$ for certain weights $\gamma$, as we show below.
 \begin{restatable}{theorem}{unifiedklobj}
 \label{thm:unifiedklobj}
-For all $\sigma > \vzero$, there exists $\gamma \in \R_{> 0}^{T}$ and $C \in \R$, such that $J_\sigma = L_\gamma + C$.
+For all $\sigma > \bm{0}$, there exists $\gamma \in \R_{> 0}^{T}$ and $C \in \R$, such that $J_\sigma = L_\gamma + C$.
 \end{restatable}
 The variational objective $L_\gamma$ is special in the sense that if parameters $\theta$ %
 of the models $\epsilon_\theta^{(t)}$ %
@@ -92,10 +92,10 @@ From $p_\theta(\bm{x}_{1:T})$ in \eqref{eq:new-reverse}, one can generate a samp
 \begin{align}
     \bm{x}_{t-1} & = \sqrt{\alpha_{t-1}} \underbrace{\left(\frac{\bm{x}_t - \sqrt{1 - \alpha_t} \epsilon_\theta^{(t)}(\bm{x}_t)}{\sqrt{\alpha_t}}\right)}_{\text{`` predicted } \bm{x}_0 \text{''}} + \underbrace{\sqrt{1 - \alpha_{t-1} - \sigma_t^2} \cdot \epsilon_\theta^{(t)}(\bm{x}_t)}_{\text{``direction pointing to } \bm{x}_t \text{''}} + \underbrace{\sigma_t \epsilon_t}_{\text{random noise}} \label{eq:sample-eq-gen}
 \end{align}
-where $\epsilon_t \sim \mathcal{N}(\vzero, \bm{I})$ is standard Gaussian noise independent of $\bm{x}_t$, and we define $\alpha_0 := 1$. Different choices of $\sigma$ values results in different generative processes, all while using the same model $\epsilon_\theta$, so re-training the model is unnecessary. When $\sigma_t = \sqrt{(1 - \alpha_{t-1}) / (1 - \alpha_t)} \sqrt{1 - \alpha_t / \alpha_{t-1}}$ for all $t$, the forward process becomes Markovian, and the generative process becomes a DDPM.
+where $\epsilon_t \sim \mathcal{N}(\bm{0}, \bm{I})$ is standard Gaussian noise independent of $\bm{x}_t$, and we define $\alpha_0 := 1$. Different choices of $\sigma$ values results in different generative processes, all while using the same model $\epsilon_\theta$, so re-training the model is unnecessary. When $\sigma_t = \sqrt{(1 - \alpha_{t-1}) / (1 - \alpha_t)} \sqrt{1 - \alpha_t / \alpha_{t-1}}$ for all $t$, the forward process becomes Markovian, and the generative process becomes a DDPM.
 
 We note another special case when $\sigma_t = 0$ for all $t$\footnote{Although this case is not covered in Theorem~\ref{thm:unifiedklobj}, we can always approximate it by making $\sigma_t$ very small.}; the forward process becomes deterministic given $\bm{x}_{t-1}$ and $\bm{x}_0$, except for $t = 1$; in the generative process, the coefficient before the random noise $\epsilon_t$ becomes zero. %
-    The resulting model becomes an implicit probabilistic model~\citep{mohamed2016learning}, where samples are generated from latent variables with a fixed procedure (from $\bm{x}_T$ to $\bm{x}_0$). We name this the \textit{denoising diffusion implicit model} (DDIM, pronounced \textipa{/d:Im/}), because it is an implicit probabilistic model trained with the DDPM objective (despite the forward process no longer being a diffusion). 
+The resulting model becomes an implicit probabilistic model~\citep{mohamed2016learning}, where samples are generated from latent variables with a fixed procedure (from $\bm{x}_T$ to $\bm{x}_0$). We name this the \textit{denoising diffusion implicit model} (DDIM, pronounced \textipa{/d:Im/}), because it is an implicit probabilistic model trained with the DDPM objective (despite the forward process no longer being a diffusion). 
 
 
 
