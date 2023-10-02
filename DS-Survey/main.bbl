@@ -1,27 +1,44 @@
-\begin{thebibliography}{109}
+\begin{thebibliography}{129}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Abbas et~al.(2023)Abbas, Tirumala, Simig, Ganguli, and Morcos]{semdedup}
+Amro Abbas, Kushal Tirumala, D{\'a}niel Simig, Surya Ganguli, and Ari~S Morcos.
+\newblock Semdedup: Data-efficient learning at web-scale through semantic deduplication.
+\newblock \emph{arXiv preprint arXiv:2303.09540}, 2023.
+
 \bibitem[Arya et~al.(1998)Arya, Mount, Netanyahu, Silverman, and Wu]{ann}
 Sunil Arya, David~M Mount, Nathan~S Netanyahu, Ruth Silverman, and Angela~Y Wu.
-\newblock An optimal algorithm for approximate nearest neighbor searching fixed
-  dimensions.
-\newblock \emph{Journal of the ACM (JACM)}, 45\penalty0 (6):\penalty0 891--923,
-  1998.
+\newblock An optimal algorithm for approximate nearest neighbor searching fixed dimensions.
+\newblock \emph{Journal of the ACM (JACM)}, 45\penalty0 (6):\penalty0 891--923, 1998.
+
+\bibitem[Ayed \& Hayou(2023)Ayed and Hayou]{data_pruning_limitations}
+Fadhel Ayed and Soufiane Hayou.
+\newblock Data pruning and neural scaling laws: fundamental limitations of score-based algorithms.
+\newblock \emph{arXiv preprint arXiv:2302.06960}, 2023.
 
 \bibitem[Bachem et~al.(2017)Bachem, Lucic, and Krause]{coreset_general}
 Olivier Bachem, Mario Lucic, and Andreas Krause.
 \newblock Practical coreset constructions for machine learning.
 \newblock \emph{arXiv preprint arXiv:1703.06476}, 2017.
 
-\bibitem[Bae et~al.(2022)Bae, Ng, Lo, Ghassemi, and
-  Grosse]{influence_functions}
+\bibitem[Bae et~al.(2022)Bae, Ng, Lo, Ghassemi, and Grosse]{influence_functions}
 Juhan Bae, Nathan Ng, Alston Lo, Marzyeh Ghassemi, and Roger Grosse.
 \newblock If influence functions are the answer, then what is the question?
 \newblock \emph{arXiv preprint arXiv:2209.05364}, 2022.
+
+\bibitem[Ben-Eliezer \& Yogev(2020)Ben-Eliezer and Yogev]{adv_sampling}
+Omri Ben-Eliezer and Eylon Yogev.
+\newblock The adversarial robustness of sampling.
+\newblock In \emph{Proceedings of the 39th ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems}, pp.\  49--62, 2020.
+
+\bibitem[Bilmes(2022)]{bilmes_submodularity}
+Jeff Bilmes.
+\newblock Submodularity in machine learning and artificial intelligence.
+\newblock \emph{arXiv preprint arXiv:2202.00132}, 2022.
 
 \bibitem[Bohdal et~al.(2020)Bohdal, Yang, and Hospedales]{label_solve}
 Ondrej Bohdal, Yongxin Yang, and Timothy Hospedales.
@@ -30,61 +47,58 @@ Ondrej Bohdal, Yongxin Yang, and Timothy Hospedales.
 
 \bibitem[Borsos et~al.(2020)Borsos, Mutny, and Krause]{bilevel_coresets}
 Zal{\'a}n Borsos, Mojmir Mutny, and Andreas Krause.
-\newblock Coresets via bilevel optimization for continual learning and
-  streaming.
-\newblock \emph{Advances in Neural Information Processing Systems},
-  33:\penalty0 14879--14890, 2020.
+\newblock Coresets via bilevel optimization for continual learning and streaming.
+\newblock \emph{Advances in Neural Information Processing Systems}, 33:\penalty0 14879--14890, 2020.
 
-\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
-  Neelakantan, Shyam, Sastry, Askell, et~al.]{gpt}
-Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla
-  Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,
-  et~al.
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.]{gpt}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
 \newblock Language models are few-shot learners.
-\newblock \emph{Advances in neural information processing systems},
-  33:\penalty0 1877--1901, 2020.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 1877--1901, 2020.
 
 \bibitem[Cao et~al.(2021)Cao, Bie, Vahdat, Fidler, and Kreis]{dp_sinkhorn}
 Tianshi Cao, Alex Bie, Arash Vahdat, Sanja Fidler, and Karsten Kreis.
-\newblock Don’t generate me: Training differentially private generative
-  models with sinkhorn divergence.
+\newblock Don’t generate me: Training differentially private generative models with sinkhorn divergence.
 \newblock \emph{Advances in Neural Information Processing Systems}, 2021.
 
 \bibitem[Casas et~al.(2020)Casas, Gulino, Liao, and Urtasun]{gnn_self_driving}
 Sergio Casas, Cole Gulino, Renjie Liao, and Raquel Urtasun.
-\newblock Spagnn: Spatially-aware graph neural networks for relational behavior
-  forecasting from sensor data.
-\newblock In \emph{2020 IEEE International Conference on Robotics and
-  Automation (ICRA)}, pp.\  9491--9497. IEEE, 2020.
+\newblock Spagnn: Spatially-aware graph neural networks for relational behavior forecasting from sensor data.
+\newblock In \emph{2020 IEEE International Conference on Robotics and Automation (ICRA)}, pp.\  9491--9497. IEEE, 2020.
 
-\bibitem[Cazenavette et~al.(2022)Cazenavette, Wang, Torralba, Efros, and
-  Zhu]{mtt}
-George Cazenavette, Tongzhou Wang, Antonio Torralba, Alexei~A Efros, and
-  Jun-Yan Zhu.
+\bibitem[Cazenavette et~al.(2022)Cazenavette, Wang, Torralba, Efros, and Zhu]{mtt}
+George Cazenavette, Tongzhou Wang, Antonio Torralba, Alexei~A Efros, and Jun-Yan Zhu.
 \newblock Dataset distillation by matching training trajectories.
-\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
-  and Pattern Recognition}, pp.\  4750--4759, 2022.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  4750--4759, 2022.
+
+\bibitem[Celis et~al.(2018)Celis, Keswani, Straszak, Deshpande, Kathuria, and Vishnoi]{fairness_dpp}
+Elisa Celis, Vijay Keswani, Damian Straszak, Amit Deshpande, Tarun Kathuria, and Nisheeth Vishnoi.
+\newblock Fair and diverse dpp-based data summarization.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  716--725. PMLR, 2018.
 
 \bibitem[Chen et~al.(2022)Chen, Kerkouche, and Fritz]{dd_privacy_clipped}
 Dingfan Chen, Raouf Kerkouche, and Mario Fritz.
 \newblock Private set generation with discriminative information.
-\newblock In \emph{Proceedings of the Advances in Neural Information Processing
-  Systems (NeurIPS)}, 2022.
+\newblock In \emph{Proceedings of the Advances in Neural Information Processing Systems (NeurIPS)}, 2022.
 
-\bibitem[Chen et~al.(2021)Chen, Zhao, Wang, Li, Liu, Li, Yang, and
-  Wang]{graph_billion}
-Qi~Chen, Bing Zhao, Haidong Wang, Mingqin Li, Chuanjie Liu, Zengzhong Li, Mao
-  Yang, and Jingdong Wang.
-\newblock Spann: Highly-efficient billion-scale approximate nearest
-  neighborhood search.
-\newblock \emph{Advances in Neural Information Processing Systems},
-  34:\penalty0 5199--5212, 2021.
+\bibitem[Chen et~al.(2021)Chen, Zhao, Wang, Li, Liu, Li, Yang, and Wang]{graph_billion}
+Qi~Chen, Bing Zhao, Haidong Wang, Mingqin Li, Chuanjie Liu, Zengzhong Li, Mao Yang, and Jingdong Wang.
+\newblock Spann: Highly-efficient billion-scale approximate nearest neighborhood search.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34:\penalty0 5199--5212, 2021.
+
+\bibitem[Chen et~al.(2020)Chen, Kornblith, Norouzi, and Hinton]{simclr}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
+\newblock A simple framework for contrastive learning of visual representations.
+\newblock In \emph{International conference on machine learning}, pp.\  1597--1607. PMLR, 2020.
+
+\bibitem[Coleman et~al.(2020)Coleman, Yeh, Mussmann, Mirzasoleiman, Bailis, Liang, Leskovec, and Zaharia]{svp}
+Cody Coleman, Christopher Yeh, Stephen Mussmann, Baharan Mirzasoleiman, Peter Bailis, Percy Liang, Jure Leskovec, and Matei Zaharia.
+\newblock Selection via proxy: Efficient data selection for deep learning.
+\newblock In \emph{International Conference on Learning Representations}, 2020.
 
 \bibitem[Cui et~al.(2022{\natexlab{a}})Cui, Wang, Si, and Hsieh]{dc_bench}
 Justin Cui, Ruochen Wang, Si~Si, and Cho-Jui Hsieh.
 \newblock {DC}-{BENCH}: Dataset condensation benchmark.
-\newblock In \emph{Thirty-sixth Conference on Neural Information Processing
-  Systems Datasets and Benchmarks Track}, 2022{\natexlab{a}}.
+\newblock In \emph{Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, 2022{\natexlab{a}}.
 
 \bibitem[Cui et~al.(2022{\natexlab{b}})Cui, Wang, Si, and Hsieh]{tesla}
 Justin Cui, Ruochen Wang, Si~Si, and Cho-Jui Hsieh.
@@ -93,42 +107,38 @@ Justin Cui, Ruochen Wang, Si~Si, and Cho-Jui Hsieh.
 
 \bibitem[Deng \& Russakovsky(2022)Deng and Russakovsky]{remember_past}
 Zhiwei Deng and Olga Russakovsky.
-\newblock Remember the past: Distilling datasets into addressable memories for
-  neural networks.
+\newblock Remember the past: Distilling datasets into addressable memories for neural networks.
 \newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
 
 \bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{bert}
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
-\newblock {BERT}: Pre-training of deep bidirectional transformers for language
-  understanding.
-\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
-  Chapter of the Association for Computational Linguistics: Human Language
-  Technologies, Volume 1 (Long and Short Papers)}, Minneapolis, Minnesota, June
-  2019. Association for Computational Linguistics.
+\newblock {BERT}: Pre-training of deep bidirectional transformers for language understanding.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)}, Minneapolis, Minnesota, June 2019. Association for Computational Linguistics.
 
 \bibitem[Dong et~al.(2016)Dong, Loy, and Tang]{fsrcnn}
 Chao Dong, Chen~Change Loy, and Xiaoou Tang.
 \newblock Accelerating the super-resolution convolutional neural network.
-\newblock In \emph{European conference on computer vision}, pp.\  391--407.
-  Springer, 2016.
+\newblock In \emph{European conference on computer vision}, pp.\  391--407. Springer, 2016.
 
 \bibitem[Dong et~al.(2022)Dong, Zhao, and Lyu]{privacy_free}
 Tian Dong, Bo~Zhao, and Lingjuan Lyu.
 \newblock Privacy for free: How does dataset condensation help privacy?
-\newblock In \emph{Proceedings of the 39th International Conference on Machine
-  Learning}. PMLR, 2022.
+\newblock In \emph{Proceedings of the 39th International Conference on Machine Learning}. PMLR, 2022.
+
+\bibitem[Dong \& Yang(2020)Dong and Yang]{nas_201}
+Xuanyi Dong and Yi~Yang.
+\newblock Nas-bench-201: Extending the scope of reproducible neural architecture search.
+\newblock In \emph{International Conference on Learning Representations}, 2020.
 
 \bibitem[Dwork(2008)]{differential_privacy_dwork}
 Cynthia Dwork.
 \newblock Differential privacy: A survey of results.
-\newblock In \emph{International conference on theory and applications of
-  models of computation}, pp.\  1--19. Springer, 2008.
+\newblock In \emph{International conference on theory and applications of models of computation}, pp.\  1--19. Springer, 2008.
 
 \bibitem[Elsken et~al.(2019)Elsken, Metzen, and Hutter]{nas_survey}
 Thomas Elsken, Jan~Hendrik Metzen, and Frank Hutter.
 \newblock Neural architecture search: A survey.
-\newblock \emph{The Journal of Machine Learning Research}, 20\penalty0
-  (1):\penalty0 1997--2017, 2019.
+\newblock \emph{The Journal of Machine Learning Research}, 20\penalty0 (1):\penalty0 1997--2017, 2019.
 
 \bibitem[Fan et~al.(2019)Fan, Ma, Li, He, Zhao, Tang, and Yin]{gnn_social}
 Wenqi Fan, Yao Ma, Qing Li, Yuan He, Eric Zhao, Jiliang Tang, and Dawei Yin.
@@ -138,150 +148,140 @@ Wenqi Fan, Yao Ma, Qing Li, Yuan He, Eric Zhao, Jiliang Tang, and Dawei Yin.
 \bibitem[Finn et~al.(2017)Finn, Abbeel, and Levine]{maml}
 Chelsea Finn, Pieter Abbeel, and Sergey Levine.
 \newblock Model-agnostic meta-learning for fast adaptation of deep networks.
-\newblock In \emph{International conference on machine learning}, pp.\
-  1126--1135. PMLR, 2017.
+\newblock In \emph{International conference on machine learning}, pp.\  1126--1135. PMLR, 2017.
 
-\bibitem[Franceschi et~al.(2018)Franceschi, Frasconi, Salzo, Grazzi, and
-  Pontil]{singleton_bilevel}
-Luca Franceschi, Paolo Frasconi, Saverio Salzo, Riccardo Grazzi, and
-  Massimiliano Pontil.
-\newblock Bilevel programming for hyperparameter optimization and
-  meta-learning.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  1568--1577. PMLR, 2018.
+\bibitem[Franceschi et~al.(2018)Franceschi, Frasconi, Salzo, Grazzi, and Pontil]{singleton_bilevel}
+Luca Franceschi, Paolo Frasconi, Saverio Salzo, Riccardo Grazzi, and Massimiliano Pontil.
+\newblock Bilevel programming for hyperparameter optimization and meta-learning.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  1568--1577. PMLR, 2018.
 
 \bibitem[French(1999)]{catast_forgetting}
 Robert~M French.
 \newblock Catastrophic forgetting in connectionist networks.
-\newblock \emph{Trends in cognitive sciences}, 3\penalty0 (4):\penalty0
-  128--135, 1999.
+\newblock \emph{Trends in cognitive sciences}, 3\penalty0 (4):\penalty0 128--135, 1999.
 
 \bibitem[Geiping \& Goldstein(2022)Geiping and Goldstein]{cramming}
 Jonas Geiping and Tom Goldstein.
 \newblock Cramming: Training a language model on a single gpu in one day, 2022.
 
-\bibitem[Ghorbani et~al.(2021)Ghorbani, Firat, Freitag, Bapna, Krikun, Garcia,
-  Chelba, and Cherry]{scaling_2}
-Behrooz Ghorbani, Orhan Firat, Markus Freitag, Ankur Bapna, Maxim Krikun,
-  Xavier Garcia, Ciprian Chelba, and Colin Cherry.
+\bibitem[Ghorbani \& Zou(2019)Ghorbani and Zou]{data_shapley}
+Amirata Ghorbani and James Zou.
+\newblock Data shapley: Equitable valuation of data for machine learning.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  2242--2251. PMLR, 2019.
+
+\bibitem[Ghorbani et~al.(2021)Ghorbani, Firat, Freitag, Bapna, Krikun, Garcia, Chelba, and Cherry]{scaling_2}
+Behrooz Ghorbani, Orhan Firat, Markus Freitag, Ankur Bapna, Maxim Krikun, Xavier Garcia, Ciprian Chelba, and Colin Cherry.
 \newblock Scaling laws for neural machine translation.
 \newblock \emph{arXiv preprint arXiv:2109.07740}, 2021.
 
 \bibitem[Gidaris \& Komodakis(2018)Gidaris and Komodakis]{conv_net}
 Spyros Gidaris and Nikos Komodakis.
 \newblock Dynamic few-shot visual learning without forgetting.
-\newblock In \emph{Proceedings of the IEEE conference on computer vision and
-  pattern recognition}, pp.\  4367--4375, 2018.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, pp.\  4367--4375, 2018.
 
 \bibitem[Goetz \& Tewari(2020)Goetz and Tewari]{federated_distill_1}
 Jack Goetz and Ambuj Tewari.
 \newblock Federated learning via synthetic data.
 \newblock \emph{arXiv preprint arXiv:2008.04489}, 2020.
 
-\bibitem[Goodfellow et~al.(2014)Goodfellow, Pouget-Abadie, Mirza, Xu,
-  Warde-Farley, Ozair, Courville, and Bengio]{gan}
-Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
-  Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\bibitem[Goodfellow et~al.(2014)Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio]{gan}
+Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
 \newblock Generative adversarial nets.
-\newblock In \emph{Advances in neural information processing systems}, pp.\
-  2672--2680, 2014.
+\newblock In \emph{Advances in neural information processing systems}, pp.\  2672--2680, 2014.
 
-\bibitem[Gupta et~al.(2022)Gupta, Kim, Lee, Tse, Lee, Wei, Brooks, and
-  Wu]{chasing_carbon}
-Udit Gupta, Young~Geun Kim, Sylvia Lee, Jordan Tse, Hsien-Hsin~S Lee, Gu-Yeon
-  Wei, David Brooks, and Carole-Jean Wu.
+\bibitem[Grill et~al.(2020)Grill, Strub, Altch{\'e}, Tallec, Richemond, Buchatskaya, Doersch, Avila~Pires, Guo, Gheshlaghi~Azar, et~al.]{byol}
+Jean-Bastien Grill, Florian Strub, Florent Altch{\'e}, Corentin Tallec, Pierre Richemond, Elena Buchatskaya, Carl Doersch, Bernardo Avila~Pires, Zhaohan Guo, Mohammad Gheshlaghi~Azar, et~al.
+\newblock Bootstrap your own latent-a new approach to self-supervised learning.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 21271--21284, 2020.
+
+\bibitem[Guo et~al.(2022)Guo, Zhao, and Bai]{deepcore}
+Chengcheng Guo, Bo~Zhao, and Yanbing Bai.
+\newblock Deepcore: A comprehensive library for coreset selection in deep learning.
+\newblock In \emph{Database and Expert Systems Applications: 33rd International Conference, DEXA 2022, Vienna, Austria, August 22--24, 2022, Proceedings, Part I}, pp.\  181--195. Springer, 2022.
+
+\bibitem[Gupta et~al.(2022)Gupta, Kim, Lee, Tse, Lee, Wei, Brooks, and Wu]{chasing_carbon}
+Udit Gupta, Young~Geun Kim, Sylvia Lee, Jordan Tse, Hsien-Hsin~S Lee, Gu-Yeon Wei, David Brooks, and Carole-Jean Wu.
 \newblock Chasing carbon: The elusive environmental footprint of computing.
 \newblock \emph{IEEE Micro}, 42\penalty0 (4):\penalty0 37--47, 2022.
 
 \bibitem[Harder et~al.(2021)Harder, Adamczewski, and Park]{dp_merf}
 Frederik Harder, Kamil Adamczewski, and Mijung Park.
-\newblock Dp-merf: Differentially private mean embeddings with randomfeatures
-  for practical privacy-preserving data generation.
-\newblock In \emph{International conference on artificial intelligence and
-  statistics}, pp.\  1819--1827. PMLR, 2021.
+\newblock Dp-merf: Differentially private mean embeddings with randomfeatures for practical privacy-preserving data generation.
+\newblock In \emph{International conference on artificial intelligence and statistics}, pp.\  1819--1827. PMLR, 2021.
 
-\bibitem[Hinton et~al.(2015)Hinton, Vinyals, Dean,
-  et~al.]{knowledge_distillation}
+\bibitem[Hershey et~al.(2017)Hershey, Chaudhuri, Ellis, Gemmeke, Jansen, Moore, Plakal, Platt, Saurous, Seybold, et~al.]{audio_classification}
+Shawn Hershey, Sourish Chaudhuri, Daniel~PW Ellis, Jort~F Gemmeke, Aren Jansen, R~Channing Moore, Manoj Plakal, Devin Platt, Rif~A Saurous, Bryan Seybold, et~al.
+\newblock Cnn architectures for large-scale audio classification.
+\newblock In \emph{2017 ieee international conference on acoustics, speech and signal processing (icassp)}, pp.\  131--135. IEEE, 2017.
+
+\bibitem[Hinton et~al.(2015)Hinton, Vinyals, Dean, et~al.]{knowledge_distillation}
 Geoffrey Hinton, Oriol Vinyals, Jeff Dean, et~al.
 \newblock Distilling the knowledge in a neural network.
 \newblock \emph{arXiv preprint arXiv:1503.02531}, 2\penalty0 (7), 2015.
 
-\bibitem[Hoffmann et~al.(2022)Hoffmann, Borgeaud, Mensch, Buchatskaya, Cai,
-  Rutherford, Casas, Hendricks, Welbl, Clark, et~al.]{scaling_3}
-Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor
-  Cai, Eliza Rutherford, Diego de~Las Casas, Lisa~Anne Hendricks, Johannes
-  Welbl, Aidan Clark, et~al.
+\bibitem[Hoffmann et~al.(2022)Hoffmann, Borgeaud, Mensch, Buchatskaya, Cai, Rutherford, Casas, Hendricks, Welbl, Clark, et~al.]{scaling_3}
+Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de~Las Casas, Lisa~Anne Hendricks, Johannes Welbl, Aidan Clark, et~al.
 \newblock Training compute-optimal large language models.
 \newblock \emph{arXiv preprint arXiv:2203.15556}, 2022.
 
-\bibitem[Hu et~al.(2022)Hu, Goetz, Malik, Zhan, Liu, and
-  Liu]{federated_distill_3}
+\bibitem[Hu et~al.(2022)Hu, Goetz, Malik, Zhan, Liu, and Liu]{federated_distill_3}
 Shengyuan Hu, Jack Goetz, Kshitiz Malik, Hongyuan Zhan, Zhe Liu, and Yue Liu.
-\newblock Fedsynth: Gradient compression via synthetic data in federated
-  learning.
+\newblock Fedsynth: Gradient compression via synthetic data in federated learning.
 \newblock \emph{arXiv preprint arXiv:2204.01273}, 2022.
 
 \bibitem[Jacot et~al.(2018)Jacot, Gabriel, and Hongler]{ntk}
 Arthur Jacot, Franck Gabriel, and Cl{\'e}ment Hongler.
-\newblock Neural tangent kernel: Convergence and generalization in neural
-  networks.
+\newblock Neural tangent kernel: Convergence and generalization in neural networks.
 \newblock \emph{Advances in neural information processing systems}, 31, 2018.
 
 \bibitem[Jang et~al.(2017)Jang, Gu, and Poole]{gumbel}
 Eric Jang, Shixiang Gu, and Ben Poole.
 \newblock Categorical reparameterization with gumbel-softmax.
-\newblock In \emph{5th International Conference on Learning Representations,
-  {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track
-  Proceedings}. OpenReview.net, 2017.
-\newblock URL \url{https://openreview.net/forum?id=rkE3y85ee}.
+\newblock In \emph{5th International Conference on Learning Representations, {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track Proceedings}. OpenReview.net, 2017.
 
-\bibitem[Jin et~al.(2022{\natexlab{a}})Jin, Tang, Jiang, Li, Zhang, Tang, and
-  Yin]{graph_distill_kdd_22}
-Wei Jin, Xianfeng Tang, Haoming Jiang, Zheng Li, Danqing Zhang, Jiliang Tang,
-  and Bing Yin.
+\bibitem[Jin et~al.(2022{\natexlab{a}})Jin, Tang, Jiang, Li, Zhang, Tang, and Yin]{graph_distill_kdd_22}
+Wei Jin, Xianfeng Tang, Haoming Jiang, Zheng Li, Danqing Zhang, Jiliang Tang, and Bing Yin.
 \newblock Condensing graphs via one-step gradient matching.
-\newblock In \emph{Proceedings of the 28th ACM SIGKDD Conference on Knowledge
-  Discovery and Data Mining}, pp.\  720--730, 2022{\natexlab{a}}.
+\newblock In \emph{Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining}, pp.\  720--730, 2022{\natexlab{a}}.
 
-\bibitem[Jin et~al.(2022{\natexlab{b}})Jin, Zhao, Zhang, Liu, Tang, and
-  Shah]{graph_distill_iclr_22}
+\bibitem[Jin et~al.(2022{\natexlab{b}})Jin, Zhao, Zhang, Liu, Tang, and Shah]{graph_distill_iclr_22}
 Wei Jin, Lingxiao Zhao, Shichang Zhang, Yozen Liu, Jiliang Tang, and Neil Shah.
 \newblock Graph condensation for graph neural networks.
-\newblock In \emph{International Conference on Learning Representations},
-  2022{\natexlab{b}}.
+\newblock In \emph{International Conference on Learning Representations}, 2022{\natexlab{b}}.
 
 \bibitem[Kang \& McAuley(2018)Kang and McAuley]{sasrec}
 Wang-Cheng Kang and Julian McAuley.
 \newblock Self-attentive sequential recommendation.
-\newblock In \emph{2018 IEEE international conference on data mining (ICDM)},
-  pp.\  197--206. IEEE, 2018.
+\newblock In \emph{2018 IEEE international conference on data mining (ICDM)}, pp.\  197--206. IEEE, 2018.
 
-\bibitem[Kaplan et~al.(2020)Kaplan, McCandlish, Henighan, Brown, Chess, Child,
-  Gray, Radford, Wu, and Amodei]{scaling_1}
-Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B Brown, Benjamin Chess, Rewon
-  Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
+\bibitem[Kaplan et~al.(2020)Kaplan, McCandlish, Henighan, Brown, Chess, Child, Gray, Radford, Wu, and Amodei]{scaling_1}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
 \newblock Scaling laws for neural language models.
 \newblock \emph{arXiv preprint arXiv:2001.08361}, 2020.
 
+\bibitem[Karpathy et~al.(2014)Karpathy, Toderici, Shetty, Leung, Sukthankar, and Fei-Fei]{video_classification}
+Andrej Karpathy, George Toderici, Sanketh Shetty, Thomas Leung, Rahul Sukthankar, and Li~Fei-Fei.
+\newblock Large-scale video classification with convolutional neural networks.
+\newblock In \emph{Proceedings of the IEEE conference on Computer Vision and Pattern Recognition}, pp.\  1725--1732, 2014.
+
+\bibitem[Killamsetty et~al.(2021)Killamsetty, S, Ramakrishnan, De, and Iyer]{grad_match}
+Krishnateja Killamsetty, Durga S, Ganesh Ramakrishnan, Abir De, and Rishabh Iyer.
+\newblock Grad-match: Gradient matching based data subset selection for efficient deep model training.
+\newblock In Marina Meila and Tong Zhang (eds.), \emph{Proceedings of the 38th International Conference on Machine Learning}, volume 139 of \emph{Proceedings of Machine Learning Research}, pp.\  5464--5474. PMLR, 18--24 Jul 2021.
+
 \bibitem[Kim et~al.(2022)Kim, Kim, Oh, Yun, Song, Jeong, Ha, and Song]{idc}
-Jang-Hyun Kim, Jinuk Kim, Seong~Joon Oh, Sangdoo Yun, Hwanjun Song, Joonhyun
-  Jeong, Jung-Woo Ha, and Hyun~Oh Song.
+Jang-Hyun Kim, Jinuk Kim, Seong~Joon Oh, Sangdoo Yun, Hwanjun Song, Joonhyun Jeong, Jung-Woo Ha, and Hyun~Oh Song.
 \newblock Dataset condensation via efficient synthetic-data parameterization.
-\newblock In \emph{Proceedings of the 39th International Conference on Machine
-  Learning}, 2022.
+\newblock In \emph{Proceedings of the 39th International Conference on Machine Learning}, 2022.
 
 \bibitem[Kipf \& Welling(2017)Kipf and Welling]{gcn}
 Thomas~N. Kipf and Max Welling.
 \newblock {Semi-Supervised Classification with Graph Convolutional Networks}.
-\newblock In \emph{Proceedings of the 5th International Conference on Learning
-  Representations}, ICLR '17, 2017.
+\newblock In \emph{Proceedings of the 5th International Conference on Learning Representations}, ICLR '17, 2017.
 
-\bibitem[Kone{\v{c}}n{\`y} et~al.(2016)Kone{\v{c}}n{\`y}, McMahan, Ramage, and
-  Richt{\'a}rik]{federated_sync_model}
-Jakub Kone{\v{c}}n{\`y}, H~Brendan McMahan, Daniel Ramage, and Peter
-  Richt{\'a}rik.
-\newblock Federated optimization: Distributed machine learning for on-device
-  intelligence.
+\bibitem[Kone{\v{c}}n{\`y} et~al.(2016)Kone{\v{c}}n{\`y}, McMahan, Ramage, and Richt{\'a}rik]{federated_sync_model}
+Jakub Kone{\v{c}}n{\`y}, H~Brendan McMahan, Daniel Ramage, and Peter Richt{\'a}rik.
+\newblock Federated optimization: Distributed machine learning for on-device intelligence.
 \newblock \emph{arXiv preprint arXiv:1610.02527}, 2016.
 
 \bibitem[LeCun et~al.(1989)LeCun, Denker, and Solla]{model_compression}
@@ -291,44 +291,33 @@ Yann LeCun, John Denker, and Sara Solla.
 
 \bibitem[Lee et~al.(2022{\natexlab{a}})Lee, Lee, and Hwang]{kfs}
 Hae~Beom Lee, Dong~Bok Lee, and Sung~Ju Hwang.
-\newblock Dataset condensation with latent space knowledge factorization and
-  sharing.
+\newblock Dataset condensation with latent space knowledge factorization and sharing.
 \newblock \emph{arXiv preprint arXiv:2208.10494}, 2022{\natexlab{a}}.
 
-\bibitem[Lee et~al.(2020)Lee, Schoenholz, Pennington, Adlam, Xiao, Novak, and
-  Sohl-Dickstein]{finite_vs_infinite_2}
-Jaehoon Lee, Samuel Schoenholz, Jeffrey Pennington, Ben Adlam, Lechao Xiao,
-  Roman Novak, and Jascha Sohl-Dickstein.
+\bibitem[Lee et~al.(2020)Lee, Schoenholz, Pennington, Adlam, Xiao, Novak, and Sohl-Dickstein]{finite_vs_infinite_2}
+Jaehoon Lee, Samuel Schoenholz, Jeffrey Pennington, Ben Adlam, Lechao Xiao, Roman Novak, and Jascha Sohl-Dickstein.
 \newblock Finite versus infinite neural networks: an empirical study.
-\newblock \emph{Advances in Neural Information Processing Systems},
-  33:\penalty0 15156--15172, 2020.
+\newblock \emph{Advances in Neural Information Processing Systems}, 33:\penalty0 15156--15172, 2020.
 
 \bibitem[Lee et~al.(2022{\natexlab{b}})Lee, Chun, Jung, Yun, and Yoon]{dcc}
 Saehyung Lee, Sanghyuk Chun, Sangwon Jung, Sangdoo Yun, and Sungroh Yoon.
 \newblock Dataset condensation with contrastive signals.
-\newblock In \emph{Proceedings of the 39th International Conference on Machine
-  Learning}, pp.\  12352--12364, 2022{\natexlab{b}}.
+\newblock In \emph{Proceedings of the 39th International Conference on Machine Learning}, pp.\  12352--12364, 2022{\natexlab{b}}.
 
-\bibitem[Li et~al.(2020{\natexlab{a}})Li, Togo, Ogawa, and
-  Haseyama]{medical_dd_1}
+\bibitem[Li et~al.(2020{\natexlab{a}})Li, Togo, Ogawa, and Haseyama]{medical_dd_1}
 Guang Li, Ren Togo, Takahiro Ogawa, and Miki Haseyama.
 \newblock Soft-label anonymous gastric x-ray image distillation.
-\newblock In \emph{2020 IEEE International Conference on Image Processing
-  (ICIP)}, pp.\  305--309. IEEE, 2020{\natexlab{a}}.
+\newblock In \emph{2020 IEEE International Conference on Image Processing (ICIP)}, pp.\  305--309. IEEE, 2020{\natexlab{a}}.
 
 \bibitem[Li et~al.(2022)Li, Togo, Ogawa, and Haseyama]{medical_dd_2}
 Guang Li, Ren Togo, Takahiro Ogawa, and Miki Haseyama.
-\newblock Compressed gastric image generation based on soft-label dataset
-  distillation for medical data sharing.
-\newblock \emph{Computer Methods and Programs in Biomedicine}, pp.\  107189,
-  2022.
+\newblock Compressed gastric image generation based on soft-label dataset distillation for medical data sharing.
+\newblock \emph{Computer Methods and Programs in Biomedicine}, pp.\  107189, 2022.
 
-\bibitem[Li et~al.(2020{\natexlab{b}})Li, Sahu, Talwalkar, and
-  Smith]{federated_survey}
+\bibitem[Li et~al.(2020{\natexlab{b}})Li, Sahu, Talwalkar, and Smith]{federated_survey}
 Tian Li, Anit~Kumar Sahu, Ameet Talwalkar, and Virginia Smith.
 \newblock Federated learning: Challenges, methods, and future directions.
-\newblock \emph{IEEE Signal Processing Magazine}, 37\penalty0 (3):\penalty0
-  50--60, 2020{\natexlab{b}}.
+\newblock \emph{IEEE Signal Processing Magazine}, 37\penalty0 (3):\penalty0 50--60, 2020{\natexlab{b}}.
 
 \bibitem[Li et~al.(2017)Li, Zhou, Chen, and Li]{metasgd}
 Zhenguo Li, Fengwei Zhou, Fei Chen, and Hang Li.
@@ -339,10 +328,8 @@ Zhenguo Li, Fengwei Zhou, Fei Chen, and Hang Li.
 Hanxiao Liu, Karen Simonyan, and Yiming Yang.
 \newblock {DARTS}: Differentiable architecture search.
 \newblock In \emph{International Conference on Learning Representations}, 2019.
-\newblock URL \url{https://openreview.net/forum?id=S1eYHoC5FX}.
 
-\bibitem[Liu et~al.(2022{\natexlab{a}})Liu, Li, Chen, and
-  Song]{graph_distill_arxiv}
+\bibitem[Liu et~al.(2022{\natexlab{a}})Liu, Li, Chen, and Song]{graph_distill_arxiv}
 Mengyang Liu, Shanchuan Li, Xinshi Chen, and Le~Song.
 \newblock Graph condensation via receptive field distribution matching.
 \newblock \emph{arXiv preprint arXiv:2206.13697}, 2022{\natexlab{a}}.
@@ -365,56 +352,51 @@ Noel Loo, Ramin Hasani, Alexander Amini, and Daniela Rus.
 \bibitem[Lorraine et~al.(2020)Lorraine, Vicol, and Duvenaud]{hyperopt_vicol}
 Jonathan Lorraine, Paul Vicol, and David Duvenaud.
 \newblock Optimizing millions of hyperparameters by implicit differentiation.
-\newblock In \emph{International Conference on Artificial Intelligence and
-  Statistics}, pp.\  1540--1552. PMLR, 2020.
+\newblock In \emph{International Conference on Artificial Intelligence and Statistics}, pp.\  1540--1552. PMLR, 2020.
 
-\bibitem[Maclaurin et~al.(2015)Maclaurin, Duvenaud, and
-  Adams]{hyperopt_maclaurin}
+\bibitem[Maclaurin et~al.(2015)Maclaurin, Duvenaud, and Adams]{hyperopt_maclaurin}
 Dougal Maclaurin, David Duvenaud, and Ryan Adams.
-\newblock Gradient-based hyperparameter optimization through reversible
-  learning.
-\newblock In \emph{International conference on machine learning}, pp.\
-  2113--2122. PMLR, 2015.
+\newblock Gradient-based hyperparameter optimization through reversible learning.
+\newblock In \emph{International conference on machine learning}, pp.\  2113--2122. PMLR, 2015.
 
 \bibitem[Maddison et~al.(2017)Maddison, Mnih, and Teh]{reparameter}
 Chris~J. Maddison, Andriy Mnih, and Yee~Whye Teh.
-\newblock The concrete distribution: A continuous relaxation of discrete random
-  variables.
+\newblock The concrete distribution: A continuous relaxation of discrete random variables.
 \newblock In \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[Madry et~al.(2018)Madry, Makelov, Schmidt, Tsipras, and Vladu]{adv_ml}
+Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
 
 \bibitem[McLachlan \& Krishnan(2007)McLachlan and Krishnan]{em}
 Geoffrey~J McLachlan and Thriyambakam Krishnan.
 \newblock \emph{The EM algorithm and extensions}.
 \newblock John Wiley \& Sons, 2007.
 
-\bibitem[Metz et~al.(2019)Metz, Maheswaranathan, Nixon, Freeman, and
-  Sohl-Dickstein]{bptt_loss_landscape}
-Luke Metz, Niru Maheswaranathan, Jeremy Nixon, Daniel Freeman, and Jascha
-  Sohl-Dickstein.
-\newblock Understanding and correcting pathologies in the training of learned
-  optimizers.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  4556--4565. PMLR, 2019.
+\bibitem[Mehrabi et~al.(2021)Mehrabi, Morstatter, Saxena, Lerman, and Galstyan]{fair_ml}
+Ninareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, and Aram Galstyan.
+\newblock A survey on bias and fairness in machine learning.
+\newblock \emph{ACM Computing Surveys (CSUR)}, 54\penalty0 (6):\penalty0 1--35, 2021.
 
-\bibitem[Mittal et~al.(2021)Mittal, Sachdeva, Agrawal, Agarwal, Kar, and
-  Varma]{eclare}
-Anshul Mittal, Noveen Sachdeva, Sheshansh Agrawal, Sumeet Agarwal, Purushottam
-  Kar, and Manik Varma.
+\bibitem[Metz et~al.(2019)Metz, Maheswaranathan, Nixon, Freeman, and Sohl-Dickstein]{bptt_loss_landscape}
+Luke Metz, Niru Maheswaranathan, Jeremy Nixon, Daniel Freeman, and Jascha Sohl-Dickstein.
+\newblock Understanding and correcting pathologies in the training of learned optimizers.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  4556--4565. PMLR, 2019.
+
+\bibitem[Mirzasoleiman et~al.(2020)Mirzasoleiman, Bilmes, and Leskovec]{craig}
+Baharan Mirzasoleiman, Jeff Bilmes, and Jure Leskovec.
+\newblock Coresets for data-efficient training of machine learning models.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  6950--6960. PMLR, 2020.
+
+\bibitem[Mittal et~al.(2021)Mittal, Sachdeva, Agrawal, Agarwal, Kar, and Varma]{eclare}
+Anshul Mittal, Noveen Sachdeva, Sheshansh Agrawal, Sumeet Agarwal, Purushottam Kar, and Manik Varma.
 \newblock Eclare: Extreme classification with label graph correlations.
 \newblock In \emph{Proceedings of the Web Conference 2021}, WWW '21, 2021.
 
-\bibitem[Naumov et~al.(2019)Naumov, Mudigere, Shi, Huang, Sundaraman, Park,
-  Wang, Gupta, Wu, Azzolini, Dzhulgakov, Mallevich, Cherniavskii, Lu,
-  Krishnamoorthi, Yu, Kondratenko, Pereira, Chen, Chen, Rao, Jia, Xiong, and
-  Smelyanskiy]{dlrm}
-Maxim Naumov, Dheevatsa Mudigere, Hao-Jun~Michael Shi, Jianyu Huang, Narayanan
-  Sundaraman, Jongsoo Park, Xiaodong Wang, Udit Gupta, Carole-Jean Wu,
-  Alisson~G. Azzolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherniavskii,
-  Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu, Volodymyr Kondratenko,
-  Stephanie Pereira, Xianjie Chen, Wenlin Chen, Vijay Rao, Bill Jia, Liang
-  Xiong, and Misha Smelyanskiy.
-\newblock Deep learning recommendation model for personalization and
-  recommendation systems.
+\bibitem[Naumov et~al.(2019)Naumov, Mudigere, Shi, Huang, Sundaraman, Park, Wang, Gupta, Wu, Azzolini, Dzhulgakov, Mallevich, Cherniavskii, Lu, Krishnamoorthi, Yu, Kondratenko, Pereira, Chen, Chen, Rao, Jia, Xiong, and Smelyanskiy]{dlrm}
+Maxim Naumov, Dheevatsa Mudigere, Hao-Jun~Michael Shi, Jianyu Huang, Narayanan Sundaraman, Jongsoo Park, Xiaodong Wang, Udit Gupta, Carole-Jean Wu, Alisson~G. Azzolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherniavskii, Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu, Volodymyr Kondratenko, Stephanie Pereira, Xianjie Chen, Wenlin Chen, Vijay Rao, Bill Jia, Liang Xiong, and Misha Smelyanskiy.
+\newblock Deep learning recommendation model for personalization and recommendation systems.
 \newblock \emph{CoRR}, abs/1906.00091, 2019.
 
 \bibitem[Neal(2012)]{nngp}
@@ -425,21 +407,15 @@ Radford~M Neal.
 \bibitem[Nguyen et~al.(2021{\natexlab{a}})Nguyen, Chen, and Lee]{kip}
 Timothy Nguyen, Zhourong Chen, and Jaehoon Lee.
 \newblock Dataset meta-learning from kernel ridge-regression.
-\newblock In \emph{International Conference on Learning Representations},
-  2021{\natexlab{a}}.
-\newblock URL \url{https://openreview.net/forum?id=l-PrrQrK0QR}.
+\newblock In \emph{International Conference on Learning Representations}, 2021{\natexlab{a}}.
 
-\bibitem[Nguyen et~al.(2021{\natexlab{b}})Nguyen, Novak, Xiao, and
-  Lee]{kip_conv}
+\bibitem[Nguyen et~al.(2021{\natexlab{b}})Nguyen, Novak, Xiao, and Lee]{kip_conv}
 Timothy Nguyen, Roman Novak, Lechao Xiao, and Jaehoon Lee.
 \newblock Dataset distillation with infinitely wide convolutional networks.
-\newblock \emph{Advances in Neural Information Processing Systems}, 34,
-  2021{\natexlab{b}}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34, 2021{\natexlab{b}}.
 
-\bibitem[Parisi et~al.(2019)Parisi, Kemker, Part, Kanan, and
-  Wermter]{continual}
-German~I Parisi, Ronald Kemker, Jose~L Part, Christopher Kanan, and Stefan
-  Wermter.
+\bibitem[Parisi et~al.(2019)Parisi, Kemker, Part, Kanan, and Wermter]{continual}
+German~I Parisi, Ronald Kemker, Jose~L Part, Christopher Kanan, and Stefan Wermter.
 \newblock Continual lifelong learning with neural networks: A review.
 \newblock \emph{Neural Networks}, 113:\penalty0 54--71, 2019.
 
@@ -453,184 +429,139 @@ Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen.
 \newblock Hierarchical text-conditional image generation with clip latents.
 \newblock \emph{arXiv preprint arXiv:2204.06125}, 2022.
 
-\bibitem[Rombach et~al.(2022)Rombach, Blattmann, Lorenz, Esser, and
-  Ommer]{stable_diffusion}
-Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj{\"o}rn
-  Ommer.
+\bibitem[Rombach et~al.(2022)Rombach, Blattmann, Lorenz, Esser, and Ommer]{stable_diffusion}
+Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj{\"o}rn Ommer.
 \newblock High-resolution image synthesis with latent diffusion models.
-\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
-  and Pattern Recognition}, pp.\  10684--10695, 2022.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  10684--10695, 2022.
 
-\bibitem[Rosasco et~al.(2021)Rosasco, Carta, Cossu, Lomonaco, and
-  Bacciu]{dd_continual_2}
-Andrea Rosasco, Antonio Carta, Andrea Cossu, Vincenzo Lomonaco, and Davide
-  Bacciu.
+\bibitem[Rosasco et~al.(2021)Rosasco, Carta, Cossu, Lomonaco, and Bacciu]{dd_continual_2}
+Andrea Rosasco, Antonio Carta, Andrea Cossu, Vincenzo Lomonaco, and Davide Bacciu.
 \newblock Distilled replay: Overcoming forgetting through synthetic samples.
 \newblock \emph{arXiv preprint arXiv:2103.15851}, 2021.
 
+\bibitem[S et~al.(2021)S, Iyer, Ramakrishnan, and De]{selcon_coreset}
+Durga S, Rishabh Iyer, Ganesh Ramakrishnan, and Abir De.
+\newblock Training data subset selection for regression with controlled generalization error.
+\newblock In Marina Meila and Tong Zhang (eds.), \emph{Proceedings of the 38th International Conference on Machine Learning}, volume 139 of \emph{Proceedings of Machine Learning Research}, pp.\  9202--9212. PMLR, 18--24 Jul 2021.
+
 \bibitem[Sachdeva \& McAuley(2020)Sachdeva and McAuley]{reviews_sigir}
 Noveen Sachdeva and Julian McAuley.
-\newblock \emph{How Useful Are Reviews for Recommendation? A Critical Review
-  and Potential Improvements}, pp.\  1845–1848.
-\newblock SIGIR '20. Association for Computing Machinery, New York, NY, USA,
-  2020.
+\newblock \emph{How Useful Are Reviews for Recommendation? A Critical Review and Potential Improvements}, pp.\  1845–1848.
+\newblock SIGIR '20. Association for Computing Machinery, New York, NY, USA, 2020.
 \newblock ISBN 9781450380164.
 \newblock \doi{10.1145/3397271.3401281}.
-\newblock URL \url{https://doi.org/10.1145/3397271.3401281}.
 
 \bibitem[Sachdeva et~al.(2019)Sachdeva, Manco, Ritacco, and Pudi]{svae}
 Noveen Sachdeva, Giuseppe Manco, Ettore Ritacco, and Vikram Pudi.
 \newblock Sequential variational autoencoders for collaborative filtering.
-\newblock In \emph{Proceedings of the twelfth ACM international conference on
-  web search and data mining}, pp.\  600--608, 2019.
+\newblock In \emph{Proceedings of the twelfth ACM international conference on web search and data mining}, pp.\  600--608, 2019.
 
 \bibitem[Sachdeva et~al.(2020)Sachdeva, Su, and Joachims]{def_support}
 Noveen Sachdeva, Yi~Su, and Thorsten Joachims.
 \newblock Off-policy bandits with deficient support.
-\newblock In \emph{Proceedings of the 26th ACM SIGKDD International Conference
-  on Knowledge Discovery \& Data Mining}, KDD '20, pp.\  965–975, New York,
-  NY, USA, 2020. Association for Computing Machinery.
+\newblock In \emph{Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining}, KDD '20, pp.\  965–975, New York, NY, USA, 2020. Association for Computing Machinery.
 \newblock \doi{10.1145/3394486.3403139}.
 
-\bibitem[Sachdeva et~al.(2022{\natexlab{a}})Sachdeva, Dhaliwal, Wu, and
-  McAuley]{inf_ae}
+\bibitem[Sachdeva et~al.(2022{\natexlab{a}})Sachdeva, Dhaliwal, Wu, and McAuley]{inf_ae}
 Noveen Sachdeva, Mehak~Preet Dhaliwal, Carole-Jean Wu, and Julian McAuley.
 \newblock Infinite recommendation networks: A data-centric approach.
-\newblock In \emph{Advances in Neural Information Processing Systems},
-  2022{\natexlab{a}}.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022{\natexlab{a}}.
 
-\bibitem[Sachdeva et~al.(2022{\natexlab{b}})Sachdeva, Wang, Han, Gupta, and
-  McAuley]{gapformer}
+\bibitem[Sachdeva et~al.(2022{\natexlab{b}})Sachdeva, Wang, Han, Gupta, and McAuley]{gapformer}
 Noveen Sachdeva, Ziran Wang, Kyungtae Han, Rohit Gupta, and Julian McAuley.
-\newblock Gapformer: Fast autoregressive transformers meet rnns for
-  personalized adaptive cruise control.
-\newblock In \emph{2022 IEEE 25th International Conference on Intelligent
-  Transportation Systems (ITSC)}, pp.\  2528--2535, 2022{\natexlab{b}}.
+\newblock Gapformer: Fast autoregressive transformers meet rnns for personalized adaptive cruise control.
+\newblock In \emph{2022 IEEE 25th International Conference on Intelligent Transportation Systems (ITSC)}, pp.\  2528--2535, 2022{\natexlab{b}}.
 \newblock \doi{10.1109/ITSC55140.2022.9922275}.
 
 \bibitem[Sachdeva et~al.(2022{\natexlab{c}})Sachdeva, Wu, and McAuley]{wsdm22}
 Noveen Sachdeva, Carole-Jean Wu, and Julian McAuley.
 \newblock On sampling collaborative filtering datasets.
-\newblock In \emph{Proceedings of the Fifteenth ACM International Conference on
-  Web Search and Data Mining}, WSDM '22, 2022{\natexlab{c}}.
+\newblock In \emph{Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining}, WSDM '22, 2022{\natexlab{c}}.
 
-\bibitem[Sangermano et~al.(2022)Sangermano, Carta, Cossu, and
-  Bacciu]{dd_continual_3}
+\bibitem[Sangermano et~al.(2022)Sangermano, Carta, Cossu, and Bacciu]{dd_continual_3}
 Mattia Sangermano, Antonio Carta, Andrea Cossu, and Davide Bacciu.
 \newblock Sample condensation in online continual learning.
-\newblock In \emph{2022 International Joint Conference on Neural Networks
-  (IJCNN)}, pp.\  01--08. IEEE, 2022.
+\newblock In \emph{2022 International Joint Conference on Neural Networks (IJCNN)}, pp.\  01--08. IEEE, 2022.
 
-\bibitem[Scao et~al.(2022)Scao, Fan, Akiki, Pavlick, Ili{\'c}, Hesslow,
-  Castagn{\'e}, Luccioni, Yvon, Gall{\'e}, et~al.]{bloom}
-Teven~Le Scao, Angela Fan, Christopher Akiki, Ellie Pavlick, Suzana Ili{\'c},
-  Daniel Hesslow, Roman Castagn{\'e}, Alexandra~Sasha Luccioni, Fran{\c{c}}ois
-  Yvon, Matthias Gall{\'e}, et~al.
+\bibitem[Scao et~al.(2022)Scao, Fan, Akiki, Pavlick, Ili{\'c}, Hesslow, Castagn{\'e}, Luccioni, Yvon, Gall{\'e}, et~al.]{bloom}
+Teven~Le Scao, Angela Fan, Christopher Akiki, Ellie Pavlick, Suzana Ili{\'c}, Daniel Hesslow, Roman Castagn{\'e}, Alexandra~Sasha Luccioni, Fran{\c{c}}ois Yvon, Matthias Gall{\'e}, et~al.
 \newblock Bloom: A 176b-parameter open-access multilingual language model.
 \newblock \emph{arXiv preprint arXiv:2211.05100}, 2022.
 
-\bibitem[Schirrmeister et~al.(2022)Schirrmeister, Liu, Hooker, and
-  Ball]{less_is_more}
+\bibitem[Schirrmeister et~al.(2022)Schirrmeister, Liu, Hooker, and Ball]{less_is_more}
 Robin~Tibor Schirrmeister, Rosanne Liu, Sara Hooker, and Tonio Ball.
-\newblock When less is more: Simplifying inputs aids neural network
-  understanding.
+\newblock When less is more: Simplifying inputs aids neural network understanding.
 \newblock \emph{arXiv preprint arXiv:2201.05610}, 2022.
 
-\bibitem[Schnabel et~al.(2016)Schnabel, Swaminathan, Singh, Chandak, and
-  Joachims]{rec_treatments}
-Tobias Schnabel, Adith Swaminathan, Ashudeep Singh, Navin Chandak, and Thorsten
-  Joachims.
+\bibitem[Schnabel et~al.(2016)Schnabel, Swaminathan, Singh, Chandak, and Joachims]{rec_treatments}
+Tobias Schnabel, Adith Swaminathan, Ashudeep Singh, Navin Chandak, and Thorsten Joachims.
 \newblock Recommendations as treatments: Debiasing learning and evaluation.
-\newblock In \emph{Proceedings of The 33rd International Conference on Machine
-  Learning}, volume~48 of \emph{Proceedings of Machine Learning Research}, pp.\
-   1670--1679. PMLR, 2016.
+\newblock In \emph{Proceedings of The 33rd International Conference on Machine Learning}, volume~48 of \emph{Proceedings of Machine Learning Research}, pp.\  1670--1679. PMLR, 2016.
 
-\bibitem[Shapiro et~al.(2001)Shapiro, Stockman, et~al.]{cv_book}
-Linda~G Shapiro, George~C Stockman, et~al.
-\newblock \emph{Computer vision}, volume~3.
-\newblock Prentice Hall New Jersey, 2001.
-
-\bibitem[Song et~al.(2022)Song, Liu, Chen, Festag, Trinitis, Schulz, and
-  Knoll]{federated_distill_5}
-Rui Song, Dai Liu, Dave~Zhenyu Chen, Andreas Festag, Carsten Trinitis, Martin
-  Schulz, and Alois Knoll.
-\newblock Federated learning via decentralized dataset distillation in
-  resource-constrained edge environments.
+\bibitem[Song et~al.(2022)Song, Liu, Chen, Festag, Trinitis, Schulz, and Knoll]{federated_distill_5}
+Rui Song, Dai Liu, Dave~Zhenyu Chen, Andreas Festag, Carsten Trinitis, Martin Schulz, and Alois Knoll.
+\newblock Federated learning via decentralized dataset distillation in resource-constrained edge environments.
 \newblock \emph{arXiv preprint arXiv:2208.11311}, 2022.
 
-\bibitem[Sorscher et~al.(2022)Sorscher, Geirhos, Shekhar, Ganguli, and
-  Morcos]{data_quality}
-Ben Sorscher, Robert Geirhos, Shashank Shekhar, Surya Ganguli, and Ari~S.
-  Morcos.
-\newblock Beyond neural scaling laws: beating power law scaling via data
-  pruning.
-\newblock In Alice~H. Oh, Alekh Agarwal, Danielle Belgrave, and Kyunghyun Cho
-  (eds.), \emph{Advances in Neural Information Processing Systems}, 2022.
+\bibitem[Sorscher et~al.(2022)Sorscher, Geirhos, Shekhar, Ganguli, and Morcos]{data_quality}
+Ben Sorscher, Robert Geirhos, Shashank Shekhar, Surya Ganguli, and Ari~S. Morcos.
+\newblock Beyond neural scaling laws: beating power law scaling via data pruning.
+\newblock In Alice~H. Oh, Alekh Agarwal, Danielle Belgrave, and Kyunghyun Cho (eds.), \emph{Advances in Neural Information Processing Systems}, 2022.
 
 \bibitem[Steck(2019)]{ease}
 Harald Steck.
 \newblock Embarrassingly shallow autoencoders for sparse data.
 \newblock In \emph{The World Wide Web Conference}, 2019.
 
-\bibitem[Such et~al.(2020)Such, Rawal, Lehman, Stanley, and Clune]{dd_nas}
-Felipe~Petroski Such, Aditya Rawal, Joel Lehman, Kenneth Stanley, and Jeffrey
-  Clune.
-\newblock Generative teaching networks: Accelerating neural architecture search
-  by learning to generate synthetic training data.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  9206--9216. PMLR, 2020.
-
 \bibitem[Sucholutsky \& Schonlau(2021)Sucholutsky and Schonlau]{text_distill}
 Ilia Sucholutsky and Matthias Schonlau.
 \newblock Soft-label dataset distillation and text dataset distillation.
-\newblock In \emph{2021 International Joint Conference on Neural Networks
-  (IJCNN)}, pp.\  1--8. IEEE, 2021.
+\newblock In \emph{2021 International Joint Conference on Neural Networks (IJCNN)}, pp.\  1--8. IEEE, 2021.
 
-\bibitem[Thoppilan et~al.(2022)Thoppilan, De~Freitas, Hall, Shazeer,
-  Kulshreshtha, Cheng, Jin, Bos, Baker, Du, et~al.]{lamda}
-Romal Thoppilan, Daniel De~Freitas, Jamie Hall, Noam Shazeer, Apoorv
-  Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu~Du,
-  et~al.
+\bibitem[Sun et~al.(2020)Sun, Kretzschmar, Dotiwalla, Chouard, Patnaik, Tsui, Guo, Zhou, Chai, Caine, et~al.]{waymo}
+Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou, Yuning Chai, Benjamin Caine, et~al.
+\newblock Scalability in perception for autonomous driving: Waymo open dataset.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pp.\  2446--2454, 2020.
+
+\bibitem[Thoppilan et~al.(2022)Thoppilan, De~Freitas, Hall, Shazeer, Kulshreshtha, Cheng, Jin, Bos, Baker, Du, et~al.]{lamda}
+Romal Thoppilan, Daniel De~Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu~Du, et~al.
 \newblock Lamda: Language models for dialog applications.
 \newblock \emph{arXiv preprint arXiv:2201.08239}, 2022.
 
-\bibitem[Toneva et~al.(2019)Toneva, Sordoni, des Combes, Trischler, Bengio, and
-  Gordon]{forgetting}
-Mariya Toneva, Alessandro Sordoni, Remi~Tachet des Combes, Adam Trischler,
-  Yoshua Bengio, and Geoffrey~J. Gordon.
-\newblock An empirical study of example forgetting during deep neural network
-  learning.
+\bibitem[Toneva et~al.(2019)Toneva, Sordoni, des Combes, Trischler, Bengio, and Gordon]{forgetting}
+Mariya Toneva, Alessandro Sordoni, Remi~Tachet des Combes, Adam Trischler, Yoshua Bengio, and Geoffrey~J. Gordon.
+\newblock An empirical study of example forgetting during deep neural network learning.
 \newblock In \emph{International Conference on Learning Representations}, 2019.
-\newblock URL \url{https://openreview.net/forum?id=BJlxm30cKm}.
+
+\bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux, Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, et~al.]{llama}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timoth{\'e}e Lacroix, Baptiste Rozi{\`e}re, Naman Goyal, Eric Hambro, Faisal Azhar, et~al.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}, 2023.
 
 \bibitem[Vicente et~al.(1994)Vicente, Savard, and J{\'u}dice]{bilevel_np_hard}
 Luis Vicente, Gilles Savard, and Joaquim J{\'u}dice.
 \newblock Descent approaches for quadratic bilevel programming.
-\newblock \emph{Journal of Optimization theory and applications}, 81\penalty0
-  (2):\penalty0 379--399, 1994.
+\newblock \emph{Journal of Optimization theory and applications}, 81\penalty0 (2):\penalty0 379--399, 1994.
 
-\bibitem[Vicol et~al.(2021)Vicol, Metz, and
-  Sohl-Dickstein]{bilevel_bias_variance}
+\bibitem[Vicol et~al.(2021)Vicol, Metz, and Sohl-Dickstein]{bilevel_bias_variance}
 Paul Vicol, Luke Metz, and Jascha Sohl-Dickstein.
-\newblock Unbiased gradient estimation in unrolled computation graphs with
-  persistent evolution strategies.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  10553--10563. PMLR, 2021.
+\newblock Unbiased gradient estimation in unrolled computation graphs with persistent evolution strategies.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  10553--10563. PMLR, 2021.
 
-\bibitem[Vicol et~al.(2022)Vicol, Lorraine, Pedregosa, Duvenaud, and
-  Grosse]{bilevel_implicit_bias}
-Paul Vicol, Jonathan~P Lorraine, Fabian Pedregosa, David Duvenaud, and Roger~B
-  Grosse.
+\bibitem[Vicol et~al.(2022)Vicol, Lorraine, Pedregosa, Duvenaud, and Grosse]{bilevel_implicit_bias}
+Paul Vicol, Jonathan~P Lorraine, Fabian Pedregosa, David Duvenaud, and Roger~B Grosse.
 \newblock On implicit bias in overparameterized bilevel optimization.
 \newblock In \emph{International Conference on Machine Learning}. PMLR, 2022.
 
-\bibitem[Wang et~al.(2022)Wang, Zhao, Peng, Zhu, Yang, Wang, Huang, Bilen,
-  Wang, and You]{cafe}
-Kai Wang, Bo~Zhao, Xiangyu Peng, Zheng Zhu, Shuo Yang, Shuo Wang, Guan Huang,
-  Hakan Bilen, Xinchao Wang, and Yang You.
+\bibitem[Wang et~al.(2022)Wang, Zhao, Peng, Zhu, Yang, Wang, Huang, Bilen, Wang, and You]{cafe}
+Kai Wang, Bo~Zhao, Xiangyu Peng, Zheng Zhu, Shuo Yang, Shuo Wang, Guan Huang, Hakan Bilen, Xinchao Wang, and Yang You.
 \newblock Cafe: Learning to condense dataset by aligning features.
-\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
-  and Pattern Recognition}, pp.\  12196--12205, 2022.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  12196--12205, 2022.
+
+\bibitem[Wang et~al.(2021)Wang, Shivanna, Cheng, Jain, Lin, Hong, and Chi]{dcnv2}
+Ruoxi Wang, Rakesh Shivanna, Derek Cheng, Sagar Jain, Dong Lin, Lichan Hong, and Ed~Chi.
+\newblock Dcn v2: Improved deep \& cross network and practical lessons for web-scale learning to rank systems.
+\newblock In \emph{Proceedings of the web conference 2021}, pp.\  1785--1797, 2021.
 
 \bibitem[Wang et~al.(2018)Wang, Zhu, Torralba, and Efros]{dd_orig}
 Tongzhou Wang, Jun-Yan Zhu, Antonio Torralba, and Alexei~A Efros.
@@ -640,43 +571,29 @@ Tongzhou Wang, Jun-Yan Zhu, Antonio Torralba, and Alexei~A Efros.
 \bibitem[Welling(2009)]{herding}
 Max Welling.
 \newblock Herding dynamical weights to learn.
-\newblock In \emph{Proceedings of the 26th Annual International Conference on
-  Machine Learning}, ICML '09, 2009.
+\newblock In \emph{Proceedings of the 26th Annual International Conference on Machine Learning}, ICML '09, 2009.
 
 \bibitem[Wiewel \& Yang(2021)Wiewel and Yang]{dd_continual_1}
 Felix Wiewel and Bin Yang.
 \newblock Condensed composite memory continual learning.
-\newblock In \emph{2021 International Joint Conference on Neural Networks
-  (IJCNN)}, pp.\  1--8. IEEE, 2021.
+\newblock In \emph{2021 International Joint Conference on Neural Networks (IJCNN)}, pp.\  1--8. IEEE, 2021.
 
-\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
-  Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu,
-  Le~Scao, Gugger, Drame, Lhoest, and Rush]{huggingface}
-T.~Wolf, L.~Debut, V.~Sanh, J.~Chaumond, C.~Delangue, A.~Moi, P.~Cistac,
-  T.~Rault, R.~Louf, M.~Funtowicz, J.~Davison, S.~Shleifer, P.~von Platen,
-  C.~Ma, Y.~Jernite, J.~Plu, C.~Xu, T.~Le~Scao, S.~Gugger, M.~Drame, Q.~Lhoest,
-  and A.~Rush.
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac, Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu, Le~Scao, Gugger, Drame, Lhoest, and Rush]{huggingface}
+T.~Wolf, L.~Debut, V.~Sanh, J.~Chaumond, C.~Delangue, A.~Moi, P.~Cistac, T.~Rault, R.~Louf, M.~Funtowicz, J.~Davison, S.~Shleifer, P.~von Platen, C.~Ma, Y.~Jernite, J.~Plu, C.~Xu, T.~Le~Scao, S.~Gugger, M.~Drame, Q.~Lhoest, and A.~Rush.
 \newblock Transformers: State-of-the-art natural language processing.
-\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
-  Natural Language Processing: System Demonstrations}, pp.\  38--45, Online,
-  October 2020. Association for Computational Linguistics.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations}, pp.\  38--45, Online, October 2020. Association for Computational Linguistics.
 \newblock \doi{10.18653/v1/2020.emnlp-demos.6}.
 
 \bibitem[Wolpert \& Macready(1997)Wolpert and Macready]{no_free_lunch}
 D.H. Wolpert and W.G. Macready.
 \newblock No free lunch theorems for optimization.
-\newblock \emph{IEEE Transactions on Evolutionary Computation}, 1\penalty0
-  (1):\penalty0 67--82, 1997.
+\newblock \emph{IEEE Transactions on Evolutionary Computation}, 1\penalty0 (1):\penalty0 67--82, 1997.
 \newblock \doi{10.1109/4235.585893}.
 
-\bibitem[Wu et~al.(2022)Wu, Raghavendra, Gupta, Acun, Ardalani, Maeng, Chang,
-  Aga, Huang, Bai, et~al.]{data_increasing_recsys}
-Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha Ardalani,
-  Kiwan Maeng, Gloria Chang, Fiona Aga, Jinshi Huang, Charles Bai, et~al.
-\newblock Sustainable ai: Environmental implications, challenges and
-  opportunities.
-\newblock \emph{Proceedings of Machine Learning and Systems}, 4:\penalty0
-  795--813, 2022.
+\bibitem[Wu et~al.(2022)Wu, Raghavendra, Gupta, Acun, Ardalani, Maeng, Chang, Aga, Huang, Bai, et~al.]{data_increasing_recsys}
+Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha Ardalani, Kiwan Maeng, Gloria Chang, Fiona Aga, Jinshi Huang, Charles Bai, et~al.
+\newblock Sustainable ai: Environmental implications, challenges and opportunities.
+\newblock \emph{Proceedings of Machine Learning and Systems}, 4:\penalty0 795--813, 2022.
 
 \bibitem[Wu et~al.(2020)Wu, Sun, Zhang, Xie, and Cui]{gnn_recsys_survey}
 Shiwen Wu, Fei Sun, Wentao Zhang, Xu~Xie, and Bin Cui.
@@ -686,26 +603,27 @@ Shiwen Wu, Fei Sun, Wentao Zhang, Xu~Xie, and Bin Cui.
 \bibitem[Wu et~al.(2019)Wu, Tang, Zhu, Wang, Xie, and Tan]{gnn_recsys}
 Shu Wu, Yuyuan Tang, Yanqiao Zhu, Liang Wang, Xing Xie, and Tieniu Tan.
 \newblock Session-based recommendation with graph neural networks.
-\newblock In \emph{Proceedings of the AAAI conference on artificial
-  intelligence}, 2019.
+\newblock In \emph{Proceedings of the AAAI conference on artificial intelligence}, 2019.
 
 \bibitem[Wu et~al.(2018)Wu, Ren, Liao, and Grosse.]{biased_bptt}
 Yuhuai Wu, Mengye Ren, Renjie Liao, and Roger Grosse.
 \newblock Understanding short-horizon bias in stochastic meta-optimization.
 \newblock In \emph{International Conference on Learning Representations}, 2018.
 
-\bibitem[Xiong et~al.(2022)Xiong, Wang, Cheng, Yu, and
-  Hsieh]{federated_distill_4}
+\bibitem[Xiong et~al.(2022)Xiong, Wang, Cheng, Yu, and Hsieh]{federated_distill_4}
 Yuanhao Xiong, Ruochen Wang, Minhao Cheng, Felix Yu, and Cho-Jui Hsieh.
-\newblock Feddm: Iterative distribution matching for communication-efficient
-  federated learning.
+\newblock Feddm: Iterative distribution matching for communication-efficient federated learning.
 \newblock \emph{arXiv preprint arXiv:2207.09653}, 2022.
+
+\bibitem[Xu \& Cohen(2018)Xu and Cohen]{stock}
+Yumo Xu and Shay~B Cohen.
+\newblock Stock movement prediction from tweets and historical prices.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pp.\  1970--1979, 2018.
 
 \bibitem[Zhao \& Bilen(2021)Zhao and Bilen]{zhao_dsa}
 Bo~Zhao and Hakan Bilen.
 \newblock Dataset condensation with differentiable siamese augmentation.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  12674--12685. PMLR, 2021.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  12674--12685. PMLR, 2021.
 
 \bibitem[Zhao \& Bilen(2022)Zhao and Bilen]{gan_distillation}
 Bo~Zhao and Hakan Bilen.
@@ -715,20 +633,17 @@ Bo~Zhao and Hakan Bilen.
 \bibitem[Zhao \& Bilen(2023)Zhao and Bilen]{dm}
 Bo~Zhao and Hakan Bilen.
 \newblock Dataset condensation with distribution matching.
-\newblock In \emph{Proceedings of the IEEE/CVF Winter Conference on
-  Applications of Computer Vision (WACV)}, 2023.
+\newblock In \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 2023.
 
 \bibitem[Zhao et~al.(2021)Zhao, Mopuri, and Bilen]{zhao_dc}
 Bo~Zhao, Konda~Reddy Mopuri, and Hakan Bilen.
 \newblock Dataset condensation with gradient matching.
 \newblock In \emph{International Conference on Learning Representations}, 2021.
 
-\bibitem[Zhou et~al.(2022{\natexlab{a}})Zhou, Pi, Zhang, Lin, Chen, and
-  Zhang]{bilevel_coresets_bayesian}
+\bibitem[Zhou et~al.(2022{\natexlab{a}})Zhou, Pi, Zhang, Lin, Chen, and Zhang]{bilevel_coresets_bayesian}
 Xiao Zhou, Renjie Pi, Weizhong Zhang, Yong Lin, Zonghao Chen, and Tong Zhang.
 \newblock Probabilistic bilevel coreset selection.
-\newblock In \emph{International Conference on Machine Learning}, pp.\
-  27287--27302. PMLR, 2022{\natexlab{a}}.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  27287--27302. PMLR, 2022{\natexlab{a}}.
 
 \bibitem[Zhou et~al.(2020)Zhou, Pu, Ma, Li, and Wu]{federated_distill_2}
 Yanlin Zhou, George Pu, Xiyao Ma, Xiaolin Li, and Dapeng Wu.
@@ -738,7 +653,6 @@ Yanlin Zhou, George Pu, Xiyao Ma, Xiaolin Li, and Dapeng Wu.
 \bibitem[Zhou et~al.(2022{\natexlab{b}})Zhou, Nezhadarya, and Ba]{frepo}
 Yongchao Zhou, Ehsan Nezhadarya, and Jimmy Ba.
 \newblock Dataset distillation using neural feature regression.
-\newblock In \emph{Advances in Neural Information Processing Systems},
-  2022{\natexlab{b}}.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022{\natexlab{b}}.
 
 \end{thebibliography}

@@ -5,9 +5,9 @@
 
 % \usepackage{tmlr}
 % If accepted, instead use the following line for the camera-ready submission:
-%\usepackage[accepted]{tmlr}
+\usepackage[accepted]{tmlr}
 % To de-anonymize and remove mentions to TMLR (for example for posting to preprint servers), instead use the following:
-\usepackage[preprint]{tmlr}
+% \usepackage[preprint]{tmlr}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -20,17 +20,11 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage[noend]{algpseudocode}
-\usepackage{algorithm}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{wrapfig}
-\usepackage{mathtools}
-\usepackage[capitalise, noabbrev]{cleveref}
+\usepackage[ruled,linesnumbered,vlined]{algorithm2e}
+\usepackage{cleveref}
+% \usepackage{algorithm}
+
+% \usepackage{palatino}
 
 % https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
 \hypersetup{
@@ -64,9 +58,9 @@
 \newcommand{\fix}{\marginpar{FIX}}
 \newcommand{\new}{\marginpar{NEW}}
 
-\def\month{MM}  % Insert correct month for camera-ready version
-\def\year{YYYY} % Insert correct year for camera-ready version
-\def\openreview{\url{https://openreview.net/forum?id=XXXX}} % Insert correct link to OpenReview for camera-ready version
+\def\month{07}  % Insert correct month for camera-ready version
+\def\year{2023} % Insert correct year for camera-ready version
+\def\openreview{\url{https://openreview.net/forum?id=lmXMXP74TO}} % Insert correct link to OpenReview for camera-ready version
 
 
 \begin{document}
@@ -83,10 +77,16 @@
 \begin{loosedefinition} \label{def:data_distillation}
     {\normalfont \textbf{(Data distillation)}} Approaches that aim to synthesize tiny and high-fidelity data summaries which distill the most important knowledge from a given target dataset. Such distilled summaries are optimized to serve as effective drop-in replacements of the original dataset for efficient and accurate data-usage applications like model training, inference, architecture search, etc.
 \end{loosedefinition}
+\vspace{0.1cm}
 
 % Reference figure 1
-The recent ``scale-is-everything'' viewpoint \citep{scaling_1, scaling_2, scaling_3}, argues that training bigger models (\ie, consisting of a higher number of parameters) on bigger datasets, and using larger computational resources is the sole key for advancing the frontier of artificial intelligence.
-On the other hand, a well-reasoned, principled solution will arguably be more amenable to scaling, thereby leading to faster progress \citep{data_quality}. Data distillation (Definition \ref{def:data_distillation}), is a task rooted in the latter school of thought. Clearly, the scale viewpoint still holds, in that if we keep increasing the amount of data (albeit now compressed and of higher quality), we will observe an improvement in both upstream and downstream generalization, but at a faster rate.
+The recent ``scale-is-everything'' viewpoint \citep{scaling_1, scaling_2, scaling_3}, argues that training bigger models (\ie, consisting of a higher number of parameters) on bigger datasets, and using larger computational resources is the sole key for advancing the frontier of artificial intelligence. Such studies observe and hypothesize the generalizability of neural networks as a power-law \wrt the aforementioned factors, albeit with small exponents.
+On the other hand, a reasonable argument is that a principled and well-reasoned solution will be more amenable to various scaling-laws, thereby leading to faster progress. 
+Data distillation (Definition \ref{def:data_distillation}) is clearly a task rooted in the latter school of thought by introducing the \emph{fidelity of data} as in important covariate in such neural scaling-laws. 
+\citet{data_quality} demonstrate this viewpoint analytically by using simple heuristics to
+% where they largely improve neural scaling laws by 
+prune away data with low measures of signal for model training.
+Clearly, the scale viewpoint still holds, in that if we keep increasing the amount of data (albeit now compressed and of higher quality), we will observe an improvement in both upstream and downstream generalization, but at a faster rate.
 
 % re-usability of knowledge
 \paragraph{Motivation.} A terse, high-quality data summary has use cases from a variety of standpoints. First and foremost, it leads to a faster model-training procedure. In turn, faster model training equates to (1) compute-cost saving and expedited research iterations, \ie, the investigative procedure of manually experimenting different ideas; 
@@ -95,28 +95,35 @@ and (2) improved eco-sustainability, \ie, lowering the amount of compute time di
 a high-quality data summary indirectly also accelerates orthogonal procedures like neural architecture search \citep{darts_nas}, approximate nearest neighbour search \citep{ann}, knowledge distillation \citep{knowledge_distillation}, \etc, where the procedure needs to iterate over the entire dataset multiple times.
 % a high-quality data summary also inherently promotes faster knowledge transfer. More specifically, all learning algorithms rely on a collected source of data to estimate their parameters from. Having a high-quality, reusable data summary can be used to train a wide variety of learning algorithms for individual downstream use-cases, without being constrained to share knowledge amongst each other. 
 
-\paragraph{Comparison with knowledge distillation \& transfer learning.} Despite 
-%all procedures 
-inherently distilling some kind of knowledge, we would like to highlight both \emph{knowledge distillation} and \emph{transfer learning} are orthogonal procedures to data distillation, which can potentially work together to perform both tasks more efficiently. Knowledge distillation \citep{knowledge_distillation} entails distilling the knowledge from a trained teacher network into a smaller student network efficiently. On the other hand, transfer learning \citep{transfer_learning} is the procedure of transferring knowledge across similar tasks, \eg, from image classification to image segmentation. Orthogonally, data distillation aims to distill the knowledge from a given dataset into a terse data summary. Such data summaries can be used \emph{in conjunction} with knowledge distillation or transfer learning procedures for both (1) faster learning of the teacher models; and (2) faster knowledge transfer to the student models. The same comparison holds true for model compression techniques \citep{model_compression} as well, where similar to knowledge distillation, the goal is to reduce model storage size, rather than reducing the training time or sample complexity.
-
-\emph{In this survey}, we intend to provide a succinct overview of various data distillation frameworks across different data modalities. We start by presenting a formal data distillation framework
-% , along with discussing commonly employed optimization techniques 
-in \cref{sec:framework}, along with a detailed empirical comparison of existing image distillation techniques. Subsequently, in \cref{sec:data_modalities}, we discuss existing data distillation frameworks for synthesizing data of different modalities, as well as outlining the associated challenges. In \cref{sec:applications}, we discuss alternative applications of synthesizing a high-fidelity data summary rather than simply accelerating model training along with pointers to existing work. Finally, in \cref{sec:challenges_future_work}, we conclude by presenting common pitfalls in existing data distillation techniques, along with proposing interesting directions for future work.
-
 \begin{figure*}[t!] \centering
     \centering
     \includegraphics[width=0.7\linewidth]{figures/overview.pdf}
-    \vspace{4pt}
+    % \vspace{4pt}
     \renewcommand\figurename{\href{https://www.noveens.com/images/dd_survey/overview.pdf}{[HQ Image Link]} Figure}
     \caption{The premise of data distillation demonstrated using an image dataset.}
+    \vspace{-0.1cm}
     \label{fig:overview}
 \end{figure*} 
 
+\paragraph{Comparison with data pruning.} Another reasonable avenue for summarizing large datasets is \emph{pruning} away \emph{low-quality} data which presumably does not carry large amount of \emph{signal} to be captured during model-training. 
+% in-depth
+The primary challenge for such data pruning approaches (\aka coreset construction) lies in tagging the \emph{hardness} of each data-point which can be used for subsequent pruning (typically in a greedy fashion). Prominent data-pruning approaches propose heuristics for the same, relying on concepts such as shapley values \citep{data_shapley}, confidence scores \citep{svp}, error-contribution \citep{forgetting}, feature-space geometry \citep{data_quality,herding,semdedup}, \etc
+% Coresets
+Another line of work builds on the advances in submodular optimization (see \citet{bilmes_submodularity} for a review) to approximately solve the NP-Hard combinatorial optimization of selecting the subset that maximizes a set-level \emph{goodness} function, when such goodness functions are provably submodular \citep{craig,grad_match,selcon_coreset}.
+% comparison to DD
+Notably, such data pruning methodologies inherently share the same goal as data distillation but are severely restricted due to only retaining data already in the target dataset, thereby leading to finite expressivity and hence, generally, lower sample-fidelity (see \citet{data_pruning_limitations} for a deeper theoretical outlook on the fundamental limitations of data pruning). Further, recent empirical studies of data pruning methodologies \citep{deepcore} demonstrate that the efficacy of such data pruning heuristics rarely and irregularly transfers to practical scenarios, with random downsampling being a hard baseline.
+
+\paragraph{Comparison with knowledge distillation \& transfer learning.} Despite inherently distilling some notion of \emph{knowledge}, we would like to highlight both \emph{knowledge distillation} and \emph{transfer learning} are orthogonal procedures to data distillation, and can potentially work in conjunction to perform both tasks more efficiently. More specifically, knowledge distillation \citep{knowledge_distillation} entails distilling the knowledge from a trained teacher network into a smaller student network. On the other hand, transfer learning \citep{transfer_learning} focuses on transferring knowledge across similar tasks, \eg, from image classification to image segmentation. Orthogonally, data distillation aims to distill the knowledge from a given dataset into a terse data summary. Such data summaries can be used \emph{in conjunction} with knowledge distillation or transfer learning procedures for both (1) faster learning of the teacher models; and (2) faster knowledge transfer to the student models. The same holds true for model compression techniques \citep{model_compression}, where similar to knowledge distillation, the goal is to reduce model storage size rather than reducing the training time or increasing the sample-fidelity.
+
+\vspace{0.001cm}
+\emph{In this survey}, we intend to provide a succinct overview of various data distillation frameworks across different data modalities. We start by presenting a formal data distillation framework in \cref{sec:framework}, and present technicalities of various existing techniques. We classify all data distillation techniques into four categories (see \cref{fig:taxonomy} for a taxonomy) and provide a detailed empirical comparison of image distillation techniques in \cref{tab:main_results}. Subsequently, in \cref{sec:data_modalities}, we discuss existing data distillation frameworks for synthesizing data of different modalities, as well as outlining the associated challenges. In \cref{sec:applications}, we discuss alternative applications of synthesizing a high-fidelity data summary rather than simply accelerating model training along with pointers to existing work. Finally, in \cref{sec:challenges_future_work}, we conclude by presenting common pitfalls in existing data distillation techniques, along with proposing interesting directions for future work.
+
 \section{The Data Distillation Framework} \label{sec:framework}
 
-Before going into the specifics of data distillation, we start by outlining useful notation. Let $\dataset \triangleq \{ (x_i, y_i) \}_{i=1}^{|\dataset|}$ be a given dataset which needs to be distilled, where $x_i \in \mathcal{X}$ are the set of input features, and $y_i \in \mathcal{Y}$ is the desired label for $x_i$. For classification tasks, let $\mathcal{C}$ be the set of unique classes in $\mathcal{Y}$, and $\dataset^c \triangleq \{ (x_i, y_i) ~|~ y_i = c\}_{i=1}^{|\dataset|}$ be the subset of $\dataset$ with class $c$. We also define the matrices $\mathbf{X} \triangleq [x_i]_{i=1}^{|\dataset|}$ and $\mathbf{Y} \triangleq [y_i]_{i=1}^{|\dataset|}$ for convenience. Given a data budget $n \in \mathbb{Z}^+$, data distillation techniques aim to synthesize a high-fidelity data summary $\distill \triangleq \{ (\Tilde{x}_i, \Tilde{y}_i) \}_{i=1}^{n}$ such that $n \ll |\dataset|$. We define $\distill^c$, $\mathbf{X}_{\mathsf{syn}}$, and $\mathbf{Y}_{\mathsf{syn}}$ similarly as defined for \dataset. Let $\Phi_{\theta} : \mathcal{X} \mapsto \mathcal{Y}$ represent a learning algorithm parameterized by $\theta$. We also assume access to a twice-differentiable cost function $l : \mathcal{Y} \times \mathcal{Y} \mapsto \mathbb{R}$, and define $\mathcal{L}_{\dataset}(\theta) \triangleq \mathbb{E}_{(x, y) \sim \dataset}[l(\Phi_{\theta}(x), y)]$ for convenience. Notation is also summarized in \cref{appendix:details}.
+Before going into the specifics of data distillation, we start by outlining useful notation. Let $\dataset \triangleq \{ (x_i, y_i) \}_{i=1}^{|\dataset|}$ be a given dataset which needs to be distilled, where $x_i \in \mathcal{X}$ are the set of input features, and $y_i \in \mathcal{Y}$ is the desired label for $x_i$. For classification tasks, let $\mathcal{C}$ be the set of unique classes in $\mathcal{Y}$, and $\dataset^c \triangleq \{ (x_i, y_i) ~|~ y_i = c\}_{i=1}^{|\dataset|}$ be the subset of $\dataset$ with class $c$. We also define the matrices $\mathbf{X} \triangleq [x_i]_{i=1}^{|\dataset|}$ and $\mathbf{Y} \triangleq [y_i]_{i=1}^{|\dataset|}$ for convenience. Given a data budget $n \in \mathbb{Z}^+$, data distillation techniques aim to synthesize a high-fidelity data summary $\distill \triangleq \{ (\Tilde{x}_i, \Tilde{y}_i) \}_{i=1}^{n}$ such that $n \ll |\dataset|$. We define $\distill^c$, $\mathbf{X}_{\mathsf{syn}}$, and $\mathbf{Y}_{\mathsf{syn}}$ similarly as defined for \dataset. Let $\Phi_{\theta} : \mathcal{X} \mapsto \mathcal{Y}$ represent a learning algorithm parameterized by $\theta$. We also assume access to a twice-differentiable cost function $l : \mathcal{Y} \times \mathcal{Y} \mapsto \mathbb{R}$, and define $\mathcal{L}_{\dataset}(\theta) \triangleq \mathbb{E}_{(x, y) \sim \dataset}[l(\Phi_{\theta}(x), y)]$ for convenience. Notation is also summarized in \cref{appendix:details}. Notably, since \dataset and \distill share the same data domain ($\mathcal{X}$), under reasonable systems' assumptions, training $\Phi$ using gradient descent (GD) on \distill will have a $\frac{|\dataset|}{n} \times$ training-time speedup compared to training $\Phi$ on \dataset. 
 
 For the sake of uniformity, we refer to the data synthesized by data distillation techniques as a \emph{data summary} henceforth. Inspired by the definition of coresets \citep{coreset_general}, we formally define an \ $\epsilon-$approximate data summary, and the data distillation task as follows:
+
 \begin{mydefinition} \label{def:data_quality}
     {\normalfont \textbf{(\boldmath{$\epsilon-$}approximate data summary)}} Given a learning algorithm $\Phi$, let $\theta^{\dataset}$, $\theta^{\distill}$ represent the optimal set of parameters for $\Phi$ estimated on $\dataset$ and $\distill$, and $\epsilon \in \mathbb{R}^+$; we define an $\epsilon-$approximate data summary as one which satisfies:
     \begin{equation} \label{eqn:eps_approx_summary}
@@ -142,15 +149,23 @@ in a sense that learning algorithms closely following the set of encoded inducti
 
 Keeping these preliminaries in mind, we now present a formal framework for data distillation, encapsulating existing data distillation approaches. Notably, the majority of existing techniques intrinsically solve a bilevel optimization problem, which are tractable surrogates of \cref{eqn:dd_optimization}. The inner-loop typically optimizes a representative learning algorithm on the data summary, and using the optimized learning algorithm, the outer-loop optimizes a tractable proxy of \cref{eqn:dd_optimization}. 
 
-Some common assumptions that existing data distillation techniques follow are: (1) static-length data summary, \ie, $n$ is fixed and is treated as a tunable hyper-parameter; and (2) we have on-demand access to the target dataset $\dataset$ which is also assumed to be \texttt{iid}. Notably, the outer-loop optimization of \distill happens simply through gradient descent (GD) on the analogously defined $\mathbf{X}_{\mathsf{syn}} \in \mathbb{R}^{n \times \dim(\mathcal{X})}$, which is instantiated as free parameters. Note that the labels, $\mathbf{Y}_{\mathsf{syn}} \in \mathbb{R}^{n \times \dim(\mathcal{Y})}$, can be similarly optimized through GD as well \citep{label_solve}. For the sake of notational clarity, we will interchangeably use optimization of \distill \emph{or} $(\mathbf{X}_{\mathsf{syn}}, \mathbf{Y}_{\mathsf{syn}})$ henceforth.
+Some common assumptions that existing data distillation techniques follow are: (1) static-length data summary, \ie, $n$ is fixed and is treated as a tunable hyper-parameter; and (2) we have on-demand access to the target dataset $\dataset$ which is also assumed to be \texttt{iid}. Notably, the outer-loop optimization of \distill happens simply through GD on the analogously defined $\mathbf{X}_{\mathsf{syn}} \in \mathbb{R}^{n \times \dim(\mathcal{X})}$, which is instantiated as free parameters. Note that the labels, $\mathbf{Y}_{\mathsf{syn}} \in \mathbb{R}^{n \times \dim(\mathcal{Y})}$, can be similarly optimized through GD as well \citep{label_solve}. For the sake of notational clarity, we will interchangeably use optimization of \distill \emph{or} $(\mathbf{X}_{\mathsf{syn}}, \mathbf{Y}_{\mathsf{syn}})$ henceforth.
 
 \begin{figure*}[t!] \centering
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/taxonomy.pdf}
-    \vspace{4pt}
+    \begin{tikzpicture}[font=\fontfamily{ppl}]
+    \node [anchor=west] (meta) at (0.48,-0.3) {\normalfont \textbf{\cref{sec:meta_model}}};
+    \node [anchor=west] (grad) at (3.88,-0.3) {\normalfont \textbf{\cref{sec:grad_matching}}};
+    \node [anchor=west] (traj) at (7.2,-0.3) {\normalfont \textbf{\cref{sec:traj_matching}}};
+    \node [anchor=west] (dist) at (10.55,-0.3) {\normalfont \textbf{\cref{sec:distr_matching}}};
+    \begin{scope}% [xshift=1.5cm]
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{figures/taxonomy.pdf}};
+    \end{scope}
+    \end{tikzpicture}%
+    % \vspace{4pt}
     \renewcommand\figurename{\href{https://www.noveens.com/images/dd_survey/taxonomy.pdf}{[HQ Image Link]} Figure}
     \caption{A taxonomy of existing data distillation approaches.}
     \label{fig:taxonomy}
+    \vspace{-4pt}
 \end{figure*} 
 
 \subsection{Data Distillation by Meta-model Matching} \label{sec:meta_model}
@@ -166,14 +181,16 @@ Besides common assumptions mentioned earlier, the key simplifying assumption for
 
 \citet{dd_orig} (DD) originally proposed the task of data distillation, and used the meta-model matching framework for optimization. DD makes
 % The first works on data distillation used the meta-model matching framework. \citet{dd_orig} (DD) make 
-the expensive optimization in \cref{eqn:meta_model_matching} more efficient by performing (1) local optimization \emph{\`a la} stochastic gradient descent (SGD) in the inner-loop, and (2) outer-loop optimization using Truncated Back-Propagation Through Time (TBPTT), \ie, unroll a limited number of inner-loop optimization steps while optimizing the outer-loop. Formally, the modified optimization objective for DD is as follows:
+the optimization in \cref{eqn:meta_model_matching} tractable by performing (1) local optimization \emph{\`a la} stochastic gradient descent (SGD) in the inner-loop, and (2) outer-loop optimization using Truncated Back-Propagation Through Time (TBPTT), \ie, unrolling only a limited number of inner-loop optimization steps. Formally, the modified optimization objective for DD is as follows:
 \begin{equation} \label{eqn:dd_orig_optimization}
 \begin{gathered}
     \underset{\distill}{\operatorname{arg} \operatorname{min}} \hspace{0.4cm} \expectation{\theta_0 \sim \mathbf{P}_\theta}{\mathcal{L}_{\dataset}\left(\theta_T\right)} \hspace{0.3cm}
     \text{s.t.} \hspace{0.4cm} \theta_{t+1} \leftarrow \theta_t - \eta \cdot \nabla_\theta \mathcal{L}_{\distill}(\theta_t),
 \end{gathered}
 \end{equation}
-where $\mathbf{P}_\theta$ is a parameter initialization distribution of choice, $T$ accounts for the truncation in TBPTT, and $\eta$ is a tunable learning rate. Notably, TBPTT has been associated with drawbacks such as (1) computationally expensive to unroll the inner-loop at each outer-loop update \citep{bilevel_bias_variance}; (2) bias involved with truncated unrolling \citep{biased_bptt}; and (3) poorly conditioned loss landscapes, particularly with long unrolls \citep{bptt_loss_landscape}. Consequently, the TBPTT framework was empirically shown to be ineffective for data distillation in subsequent works \citep{zhao_dc}. However, recent work \citep{remember_past} claims that using momentum-based optimizers and longer unrolling of the inner-loop can greatly improve performance. We delay a deeper discussion of this work to \cref{sec:dd_factorization} for clarity. 
+where $\mathbf{P}_\theta$ is a parameter initialization distribution of choice, $T$ accounts for the truncation in TBPTT, and $\eta$ is a tunable learning rate. We also elucidate DD's control-flow in \cref{alg:dd_overview} for reference. 
+
+Notably, TBPTT has been associated with drawbacks such as (1) computationally expensive inner-loop unrolling; (2) bias involved with truncated unrolling \citep{biased_bptt}; and (3) poorly conditioned loss landscapes, particularly with long unrolls \citep{bptt_loss_landscape}. Consequently, the TBPTT framework was empirically shown to be ineffective for data distillation \citep{zhao_dc}. However, recent work \citep{remember_past} claims that using momentum-based optimizers and longer inner-loop unrolling can greatly improve performance. We delay a deeper discussion of this work to \cref{sec:dd_factorization} for clarity.
 % Missing work here
 
 Analogously, a separate line of work focuses on using Neural Tangent Kernel (NTK) \citep{ntk} based algorithms to solve the inner-loop in closed form. As a brief side note, the infinite-width correspondence states that performing Kernelized Ridge Regression (KRR) using the NTK of a given neural network, is equivalent to training the same $\infty$-width neural network with L2 reconstruction loss for $\infty$ SGD-steps. These ``$\infty$-width'' neural networks have been shown to perform reasonably compared to their finite-width counterparts, while also being solved in closed-form (see \citet{finite_vs_infinite_2} for a detailed analysis on finite \vs infinite neural networks for image classification). KIP uses the NTK of a fully-connected neural network \citep{kip}, or a convolutional network \citep{kip_conv} in the inner-loop of \cref{eqn:meta_model_matching} for efficient data distillation. More formally, given the NTK $\mathcal{K} : \mathcal{X} \times \mathcal{X} \mapsto \mathbb{R}$ of a neural network architecture, KIP optimizes the following objective:
@@ -195,10 +212,12 @@ limiting its scalability. Subsequently, RFAD \citep{rfad} proposes using (1) the
 \end{equation}
 where $T$ represents the number of inner-loop update steps for the feature extractor $f_\theta$. Notably, (1) a wide architecture for $f_\theta$ is crucial for distillation quality in FRePO; and (2) despite the bilevel optimization, FRePO is shown to be more scalable compared to KIP (\cref{eqn:kip_optimization}), while also being more generalizable.
 
+\input{dd_algorithm}
+
 \subsection{Data Distillation by Gradient Matching} \label{sec:grad_matching}
 Gradient matching based data distillation, at a high level, performs one-step distance matching on (1) the network trained on the target dataset ($\dataset$) \vs (2) the same network trained on the data summary ($\distill$). In contrast to the meta-model matching framework, such an approach circumvents the unrolling of the inner-loop, thereby making the overall optimization much more efficient. 
 % is a simplification of the aforementioned meta-model matching family to be more efficient. Approaches in this family aim to match a learning algorithm's gradient on the data summary ($\distill$) \vs on the target dataset ($\dataset$). 
-First proposed by \citet{zhao_dc} (DC), data summaries optimized by gradient-matching significantly outperformed heuristic data samplers, principled coreset construction techniques, as well as TBPTT-based data distillation proposed by \citet{dd_orig}. Formally, given a learning algorithm $\Phi$, DC solves the following optimization objective:
+First proposed by \citet{zhao_dc} (DC), data summaries optimized by gradient-matching significantly outperformed data pruning methodologies, as well as TBPTT-based data distillation proposed by \citet{dd_orig}. Formally, given a learning algorithm $\Phi$, DC solves the following optimization objective:
 \begin{equation} \label{eqn:gradient_matching}
 \begin{gathered}
     \underset{\distill}{\operatorname{arg} \operatorname{min}} \hspace{0.4cm} \expectation{\substack{\theta_0 \sim \mathbf{P}_\theta\\c ~\sim~ \mathcal{C}}}{\sum_{t=0}^T ~ \mathbf{D}\left( \nabla_\theta \mathcal{L}_{\dataset^c}(\theta_t), \nabla_\theta \mathcal{L}_{\distill^c}(\theta_t) \right)} \hspace{0.3cm}
@@ -210,11 +229,13 @@ In addition to assumptions imposed by the meta-model matching framework (\cref{s
 
 % Provide a list of methods with their even subtler variations
 Subsequently, numerous other approaches have been built atop this framework with subtle variations. DSA \citep{zhao_dsa} improves over DC by performing the same image-augmentations (\eg, crop, rotate, jitter, \etc) on both \dataset and \distill while optimizing \cref{eqn:gradient_matching}. Since these augmentations are universal and are applicable across data distillation frameworks, augmentations performed by DSA have become a common part of all methods proposed henceforth, but we omit them for notational clarity. DCC \citep{dcc} further modifies the gradient-matching objective to incorporate class contrastive signals inside each gradient-matching step and is shown to improve stability as well as performance. With $\theta_t$ evolving similarly as in \cref{eqn:gradient_matching}, the modified optimization objective for DCC can be written as:
+
 \begin{equation} \label{eqn:dcc_gradient_matching}
 \begin{gathered}
     \underset{\distill}{\operatorname{arg} \operatorname{min}} \hspace{0.4cm} \expectation{\theta_0 \sim \mathbf{P}_\theta}{\sum_{t=0}^T ~ \mathbf{D}\left( \expectation{c \in \mathcal{C}}{ \nabla_\theta \mathcal{L}_{\dataset^c}(\theta_t)}, \expectation{c \in \mathcal{C}}{\nabla_\theta \mathcal{L}_{\distill^c}(\theta_t)} \right)}
 \end{gathered}
 \end{equation}
+
 Most recently, \citet{idc} (IDC) extend the gradient matching framework by: (1) multi-formation: to synthesize a higher amount of data within the same memory budget, store the data summary (\eg, images) in a lower resolution to remove spatial redundancies, and upsample (using \eg, bilinear, FSRCNN \citep{fsrcnn}) to the original scale while usage; and (2) matching gradients of the network's training trajectory over the full dataset $\dataset$ rather than the data summary $\distill$. To be specific, given a $k \times$ upscaling function $f : \mathbb{R}^{d \times d} \mapsto \mathbb{R}^{kd \times kd}$, the modified optimization objective for IDC can be formalized as:
 \begin{equation} \label{eqn:idc_gradient_matching}
 \begin{gathered}
@@ -236,7 +257,7 @@ where $\mathbf{D} : \mathbb{R}^{|\theta|} \times \mathbb{R}^{|\theta|} \mapsto \
 
 \begin{figure*}[t!] \centering
     \centering
-    \includegraphics[width=\linewidth]{figures/optimization.pdf}
+    \includegraphics[width=0.9\linewidth]{figures/optimization.pdf}
     \renewcommand\figurename{\href{https://www.noveens.com/images/dd_survey/optimization.pdf}{[HQ Image Link]} Figure}
     \vspace{-10pt}
     \caption{The underlying optimization in various data distillation frameworks.}
@@ -245,7 +266,7 @@ where $\mathbf{D} : \mathbb{R}^{|\theta|} \times \mathbb{R}^{|\theta|} \mapsto \
 
 \subsection{Data Distillation by Distribution Matching} \label{sec:distr_matching}
 % \citep{IDC} for theory on why gradient matching is better than distribution matching
-Even though the aforementioned gradient-matching or trajectory-matching based data distillation techniques have been empirically shown to synthesize high-quality data summaries, the underlying bilevel optimization, however, is oftentimes an expensive procedure both in terms of computation time and memory. To this end, distribution-matching techniques solve a correlated proxy task which restricts the optimization to a single-level, leading to a much improved scalability. More specifically, instead of matching the quality of models on $\dataset$ \vs $\distill$, distribution-matching techniques directly match the distribution of data in $\dataset$ \vs $\distill$. The key assumption for this family of methods is that two datasets which are similar according to a particular distribution divergence metric, also lead to similarly trained models.
+Even though the aforementioned gradient-matching or trajectory-matching based data distillation techniques have been empirically shown to synthesize high-quality data summaries, the underlying bilevel optimization, however, is oftentimes a computationally expensive procedure. To this end, distribution-matching techniques solve a correlated proxy task via a single-level optimization, leading to a vastly improved scalability. More specifically, instead of matching the quality of models on $\dataset$ \vs $\distill$, distribution-matching techniques directly match the distribution of $\dataset$ \vs $\distill$. The key assumption for this family of methods is that two datasets that are similar according to a particular distribution divergence metric, lead to similarly trained models.
 
 First proposed by \citet{dm}, DM uses (1) numerous parametric encoders to cast high-dimensional data into respective low-dimensional latent spaces; and (2) an approximation of the Maximum Mean Discrepancy to compute the distribution mismatch between $\dataset$ and $\distill$ in each of the latent spaces. More precisely, given a set of $k$ encoders $\mathcal{E} \triangleq \{ \psi_i : \mathcal{X} \mapsto \mathcal{X}_i \}_{i=1}^{k}$, the optimization objective can be written as:
 \begin{equation} \label{eqn:distribution_matching}
@@ -264,6 +285,8 @@ DM uses a set of randomly initialized neural networks (with the same architectur
 \end{equation}
 where $\hat{p}(\cdot|\cdot, \theta)$ intuitively represents the nearest centroid classifier on $\distill$ using the latent representations obtained by last layer of $\Phi_\theta$. Analogously, IT-GAN \citep{gan_distillation} also uses the distribution-matching framework in \cref{eqn:distribution_matching} to generate data that is informative for model training, in contrast to the traditional GAN \citep{gan} which focuses on generating realistic data.
 
+\input{results.tex}
+
 \subsection{Data Distillation by Factorization} \label{sec:dd_factorization}
 All of the aforementioned data distillation frameworks intrinsically maintain the synthesized data summary as a large set of free parameters, which are in turn optimized. Arguably, such a setup prohibits knowledge sharing between synthesized data points (parameters), which might introduce data redundancy. On the other hand, factorization-based data distillation techniques parameterize the data summary using two separate components: (1) bases: a set of mutually independent base vectors; and (2) hallucinators: a mapping from the bases' vector space to the joint data- and label-space. In turn, both the bases and hallucinators are optimized for the task of data distillation. 
 
@@ -279,7 +302,7 @@ This framework was concurrently proposed by \citet{remember_past} (we take the l
     \mathcal{H} \triangleq \left\{ \mathbf{H}_i \in \mathbb{R}^{|\mathbf{B}| \times |\mathcal{C}|} \right\}_{i=1}^{|\mathcal{H}|},
 \end{gathered}
 \end{equation}
-where for the sake of notational simplicity, we assume $y \in \mathbb{R}^{|\mathcal{C}|}$ represents the one-hot vector of the label for which we want to generate data, and the maximum amount of data that can be synthesized $n \leq |\mathcal{C}|\cdot|\mathcal{H}|$. Since the data generation (\cref{eqn:linba_generation}) is an end-to-end differentiable procedure, both $\mathbf{B}$ and $\mathcal{H}$ are jointly optimized using the TBPTT framework discussed in \cref{sec:meta_model}, albeit with some crucial modifications for vastly improved performance: (1) using momentum-based optimizers instead of vanilla SGD in the inner-loop; and (2) longer unrolling ($\geq 100$ steps) of the inner-loop during TBPTT. \citet{haba} (HaBa) relax the linear and predictand-conditional hallucinator assumption of LinBa, equating to the following data parameterization:
+where for the sake of notational simplicity, we assume $y \in \mathbb{R}^{|\mathcal{C}|}$ represents the one-hot vector of the label for which we want to generate data, and the maximum amount of data that can be synthesized $n \leq |\mathcal{C}|\cdot|\mathcal{H}|$. Since the data generation (\cref{eqn:linba_generation}) is end-to-end differentiable, both $\mathbf{B}$ and $\mathcal{H}$ are jointly optimized using the TBPTT framework discussed in \cref{sec:meta_model}, albeit with some crucial modifications for vastly improved performance: (1) using momentum-based optimizers instead of vanilla SGD in the inner-loop; and (2) longer unrolling ($\geq 100$ steps) of the inner-loop during TBPTT. \citet{haba} (HaBa) relax the linear and predictand-conditional hallucinator assumption of LinBa, equating to the following data parameterization:
 \begin{equation} \label{eqn:haba_generation}
 \begin{gathered}
     \distill \triangleq \left\{ ~ (h(b), ~y) ~ \right\}_{\raisebox{6pt}{$\substack{b, y \sim \mathcal{B}\\h \sim \mathcal{H}}$}}
@@ -312,19 +335,8 @@ unintentionally deviate from the original intent of data distillation, and progr
 As a potential solution,
 we encourage the community to consider reporting results for both scenarios: a fixed data summary size $n$, as well as fixed bytes-of-storage. Nonetheless, for the ease of empirical comparison amongst the discussed data distillation techniques, we provide a collated set of results over four image-classification datasets in \cref{tab:main_results}.
 
-\input{results.tex}
-
-\begin{figure*}[t!] \centering
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/data_modalities.pdf}
-    \renewcommand\figurename{\href{https://www.noveens.com/images/dd_survey/data_modalities.pdf}{[HQ Image Link]} Figure}
-    % \vspace{-10pt}
-    \caption{Overview of distilling data for a few commonly observed data modalities.}
-    \label{fig:data_modalities}
-\end{figure*}
-
 \section{Data Modalities} \label{sec:data_modalities}
-Having learned about different kinds of optimization frameworks for data distillation, we now discuss an orthogonal (and important) aspect of data distillation -- \emph{what kinds of data can data distillation techniques summarize?} From continuous-valued images to heterogeneous, discrete, and semi-structured graphs, the underlying data for each unique application of machine learning has its own modality, structure, and set of assumptions. While the earliest data distillation techniques were designed to summarize images for classification, recent steps have been taken to expand the horizon of data distillation into numerous other scenarios. In what follows, we categorize existing data distillation techniques as per their intended data modality, while also discussing their unique challenges.
+Having learned about different kinds of optimization frameworks for data distillation, we now discuss an orthogonal (and important) aspect of data distillation --- \emph{what kinds of data can data distillation techniques summarize?} From continuous-valued images to heterogeneous and semi-structured graphs, the underlying data for each unique application of machine learning has its own modality, structure, and set of assumptions. While the earliest data distillation techniques were designed to summarize images, recent steps have been taken to expand the horizon of data distillation into numerous other scenarios. In what follows, we categorize existing data distillation methods by their intended data modality, while also discussing their unique challenges.
 
 \paragraph{Images.} A large-portion of existing data distillation techniques are designed for image classification data \citep{dd_orig, zhao_dc, zhao_dsa, kip, kip_conv, dm, idc, mtt, cafe, gan_distillation, frepo, rfad, dcc, haba, remember_past, kfs} simply because images have a real-valued, continuous data-domain ($\mathcal{X} \equiv \mathbb{R}^{d \times d}$). This allows SGD-based optimization directly on the data, which is treated as a set of free parameters. Intuitively, incrementally changing each pixel value can be treated as slight perturbations in the color space, and hence given a suitable data distillation loss, can be na\"ively optimized using SGD. 
 
@@ -332,7 +344,16 @@ Having learned about different kinds of optimization frameworks for data distill
 
 \citet{text_distill} take a latent-embedding approach to textual data distillation. On a high level, to circumvent the discreteness of the optimization, the authors perform distillation in a continuous embedding space. More specifically, assuming access to a latent space specified by a \emph{fixed} text-encoder, the authors learn continuous \emph{representations} of each word in the distilled text and optimize it using the TBPTT data-distillation framework proposed by \citet{dd_orig} (\cref{eqn:dd_orig_optimization}). Finally, the distilled text representations are decoded by following a simple nearest-neighbor protocol.
 
-\paragraph{Graphs.} A wide variety of data and applications can inherently be modeled as graphs, \eg, user-item interactions \citep{gnn_recsys_survey, eclare, reviews_sigir}, social networks \citep{gnn_social}, autonomous driving \citep{gnn_self_driving, gapformer}, \etc Taking the example of social networks, these user-user graphs in the modern-era easily scale up to the billion-scale \citep{graph_billion}, calling for principled scaling solutions. Graph distillation could trivially solve a majority of the scale challenges, but synthesizing tiny, high-fidelity graphs has the following hurdles: (1) nodes in a graph can be highly abstract, \eg, users, products, text articles, \etc some of which could be discrete, heterogeneous, or even simply numerical IDs; (2) graphs follow a variety of intrinsic patterns (\eg, spatial \citep{gcn}) which need to be retained in the distilled graphs; and (3) quadratic size of the adjacency matrix could be computationally prohibitive even for moderate-sized graphs.
+\begin{figure*}[t!] \centering
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/data_modalities.pdf}
+    \renewcommand\figurename{\href{https://www.noveens.com/images/dd_survey/data_modalities.pdf}{[HQ Image Link]} Figure}
+    \caption{Overview of distilling data for a few commonly observed data modalities.}
+    \label{fig:data_modalities}
+    \vspace{-10pt}
+\end{figure*}
+
+\paragraph{Graphs.} A wide variety of data and applications can inherently be modeled as graphs, \eg, user-item interactions \citep{gnn_recsys_survey, eclare, reviews_sigir}, social networks \citep{gnn_social}, autonomous driving \citep{gnn_self_driving, gapformer}, \etc Taking the example of social networks, underlying user-user graphs typically size up to the billion-scale \citep{graph_billion}, calling for principled scaling solutions. Graph distillation trivially solves a majority of the scale challenges, but synthesizing tiny, high-fidelity graphs has the following hurdles: (1) nodes in a graph can be highly abstract, \eg, users, products, \etc and could be discrete, heterogeneous, or even numerical IDs; (2) graphs follow a variety of intrinsic patterns (\eg, spatial \citep{gcn}) which need to be retained in the distilled graphs; and (3) quadratic size of the adjacency matrix could be computationally prohibitive for data optimization.
 
 \citet{graph_distill_iclr_22} propose \textsc{GCond} which distills graphs in the inductive node-classification setting, specified by its node-feature matrix $\mathbf{X}$, adjacency matrix $\mathbf{A}$, and node-target matrix $\mathbf{Y}$. \textsc{GCond} distills the given graph by learning a synthetic node-feature matrix $\mathbf{X}_{\mathsf{syn}}$, and using $\mathbf{X}_{\mathsf{syn}}$ to generate $\mathbf{A}_{\mathsf{syn}} \triangleq f_\theta(\mathbf{X}_{\mathsf{syn}})$ which can be realized, \eg, through a parametric similarity function $\operatorname{sim}_\theta(\cdot, \cdot)$ between the features of two nodes, \ie, $\mathbf{A}_{\mathsf{syn}}^{i, j} \triangleq \sigma(\operatorname{sim}_\theta(\mathbf{X}_{\mathsf{syn}}^{i}, \mathbf{X}_{\mathsf{syn}}^{j}))$, where $\sigma(\cdot)$ is the sigmoid function. Finally, both $\mathbf{X}_{\mathsf{syn}}$ and $\theta$ are optimized using the gradient-matching framework proposed by \citet{zhao_dc} (\cref{eqn:gradient_matching}). Another work \citep{graph_distill_arxiv} (GCDM) shares the same framework as \textsc{GCond} but instead uses the distribution matching framework proposed by \citet{dm} (\cref{eqn:distribution_matching}) to optimize $\mathbf{X}_{\mathsf{syn}}$ and $\theta$. Extending to a graph-classification setting, \citet{graph_distill_kdd_22} further propose \textsc{DosCond} with two major changes compared to \textsc{GCond}: (1) instead of parameterizing the adjacency matrix using a similarity function on $\mathbf{X}_{\mathsf{syn}}$, they maintain a free-parameter matrix $\Omega$ with the same size as the adjacency matrix, and sample each $\mathbf{A}_{\mathsf{syn}}^{i, j}$ entry through an independent Bernoulli draw on $\Omega^{i, j}$ as the prior using the reparameterization trick \citep{reparameter}. Such a procedure ensures differentiability as well as discrete matrix synthesis; and (2) $\mathbf{X}_{\mathsf{syn}}$ and $\Omega$ are still optimized using the gradient-matching framework (\cref{eqn:gradient_matching}), albeit with only a single-step, \ie, $T=1$ for improved scalability and without empirically observing a loss in performance.
 
@@ -347,9 +368,12 @@ While the data distillation task was originally designed to accelerate model tra
 
 \paragraph{Differential Privacy.} Data distillation was recently shown to be a promising solution for differential privacy as defined by \citet{differential_privacy_dwork}. \citet{privacy_free} show that data distillation techniques can perform better than existing state-of-the-art differentially-private data generators \citep{dp_merf, dp_sinkhorn} on both performance and privacy grounds. Notably, the privacy benefits of data distillation techniques are virtually \emph{free}, as none of these methods were optimized for generating differentially-private data. \citet{dd_privacy_clipped} further modify the gradient matching framework (\cref{eqn:gradient_matching}) by clipping and adding white noise to the gradients obtained on the original dataset while optimization. Such a routine was shown to have better sample utility, while also satisfying strict differential privacy guarantees. From a completely application perspective, data distillation has been used to effectively distill sensitive medical data as well \citep{medical_dd_1, medical_dd_2}. \looseness=-1
 
-\paragraph{Neural Architecture Search (NAS).} Automatic searching of neural-network architectures can alleviate the manual effort, as well as lead to better models
+\paragraph{Neural Architecture Search (NAS).} Automatic searching of neural-network architectures can alleviate a majority of manual effort, as well as lead to more accurate models
 % the tedious and heuristic procedure of manually searching neural network architectures 
-(see \citet{nas_survey} for a detailed review). Analogous to using model extrapolation, \ie, extrapolating the performance of an under-trained model architecture on the full dataset; data extrapolation, on the other hand, aims to train models on a small, high-fidelity data sample till convergence. Numerous data distillation techniques \citep{zhao_dc, dd_nas} show promise on small NAS test-beds by employing the data extrapolation framework. However, \citet{dc_bench} show that data distillation \emph{does not} perform well when evaluating diverse architectures on bigger NAS test-beds, calling for better rank-preserving data distillation techniques.
+(see \citet{nas_survey} for a detailed review). Analogous to using model extrapolation, \ie, extrapolating the performance of an under-trained model architecture on the full dataset; data extrapolation, on the other hand, aims to train models on a small, high-fidelity data sample till convergence. 
+\citet{zhao_dc} 
+% A few data distillation techniques  
+show promise of their technique (DC) on a small custom NAS test-bed consisting of only $720$ variations of the ConvNet architecture \citep{conv_net} by employing the data extrapolation framework. However, \citet{dc_bench} show that data distillation \emph{does not} perform well when evaluating diverse architectures on the bigger test-bed, NAS-Bench-201 \citep{nas_201}, calling for better rank-preserving data distillation techniques.
 
 \paragraph{Continual Learning.} Never-ending learning (see \citet{continual} for a detailed review) has been frequently associated with catastrophic forgetting \citep{catast_forgetting}, \ie, patterns extracted from old data/tasks are easily forgotten when patterns from new data/tasks are learned. Data distillation has been shown as an effective solution to alleviate catastrophic forgetting, by simply using the distilled data summary in a replay buffer that is continually updated and used in subsequent data/task training \citep{dd_continual_1, dd_continual_2, dd_continual_3}. \citet{remember_past} show further evidence of a simple \emph{compress-then-recall} strategy outperforming existing state-of-the-art continual learning approaches. Notably, \emph{only} the data summary is stored for each task, and a new model is trained (from scratch) using all previous data summaries, for each new incoming task.
 
@@ -359,13 +383,17 @@ While the data distillation task was originally designed to accelerate model tra
 
 Despite achieving remarkable progress in data-efficient learning, there are numerous framework-based, theoretical, and application-based directions yet to be explored in data distillation. In what follows, we highlight and discuss such directions for the community to further explore, based either on early evidence or our intuition. \looseness=-1
 
-\paragraph{New data modalities \& settings.} Extending on the discussion in \cref{sec:data_modalities}, existing data distillation techniques have largely been restricted to image-classification settings, due to the easy availability of datasets, and amenable data-optimization. However, taking a step back to the broad field of computer vision (see \citet{cv_book} for a thorough background), there are numerous equally important tasks that can benefit from a high-quality data summary. 
-% that are riddled with their own set of intricacies. 
-For example, increasing the sample efficiency of training image-generation models is both highly important due to their massive size and popularity \citep{dalle, stable_diffusion}, and is also highly non-trivial to fit into the existing data distillation framework. Similarly, a variety of important machine learning applications don't enjoy a continuous data domain like images, making it hard for existing data distillation techniques to scale and work as expected. In addition to recent efforts on distilling discrete data like graphs \citep{graph_distill_kdd_22, graph_distill_iclr_22} and recommender systems \citep{inf_ae}, developing a unified, principled data distillation framework for inherently sparse and discrete data will be useful for a variety of research communities (\eg, text, tabular-data, extreme classification, \etc).
+\paragraph{New data modalities.} Extending the discussion in \cref{sec:data_modalities}, existing data distillation techniques have largely been restricted to cater to image datasets, primarily due to the amenable data-optimization in the continuous pixel-domain of images.
+Despite recent efforts in increasing the horizon of data distillation to other data modalities such as graphs \citep{graph_distill_kdd_22, graph_distill_iclr_22} and recommender systems \citep{inf_ae}; each data modality poses its unique challenges and calls for future work, \eg, handling long sequences of time-series data in audio-classification \citep{audio_classification}, video classification \citep{video_classification}, self-driving \citep{waymo}; millions of categorical features in tabular data \citep{dcnv2}; sparse and noisy financial data \citep{stock}; \etc
+% developing a unified, principled data distillation framework for inherently sparse and discrete data will be useful for a variety of research communities (\eg, text, tabular-data, extreme classification, \etc).
 
-\paragraph{Better scaling.} Existing data distillation techniques validate their prowess \emph{only} in the super low-data regime (typically $1-50$ data points per class). However, \citet{dc_bench} show that as we keep scaling the size of the data summary (larger distilled data), most distillation methods collapse to the random-sampling baseline. While convergent behavior is expected, the distillation performance collapses much more rapidly with larger data summaries. Analogously, for data distillation to practically replace full-data training, deeper investigations of the causes and potential fixes of such scaling artifacts are highly necessary.
+\paragraph{New predictive tasks.}  Another limitation of existing data distillation techniques is that their underlying optimization is primarily designed for classification scenarios. However, a large number of predictive tasks fail to na\"ively fit into the existing supervised data distillation framework, \eg, image-generation \citep{dalle, stable_diffusion}, language modeling \citep{bert, gpt, llama}, representation learning \citep{byol, simclr}, \etc Further, the aforementioned tasks have gained immense popularity and have seen widespread practical use in the recent years, calling for future work in developing data distillation techniques for more predictive tasks.
+
+\paragraph{Better scaling.} Existing data distillation techniques validate their prowess \emph{only} in the super low-data regime (typically $1-50$ data points per class) due to (i) computational difficulties in synthesizing large data summaries with existing techniques; and (ii) collapse to the random-sampling baseline when synthesizing large data summaries, as noted by \citet{dc_bench}. This calls for future work from both directions --- developing efficient data distillation techniques that are scalable to web-scale datasets, and deeper investigations of the cause and potential fixes of the observed scaling artifacts of existing techniques.
 
 \paragraph{Improved optimization.} A unifying thread across data distillation techniques is an underlying bilevel optimization, which is provably NP-hard even in the linear inner-optimization case \citep{bilevel_np_hard}. Notably, bilevel optimization has been successfully applied in a variety of other applications like meta-learning \citep{maml, metasgd}, hyper-parameter optimization \citep{hyperopt_maclaurin, hyperopt_vicol}, neural architecture search \citep{darts_nas}, coreset construction \citep{bilevel_coresets, bilevel_coresets_bayesian}, \etc Despite its success, many theoretical underpinnings are yet to be explored, \eg, the effect of commonly-used singleton solution assumption \citep{singleton_bilevel}, the effect of over-parameterization on bilevel optimization \citep{bilevel_implicit_bias}, connections to statistical influence functions \citep{influence_functions}, the bias-variance tradeoff \citep{bilevel_bias_variance}, \etc Clearly, an overall better understanding of bilevel optimization will directly enable the development of better data distillation techniques.
+
+\paragraph{Improved data-quality evaluation.} As briefly discussed in \cref{sec:framework}, data synthesized using data distillation is evaluated from performance, efficiency, and transferability standpoints. However, numerous high-stakes use-cases call for being able to train robust models from a variety of angles such as fairness \citep{fair_ml}, adversarial robustness \citep{adv_ml}, \etc Hence, synthesizing data summaries able to support such robust model training is practical and an important direction for future work. Notably, while popular metrics exist for evaluating the robustness of learning algorithms from the aforementioned standpoints, developing such notions at the dataset-level is non-trivial, and with little existing literature \citep{fairness_dpp, adv_sampling}.
 
 \section*{Acknowledgments}
 We sincerely thank Zhiwei Deng, Bo Zhao, and George Cazenavette for their feedback on early drafts of this survey.
@@ -374,7 +402,8 @@ We sincerely thank Zhiwei Deng, Bo Zhao, and George Cazenavette for their feedba
 \bibliography{references}}
 \bibliographystyle{tmlr}
 
-% \newpage
+\newpage
+
 \appendix
 
 \input{appendix}

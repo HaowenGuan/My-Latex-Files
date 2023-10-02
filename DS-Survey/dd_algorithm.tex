@@ -1,0 +1,24 @@
+% \newcommand\mycommfont[1]{#1}
+% \SetCommentSty{mycommfont}
+\setlength{\algomargin}{1.5em}
+\begin{algorithm}[t]
+    \caption{Control-flow of data distillation using na\"ive meta-matching (\cref{eqn:dd_orig_optimization})}
+    \label{alg:dd_overview}
+    \KwIn{Target dataset \dataset, outer-loop iterations $K$, parameter initialization distribution $\mathbf{P}_\theta$, inner-loop iterations $T$, inner-loop learning rate $\eta$, outer-loop learning rate $\eta_{\mathsf{syn}}$} % $\mathbf{w}_T$, $\mathbf{m}_T$, $\mathbf{v}_T$, $\gamma$, $\alpha$, $\epsilon$, $L(w, x)$, meta-objective $f(w)$
+    \textbf{Initialize:} $(\mathbf{X}_{\mathsf{syn}}^{0}, \mathbf{Y}_{\mathsf{syn}}^{0}) \sim \dataset$ % $d\mathbf{m} \leftarrow 0$, $d\mathbf{x} \leftarrow 0$, $d\mathbf{w} \leftarrow \nabla_\mathbf{w} f(\mathbf{w}_T)$
+    
+    \For(\tcp*[f]{\textbf{Outer-loop:}\ optimize \distill}){$k = 1, \ldots, K$} %\Comment{Outer-loop: optimize \distill}
+    {
+        Initialize $\theta_0 \sim \mathbf{P}_\theta$
+        
+        \For(\tcp*[f]{\textbf{Inner-loop:}\ optimize $\Phi$ on $\distill^{k-1}$}){$t = 1, \ldots, T$} %\Comment{Inner-loop: optimize $\Phi$ on $\distill^{k-1}$}
+        {
+            $\theta_{t} \leftarrow \theta_{t-1} - \eta \cdot \nabla_\theta \mathcal{L}_{\distill^{k-1}}(\theta_{t-1})$
+        }
+
+        $\mathbf{X}_{\mathsf{syn}}^{k} \leftarrow \mathbf{X}_{\mathsf{syn}}^{k-1} - \eta_{\mathsf{syn}} \cdot \nabla_{\mathbf{X}_{\mathsf{syn}}} \mathcal{L}_{\dataset}(\theta_{T})$ \tcp*[f]{Update $\mathbf{X}_{\mathsf{syn}}$ by computing unrolled meta-gradient}
+        
+        $\mathbf{Y}_{\mathsf{syn}}^{k} \leftarrow \mathbf{Y}_{\mathsf{syn}}^{k-1} - \eta_{\mathsf{syn}} \cdot \nabla_{\mathbf{Y}_{\mathsf{syn}}} \mathcal{L}_{\dataset}(\theta_{T})$ \tcp*[f]{Update $\mathbf{Y}_{\mathsf{syn}}$ by computing unrolled meta-gradient}
+    }
+    \KwOut{$\distill^{K} \equiv (\mathbf{X}_{\mathsf{syn}}^{K}, \mathbf{Y}_{\mathsf{syn}}^{K})$}
+\end{algorithm}
